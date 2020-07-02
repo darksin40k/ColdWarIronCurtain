@@ -23,9 +23,11 @@ country_event = {		#Coup Start
 
 	option = {
 		name = "Round up the suspected plotters"
+			ai_chance  = {
+				base = 40
+			}
 		hidden_effect = {
 			news_event = Afghani_Coup.4
-			country_event = Afghani_Coup.3
 			complete_national_focus = AFG_The_1950_Coup_Attempt
 			complete_national_focus = AFG_Crackdown_on_Hizb_I_Sirri_Ittihad
 		}
@@ -37,6 +39,13 @@ country_event = {		#Coup Start
 			news_event = Afghani_Coup.3
 			complete_national_focus = AFG_The_1950_Coup_Attempt
 			complete_national_focus = AFG_Hizb_I_Sirri_Ittihad_Takeover
+		}
+		ai_chance  = {
+			base = 40 
+			modifier = {
+				factor = 0 
+				is_historical_focus_on = yes
+			}
 		}
 	}
 }
@@ -158,18 +167,28 @@ country_event = {		#Coup Start
 
 	option = {
 		name = "Appoint Mohammed Daoud Khan"
-		complete_national_focus = AFG_Appoint_Ghulam_Muhammad_Ghobar_Prime_Minister
+		complete_national_focus = AFG_Appoint_Daud_Prime_Minister
 		create_country_leader = {
 			name = "Mohammed Daoud Khan"
 			picture = "Mohammed_Daoud_Khan.dds"
 			ideology = monarchy
 		}
-	}
+		ai_chance = {
+			base = 10
+		}
+	}   
 	option = {
 		name = "Appoint Ghulam Muhammad Ghobar"
 		set_politics = {
 			ruling_party = nationalism
 			elections_allowed = no
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
 		}
 		complete_national_focus = AFG_Appoint_Ghulam_Muhammad_Ghobar_Prime_Minister
 	}
@@ -325,6 +344,37 @@ country_event = {
 
 	option = {
 		name = "How did we lose to Afghanistan....."
+	}
+}
+
+country_event = {
+	id = AFG_PAK.24
+	title = "Proposal From Afghanistan"
+	desc = AFG_PAK.24.d
+	picture = GFX_pasht
+
+	is_triggered_only = yes
+
+	option = {
+		name = "...The area will be created."
+		release_autonomy = {
+			target = WAZ
+			autonomy_state = autonomy_integrated_puppet
+			freedom_level = 0.1
+		}
+		WAZ ={
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.2
+			}
+		}
+	}
+	option = {
+		name = "...The request is denied."
 	}
 }
 

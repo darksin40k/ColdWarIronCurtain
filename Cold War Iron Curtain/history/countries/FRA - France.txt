@@ -243,6 +243,22 @@ add_ideas = {
 }
 
 if = {
+	limit = { has_dlc = "Man the Guns" }
+	create_equipment_variant = {
+		name = "Type IXA"
+		type = sub_hull_ww  
+		parent_version = 0
+		name_group = USA_SS_HISTORICAL
+		modules = {
+			fixed_sub_torpedo_slot = sub_torpedo_ww
+			fixed_sub_engine_slot = sub_engine_ww
+			fixed_maritime_slot = sonar_ww 
+			mid_1_custom_slot = sub_torpedo_ww
+		}
+	}
+}
+
+if = {
 	limit = {
 		has_dlc = "Together for Victory"
 	}
@@ -263,6 +279,11 @@ if = {
 	}
 	set_autonomy = {
 		target = TOG
+		autonomous_state = autonomy_UN_Trust_Territory
+		freedom_level = 0.1
+	}
+	set_autonomy = {
+		target = CMR
 		autonomous_state = autonomy_UN_Trust_Territory
 		freedom_level = 0.1
 	}
@@ -344,6 +365,7 @@ if = {
   FRA = { diplomatic_relation = { country = TUR relation = military_access active = yes } }
   FRA = { diplomatic_relation = { country = GRE relation = military_access active = yes } }
   FRA = { diplomatic_relation = { country = WGR relation = guarantee  active = no } }
+  remove_ideas = fiscal_collapse_3
 }
 
 1990.1.1 = {
@@ -611,6 +633,81 @@ set_variable = { var = FRA.French_Union_Unity value = 5 }
 set_variable = { var = FRA.Rda_Support value = 40 }
 
 
+#resource rights
+
+1954.4.26 = {
+	#laos	
+		remove_resource_rights = 1187
+		remove_resource_rights = 1191
+		remove_resource_rights = 670
+		remove_resource_rights = 841
+		remove_resource_rights = 1196
+		remove_resource_rights = 1198
+		remove_resource_rights = 1295
+	#vietnam
+		remove_resource_rights = 983
+		remove_resource_rights = 1285
+		remove_resource_rights = 286
+		remove_resource_rights = 1289
+		remove_resource_rights = 982
+		remove_resource_rights = 1288
+		remove_resource_rights = 1286
+		remove_resource_rights = 757
+		remove_resource_rights = 786
+		remove_resource_rights = 838
+		remove_resource_rights = 671
+		remove_resource_rights = 881
+		remove_resource_rights = 1291
+		remove_resource_rights = 1280
+	#cambodia
+		remove_resource_rights = 984
+		remove_resource_rights = 840
+		remove_resource_rights = 741
+		remove_resource_rights = 985
+
+}
+1956.3.2 = {
+	#morocco
+		remove_resource_rights = 461
+		remove_resource_rights = 462
+
+}
+1956.3.26 = {
+	#tunisia
+		remove_resource_rights = 458
+		remove_resource_rights = 665
+
+}
+1958.10.5 = {
+	#french west africa
+		remove_resource_rights = 557
+		remove_resource_rights = 965
+		remove_resource_rights = 764
+		remove_resource_rights = 766
+		remove_resource_rights = 272
+		remove_resource_rights = 763
+		remove_resource_rights = 1060
+		remove_resource_rights = 1277
+		remove_resource_rights = 762
+		remove_resource_rights = 765
+		remove_resource_rights = 1029
+		remove_resource_rights = 774
+		remove_resource_rights = 1251
+		remove_resource_rights = 556
+		remove_resource_rights = 1252
+		remove_resource_rights = 839
+		remove_resource_rights = 760
+	#french equatorial africa
+		remove_resource_rights = 1147
+		remove_resource_rights = 660
+		remove_resource_rights = 767
+		remove_resource_rights = 818
+		remove_resource_rights = 515
+		remove_resource_rights = 819
+		remove_resource_rights = 539
+		remove_resource_rights = 769
+		remove_resource_rights = 1057
+}
 
 1949.1.1 = {
 add_to_tech_sharing_group = marshall_plan
@@ -721,6 +818,8 @@ add_to_tech_sharing_group = marshall_plan
 	dismantle_faction = yes
 	create_faction = "The French Community"
 	remove_from_faction = MAD
+	remove_from_faction = SEN
+	remove_from_faction = RCG
 	SEN = {remove_ideas = FRA_Colony}
 	RCG = {remove_ideas = FRA_Colony}
 }
@@ -838,7 +937,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Georges Fontenis"
-	picture = "Georges_Fontenis.dds"
+	picture = "Portrait_France_Georges_Fontenis.dds"
 	ideology = anarcho_communism
 }
 
@@ -865,8 +964,8 @@ create_corps_commander = {
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4
-	#planning_skill = 4
-	#logistics_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
 }
 
 create_corps_commander = {
@@ -877,8 +976,8 @@ create_corps_commander = {
 	skill = 4
 	attack_skill = 4
 	defense_skill = 4
-	#planning_skill = 4
-	#logistics_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
 }
 
 create_corps_commander = {
@@ -889,8 +988,8 @@ create_corps_commander = {
 	skill = 4
 	attack_skill = 3
 	defense_skill = 3
-	#planning_skill = 3
-	#logistics_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_field_marshal = {
@@ -901,8 +1000,8 @@ create_field_marshal = {
 	skill = 5
 	attack_skill = 5
 	defense_skill = 5
-	#planning_skill = 5
-	#logistics_skill = 5
+	planning_skill = 5
+	logistics_skill = 5
 }
 
 create_corps_commander = {
@@ -913,8 +1012,8 @@ create_corps_commander = {
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
-	#planning_skill = 1
-	#logistics_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -925,8 +1024,8 @@ create_corps_commander = {
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	#planning_skill = 1
-	#logistics_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 create_corps_commander = {
@@ -937,8 +1036,8 @@ create_corps_commander = {
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
-	#planning_skill = 2
-	#logistics_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
 }
 create_corps_commander = {
 	name = "Paul Ely"
@@ -1226,11 +1325,12 @@ if = {
         name = "Bougainville-class"
         type = screen_hull_medium_ww
         parent_version = 0
+		name_group = FRA_DE_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_light_ww
             fixed_maritime_slot = sonar_ww 
-            fixed_ship_engine_slot = screen_engine_ww
+            fixed_ship_engine_slot = screen_engine_light_ww
             fixed_ship_torpedo_slot = torpedo_ww
             mid_1_custom_slot = ship_subkiller_0
             rear_1_custom_slot = ship_armament_light_ww
@@ -1240,6 +1340,7 @@ if = {
         name = "Béarn-class"
         type = carrier_hull_ww
         parent_version = 0
+		name_group = FRA_CV_HISTORICAL
         modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = sonar_ww
@@ -1256,6 +1357,7 @@ if = {
         name = "Chacal-class"
         type = screen_hull_heavy_ww
         parent_version = 0
+		name_group = FRA_DD_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
@@ -1271,6 +1373,7 @@ if = {
         name = "Le Fantasque-class"
         type = screen_hull_heavy_ww
         parent_version = 0
+		name_group = FRA_DD_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
@@ -1286,6 +1389,7 @@ if = {
         name = "L'Adroit-class"
         type = screen_hull_heavy_ww
         parent_version = 0
+		name_group = FRA_DD_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
@@ -1301,6 +1405,7 @@ if = {
         name = "Aigle-class"
         type = screen_hull_heavy_ww
         parent_version = 0
+		name_group = FRA_DD_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
@@ -1316,6 +1421,7 @@ if = {
         name = "Bourrasque-class"
         type = screen_hull_heavy_ww
         parent_version = 0
+		name_group = FRA_DD_HISTORICAL
         modules = {
             fixed_ship_anti_air_slot = ship_AA_gun_1
             fixed_ship_battery_slot = ship_armament_medium_ww
@@ -1331,6 +1437,7 @@ if = {
         name = "Duguay-Trouin-class"
         type = battle_hull_light_ww
         parent_version = 0
+		name_group = FRA_CL_HISTORICAL
         modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -1348,6 +1455,7 @@ if = {
         name = "Émile Bertin-class"
         type = battle_hull_light_ww
         parent_version = 0
+		name_group = FRA_CL_HISTORICAL
         modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -1365,6 +1473,7 @@ if = {
         name = "La Galissonnière-class"
         type = battle_hull_light_ww
         parent_version = 0
+		name_group = FRA_CL_HISTORICAL
         modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -1382,6 +1491,7 @@ if = {
         name = "Suffren-class"
         type = battle_hull_light_ww
         parent_version = 0
+		name_group = FRA_CL_HISTORICAL
         modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -1399,6 +1509,7 @@ if = {
         name = "Duquesne-class"
         type = battle_hull_light_ww
         parent_version = 0
+		name_group = FRA_CL_HISTORICAL
         modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -1416,6 +1527,7 @@ if = {
         name = "Richelieu-class"
         type = battle_hull_medium_ww
         parent_version = 0
+		name_group = FRA_CA_HISTORICAL
         modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1

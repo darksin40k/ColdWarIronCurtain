@@ -511,7 +511,7 @@ focus_tree = {
 							name = light_air_bonus
 							bonus = 1
 							uses = 2
-							category = light_air
+							category = air_single_engine
 						}
 				}
 	}
@@ -1898,7 +1898,10 @@ focus_tree = {
 		x = 27
 		y = 18
 		completion_reward = {
-			add_ideas = communism_banned
+			add_timed_idea = {
+				idea = communism_banned
+				days = 150
+			}
 		}
 
 
@@ -1914,7 +1917,14 @@ focus_tree = {
 		x = 21
 		y = 17
 		completion_reward = {
-		add_ideas = free_press_3
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_1
 		}
 
 	}
@@ -2043,12 +2053,14 @@ focus_tree = {
 		x = 28
 		y = 19
 		completion_reward = {
-			remove_ideas = policy_cpi_temp_0
-			remove_ideas = policy_cpi_temp_1
-			remove_ideas = policy_cpi_temp_2
-			remove_ideas = policy_cpi_temp_3
-			remove_ideas = policy_cpi_temp_4
-			remove_ideas = policy_cpi_temp_5
+			hidden_effect = {
+				remove_ideas = policy_cpi_temp_0
+				remove_ideas = policy_cpi_temp_1
+				remove_ideas = policy_cpi_temp_2
+				remove_ideas = policy_cpi_temp_3
+				remove_ideas = policy_cpi_temp_4
+				remove_ideas = policy_cpi_temp_5
+			}
 			
 			add_ideas = policy_cpi_temp_3
 			cpi_expenditure = yes
@@ -2171,7 +2183,14 @@ focus_tree = {
 		x = 21
 		y = 14
 		completion_reward = {
-			add_ideas = press_censorship_5
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_1
 		}
 	}
 	focus = {
@@ -3498,6 +3517,7 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}	
+		}
 		}
 	}
 	focus = {

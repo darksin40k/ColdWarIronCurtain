@@ -473,7 +473,7 @@ if = {
 		set_popularities = { 
 			democratic = 0
 			communism = 10
-			fascism = 30
+			fascism = 25
 			nationalism = 50
 			monarchism = 0
 			neutrality = 0
@@ -806,7 +806,8 @@ if = {
 			limit = {
 				has_dlc = "La Resistance"
 			}
-			create_intelligence_agency = yes
+			create_intelligence_agency = { name = "Idarat al-Mukhabarat al-Jawiyya" icon = "GFX_intelligence_agency_logo_syr" } 
+			
 		}
 
 		set_politics = {

@@ -272,15 +272,12 @@ guiTypes = {
 			maxHeight = 20
 			fixedsize = yes
 		}
-		
-		
-
 	}
 
 	containerWindowType = {
 		name = "current_money_container"
 		
-		position = { x = 65%% y = 6 } #990
+		position = { x = 1050 y = 4 } #990
 		iconType ={
 			name ="money_bg"
 			spriteType = "GFX_moneybarBG"
@@ -318,6 +315,21 @@ guiTypes = {
 			maxHeight = 24
 			fixedsize = yes
 			pdx_tooltip = "core_omnom"
+		}
+		iconType ={
+			name ="nuke_bg"
+			spriteType = "GFX_nukeBG"
+			position = { x= 230 y=-1 }
+		}
+		instantTextBoxType = {
+			name ="nukecount"
+			position = { x= 211 y = 4 }
+			font = "hoi_16mbs"
+			text = "num_nukes_IC"
+			format = center
+			maxWidth = 130
+			maxHeight = 24
+			fixedsize = yes
 		}
 		iconType = {
 			name ="omnom_warning"
@@ -381,9 +393,26 @@ guiTypes = {
 		}
 	}
 	containerWindowType = {
+		name = "chem_weapon_window"
+		position = { x = 0 y = 39 }
+		size = { width = 100 height = 300 }
+
+		buttonType = {
+			name = "Chemical_Weapon_Button"
+			position = { x = 80%% y = 655%% }#{ x = 0 y = 0 }
+			spriteType = "GFX_Chemical_Weapon_Button"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_LEFT"
+			clicksound = click_open
+			clicksound = click_default
+			buttonFont = "hoi_16mbs"
+		}
+	}
+	containerWindowType = {
 		name = "sd_window_access"
 		position = { x = 0 y = 40 }
 		size = { width = 100 height = 300 }
+		
 		instantTextboxType = {
 			name = "Development_Tier"
 			position = { x = 370 y = 254 }
@@ -396,6 +425,16 @@ guiTypes = {
 			pdx_tooltip = DEVELOPMENT_TIER_TT
 		}
 		instantTextboxType = {
+			name = "Development_Progress"
+			position = { x = 150 y = 256 }
+			font = "hoi_16mbs"
+			text = "Upgrade Progress: [?upgrade_progress|1G]% (+[UPGRADE_PER_MONTH_TARGETTED]%/month)" 
+			format = center
+			maxWidth = 250
+			maxHeight = 20
+			fixedsize = yes
+		}
+		instantTextboxType = {
 			name = "Agribiome_Tier"
 			position = { x = 375 y = 234 }
 			font = "hoi_16mbs"
@@ -406,10 +445,50 @@ guiTypes = {
 			fixedsize = yes
 			pdx_tooltip = "[AGRIBIOME_TIER_TT]"
 		}
+		instantTextboxType = {
+			name = "Telecoms_Tier"
+			position = { x = 375 y = 216 }
+			font = "hoi_16mbs"
+			text = "telecoms_headsup"
+			format = center
+			maxWidth = 250
+			maxHeight = 20
+			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "Telecoms_Upgrading"
+			position = { x = 375 y = 216 }
+			font = "hoi_16mbs"
+			text = "Telecoms: [?telecoms_upgrade_progress|0G]%"
+			format = center
+			maxWidth = 250
+			maxHeight = 20
+			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "Grid_Tier"
+			position = { x = 375 y = 198 }
+			font = "hoi_16mbs"
+			text = "grid_headsup"
+			format = center
+			maxWidth = 250
+			maxHeight = 20
+			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "Grid_Upgrading"
+			position = { x = 375 y = 198 }
+			font = "hoi_16mbs"
+			text = "Power Grid: [?telecoms_upgrade_progress|0G]%"
+			format = center
+			maxWidth = 250
+			maxHeight = 20
+			fixedsize = yes
+		}
 		buttonType = {
 			name = "sd_open"
 			position = { x = 160 y = 244 }
-			spriteType = "GFX_button_148x34"
+			spriteType = "GFX_policy_button_ic_available"
 			buttonFont = "Main_14_black"
 			Orientation = "UPPER_LEFT"
 			clicksound = click_open
@@ -418,15 +497,32 @@ guiTypes = {
 			buttonText = "Upgrade State"
 			pdx_tooltip = STATE_UPGRADE_TT
 		}
-		buttonType = {
-			name = "upgrade_cost_display"
-			position = { x = 240 y = 163 }
+		iconType = {
+			name = "sd_open_unavailable"
+			position = { x = 160 y = 244 }
+			spriteType = "GFX_policy_button_ic_unaffordable_450"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = STATE_UPGRADE_TT
+		}
+		instantTextboxType = {
+			name = "Tech_Not_Met"
+			position = { x = 113 y = 251 }
 			font = "hoi_16mbs"
-			text = "[UPGRADE_TIER_COST]"
+			text = "Tech Requirement Not Met" 
 			format = center
 			maxWidth = 250
 			maxHeight = 20
 			fixedsize = yes
+		}
+		buttonType = {
+			name = "upgrade_cost_display"
+			position = { x = 255 y = 160 }
+			font = "hoi_16mbs"
+			text = "[UPGRADE_TIER_COST]"
+			format = center
+			#maxWidth = 250
+			#maxHeight = 20
+			#fixedsize = yes
 		}
 	}
 	

@@ -27,10 +27,10 @@ ideas = {
 				has_global_flag = korean_war
 			}
 			modifier = {
-				army_org_factor = 0.1
+				army_org_factor = 0.05
 				army_speed_factor = 0.15
-				army_core_attack_factor = 3
-				army_core_defence_factor = 3
+				army_core_attack_factor = 2
+				army_core_defence_factor = 1
 			}
 			removal_cost = -1
 		}
@@ -53,6 +53,31 @@ ideas = {
 		targeted_modifier = { tag = USA attack_bonus_against = 7 defense_bonus_against = 7}
 		targeted_modifier = { tag = ENG attack_bonus_against = 10  defense_bonus_against = 10}
 		targeted_modifier = { tag = FRA attack_bonus_against = 10 defense_bonus_against = 10}
+	}
+	
+	congo_crisis_idea = {
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			has_government = neutrality
+		}
+
+		cancel = {
+			has_war = no 
+		}
+		
+		removal_cost = -1
+		
+		picture = generic_volunteer_expedition_bonus
+
+		modifier = {
+			army_org_factor = 0.50
+			army_core_defence_factor = 0.50
+			army_speed_factor = -0.33
+			
+		}
 	}
 	korean_war_un = {
 				allowed = {

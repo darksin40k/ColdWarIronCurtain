@@ -69,7 +69,7 @@ focus_tree = {
 				remove_ideas = illiteracy_2
 				add_ideas = illiteracy_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = illiteracy_1
 				}
@@ -277,7 +277,15 @@ focus_tree = {
 		x = 3
 		y = 12
 		completion_reward = {
-			add_ideas = policy_union_temp_5
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
+			add_ideas = policy_union_temp_2
 		}
 	}
 	focus = {
@@ -428,14 +436,14 @@ focus_tree = {
 				remove_ideas = fiscal_collapse_3
 				add_ideas = fiscal_collapse_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_2
 				}
 				remove_ideas = fiscal_collapse_2
 				add_ideas = fiscal_collapse_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_1
 				}
@@ -531,14 +539,14 @@ focus_tree = {
 				remove_ideas = fiscal_collapse_3
 				add_ideas = fiscal_collapse_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_2
 				}
 				remove_ideas = fiscal_collapse_2
 				add_ideas = fiscal_collapse_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_1
 				}
@@ -889,6 +897,14 @@ focus_tree = {
 		x = 19
 		y = 11
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_4
 		}
 	}
@@ -2141,6 +2157,14 @@ focus_tree = {
 		x = 9
 		y = 12
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_0
 		}
 	}
@@ -2468,7 +2492,7 @@ focus_tree = {
 				remove_ideas = illiteracy_2
 				add_ideas = illiteracy_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = illiteracy_1
 				}

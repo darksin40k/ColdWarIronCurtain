@@ -80,6 +80,9 @@ focus_tree = {
 		available = {
 			always = no
 		}
+		completion_reward = {
+			custom_effect_tooltip = saf.tt.1
+		}
 	}
 	focus = {
 		id = SAF_The_Elections_of_1958
@@ -90,6 +93,9 @@ focus_tree = {
 		y = 18
 		available = {
 			always = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = saf.tt.1
 		}
 	}
 	focus = {
@@ -564,13 +570,19 @@ focus_tree = {
 		icon = GFX_SAF_Koos_Straus 
 		search_filters = {IC_FILTER}
 		cost = 10.00
+		mutually_exclusive = {
+			focus = SAF_National_Party_Victory
+		}
 		prerequisite = {
 			focus = SAF_The_Elections_of_1953
 		}
 		x = 28
 		y = 9
 		available = {
-			always = no
+			has_country_flag = up_victory
+		}
+		completion_reward = {
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -723,13 +735,19 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
 		cost = 10.00
+		mutually_exclusive = {
+			focus = SAF_National_Party_Victory_1958
+		}
 		prerequisite = {
 			focus = SAF_The_Elections_of_1958
 		}
 		x = 29
 		y = 19
 		available = {
-			always = no
+			has_country_flag = up_victory_58
+		}
+		completion_reward = {
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -947,6 +965,14 @@ focus_tree = {
 		x = 34
 		y = 5
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_0
 		}
 	}
@@ -955,13 +981,19 @@ focus_tree = {
 		icon = GFX_SAF_DF_Malan
 		search_filters = {IC_FILTER}
 		cost = 10.00
+		mutually_exclusive = {
+			focus = SAF_United_Party_Victory
+		}
 		prerequisite = {
 			focus = SAF_The_Elections_of_1953
 		}
 		x = 39
 		y = 9
 		available = {
-			always = no
+			has_country_flag = np_victory
+		}
+		completion_reward = {
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -1051,6 +1083,9 @@ focus_tree = {
 		available = {
 			always = no
 		}
+		completion_reward = {
+			custom_effect_tooltip = saf.tt.1
+		}
 
 	}
 	focus = {
@@ -1068,6 +1103,9 @@ focus_tree = {
 		y = 13
 		available = {
 			always = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = saf.tt.1
 		}
 
 	}
@@ -1145,13 +1183,19 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
 		cost = 10.00
+		mutually_exclusive = {
+			focus = SAF_United_Party_Victory_1958
+		}
 		prerequisite = {
 			focus = SAF_The_Elections_of_1958
 		}
 		x = 39
 		y = 19
 		available = {
-			always = no
+			has_country_flag = np_victory_58
+		}
+		completion_reward = {
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -1541,7 +1585,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SAF_Establish_the_South_African_Defense_Force
-		icon = GFX_goal_unknown
+		icon = GFX_saf_defence
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

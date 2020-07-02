@@ -1,7 +1,41 @@
-income_effect = {
+income_effect = {		#DO NOT TOUCH FILE WITHOUT APPROVAL; IDEALLY FROM SWF
+	
+	every_owned_state = {
+		state_population_category_check = yes
+	}
 	
 	set_variable = { grossdomesticproduct_influence_limit = grossdomesticproduct }
 	multiply_variable = { grossdomesticproduct_influence_limit = 2 }
+	
+	set_variable = { upgrade_estimate_preindustrial = 0 }
+	set_variable = { upgrade_estimate_industrial = 0 }
+	set_variable = { upgrade_estimate_developed = 0 }
+	set_variable = { upgrade_estimate_modern = 0 }
+	set_variable = { upgrade_estimate_automated = 0 }
+	set_variable = { num_of_preindustrial_states = 0 }
+	set_variable = { num_of_industrial_states = 0 }
+	set_variable = { num_of_developed_states = 0 }
+	set_variable = { num_of_modern_states = 0 }
+	set_variable = { num_of_automated_states = 0 }
+	
+	#DEBUG#
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = fiscal_policies_set
+			}
+		}
+		starting_policies = yes
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_country_flag = flag_default_social_set
+			}
+		}
+		default_social_policies = yes
+	}
+	#DEBUG#
 	
 	edict_expenditure = yes
 	corruption_idea_calc = yes
@@ -11,11 +45,12 @@ income_effect = {
 	edu_expenditure = yes
 	health_expenditure = yes
 	public_expenditure = yes
+	flag_building_macro = yes
 	tax_rate = yes
 	domestic_bond_calc = yes
-	flag_building_macro = yes
 	mercenary_calc = yes
-	
+	religious_drift = yes
+	social_indices = yes
 	
 	set_variable = { CorruptPolicyExcess = CorruptionLevel }
 	multiply_variable = { CorruptPolicyExcess = 0.2 }
@@ -31,8 +66,110 @@ income_effect = {
 		add_to_variable = { ROOT.steel_works_total = building_level@steel_factory }
 		add_to_variable = { ROOT.tungsten_factory_total = building_level@tungsten_factory }
 		
-		add_to_variable = { ROOT.office_park_total = building_level@office_park }	#+2
+		add_to_variable = { ROOT.fossil_fuel_powerplant_total = building_level@fossil_fuel_powerplant }
+		add_to_variable = { ROOT.renewable_powerplant_total = building_level@renewable_powerplant }
+		add_to_variable = { ROOT.nuclear_powerplant_total = building_level@nuclear_powerplant }
 		
+		add_to_variable = { ROOT.tourism_infrastructure_total = tourism_infrastructure }
+		
+		add_to_variable = { ROOT.office_park_total = building_level@office_park }	#+2
+		if = { #Add to upgrade progress
+			limit = { 
+				AND = {
+					check_variable = { upgrade_progress > 0 }
+					OR = {
+						has_state_category = pop1
+						has_state_category = pop2
+						has_state_category = pop1dev1
+						has_state_category = pop2dev1
+						has_state_category = pop1dev2
+						has_state_category = pop2dev2
+						has_state_category = pop1dev3
+						has_state_category = pop2dev3
+						has_state_category = pop1dev4
+						has_state_category = pop2dev4
+					}
+				}
+			}
+			add_to_variable = { upgrade_progress = global.upgrade_per_month_fast }
+		}
+		else_if = {
+			limit = { 
+				AND = {
+					check_variable = { upgrade_progress > 0 }
+					OR = {
+						has_state_category = pop3
+						has_state_category = pop4
+						has_state_category = pop5
+						has_state_category = pop3dev1
+						has_state_category = pop4dev1
+						has_state_category = pop5dev1
+						has_state_category = pop7dev1
+						has_state_category = pop3dev2
+						has_state_category = pop4dev2
+						has_state_category = pop5dev2
+						has_state_category = pop7dev2
+						has_state_category = pop3dev3
+						has_state_category = pop4dev3
+						has_state_category = pop5dev3
+						has_state_category = pop7dev3
+						has_state_category = pop3dev4
+						has_state_category = pop4dev4
+						has_state_category = pop5dev4
+						has_state_category = pop7dev4
+					}
+				}
+			}
+			add_to_variable = { upgrade_progress = global.upgrade_per_month_nominal }
+		}
+		else_if = {
+			limit = { 
+				AND = {
+					check_variable = { upgrade_progress > 0 }
+					OR = {
+						has_state_category = pop10
+						has_state_category = pop15
+						has_state_category = pop10dev1
+						has_state_category = pop15dev1
+						has_state_category = pop10dev2
+						has_state_category = pop15dev2
+						has_state_category = pop10dev3
+						has_state_category = pop15dev3
+						has_state_category = pop10dev4
+						has_state_category = pop15dev4
+					}
+				}
+			}
+			add_to_variable = { upgrade_progress = global.upgrade_per_month_slow }
+		}
+		else_if = {
+			limit = { 
+				AND = {
+					check_variable = { upgrade_progress > 0 }
+					OR = {
+						has_state_category = pop20
+						has_state_category = pop20dev1
+						has_state_category = pop20dev2
+						has_state_category = pop20dev3
+						has_state_category = pop20dev4
+					}
+				}
+			}
+			add_to_variable = { upgrade_progress = global.upgrade_per_month_marathon }
+		}
+		
+		if = { #Upgrade state if reached full progress
+			limit = { check_variable = { upgrade_progress > 99 } }
+			Upgrade_State_effect = yes
+		}
+		
+		#Measure cost of state upgrades for tooltip
+		if = {
+			limit = {
+				ROOT = { is_ai = no } #AI has no use for this data and would only waste processing power. Less AI means less AI lag so it balances as players control more of the world, effectively not creating lag at all.
+			}
+			full_upgrade_estimate = yes
+		}
 	}
 	
 	#industrial_complex Modifiers
@@ -88,6 +225,18 @@ income_effect = {
 	if = {
 		limit = {
 			has_tech = 	agriculture_VI
+		}
+		add_to_variable = { farm_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	agriculture_VII
+		}
+		add_to_variable = { farm_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	agriculture_VIII
 		}
 		add_to_variable = { farm_tech = 0.15 }
 	}
@@ -197,6 +346,18 @@ income_effect = {
 		}
 		add_to_variable = { dockyard_tech = 0.05 }
 	}
+	if = {
+		limit = {
+			has_tech = 	logistics_XIII
+		}
+		add_to_variable = { dockyard_tech = 0.05 }
+	}
+	if = {
+		limit = {
+			has_tech = 	logistics_XIV
+		}
+		add_to_variable = { dockyard_tech = 0.05 }
+	}
 	add_to_variable = { dockyard_tech = trade_credit_factor_difference }
 	add_to_variable = { dockyard_tech = industry_credit_factor_difference }
 	
@@ -241,6 +402,18 @@ income_effect = {
 	if = {
 		limit = {
 			has_tech = 	plastics_V
+		}
+		add_to_variable = { oil_refinery_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	plastics_VI
+		}
+		add_to_variable = { oil_refinery_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	plastics_VII
 		}
 		add_to_variable = { oil_refinery_tech = 0.15 }
 	}
@@ -289,6 +462,18 @@ income_effect = {
 		}
 		add_to_variable = { steel_works_tech = 0.15 }
 	}
+	if = {
+		limit = {
+			has_tech = 	materials_VII
+		}
+		add_to_variable = { steel_works_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	materials_VII
+		}
+		add_to_variable = { steel_works_tech = 0.15 }
+	}
 	add_to_variable = { steel_works_tech = refinery_credit_factor_difference }
 	multiply_variable = { steel_works_tech = inc_productivity }
 	multiply_variable = { steel_works_total = steel_works_tech }
@@ -330,6 +515,12 @@ income_effect = {
 	if = {
 		limit = {
 			has_tech = 	chemistry_VI
+		}
+		add_to_variable = { tungsten_factory_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	chemistry_VII
 		}
 		add_to_variable = { tungsten_factory_tech = 0.15 }
 	}
@@ -378,6 +569,18 @@ income_effect = {
 		}
 		add_to_variable = { office_park_tech = 0.15 }
 	}
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_VII
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_VIII
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
 	add_to_variable = { office_park_tech = commerce_credit_factor_difference }
 	
 	multiply_variable = { office_park_tech = inc_productivity }
@@ -386,9 +589,23 @@ income_effect = {
 	add_to_variable = { IncomeTotal = office_park_total }
 	set_variable { OP_Display = office_park_total }
 	
+	#Tourism Infrastructure#
+	multiply_variable = { tourism_infrastructure_total = 1 }
+	multiply_variable = { tourism_infrastructure_total = global.GlobalCredit } #DIVIDER
+	set_variable = { tourism_infrastructure_tech = 1 } #No techs for tourism so always 1
+	
+	add_to_variable = { tourism_infrastructure_tech = commerce_credit_factor_difference } #Tourism affected by commerce
+	
+	multiply_variable = { tourism_infrastructure_total = tourism_infrastructure_tech }
+	multiply_variable = { tourism_infrastructure_total = stability } #Stability affects tourism
+	add_to_variable = { IncomeTotal = tourism_infrastructure_total }
+	set_variable { TI_Display = tourism_infrastructure_total }
+	
+	#Overall Multipliers#
 	set_variable = { industrial_complex_per = 0.9 }
 	set_variable = { farm_per = 0.9 }
 	set_variable = { dockyard_per = 0.9 }
+	set_variable = { tourism_infrastructure_per = 0.9 } #Each tourist infrastructure unit is equal to 1/3 of a office park but each tourist infrastructure flag building may be worth more than 1 tourist infrastructure
 	set_variable = { oil_refinery_per = 1.8 }
 	set_variable = { steel_works_per = 1.8 }
 	set_variable = { tungsten_factory_per = 1.8 }
@@ -761,13 +978,13 @@ income_effect = {
 		austerityCheck = grossdomesticproduct
 	}
 	multiply_variable = {
-		austerityCheck = 0.55
+		austerityCheck = 2
 	}
 	set_variable = {
 		defaultCheck = grossdomesticproduct
 	}
 	multiply_variable = {
-		defaultCheck = 1.25
+		defaultCheck = 6
 	}
 	
 	set_variable = { refinery_total = 0 }
@@ -777,6 +994,7 @@ income_effect = {
 	add_to_variable = { refinery_total = oil_refinery_total }
 
 
+	ai_economic_planning = yes
 	
 	set_variable = { IncomeTotal = 0 }
 	set_variable = { ROOT.industrial_complex_total = 0 }  
@@ -792,7 +1010,6 @@ military_expenditure = {
 	add_to_variable = { IncomeCheck = mil_expend }
 	set_variable = { battalion_tier_1 = num_battalions_with_type@direct_fire_gun }
 	add_to_variable = { battalion_tier_1 = num_battalions_with_type@militia }
-	add_to_variable = { battalion_tier_1 = num_battalions_with_type@signal_company }
 
 	multiply_variable = { battalion_tier_1 = 0.01 }
 
@@ -845,6 +1062,7 @@ military_expenditure = {
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@navy_special_force }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@airforce_special_force }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@logistics_helicopter }
+	add_to_variable = { battalion_tier_4 = num_battalions_with_type@signal_company }
 
 	multiply_variable = { battalion_tier_4 = 0.2 }
 
@@ -1054,6 +1272,157 @@ cpi_expenditure = {
 	add_to_variable = { cpi_cost = cpi_cost_cor_penalty }
 	add_to_variable = { cpi_cost_display = cpi_cost_cor_penalty }
 	subtract_from_variable = { IncomeCheck = cpi_cost }
+	
+	
+	#AGENCY-RELATED STUFF#
+	if = {
+		limit = {
+			has_intelligence_agency = yes
+		}
+		agency_calc_operative_slots = yes
+	}
+}
+agency_calc_operative_slots = {
+	count_agency_upgrades = yes
+	
+	set_variable = { operative_slot_bonus = num_agency_upgrades_real }
+	divide_variable = { operative_slot_bonus = global.upgrades_per_operative } #Number of agency upgrades divided by agency upgrades per operative gain
+	round_variable = operative_slot_bonus
+	if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 1 }
+		}
+		add_ideas = operative_slots_from_upgrade_1
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 2 }
+		}
+		add_ideas = operative_slots_from_upgrade_2
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 3 }
+		}
+		add_ideas = operative_slots_from_upgrade_3
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 4 }
+		}
+		add_ideas = operative_slots_from_upgrade_4
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 5 }
+		}
+		add_ideas = operative_slots_from_upgrade_5
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 6 }
+		}
+		add_ideas = operative_slots_from_upgrade_6
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+			operative_slots_from_upgrade_5
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 7 }
+		}
+		add_ideas = operative_slots_from_upgrade_7
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+			operative_slots_from_upgrade_5
+			operative_slots_from_upgrade_6
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 8 }
+		}
+		add_ideas = operative_slots_from_upgrade_8
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+			operative_slots_from_upgrade_5
+			operative_slots_from_upgrade_6
+			operative_slots_from_upgrade_7
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = { operative_slot_bonus = 9 }
+		}
+		add_ideas = operative_slots_from_upgrade_9
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+			operative_slots_from_upgrade_5
+			operative_slots_from_upgrade_6
+			operative_slots_from_upgrade_7
+			operative_slots_from_upgrade_8
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				check_variable = { operative_slot_bonus = 10 }
+				check_variable = { operative_slot_bonus > 10 }
+			}
+		}
+		add_ideas = operative_slots_from_upgrade_10
+		
+		remove_ideas = { #Remove needs to be below to not delete existing operatives
+			operative_slots_from_upgrade_1
+			operative_slots_from_upgrade_2
+			operative_slots_from_upgrade_3
+			operative_slots_from_upgrade_4
+			operative_slots_from_upgrade_5
+			operative_slots_from_upgrade_6
+			operative_slots_from_upgrade_7
+			operative_slots_from_upgrade_8
+			operative_slots_from_upgrade_9
+		}
+	}
 }
 edu_expenditure = {
 	add_to_variable = { IncomeCheck = edu_cost }
@@ -1282,6 +1651,18 @@ gdp_calculation = {
 		}
 		add_to_variable = { farm_tech = 0.15 }
 	}
+	if = {
+		limit = {
+			has_tech = 	agriculture_VII
+		}
+		add_to_variable = { farm_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	agriculture_VIII
+		}
+		add_to_variable = { farm_tech = 0.15 }
+	}
 	add_to_variable = { dockyard_tech = agriculture_credit_factor_difference }
 	
 	multiply_variable = { farm_tech = inc_productivity }
@@ -1386,6 +1767,18 @@ gdp_calculation = {
 		}
 		add_to_variable = { dockyard_tech = 0.05 }
 	}
+	if = {
+		limit = {
+			has_tech = 	logistics_XIII
+		}
+		add_to_variable = { dockyard_tech = 0.05 }
+	}
+	if = {
+		limit = {
+			has_tech = 	logistics_XIV
+		}
+		add_to_variable = { dockyard_tech = 0.05 }
+	}
 	add_to_variable = { dockyard_tech = trade_credit_factor_difference }
 	add_to_variable = { dockyard_tech = industry_credit_factor_difference }
 	
@@ -1429,6 +1822,18 @@ gdp_calculation = {
 	if = {
 		limit = {
 			has_tech = 	plastics_V
+		}
+		add_to_variable = { oil_refinery_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	plastics_VI
+		}
+		add_to_variable = { oil_refinery_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	plastics_VII
 		}
 		add_to_variable = { oil_refinery_tech = 0.15 }
 	}
@@ -1477,6 +1882,18 @@ gdp_calculation = {
 		}
 		add_to_variable = { steel_works_tech = 0.15 }
 	}
+	if = {
+		limit = {
+			has_tech = 	materials_VII
+		}
+		add_to_variable = { steel_works_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	materials_VIII
+		}
+		add_to_variable = { steel_works_tech = 0.15 }
+	}
 	add_to_variable = { steel_works_tech = refinery_credit_factor_difference }
 	multiply_variable = { steel_works_tech = inc_productivity }
 	multiply_variable = { steel_works_totalGDP = steel_works_tech }
@@ -1518,6 +1935,12 @@ gdp_calculation = {
 	if = {
 		limit = {
 			has_tech = 	chemistry_VI
+		}
+		add_to_variable = { tungsten_factory_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	chemistry_VII
 		}
 		add_to_variable = { tungsten_factory_tech = 0.15 }
 	}
@@ -1565,6 +1988,18 @@ gdp_calculation = {
 		}
 		add_to_variable = { office_park_tech = 0.15 }
 	}
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_VII
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_VIII
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
 	add_to_variable = { office_park_tech = commerce_credit_factor_difference }
 	
 	multiply_variable = { office_park_tech = inc_productivity }
@@ -1576,7 +2011,7 @@ gdp_calculation = {
 	
 	set_variable = { grossdomesticproduct = IncometotalGDP }
 	set_variable = { grossdomesticproduct_fake = grossdomesticproduct }
-	divide_variable = { grossdomesticproduct_fake = 25 } #Fake display multiplier
+	divide_variable = { grossdomesticproduct_fake = 250 } #Fake display multiplier
 	
 	set_variable = { IncometotalGDP = 0 }
 	set_variable = { ROOT.industrial_complex_totalGDP = 0 }  
@@ -1841,6 +2276,18 @@ domestic_bond_calc = {
 		}
 		add_to_variable = { office_park_tech = 0.15 }
 	}
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_VII
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_VIII
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
 	multiply_variable = { outcrowding_limit = office_park_tech }
 	
 	
@@ -1880,30 +2327,864 @@ flag_building_macro = {
 ##### CATEGORIES #####
 	if = {
 		limit = {
-			check_variable = { industrialization_budget > 25 }
+			check_variable = { industrialization_budget > 24 }
 		}
 		FBU_category_0 = yes
 	}
 	if = {
 		limit = {
-			check_variable = { development_budget > 25 }
+			check_variable = { development_budget > 24 }
 		}
 		FBU_category_1 = yes
 	}
 	if = {
 		limit = {
-			check_variable = { modernization_budget > 25 }
+			check_variable = { modernization_budget > 24 }
 		}
 		FBU_category_2 = yes
 	}
 	if = {
 		limit = {
-			check_variable = { automation_budget > 25 }
+			check_variable = { automation_budget > 24 }
 		}
 		FBU_category_3 = yes
 	}
 ##### TELECOMS #####
 }
+
+
+ai_economic_planning = {	#Caulcates building targets for the AI Strategies in default.txt
+	
+	#Clear old values
+	clr_country_flag = ai_country_is_well_off
+	
+	multiply_variable = { ai_office_park_target = -1 }
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = office_park
+				value = [OFFICE_PARK_UWU]
+			}
+		}
+		OFFICE_PARK_UWU = "[?ai_office_park_target]"
+	}
+	multiply_variable = { ai_fossil_fuel_powerplant_target_reduced = -1 }
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = fossil_fuel_powerplant
+				value = [FOSSIL_FUEL_REDUCED_UWU]
+			}
+		}
+		FOSSIL_FUEL_REDUCED_UWU = "[ai_fossil_fuel_powerplant_target]"
+	}
+	multiply_variable = { ai_renewable_powerplant_target = -1 }
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = renewable_powerplant
+				value = [RENEWABLE_UWU]
+			}
+		}
+		RENEWABLE_UWU = "[ai_renewable_powerplant_target]"
+	}
+	multiply_variable = { ai_nuclear_powerplant_target = -1 }
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = nuclear_powerplant
+				value = [NUCLEAR_UWU]
+			}
+		}
+		NUCLEAR_UWU = "[ai_nuclear_powerplant_target]"
+	}
+	multiply_variable = { ai_agri_industrial_complex_target = -1 }
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = agri_industrial_complex
+				value = [OMNOM_UWU]
+			}
+		}
+		OMNOM_UWU = "[ai_agri_industrial_complex_target]"
+	}
+	#ALL TARGETS ARE NOW RESET
+	
+	if = { limit = { is_ai = yes } emergency_policy_replanning = yes } #AI Reduces Policies if Overbudget
+	
+	#ai_fossil_fuel_powerplant_target is total economic buildings x the ai_power_Ratio global define
+	set_variable = { ai_fossil_fuel_powerplant_target = ROOT.industrial_complex_total }
+	multiply_variable = { ai_fossil_fuel_powerplant_target = 1.2 }
+	add_to_variable = { ai_fossil_fuel_powerplant_target = ROOT.dockyard_total }
+	add_to_variable = { ai_fossil_fuel_powerplant_target = ROOT.office_park_total }
+	multiply_variable = { ai_fossil_fuel_powerplant_target = global.ai_power_ratio }
+	
+	#Calculations for the large economy power plant building targets
+	set_variable = { ai_fossil_fuel_powerplant_target_reduced = ai_fossil_fuel_powerplant_target }
+	set_variable = { alpha = 1 }
+	subtract_from_variable = { alpha = global.ai_renewable_ratio }
+	subtract_from_variable = { alpha = global.ai_nuclear_ratio }
+	multiply_variable = { ai_fossil_fuel_powerplant_target_reduced = alpha }
+	set_variable = { ai_renewable_powerplant_target = ai_fossil_fuel_powerplant_target }
+	set_variable = { ai_nuclear_powerplant_target = ai_fossil_fuel_powerplant_target }
+	multiply_variable = { ai_renewable_powerplant_target = global.ai_renewable_ratio }
+	multiply_variable = { ai_nuclear_powerplant_target = global.ai_nuclear_ratio }
+	
+	#office target = factories x global define ratio
+	set_variable = { ai_office_park_target = ROOT.industrial_complex_total }
+	multiply_variable = { ai_office_park_target = global.ai_office_ratio }
+	
+	#AI will spend the ai_agri_investment on factories on agri-industry until they reach a positive food balance
+	set_variable = { ai_agri_industrial_complex_target = ROOT.farm_total }
+	set_variable = { beta = ROOT.num_of_civilian_factories_available_for_projects }
+	add_to_variable = { beta = 1 }
+	divide_variable = { beta = 7 } #one half max factories per construction project rounded down
+	multiply_variable = { beta = global.ai_agri_investment }
+	multiply_variable = { ai_agri_industrial_complex_target = beta }
+	
+	round_variable = ai_fossil_fuel_powerplant_target
+	round_variable = ai_fossil_fuel_powerplant_target_reduced
+	round_variable = ai_renewable_powerplant_target
+	round_variable = ai_nuclear_powerplant_target
+	round_variable = ai_office_park_target
+	round_variable = ai_agri_industrial_complex_target
+	
+	#ONLY BUILD NUCLEAR/RENEWABLES IF PAST THE AI POINT#
+	if = {
+		limit = {
+			num_of_civilian_factories_available_for_projects > global.ai_renewable_point
+		}
+		set_variable = { ai_fossil_fuel_powerplant_target = ai_fossil_fuel_powerplant_target_reduced }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = num_of_civilian_factories_available_for_projects
+				value = global.ai_renewable_point
+				compare = less_than_or_equals
+			}
+		}
+		set_variable = { ai_nuclear_powerplant_target = 0 }
+		set_variable = { ai_renewable_powerplant_target = 0 }
+	}
+	
+	#DO NOT BUILD MORE FARMS THAN YOU NEED x 1.1#
+	set_variable = { food_compo = food_consumption }
+	multiply_variable = { food_compo = 1.1 }
+	if = {
+		limit = {
+			check_variable = { foodCheck > food_compo }
+		}
+		set_variable = { ai_agri_industrial_complex_target = ROOT.farm_total }
+		
+	}
+	
+	#APPLY NEW VALUES TO AI STRATEGIES
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = office_park
+				value = [OFFICE_PARK_UWU]
+			}
+		}
+		OFFICE_PARK_UWU = "[?ai_office_park_target]"
+	}
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = fossil_fuel_powerplant
+				value = [FOSSIL_FUEL_REDUCED_UWU]
+			}
+		}
+		FOSSIL_FUEL_REDUCED_UWU = "[ai_fossil_fuel_powerplant_target]"
+	}
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = renewable_powerplant
+				value = [RENEWABLE_UWU]
+			}
+		}
+		RENEWABLE_UWU = "[ai_renewable_powerplant_target]"
+	}
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = nuclear_powerplant
+				value = [NUCLEAR_UWU]
+			}
+		}
+		NUCLEAR_UWU = "[ai_nuclear_powerplant_target]"
+	}
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = agri_industrial_complex
+				value = [OMNOMN_UWU]
+			}
+		}
+		OMNOM_UWU = "[ai_agri_industrial_complex_target]"
+	}
+	
+	#CONTROLLED WATER INFRASTRUCTURE GROWTH
+	#At the ai_water_point variable's number of factories that can construct in the country, the AI will start to build water infrastructure
+	set_variable = { gamma = 1.5 } #Will build 2 per month at gamma x the ai_water_point
+	multiply_variable = { gamma = global.ai_water_point }
+	set_variable = { delta = 2.5 } #Will build 3 per month at delta x the ai_water_point
+	multiply_variable = { delta = global.ai_water_point }
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > global.ai_water_point 
+				is_ai = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				AND = {
+					agri_industrial_complex > 0
+					
+					free_building_slots = {
+						building = water_infrastructure
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = water_infrastructure
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > gamma
+				is_ai = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				AND = {
+					agri_industrial_complex > 0
+					
+					free_building_slots = {
+						building = water_infrastructure
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = water_infrastructure
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > delta
+				is_ai = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				AND = {
+					agri_industrial_complex > 0
+					
+					free_building_slots = {
+						building = water_infrastructure
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = water_infrastructure
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	
+	
+	#Creates flags for ai strategies
+	
+	set_temp_variable = { office_parks_x50p = ROOT.office_park_total }
+	multiply_temp_variable = { office_parks_x50p = 1.5 } #1.5x office parks.
+	if = {
+		limit = {
+			check_variable = { office_parks_x50p > num_owned_controlled_states } #AI has 2/3 the office parks as it does owned and controlled states
+		}
+		set_country_flag = ai_country_is_well_off #AI believes it is well off and has a strong income foundation to spend on ambitious projects
+	}
+	##### MAKE AN EXTRA SCRIPT FOR THE AI TO DETERMINE IF ITS DEBT IS BAD #####
+}
+
+full_upgrade_estimate = {
+	if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop1
+		}
+		add_to_variable = { ROOT.upgrade_estimate_preindustrial = global.UPC_pop1 }
+		add_to_variable = { ROOT.num_of_preindustrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop2
+		}
+		add_to_variable = { ROOT.upgrade_estimate_preindustrial = global.UPC_pop2 }
+		add_to_variable = { ROOT.num_of_preindustrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop3
+		}
+		add_to_variable = { ROOT.upgrade_estimate_preindustrial = global.UPC_pop3 }
+		add_to_variable = { ROOT.num_of_preindustrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop4
+		}
+		add_to_variable = { ROOT.upgrade_estimate_preindustrial = global.UPC_pop4 }
+		add_to_variable = { ROOT.num_of_preindustrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop5
+		}
+		add_to_variable = { ROOT.upgrade_estimate_preindustrial = global.UPC_pop5 }
+		add_to_variable = { ROOT.num_of_preindustrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop7
+		}
+		add_to_variable = { ROOT.upgrade_estimate_preindustrial = global.UPC_pop7 }
+		add_to_variable = { ROOT.num_of_preindustrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop10
+		}
+		add_to_variable = { ROOT.upgrade_estimate_preindustrial = global.UPC_pop10 }
+		add_to_variable = { ROOT.num_of_preindustrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop15
+		}
+		add_to_variable = { ROOT.upgrade_estimate_preindustrial = global.UPC_pop15 }
+		add_to_variable = { ROOT.num_of_preindustrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop20
+		}
+		add_to_variable = { ROOT.upgrade_estimate_preindustrial = global.UPC_pop20 }
+		add_to_variable = { ROOT.num_of_preindustrial_states = 1 }
+	}
+	
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop1dev1
+		}
+		add_to_variable = { ROOT.upgrade_estimate_industrial = global.UPC_pop1dev1 }
+		add_to_variable = { ROOT.num_of_industrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop2dev1
+		}
+		add_to_variable = { ROOT.upgrade_estimate_industrial = global.UPC_pop2dev1 }
+		add_to_variable = { ROOT.num_of_industrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop3dev1
+		}
+		add_to_variable = { ROOT.upgrade_estimate_industrial = global.UPC_pop3dev1 }
+		add_to_variable = { ROOT.num_of_industrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop4dev1
+		}
+		add_to_variable = { ROOT.upgrade_estimate_industrial = global.UPC_pop4dev1 }
+		add_to_variable = { ROOT.num_of_industrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop5dev1
+		}
+		add_to_variable = { ROOT.upgrade_estimate_industrial = global.UPC_pop5dev1 }
+		add_to_variable = { ROOT.num_of_industrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop7dev1
+		}
+		add_to_variable = { ROOT.upgrade_estimate_industrial = global.UPC_pop7dev1 }
+		add_to_variable = { ROOT.num_of_industrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop10dev1
+		}
+		add_to_variable = { ROOT.upgrade_estimate_industrial = global.UPC_pop10dev1 }
+		add_to_variable = { ROOT.num_of_industrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop15dev1
+		}
+		add_to_variable = { ROOT.upgrade_estimate_industrial = global.UPC_pop15dev1 }
+		add_to_variable = { ROOT.num_of_industrial_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop20dev1
+		}
+		add_to_variable = { ROOT.upgrade_estimate_industrial = global.UPC_pop20dev1 }
+		add_to_variable = { ROOT.num_of_industrial_states = 1 }
+	}
+	
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop1dev2
+		}
+		add_to_variable = { ROOT.upgrade_estimate_developed = global.UPC_pop1dev2 }
+		add_to_variable = { ROOT.num_of_developed_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop2dev2
+		}
+		add_to_variable = { ROOT.upgrade_estimate_developed = global.UPC_pop2dev2 }
+		add_to_variable = { ROOT.num_of_developed_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop3dev2
+		}
+		add_to_variable = { ROOT.upgrade_estimate_developed = global.UPC_pop3dev2 }
+		add_to_variable = { ROOT.num_of_developed_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop4dev2
+		}
+		add_to_variable = { ROOT.upgrade_estimate_developed = global.UPC_pop4dev2 }
+		add_to_variable = { ROOT.num_of_developed_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop5dev2
+		}
+		add_to_variable = { ROOT.upgrade_estimate_developed = global.UPC_pop5dev2 }
+		add_to_variable = { ROOT.num_of_developed_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop7dev2
+		}
+		add_to_variable = { ROOT.upgrade_estimate_developed = global.UPC_pop7dev2 }
+		add_to_variable = { ROOT.num_of_developed_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop10dev2
+		}
+		add_to_variable = { ROOT.upgrade_estimate_developed = global.UPC_pop10dev2 }
+		add_to_variable = { ROOT.num_of_developed_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop15dev2
+		}
+		add_to_variable = { ROOT.upgrade_estimate_developed = global.UPC_pop15dev2 }
+		add_to_variable = { ROOT.num_of_developed_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop20dev2
+		}
+		add_to_variable = { ROOT.upgrade_estimate_developed = global.UPC_pop20dev2 }
+		add_to_variable = { ROOT.num_of_developed_states = 1 }
+	}
+	
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop1dev3
+		}
+		add_to_variable = { ROOT.upgrade_estimate_modern = global.UPC_pop1dev3 }
+		add_to_variable = { ROOT.num_of_modern_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop2dev3
+		}
+		add_to_variable = { ROOT.upgrade_estimate_modern = global.UPC_pop2dev3 }
+		add_to_variable = { ROOT.num_of_modern_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop3dev3
+		}
+		add_to_variable = { ROOT.upgrade_estimate_modern = global.UPC_pop3dev3 }
+		add_to_variable = { ROOT.num_of_modern_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop4dev3
+		}
+		add_to_variable = { ROOT.upgrade_estimate_modern = global.UPC_pop4dev3 }
+		add_to_variable = { ROOT.num_of_modern_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop5dev3
+		}
+		add_to_variable = { ROOT.upgrade_estimate_modern = global.UPC_pop5dev3 }
+		add_to_variable = { ROOT.num_of_modern_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop7dev3
+		}
+		add_to_variable = { ROOT.upgrade_estimate_modern = global.UPC_pop7dev3 }
+		add_to_variable = { ROOT.num_of_modern_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop10dev3
+		}
+		add_to_variable = { ROOT.upgrade_estimate_modern = global.UPC_pop10dev3 }
+		add_to_variable = { ROOT.num_of_modern_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop15dev3
+		}
+		add_to_variable = { ROOT.upgrade_estimate_modern = global.UPC_pop15dev3 }
+		add_to_variable = { ROOT.num_of_modern_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop20dev3
+		}
+		add_to_variable = { ROOT.upgrade_estimate_modern = global.UPC_pop20dev3 }
+		add_to_variable = { ROOT.num_of_modern_states = 1 }
+	}
+	
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop1dev4
+		}
+		add_to_variable = { ROOT.upgrade_estimate_automated = global.UPC_pop1dev4 }
+		add_to_variable = { ROOT.num_of_automated_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop2dev4
+		}
+		add_to_variable = { ROOT.upgrade_estimate_automated = global.UPC_pop2dev4 }
+		add_to_variable = { ROOT.num_of_automated_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop3dev4
+		}
+		add_to_variable = { ROOT.upgrade_estimate_automated = global.UPC_pop3dev4 }
+		add_to_variable = { ROOT.num_of_automated_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop4dev4
+		}
+		add_to_variable = { ROOT.upgrade_estimate_automated = global.UPC_pop4dev4 }
+		add_to_variable = { ROOT.num_of_automated_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop5dev4
+		}
+		add_to_variable = { ROOT.upgrade_estimate_automated = global.UPC_pop5dev4 }
+		add_to_variable = { ROOT.num_of_automated_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop7dev4
+		}
+		add_to_variable = { ROOT.upgrade_estimate_automated = global.UPC_pop7dev4 }
+		add_to_variable = { ROOT.num_of_automated_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop10dev4
+		}
+		add_to_variable = { ROOT.upgrade_estimate_automated = global.UPC_pop10dev4 }
+		add_to_variable = { ROOT.num_of_automated_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop15dev4
+		}
+		add_to_variable = { ROOT.upgrade_estimate_automated = global.UPC_pop15dev4 }
+		add_to_variable = { ROOT.num_of_automated_states = 1 }
+	}
+	else_if = {
+		limit = {
+			NOT = { check_variable = { upgrade_progress > 0 } }
+			has_state_category = pop20dev4
+		}
+		add_to_variable = { ROOT.upgrade_estimate_automated = global.UPC_pop20dev4 }
+		add_to_variable = { ROOT.num_of_automated_states = 1 }
+	}
+}
+full_upgrade_estimate_regen = { #country scope
+
+	set_variable = { upgrade_estimate_preindustrial = 0 }
+	set_variable = { upgrade_estimate_industrial = 0 }
+	set_variable = { upgrade_estimate_developed = 0 }
+	set_variable = { upgrade_estimate_modern = 0 }
+	set_variable = { upgrade_estimate_automated = 0 }
+	set_variable = { num_of_preindustrial_states = 0 }
+	set_variable = { num_of_industrial_states = 0 }
+	set_variable = { num_of_developed_states = 0 }
+	set_variable = { num_of_modern_states = 0 }
+	set_variable = { num_of_automated_states = 0 }
+	every_owned_state = {
+		full_upgrade_estimate = yes
+	}
+	tax_rate = yes
+}
+social_indices = {
+	
+	#racial-related issues ebbed by equal rights and affirmative action#
+	if = { #Equal rights makes people work it out
+		limit = {
+			AND = {
+				has_idea = policy_minorities_temp_3
+				check_variable = { segregationValue < 0 }
+			}
+		}
+		add_to_variable = { segregationValue = 0.0002 }
+	}
+	else_if = { #Affirmative action tackles it
+		limit = {
+			AND = {
+				has_idea = policy_minorities_temp_3a
+				check_variable = { segregationValue < 0 }
+			}
+		}
+		add_to_variable = { segregationValue = 0.0005 }
+	}
+	else_if = { #Systemic opposition makes it worse
+		limit = {
+			AND = {
+				has_idea = policy_minorities_temp_1
+				check_variable = { segregationValue > -0.05 }
+			}
+		}
+		add_to_variable = { segregationValue = -0.0005 }
+	}
+	else_if = { #Systemic oppression makes it worse
+		limit = {
+			AND = {
+				has_idea = policy_minorities_temp_0
+				check_variable = { segregationValue > -0.10 }
+			}
+		}
+		add_to_variable = { segregationValue = -0.001 }
+	}
+	
+	if = { #Normalize Values to acceptable levels/cap penalties
+		limit = {
+			check_variable = { segregationValue < -0.11 }
+		}
+		add_to_variable = { segregationValue = 0.01 }
+	}
+	
+	if = {
+		limit = {
+			AND = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = segregation_dynamic_modifier
+					}
+				}
+				check_variable = { segregationValue < -0.05 }
+				NOT = { has_country_flag = segregation_dynamic_set }
+			}
+		}
+		country_event = generic.31
+		set_country_flag = segregation_dynamic_set
+		add_dynamic_modifier = { modifier = segregation_dynamic_modifier }
+	}
+	else_if = {
+		limit = {
+			AND = {
+				has_dynamic_modifier = {
+					modifier = segregation_dynamic_modifier
+				}
+				check_variable = { segregationValue > -0.001 }
+			}
+		}
+		country_event = generic.32
+		clr_country_flag = segregation_dynamic_set
+		remove_dynamic_modifier = { modifier = segregation_dynamic_modifier }
+	}
+}
+
+
+state_population_category_check = { #Directory for optimization
+	if = {
+		limit = {
+			OR = {
+				has_state_category = pop1
+				has_state_category = pop2
+				has_state_category = pop3
+				has_state_category = pop4
+				has_state_category = pop5
+				has_state_category = pop7
+				has_state_category = pop10
+				has_state_category = pop15
+				has_state_category = pop20
+			}
+		}
+		state_population_category_dev0 = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_state_category = pop1dev1
+				has_state_category = pop2dev1
+				has_state_category = pop3dev1
+				has_state_category = pop4dev1
+				has_state_category = pop5dev1
+				has_state_category = pop7dev1
+				has_state_category = pop10dev1
+				has_state_category = pop15dev1
+				has_state_category = pop20dev1
+			}
+		}
+		state_population_category_dev1 = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_state_category = pop1dev2
+				has_state_category = pop2dev2
+				has_state_category = pop3dev2
+				has_state_category = pop4dev2
+				has_state_category = pop5dev2
+				has_state_category = pop7dev2
+				has_state_category = pop10dev2
+				has_state_category = pop15dev2
+				has_state_category = pop20dev2
+			}
+		}
+		state_population_category_dev2 = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_state_category = pop1dev3
+				has_state_category = pop2dev3
+				has_state_category = pop3dev3
+				has_state_category = pop4dev3
+				has_state_category = pop5dev3
+				has_state_category = pop7dev3
+				has_state_category = pop10dev3
+				has_state_category = pop15dev3
+				has_state_category = pop20dev3
+			}
+		}
+		state_population_category_dev3 = yes
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_state_category = pop1dev4
+				has_state_category = pop2dev4
+				has_state_category = pop3dev4
+				has_state_category = pop4dev4
+				has_state_category = pop5dev4
+				has_state_category = pop7dev4
+				has_state_category = pop10dev4
+				has_state_category = pop15dev4
+				has_state_category = pop20dev4
+			}
+		}
+		state_population_category_dev4 = yes
+	}
+}
+
+
+
+
+
+
 
 
 

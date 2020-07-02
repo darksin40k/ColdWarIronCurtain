@@ -69,7 +69,10 @@ focus_tree = {
 		x = 36
 		y = 0
 		completion_reward = {
-			add_ideas = total_loyalty
+			add_timed_idea = {
+				idea = total_loyalty
+				days = 700
+			}
 		}
 	}
 	focus = {
@@ -89,14 +92,14 @@ focus_tree = {
 		id = STALIN_Catch_Up_with_Western_Atomic_Research
 		icon = GFX_nuclear_detonation
 		search_filters = {IC_FILTER}
-		cost = 5.00
+		cost = 15.00
 		prerequisite = {
 			focus = STALIN_Heavy_Industry_Development
 		}
 		x = 1
 		y = 1
 			completion_reward = {
-				add_tech = atomic_weapons_armament_0 
+				news_event = Soviet_Nuke_Test.1 
 			}
 	}
 	focus = {
@@ -123,7 +126,7 @@ focus_tree = {
 		id = STALIN_Prioritize_Electronic_Developments
 		icon = GFX_Improved_Electronics
 		search_filters = {IC_FILTER}
-		cost = 40.00
+		cost = 20.00
 		prerequisite = {
 			focus = STALIN_Utilize_German_Rocketry_Knowledge
 		}
@@ -147,7 +150,7 @@ focus_tree = {
 		id = STALIN_Aid_Ukranian_Reconstruction
 		icon = GFX_aid_ukranian_reconstruction
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 15.00
 		prerequisite = {
 			focus = STALIN_Heavy_Industry_Development
 		}
@@ -157,6 +160,7 @@ focus_tree = {
 			every_owned_state = {
 				limit = {
 					is_core_of = UKR
+					state_population > 1500000
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -175,7 +179,7 @@ focus_tree = {
 		id = STALIN_Rebuild_Ukranian_Agriculture
 		icon = GFX_Aid_Ukraine 
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 15.00
 		prerequisite = {
 			focus = STALIN_Aid_Ukranian_Reconstruction
 		}
@@ -185,6 +189,7 @@ focus_tree = {
 			every_owned_state = {
 				limit = {
 					is_core_of = UKR
+					state_population > 1500000
 				}
 				add_building_construction = {
 					type = agri_industrial_complex
@@ -244,7 +249,7 @@ focus_tree = {
 		id = STALIN_Invest_in_the_Baltics
 		icon = GFX_baltic_ssr_investments
 		search_filters = {IC_FILTER}
-		cost = 5.00
+		cost = 15.00
 		prerequisite = {
 			focus = STALIN_Heavy_Industry_Development
 		}
@@ -258,6 +263,7 @@ focus_tree = {
 						is_core_of = LAT
 						is_core_of = LIT
 					}
+					state_population > 200000
 				}
 				add_building_construction = {
 					type = infrastructure
@@ -518,7 +524,7 @@ focus_tree = {
 		x = 18
 		y = 1
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.035
 			add_threat = -5
 		}
 	}
@@ -725,6 +731,12 @@ focus_tree = {
 			transfer_state = 353
 			transfer_state = 354
 			transfer_state = 793
+			793 = {
+				add_core_of = SOV
+			}
+			354 = {
+				add_core_of = SOV
+			}
 			353 = {
 				add_core_of = SOV
 				add_core_of = ARM
@@ -750,13 +762,16 @@ focus_tree = {
 				transfer_state = 341
 				transfer_state = 339
 				937 = {
-					add_core_of = KUR
+					add_core_of = PDG
+					add_core_of = GRE
 				}
 				341 = {
-					add_core_of = KUR
+					add_core_of = PDG
+					add_core_of = GRE
 				}
 				339 = {
-					add_core_of = KUR
+					add_core_of = PDG
+					add_core_of = GRE
 				}
 			}
 		}
@@ -1207,7 +1222,10 @@ focus_tree = {
 		x = 32
 		y = 9
 		completion_reward = {
-			add_ideas = The_64th_Fighter_Aviation_Corps
+			add_timed_idea = {
+				days = 900
+				idea = The_64th_Fighter_Aviation_Corps
+			}
 			KPA = {
 				527 = {
 					add_building_construction = {
@@ -1271,7 +1289,7 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 			custom_effect_tooltip = cpsu_strength_decrease_TT
 			custom_effect_tooltip = gulag_factor_increase_TT
 		}
@@ -1287,7 +1305,10 @@ focus_tree = {
 		x = 35
 		y = 2
 		completion_reward = {
-			add_ideas = socialist_realism
+			add_timed_idea = {
+			idea = socialist_realism
+			days = 900
+			}
 		}	
 	}
 	focus = {
@@ -1303,7 +1324,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			country_event = Stalin_Purge.1
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 	}
@@ -1321,9 +1342,12 @@ focus_tree = {
 		x = 36
 		y = 3
 		completion_reward = {
-			add_ideas = repression
+			add_timed_idea = {
+				idea = repression
+				days = 750
+			}
 			custom_effect_tooltip = cpsu_strength_decrease_TT
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 		}
 	}
 	focus = {
@@ -1337,9 +1361,9 @@ focus_tree = {
 		x = 33
 		y = 4
 		completion_reward = {
-			add_stability = 0.02
+			add_stability = 0.01
 			country_event = Stalin_Jew.1
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 	}
@@ -1354,8 +1378,11 @@ focus_tree = {
 		x = 36
 		y = 4
 		completion_reward = {
-			add_ideas = leftwing_deathsquads
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_timed_idea = {
+				days = 500
+				idea = leftwing_deathsquads
+			}
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 
@@ -1413,7 +1440,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 			country_event = Stalin_Purge.2
-			add_to_variable = { cpsu_strength = -0.05 }
+			add_to_variable = { cpsu_strength_factor = -0.05 }
 			custom_effect_tooltip = cpsu_strength_decrease_TT
 		}
 	}
@@ -1502,7 +1529,7 @@ focus_tree = {
 		id = STALIN_Invest_in_Supersonic_Fighters
 		icon = GFX_Invest_in_Supersonic
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Develop_the_Tu_16
 		}
@@ -1592,7 +1619,7 @@ focus_tree = {
 		id = STALIN_Increase_Soviet_Air_Defense_Forces
 		icon = GFX_Anti_Aircraft
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Expand_the_VDV
 		}
@@ -1740,21 +1767,24 @@ focus_tree = {
 		id = STALIN_Ramp_Up_Submarine_Production
 		icon = GFX_Increase_Sub_Production
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = STALIN_Study_German_Submarine_Designs
 		}
 		x = 56
 		y = 4
 		completion_reward = {
-			add_ideas = Submarine_Expansion
+			add_timed_idea = {
+				idea = Submarine_Expansion
+					days = 900
+			}
 		}
 	}
 	focus = {
 		id = STALIN_Chase_the_Industrial_Power_Dream
 		icon = GFX_Soviet_Industrial_Aid
 		search_filters = {IC_FILTER}
-		cost = 40.00
+		cost = 20.00
 		prerequisite = {
 			focus = STALIN_Connect_the_Union
 		}
@@ -1824,6 +1854,12 @@ focus_tree = {
 				target = KOR
 				type = annex_everything
 			}		
+			KPA = {
+				declare_war_on = {
+					target = KOR
+					type = annex_everything
+				}			
+			}
 			add_war_support = 0.05
 		}	
 	}
@@ -1835,6 +1871,11 @@ focus_tree = {
 		prerequisite = {
 			focus = STALIN_Increase_Korean_Production_Capabilities
 			focus = STALIN_Direct_Intervention
+		}
+		available = {
+			KPA = {
+				has_war = no
+			}
 		}
 		mutually_exclusive = {
 			focus = STALIN_Ensure_the_Survival_of_the_Kim_Regime

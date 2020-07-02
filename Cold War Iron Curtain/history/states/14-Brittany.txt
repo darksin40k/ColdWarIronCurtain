@@ -24,8 +24,7 @@ state = {
 
 			industrial_complex = 1
 			dockyard = 1
-			arms_factory = 1
-			agri_industrial_complex = 5
+			agri_industrial_complex = 3
 			
 			fossil_fuel_powerplant = 2
 			
@@ -47,7 +46,7 @@ state = {
 	provinces = {
 		542 3552 3758 6536 6548 6572 9510 9525 11508 
 	}
-	manpower = 2396600
+	manpower = 1493200
 	buildings_max_level_factor = 1.000
-	state_category = pop2dev2
+	state_category = pop1dev2
 }

@@ -41,7 +41,13 @@ country_event = {
 	option = {
 		name = "Preserve the Current Coalition"
 		complete_national_focus = VIE_Coalition_United_Front_of_Nationalists_Victory
-
+	ai_chance = {
+		base = 40
+		modifier {
+			is_historical_focus_on = yes
+			factor = 50
+			}	
+		}
 	}
 	option = {
 		name = "Can Lao Victory"
@@ -222,7 +228,9 @@ country_event = {
 		news_event = Sect_Crisis.2
 		complete_national_focus = VIE_The_Sect_Crisis
 		complete_national_focus = VIE_Diem_Victory
-
+		ai_chance = {
+			base = 10
+		}
 	}
 	option = {
 		name = "Crush Diem's Forces"
@@ -230,6 +238,13 @@ country_event = {
 		complete_national_focus = VIE_The_Sect_Crisis
 		complete_national_focus = VIE_United_Front_Victory
 
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
 	}
 }
 country_event = {

@@ -168,7 +168,7 @@ country_event = {
 					elections_allowed = yes
 				}
 				create_country_leader = {
-					name = "Ahmed Sékou Touré"
+					name = "Ahmed Sï¿½kou Tourï¿½"
 					picture = "Ahmed_Sekou_Toure"
 					expire = "2005.1.1"
 					ideology = african_socialism
@@ -201,16 +201,14 @@ country_event = {
 		set_autonomy = { target = NGR autonomy_state = autonomy_free }
 		NGR = {
 				set_autonomy = { target = NGR autonomy_state = autonomy_free }
-				if = {
-					limit = {
-						has_war_with = VIN
-					}
-					white_peace = VIN
-				}
 				set_politics = {
 					ruling_party = nationalism
 					elections_allowed = yes
 				}
+				drop_cosmetic_tag = yes
+				transfer_state = 765
+				transfer_state = 766
+				transfer_state = 1029
 		}
 	}
 
@@ -241,15 +239,9 @@ country_event = {
 		CHA = {
 			drop_cosmetic_tag = yes
 			set_autonomy = { target = CHA autonomy_state = autonomy_free }
-				if = {
-					limit = {
-						has_war_with = VIN
-					}
-					white_peace = VIN
-				}
-				release = CAR
-				release = RCG
-				release = GAB
+			release = CAR
+			release = RCG
+			release = GAB
 		}
 	}
 
@@ -329,7 +321,7 @@ news_event = {
 
 news_event = {
 	id = fra.15
-	title = "[GetNewspaperHeader]Philippe Pétain Dies at age 95"
+	title = "[GetNewspaperHeader]Philippe Petain Dies at age 95"
 	desc = fra.15.d
 
 	picture = news_event_petain_ded

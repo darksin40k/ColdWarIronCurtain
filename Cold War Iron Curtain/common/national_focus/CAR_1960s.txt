@@ -791,7 +791,7 @@ focus_tree = {
 							name = light_air_bonus
 							bonus = 0.25
 							uses = 1
-							category = light_air
+							category = air_single_engine
 						}
 				}
 
@@ -812,7 +812,7 @@ focus_tree = {
 							name = light_air_bonus
 							bonus = 0.25
 							uses = 1
-							category = light_air
+							category = air_single_engine
 						}
 				}
 
@@ -1340,6 +1340,7 @@ focus_tree = {
 		x = 0
 		y = 12
 			completion_reward = {
+					custom_effect_tooltip = Resource_Efficiency_TT
 					add_ideas = Resource_Efficiency
 				}
 
@@ -1758,6 +1759,7 @@ focus_tree = {
 		x = 9
 		y = 19
 			completion_reward = {
+					custom_effect_tooltip = Resource_Efficiency_TT
 					add_ideas = Resource_Efficiency
 				}
 
@@ -2546,7 +2548,14 @@ focus_tree = {
 		x = 41
 		y = 6
 			completion_reward = {
-					add_ideas = press_censorship_5
+				hidden_effect = {
+					remove_ideas = policy_media_temp_0
+					remove_ideas = policy_media_temp_1
+					remove_ideas = policy_media_temp_2
+					remove_ideas = policy_media_temp_3
+					remove_ideas = policy_media_temp_3a
+				}
+				add_ideas = policy_media_temp_0
 					add_popularity = {
 							ideology = neutrality
 							popularity = 0.25

@@ -5,6 +5,7 @@ focus_tree = {
 
 	}
 	default = no
+	continuous_focus_position = { x = 100 y = 4500 }
 	focus = {
 		id = PER_The_Iranian_Economy
 		icon = GFX_Gold
@@ -613,12 +614,13 @@ focus_tree = {
 		x = 12
 		y = 7
 		completion_reward = {
-			remove_ideas = policy_education_temp_0
-			remove_ideas = policy_education_temp_1
-			remove_ideas = policy_education_temp_2
-			remove_ideas = policy_education_temp_3
-			remove_ideas = policy_education_temp_4
-			
+			hidden_effect = {
+				remove_ideas = policy_education_temp_0
+				remove_ideas = policy_education_temp_1
+				remove_ideas = policy_education_temp_2
+				remove_ideas = policy_education_temp_3
+				remove_ideas = policy_education_temp_4
+			}
 			add_ideas = policy_education_temp_3		
 		}
 	}
@@ -821,12 +823,13 @@ focus_tree = {
 		x = 30
 		y = 7
 		completion_reward = {
-			remove_ideas = policy_services_temp_0
-			remove_ideas = policy_services_temp_1
-			remove_ideas = policy_services_temp_2
-			remove_ideas = policy_services_temp_3
-			
-			add_ideas = policy_services_temp_3
+			hidden_effect = {
+				remove_ideas = policy_services_temp_0
+				remove_ideas = policy_services_temp_1
+				remove_ideas = policy_services_temp_2
+				remove_ideas = policy_services_temp_3
+			}
+			add_ideas = policy_services_temp_2
 			public_expenditure = yes		
 		}
 	}
@@ -904,11 +907,13 @@ focus_tree = {
 		x = 31
 		y = 8
 		completion_reward = {
-			remove_ideas = policy_taxrate_temp_1
-			remove_ideas = policy_taxrate_temp_2
-			remove_ideas = policy_taxrate_temp_3
-			remove_ideas = policy_taxrate_temp_4
-			remove_ideas = policy_taxrate_temp_5
+			hidden_effect = {
+				remove_ideas = policy_taxrate_temp_1
+				remove_ideas = policy_taxrate_temp_2
+				remove_ideas = policy_taxrate_temp_3
+				remove_ideas = policy_taxrate_temp_4
+				remove_ideas = policy_taxrate_temp_5
+			}
 			add_ideas = policy_taxrate_temp_5
 			tax_rate = yes		
 		}
@@ -1407,6 +1412,14 @@ focus_tree = {
 		x = 40
 		y = 8
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_0
 		}
 	}
@@ -1455,13 +1468,14 @@ focus_tree = {
 		x = 44
 		y = 7
 		completion_reward = {
-			remove_ideas = policy_women_temp_0
-			remove_ideas = policy_women_temp_1
-			remove_ideas = policy_women_temp_2
-			remove_ideas = policy_women_temp_3
-			remove_ideas = policy_women_temp_4
-			remove_ideas = policy_women_temp_4a
-			
+			hidden_effect = {
+				remove_ideas = policy_women_temp_0
+				remove_ideas = policy_women_temp_1
+				remove_ideas = policy_women_temp_2
+				remove_ideas = policy_women_temp_3
+				remove_ideas = policy_women_temp_4
+				remove_ideas = policy_women_temp_4a
+			}
 			add_ideas = policy_women_temp_2
 		
 		}
@@ -1886,7 +1900,7 @@ focus_tree = {
 				name = light_air_bonus
 				bonus = 1.25
 				uses = 1
-				category = light_air
+				category = air_single_engine
 			}
 		}
 	}
@@ -2065,14 +2079,15 @@ focus_tree = {
 		x = 54
 		y = 2
 		completion_reward = {
-			remove_ideas = policy_cpi_temp_0
-			remove_ideas = policy_cpi_temp_1
-			remove_ideas = policy_cpi_temp_2
-			remove_ideas = policy_cpi_temp_3
-			remove_ideas = policy_cpi_temp_4
-			remove_ideas = policy_cpi_temp_5
-			
-			add_ideas = policy_cpi_temp_5
+			hidden_effect = {
+				remove_ideas = policy_cpi_temp_0
+				remove_ideas = policy_cpi_temp_1
+				remove_ideas = policy_cpi_temp_2
+				remove_ideas = policy_cpi_temp_3
+				remove_ideas = policy_cpi_temp_4
+				remove_ideas = policy_cpi_temp_5
+			}
+			add_ideas = policy_cpi_temp_3
 			cpi_expenditure = yes
 		
 		}
@@ -2154,12 +2169,14 @@ focus_tree = {
 		x = 55
 		y = 21
 		completion_reward = {
-			remove_ideas = policy_religion_temp_1
-			remove_ideas = policy_religion_temp_2
-			remove_ideas = policy_religion_temp_3
-			remove_ideas = policy_religion_temp_3a
-			remove_ideas = policy_religion_temp_0a
-			remove_ideas = policy_religion_temp_0
+			hidden_effect = {
+				remove_ideas = policy_religion_temp_1
+				remove_ideas = policy_religion_temp_2
+				remove_ideas = policy_religion_temp_3
+				remove_ideas = policy_religion_temp_3a
+				remove_ideas = policy_religion_temp_0a
+				remove_ideas = policy_religion_temp_0
+			}
 			add_ideas = policy_religion_temp_3a		
 		}
 	}
@@ -2198,13 +2215,14 @@ focus_tree = {
 		x = 56
 		y = 3
 		completion_reward = {
-			remove_ideas = policy_military_temp_0
-			remove_ideas = policy_military_temp_1
-			remove_ideas = policy_military_temp_2
-			remove_ideas = policy_military_temp_3
-			remove_ideas = policy_military_temp_4
-			remove_ideas = policy_military_temp_5
-			
+			hidden_effect = {
+				remove_ideas = policy_military_temp_0
+				remove_ideas = policy_military_temp_1
+				remove_ideas = policy_military_temp_2
+				remove_ideas = policy_military_temp_3
+				remove_ideas = policy_military_temp_4
+				remove_ideas = policy_military_temp_5
+			}
 			add_ideas = policy_military_temp_4
 			military_expenditure = yes		
 		}
@@ -2608,12 +2626,14 @@ focus_tree = {
 		x = 40
 		y = 15
 		completion_reward = {
-			remove_ideas = policy_welfare_temp_0
-			remove_ideas = policy_welfare_temp_1
-			remove_ideas = policy_welfare_temp_2
-			remove_ideas = policy_welfare_temp_3
-			remove_ideas = policy_welfare_temp_4
-			remove_ideas = policy_welfare_temp_5
+			hidden_effect = {
+				remove_ideas = policy_welfare_temp_0
+				remove_ideas = policy_welfare_temp_1
+				remove_ideas = policy_welfare_temp_2
+				remove_ideas = policy_welfare_temp_3
+				remove_ideas = policy_welfare_temp_4
+				remove_ideas = policy_welfare_temp_5
+			}
 			
 			add_ideas = policy_welfare_temp_2		
 		}

@@ -21,6 +21,25 @@ ic_pulse = {
 	}
 	if = {
 		limit = {
+			tag = VIE
+			has_war_with = NLF
+		}
+		every_owned_state = {
+			if = {
+				limit = {
+					resistance > 90
+					is_core_of = NLF
+					is_fully_controlled_by = VIE
+				}
+				create_unit = {
+					division = "division_template = \"Viet Cong Su đoàn\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					owner = NLF
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
 			tag = FRA
 			date > 1949.10.01
 			date < 1949.12.30
@@ -28,16 +47,6 @@ ic_pulse = {
 		}
 		country_event = French_PM.1
 		set_country_flag = French_Gov_1
-	}
-	if = {
-		limit = {
-			tag = POR
-			date > 1960.11.01
-			date < 1960.12.31
-			NOT = { has_country_flag = Angola_Prelude_1 }
-		}
-		set_country_flag = Angola_Prelude_1
-		news_event = Angola_Prelude.1
 	}
 	if = {
 		limit = {
@@ -253,6 +262,14 @@ ic_pulse = {
 	}
 	if = {
 		limit = { 
+			tag = YUG
+			date > 1970.01.01
+			date < 1970.03.01
+		}
+		country_event = yug.1000
+	}
+	if = {
+		limit = { 
 			tag = FIN
 			date > 1952.06.01
 			date < 1952.07.01
@@ -345,11 +362,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		set_variable = { total_sen_dem = 0 }
-		set_variable = { total_sen_gop = 0 }
-		class_2_senate_calc = yes
-		class_1_senate_calc = yes
-		class_3_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -406,7 +421,7 @@ ic_pulse = {
 	}
 	if = {
 		limit = {
-			NOT = { tag = POR }
+			tag = POR 
 			date > 1963.1.01
 			date < 1963.3.1
 			NOT = { has_country_flag = GNB_War_Notif }
@@ -457,11 +472,9 @@ ic_pulse = {
 	if = {
 		limit = {
 			tag = KEN
-			date > 1969.10.01
-			date < 1969.11.01
-			NOT = {
-				has_government = conservative
-			}
+			date > 1959.10.01
+			date < 1959.11.01
+			has_government = neutrality
 		}
 		country_event = kenya.16
 	}
@@ -474,7 +487,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_1_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -506,6 +521,17 @@ ic_pulse = {
 	}
 	if = {
 		limit = {
+			tag = VIE
+			date > 1959.11.01
+			date < 1961.12.30
+			has_country_flag = NLF_trigger
+		}
+		country_event = NLF_Flavor.1
+	}
+	
+
+	if = {
+		limit = {
 			tag = USA
 			date > 1954.11.01
 			date < 1954.12.30
@@ -513,7 +539,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_2_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -524,7 +552,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_3_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -535,7 +565,10 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_1_senate_calc = yes
+		
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -546,7 +579,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_2_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -557,7 +592,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_3_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -568,7 +605,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_1_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -579,7 +618,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_2_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -590,7 +631,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_3_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -601,7 +644,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_1_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -612,7 +657,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_2_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -623,7 +670,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_3_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -634,7 +683,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_1_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -645,7 +696,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_2_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -656,7 +709,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_3_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -667,7 +722,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_1_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -678,7 +735,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_2_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -689,7 +748,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_3_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -700,7 +761,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_1_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -711,7 +774,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_2_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -722,7 +787,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_3_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -733,7 +800,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_1_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -744,7 +813,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_2_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -755,7 +826,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_3_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -766,7 +839,9 @@ ic_pulse = {
 		calc_us_house = yes
 		swf_us_chance_seats = yes
 		us_calc_house_total_party = yes
-		class_1_senate_calc = yes
+		calc_us_senate = yes
+		swf_us_chance_seats_senate = yes
+		us_calc_senate_total_party = yes
 	}
 	if = {
 		limit = {
@@ -1556,8 +1631,8 @@ ic_pulse = {
 	 if = {
 		limit = {
 				tag = FRA
-				date > 1961.04.20
-				date < 1961.04.30
+				date > 1961.04.01
+				date < 1961.05.30
 			}
 		country_event = algeirs.2
 	}
@@ -1731,7 +1806,9 @@ ic_pulse = {
 		limit = {
 			tag = FRA
 			SEN = {
-				has_idea = FRA_Colony
+				NOT = {
+					country_exists = MRT
+				}
 			}
 			date > 1958.10.04
 			date < 1960.01.01
@@ -1751,7 +1828,7 @@ ic_pulse = {
 		limit = {
 			tag = FRA
 			RCG = {
-				has_idea = FRA_Colony
+				NOT = { country_exists = CHA }
 			}
 			date > 1958.10.04
 			date < 1960.01.01
@@ -1776,11 +1853,18 @@ ic_pulse = {
 			date > 1958.04.01
 			date < 1959.01.01
 			OR = {
-				has_completed_focus = FRA_RPF_1953
-				has_completed_focus = FRA_CNIP_1953
+				has_country_flag = Kalb_1953
+				has_country_flag = Coty_1953
 			}
+			NOT = {
+				has_country_flag = crisis_1958
+			}
+			NOT = { has_government = communism }
+			NOT = { has_government = trotskyism }
+			NOT = { has_government = maoism }
 		}
 		country_event = fra_crisis.2
+		set_country_flag = crisis_1958
 	}
 	
 	#if = {
@@ -1850,17 +1934,15 @@ ic_pulse = {
 					NOT = { tag = ENG }
 					NOT = { tag = DDR }
 					NOT = { tag = SOV }
-					NOT = { tag = VIE }
+					NOT = { tag = VIE } 
 					NOT = { tag = CAM }
 					NOT = { tag = ITA }
 					NOT = { tag = FRA }
 					NOT = { tag = IRQ }
 					NOT = { tag = PER }
 					NOT = { tag = GRE }
-					NOT = { tag = YUG }
 					NOT = { tag = PRC }
 					NOT = { tag = SPR }
-					NOT = { tag = POR }
 					NOT = { tag = NGA }
 					NOT = { tag = POL }
 					NOT = { tag = SOM }
@@ -1913,7 +1995,6 @@ ic_pulse = {
 						tag = PER
 						tag = GRE
 						tag = PRC
-						tag = POR
 						tag = NGA
 						tag = POL
 						tag = SAF
@@ -1937,6 +2018,7 @@ ic_pulse = {
 						tag = ETH
 						tag = WGR
 						tag = EGY
+						tag = SOM
 					}
 				}
 				set_country_flag = focus_tree_60_reset		
@@ -1948,17 +2030,18 @@ ic_pulse = {
 				}
 				if = {
 					limit = {
+						tag = SOM
+					}
+					load_focus_tree = SOR_1960s
+				}
+				if = {
+					limit = {
 						tag = DDR
 					}
 					load_focus_tree = DDR_1960s
 				}
 				
-				if = {
-					limit = {
-						tag = POR
-					}
-					load_focus_tree = POR_1960s
-				}
+
 				if = {
 					limit = {
 						tag = NGA
@@ -2125,6 +2208,36 @@ ic_pulse = {
 			}
 			if = {
 				limit = {
+					date > 1972.12.31
+					date < 1973.01.31
+					NOT = {
+						has_country_flag = focus_tree_73_reset
+					}
+					NOT = { tag = USA }
+					NOT = { tag = SOV }
+					NOT = { tag = FRA }
+					NOT = { tag = CAR }
+
+				}
+				load_focus_tree = generic_70s
+				set_country_flag = focus_tree_73_reset
+			}
+			if = {
+				limit = {
+					date > 1972.12.31
+					date < 1973.01.31
+					NOT = {
+						has_country_flag = focus_tree_73_reset
+					}
+					tag = FRA 
+
+				}
+				load_focus_tree = FRA_1970s
+				set_country_flag = focus_tree_73_reset
+			}
+			
+			if = {
+				limit = {
 					tag = ROM
 					date > 1965.04.02
 					date < 1965.07.22					
@@ -2185,11 +2298,48 @@ ic_pulse = {
 			}
 			if = {
 				limit = {
+					date > 1955.07.01
+					date < 1955.08.25
+					tag = YEM
+				}
+				country_event = YEM_COuP.1
+			}
+			if = {
+				limit = {
+					date > 1959.06.01
+					date < 1955.07.25
+					tag = YEM
+				}
+				country_event = YEM_COuP.4
+			}			
+			if = {
+				limit = {
 					tag = PER
 					date > 1952.03.01
 					date < 1952.04.01
 				}
 				country_event = iran_elections.1952
+			}
+			if = {
+				limit = {
+					tag = SOV
+					date > 1958.07.01
+					date < 1958.09.01
+				}
+				country_event = nfc.1
+			}
+			if = {
+				limit = {
+					tag = USA
+					date > 1961.06.01
+					date < 1961.08.01
+					NOT = { has_country_flag = Jupiter_Misisles_Turkey }
+					NOT = { TUR = { has_government = communism } }
+					NOT = { TUR = { has_government = trotskyism } }
+					NOT = { TUR = { has_government = maoism } }
+				}
+				set_country_flag = Jupiter_Misisles_Turkey
+				news_event = cubamc.1
 			}
 			if = {
 				limit = {
@@ -2703,6 +2853,16 @@ ic_pulse = {
 					original_tag = ZIM
 				}
 				country_event = zimbabwe.65
+			}
+			if = {
+				limit = {
+					tag = FRA 
+					date > 1953.09.01
+					date < 1954.01.01
+					NOT = { has_country_flag = french_elections_11 }
+				}
+				set_country_flag = french_elections_11
+				country_event = french_elections.11
 			}
 			if = {
 				limit = {
@@ -4352,8 +4512,10 @@ ic_pulse = {
 			date < 1967.09.01
 			NOT = { has_country_flag = Biafra_War_Start }
 			tag = NGA
+			NOT = { country_exists = NGA }
 		}
-		complete_national_focus = NGA_1960s_Biafran_War
+		set_country_flag = Biafra_War_Start
+		NGA = { complete_national_focus = NGA_1960s_Biafran_War }
 		BFR = {
 			transfer_state = 1122
 			create_corps_commander = {
@@ -5443,8 +5605,19 @@ ic_pulse = {
 	if = {
 		limit = {
 			tag = DOC
+			is_subject = no
+			NOT = { has_completed_focus = DOC_Appoint_Mpolo }
+			date > 1960.09.01
+			date < 1970.01.01
+		}
+		country_event = mobutu.100
+	}
+	
+	if = {
+		limit = {
+			tag = DOC
 			has_global_flag = congo_crisis_historical
-			date > 1960.07.10
+			date > 1960.07.01
 			date < 1970.01.01
 			NOT = { has_global_flag = katanga_seceded country_exists = KAG }
 		}
@@ -5454,7 +5627,7 @@ ic_pulse = {
 		limit = {
 			tag = DOC
 			has_global_flag = congo_crisis_historical
-			date > 1960.08.07
+			date > 1960.08.01
 			date < 1970.01.01
 			has_global_flag = katanga_seceded
 			country_exists = KAG
@@ -5466,14 +5639,17 @@ ic_pulse = {
 		limit = {
 			tag = DOC
 			has_global_flag = congo_crisis_historical
-			date > 1960.08.07
+			date > 1960.08.01
 			date < 1970.01.01
 			has_global_flag = katanga_seceded
 			has_global_flag = south_kasai_seceded
-			country_exists = KAG
-			country_exists = SKS
 			has_completed_focus = DOC_Lumumba_Deposed
-			NOT = { has_global_flag = free_republic_of_the_congo has_global_flag = simba_rebellion country_exists = COG }
+			NOT = { 
+				country_exists = COG 
+			}
+			NOT = {
+				has_global_flag = free_republic_of_the_congo
+			}
 		}
 		country_event = { id = congo.6 days = 1  }
 		set_global_flag = free_republic_of_the_congo
@@ -5520,9 +5696,17 @@ ic_pulse = {
 		limit = {
 			tag = DOC
 			surrender_progress > 0.9
-			country_exists = KAG
+			has_war_with = KAG
 		}
 		country_event = congo.11
+	}
+	if = {
+		limit = {
+			tag = DOC
+			surrender_progress > 0.9
+			has_war_with = COG
+		}
+		country_event = congo.12
 	}
 
 	if = {
@@ -6040,6 +6224,15 @@ ic_pulse = {
 		}
 		country_event = decolonization.30
 	}
+#kano riots
+	if = {
+		limit = {
+			original_tag = NGA
+			date > 1953.05.16
+			date < 1953.06.17
+		}
+		country_event = nga50.2
+	}
 	if = {
 		limit = {
 			original_tag = MOR
@@ -6273,7 +6466,32 @@ ic_pulse = {
 				country_event = { id = GRE_Elections.2 days = 1 }
 			}
 
-
+    if = {
+				limit = {
+					tag = GRE
+					date > 1956.2.18
+					date < 1957.1.1
+					NOT = { has_government = neutrality }
+					NOT = { has_government = monarchism }
+					NOT = { has_government = communism }
+					NOT = { has_government = maoism }
+				}
+				country_event = { id = GRE_Elections.3 days = 1 }
+			}
+			
+	if = {
+				limit = {
+					tag = GRE
+					date > 1958.5.11
+					date < 1959.1.1
+					NOT = { has_government = neutrality }
+					NOT = { has_government = monarchism }
+					NOT = { has_government = communism }
+					NOT = { has_government = maoism }
+				}
+				country_event = { id = GRE_Elections.4 days = 1 }
+			}
+			
 	if = {
 		limit = {
 			original_tag = SPR
@@ -6334,62 +6552,66 @@ ic_pulse = {
 	}
 
 ###ISRAEL
-
+	
 	if = {
 		limit = {
 			original_tag = ISR
-			date > 1951.6.29
-			date < 1951.7.30
+			date > 1951.6.01
+			date < 1951.8.01
+			NOT = { has_country_flag = ISR_ELECTION_1 }
 		}
-		country_event = { id = israelelection.1 days = 0 }
+		set_country_flag = ISR_ELECTION_1
+		country_event = israelelection.1
 	}
 	if = {
 		limit = {
 			original_tag = ISR
-			date > 1955.6.25
-			date < 1955.7.26
+			date > 1955.06.01
+			date < 1955.08.01
+			NOT = { has_country_flag = ISR_ELECTION_2 }
 		}
-		country_event = { id = israelelection.2 days = 0 }
+		set_country_flag = ISR_ELECTION_2
+		country_event = israelelection.2
 	}
 	if = {
 		limit = {
 			original_tag = ISR
-			date > 1949.6.1
-			date < 1949.7.20
+			date > 1950.01.01
+			date < 1950.05.05
+			NOT = { has_country_flag = ISR_POL_11 }
 		}
-		country_event = { id = israel.10 days = 0 }
+		set_country_flag = ISR_POL_11
+		country_event = israel.11
 	}
 	if = {
 		limit = {
 			original_tag = ISR
-			date > 1950.1.1
-			date < 1950.5.5
+			date > 1949.08.01
+			date < 1949.09.05
+			NOT = { has_country_flag = ISR_POL_12 }
 		}
-		country_event = { id = israel.11 days = 0 }
+		set_country_flag = ISR_POL_12
+		country_event = israel.12
 	}
 	if = {
 		limit = {
 			original_tag = ISR
-			date > 1949.8.1
-			date < 1949.9.5
-		}
-		country_event = { id = israel.12 days = 0 }
-	}
-	if = {
-		limit = {
-			original_tag = ISR
-			date > 1949.11.1
+			date > 1949.11.01
 			date < 1949.12.30
+			NOT = { has_country_flag = ISR_POL_13 }
 		}
-		country_event = { id = israel.13 days = 0 }
+		set_country_flag = ISR_POL_13
+		country_event = israel.13
 	}
 	if = {
 		limit = {
 			original_tag = ISR
-			date > 1950.8.1
-			date < 1951.1.5
+			date > 1950.08.01
+			date < 1951.01.05
+			NOT = { has_country_flag = ISR_POL_14 }
 		}
-		country_event = { id = israel.14 days = 0 }
+		set_country_flag = ISR_POL_14
+		country_event = israel.14
 	}
 	if = {
 		limit = {
@@ -6638,7 +6860,7 @@ ic_pulse = {
 			NOT = { has_country_flag = IRAN_REV_5 }
 		}
 		set_country_flag = IRAN_REV_5
-		country_event = Iranian_Revolution.5
+		news_event = Iranian_Revolution.5
 	}
  	if = {
 		limit = {
@@ -6686,6 +6908,17 @@ ic_pulse = {
  	if = {
 		limit = {
 			tag = IRQ
+			date > 1958.07.01
+			date < 1958.09.01
+			NOT = { has_country_flag = IRAQ_REV_1 }
+		}
+		set_country_flag = IRAQ_REV_1
+		country_event = swfs.2
+	}	
+	
+ 	if = {
+		limit = {
+			tag = IRQ
 			date > 1980.09.01
 			date < 1980.11.01
 			NOT = { has_country_flag = IRAN_IRAQ_1 }
@@ -6693,6 +6926,208 @@ ic_pulse = {
 		}
 		set_country_flag = IRAN_IRAQ_1
 		news_event = Iran_Iraq_War.4
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1963.06.01
+			date < 1963.08.31
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_21 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_21
+		news_event = USA_CIVIL_RIGHTS.21
+	}	
+	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1955.12.01
+			date < 1956.01.31
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_1 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_1
+		news_event = USA_CIVIL_RIGHTS.1
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1955.09.01
+			date < 1955.10.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_2 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_2
+		news_event = USA_CIVIL_RIGHTS.2
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1961.11.01
+			date < 1961.12.31
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_3 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_3
+		news_event = USA_CIVIL_RIGHTS.3
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1963.02.01
+			date < 1963.03.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_4 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_4
+		news_event = USA_CIVIL_RIGHTS.4
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1963.08.01
+			date < 1963.09.25
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_5 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_5
+		news_event = USA_CIVIL_RIGHTS.5
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1963.09.01
+			date < 1963.10.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_6 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_6
+		news_event = USA_CIVIL_RIGHTS.6
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1965.03.01
+			date < 1965.04.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_7 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_7
+		news_event = USA_CIVIL_RIGHTS.7
+		news_event = { id = USA_CIVIL_RIGHTS.8 days = 14 }
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1966.06.01
+			date < 1966.07.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_9 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_9
+		news_event = USA_CIVIL_RIGHTS.9
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1968.03.01
+			date < 1968.04.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_10 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_10
+		news_event = USA_CIVIL_RIGHTS.10
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1961.12.01
+			date < 1962.01.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_11 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_11
+		news_event = USA_CIVIL_RIGHTS.11
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1968.04.01
+			date < 1968.05.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_12 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_12
+		news_event = USA_CIVIL_RIGHTS.12
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1965.02.01
+			date < 1965.03.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_13 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_13
+		news_event = USA_CIVIL_RIGHTS.13
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1965.08.01
+			date < 1965.09.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_14 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_14
+		news_event = USA_CIVIL_RIGHTS.14
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1966.10.01
+			date < 1966.11.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_15 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_15
+		news_event = USA_CIVIL_RIGHTS.15
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1967.06.01
+			date < 1967.07.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_16 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_16
+		news_event = USA_CIVIL_RIGHTS.16
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1967.07.01
+			date < 1967.08.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_17 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_17
+		news_event = USA_CIVIL_RIGHTS.17
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1963.01.01
+			date < 1963.02.28
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_18 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_18
+		news_event = USA_CIVIL_RIGHTS.18
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1964.06.01
+			date < 1964.07.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_19 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_19
+		news_event = USA_CIVIL_RIGHTS.19
+	}	
+ 	if = {
+		limit = {
+			tag = USA
+			date > 1964.08.01
+			date < 1964.09.30
+			NOT = { has_country_flag = US_CIVIL_RIGHTS_20 }
+		}
+		set_country_flag = US_CIVIL_RIGHTS_20
+		news_event = USA_CIVIL_RIGHTS.20
 	}	
 
 ##### WEAPON PURCHASE FLAGSETS #####
@@ -6774,5 +7209,142 @@ ic_pulse = {
 		set_global_flag = WP_MAO_tech_6
 		
 		set_global_flag = WP_IND_tech_6
+	}
+	if = {
+		limit = {
+			date < 1960.10.01
+			date > 1961.05.01
+			tag = ENG
+		}
+		country_event = decolonization.41
+	}
+	if = {
+		limit = {
+			date < 1960.10.01
+			tag = DOC
+			NOT = {
+				has_government = socialist
+				has_government = neutrality
+			}
+		}
+		country_event = lumumba_deposed.2
+	}
+	if = {
+		limit = {
+			date > 1955.6.15
+			tag = NGA
+			has_government = neutrality
+		}
+		country_event = nga50.3
+	}
+	if = {
+		limit = {
+			1280 = {
+				is_core_of = VIE
+				is_controlled_by = VIN
+				OR = {
+					is_core_of = LOS
+					is_controlled_by = LAO
+				}
+			}
+			FRA = {remove_resource_rights = 1280}
+		}
+	}
+	if = {
+		limit = {
+			1281 = {
+				is_core_of = VIE
+				is_controlled_by = VIN
+				OR = {
+					is_core_of = LOS
+					is_controlled_by = LAO
+				}
+			}
+			FRA = {remove_resource_rights = 1281}
+		}
+	}
+	if = {
+		limit = {
+			786 = {
+				is_core_of = VIE
+				is_controlled_by = VIN
+				OR = {
+					is_core_of = LOS
+					is_controlled_by = LAO
+				}
+			}
+			FRA = {remove_resource_rights = 786}
+		}
+	}
+	if = {
+		limit = {
+			671 = {
+				is_core_of = VIE
+				is_controlled_by = VIN
+				OR = {
+					is_core_of = LOS
+					is_controlled_by = LAO
+				}
+			}
+				FRA = {remove_resource_rights = 671}
+		}
+	}
+	if = {
+		limit = {
+			751 = {
+				is_core_of = VIE
+				is_controlled_by = VIN
+				OR = {
+					is_core_of = LOS
+					is_controlled_by = LAO
+				}
+			}
+			FRA = {remove_resource_rights = 751}
+
+		}
+	}
+	#founding of action group (nigerian political party)
+	if = {
+		limit = {
+			date > 1951.1.1
+			date < 1951.1.20
+			tag = NGA
+			NOT = {
+				has_completed_focus = NGA_1950_Action_Group
+			}
+		}
+		country_event = nga50.6
+	}
+	#Haile Selassie's visit to Jamaica (Grounation Day)
+	if = {
+		limit = {
+			date > 1966.4.21
+			date < 1966.4.21
+			tag = ETH
+			has_government = monarchism
+			country_exists = JAM
+		}
+		country_event = newseth60.3
+		set_country_flag = grounation_day
+	}
+	#The Madrid Accords
+	if = {
+		limit = {
+			date > 1975.11.14
+			date < 1975.11.16
+			tag = SPR
+			country_exists = MOR
+			country_exists = MRT
+		}
+		country_event = decolonization.42
+	}
+	#Mauritanian coup against daddah
+	if = {
+		limit = {
+			date > 1978.7.10
+			date < 1978.7.12
+			tag = MRT
+		}
+		country_event = mrt.1
 	}
 }

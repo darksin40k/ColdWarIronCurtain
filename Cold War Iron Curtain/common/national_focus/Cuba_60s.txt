@@ -1133,6 +1133,10 @@ focus_tree = {
 							picture = "raul_castro.dds"
 							ideology = marxism_leninism
 						}
+						set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
 				}
 
 	}
@@ -1376,6 +1380,9 @@ focus_tree = {
 		cost = 10.00
 		prerequisite = {
 			focus = CUB_state_visit_to_the_USA
+		}
+		available = {
+			has_completed_focus = CUB_the_posadist_fifth_international
 		}
 		x = 90
 		y = 13
@@ -2399,12 +2406,20 @@ focus_tree = {
 		x = 85
 		y = 8
 			completion_reward = {
+				set_party_name = { 
+					ideology = communism 
+					long_name = "Partido Comunista de Cuba" 
+					name = "PCC" 
+				}
 					create_country_leader = {
 							name = "Fidel Castro"
 							picture = "fidel_castro.dds"
 							ideology = marxism_leninism
 						}
-					set_ruling_party = communism
+					set_politics = {
+							ruling_party = communism
+							elections_allowed = no
+						}
 				}
 
 	}
@@ -3118,6 +3133,16 @@ focus_tree = {
 		x = 75
 		y = 8
 			completion_reward = {
+					create_country_leader = {
+							name = "Ernesto Guevara"
+							picture = "Che_Guevara.dds"
+							ideology = guevarism
+						}
+						set_party_name = { 
+							ideology = maoism 
+							long_name = "Partido Comunista de Cuba" 
+							name = "PCC" 
+						}
 					set_politics = {
 							ruling_party = maoism
 							elections_allowed = no

@@ -386,10 +386,13 @@ focus_tree = {
 		x = 20
 		y = 15
 		completion_reward = {
+			SOV = {
 				set_autonomy = {
-							target = ROM
-							autonomy_state = autonomy_free
-						}
+					target = ROM
+					autonomy_state = autonomy_free
+				}
+			}
+
 		}
 	}
 	focus = {
@@ -649,7 +652,14 @@ focus_tree = {
 		x = 28
 		y = 16
 		completion_reward = {
-			add_ideas = default_media_laws_0
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_2
 		}
 	}
 	focus = {

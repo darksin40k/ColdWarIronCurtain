@@ -16,7 +16,6 @@ scripted_gui = {
 				}			
 			}
 
-
 			defconbuttonraise_click = {
 				if = {
 					limit = { 
@@ -48,7 +47,11 @@ scripted_gui = {
 				}				
 				else = {
 				
-				}				
+				}	
+				add_timed_idea = {
+					idea = DEFCON_COOLDOWN
+					days = 2
+				}			
 			}
 			defconbuttonlower_click = {
 				if = {
@@ -82,6 +85,10 @@ scripted_gui = {
 				else = {
 				
 				}
+				add_timed_idea = {
+					idea = DEFCON_COOLDOWN
+					days = 2
+				}			
 			}
 			denuclearize_click = {
 				set_temp_variable = { NukesRemoval = NukeTotal }
@@ -152,13 +159,21 @@ scripted_gui = {
 			
 			}
 		}
+		triggers = {
+			defconbuttonraise_click_enabled = {
+				NOT = { has_idea = DEFCON_COOLDOWN }
+			}
+			defconbuttonlower_click_enabled = {
+				NOT = { has_idea = DEFCON_COOLDOWN }
+			}
+		}
 	}
 	wmd_topbar_button = {
 
 		context_type = player_context
 
 		window_name = "wmd_topbar_button"
-		parent_window_name = country_menu_window
+		parent_window_name = after_intel_agency_button
 		effects = {
 			wmd_tab_open_click = {
 				ROOT = {
@@ -259,6 +274,7 @@ scripted_gui = {
 				clr_country_flag = WMD_STRIKE_LEVEL_2
 				clr_country_flag = WMD_STRIKE_LEVEL_1
 			}
+
 			wmd_button_launch_click = { 
 				for_each_loop = {
 					array = WarCrimeTargetList
@@ -292,6 +308,31 @@ scripted_gui = {
 			tier1_active_visible = { has_country_flag = WMD_STRIKE_LEVEL_1 }
 			tier2_active_visible = { has_country_flag = WMD_STRIKE_LEVEL_2 }
 			tier3_active_visible = { has_country_flag = WMD_STRIKE_LEVEL_3 }
+			chem_box_unchecked_click_enabled = {
+				always = no
+			}
+			chem_box_checked_click_enabled = {
+				always = no
+			}
+			nuke_box_checked_click_enabled = {
+				always = no
+			}
+			nuke_box_unchecked_click_enabled = {
+				always = no
+			}
+			tier3_click_enabled = {
+				OR = {
+					AND = {
+						tag = USA
+						has_country_flag = Jupiter_Misisles_Turkey
+					}
+					AND = {
+						tag = SOV
+						has_country_flag = Cuban_Missiles
+					}
+					has_tech = icbm1
+				}
+			}
 		}
     }
 }

@@ -5,6 +5,7 @@ equipments = {
 
 		archetype = screen_hull_medium
 		priority = 500
+		visual_level = 1
 		
 		interface_category = interface_category_screen_ships
 		
@@ -48,7 +49,7 @@ equipments = {
 		surface_detection = 20
 		sub_detection = 5
 		surface_visibility = 10
-		naval_speed = 46
+		naval_speed = 30
 		naval_range = 1600
 		max_strength = 200
 		fuel_consumption = 2
@@ -64,6 +65,7 @@ equipments = {
 
 		archetype = screen_hull_heavy
 		priority = 500
+		visual_level = 1
 		
 		interface_category = interface_category_screen_ships
 		
@@ -110,7 +112,7 @@ equipments = {
 		surface_detection = 25
 		sub_detection = 15
 		surface_visibility = 14
-		naval_speed = 42
+		naval_speed = 25
 		naval_range = 2000
 		max_strength = 400
 		fuel_consumption = 4
@@ -126,6 +128,7 @@ equipments = {
 
 		archetype = battle_hull_light
 		priority = 500
+		visual_level = 1
 		
 		interface_category = interface_category_screen_ships
 		
@@ -180,7 +183,7 @@ equipments = {
 		surface_detection = 30
 		sub_detection = 10
 		surface_visibility = 17
-		naval_speed = 38
+		naval_speed = 20
 		naval_range = 2200
 		max_strength = 600
 		fuel_consumption = 8
@@ -196,6 +199,7 @@ equipments = {
 
 		archetype = battle_hull_medium
 		priority = 500
+		visual_level = 1
 		
 		interface_category = interface_category_capital_ships
 		
@@ -259,8 +263,7 @@ equipments = {
 		surface_detection = 30
 		sub_detection = 10
 		surface_visibility = 23
-		naval_speed = 32
-		naval_range = 2300
+		naval_speed = 20
 		max_strength = 900
 		fuel_consumption = 16
 		build_cost_ic = 2400
@@ -275,6 +278,7 @@ equipments = {
 
 		archetype = battle_hull_heavy
 		priority = 500
+		visual_level = 1
 		
 		interface_category = interface_category_capital_ships
 		
@@ -352,7 +356,7 @@ equipments = {
 		surface_detection = 40
 		sub_detection = 15
 		surface_visibility = 40
-		naval_speed = 28
+		naval_speed = 20
 		naval_range = 3300
 		max_strength = 1260
 		fuel_consumption = 32
@@ -368,7 +372,7 @@ equipments = {
 
 		archetype = carrier_hull
 		priority = 500
-		parent = carrier_hull_0
+		visual_level = 1
 		
 		module_slots = {
 			fixed_ship_anti_air_slot = inherit
@@ -422,7 +426,7 @@ equipments = {
 		surface_detection = 20
 		sub_detection = 1
 		surface_visibility = 24
-		naval_speed = 30
+		naval_speed = 20
 		naval_range = 2000
 		max_strength = 600
 		fuel_consumption = 10
@@ -439,6 +443,7 @@ equipments = {
 
 		archetype = sub_hull_small_single
 		priority = 500
+		visual_level = 1
 		
 		interface_category = interface_category_other_ships
 
@@ -506,7 +511,7 @@ equipments = {
 		surface_detection = 30
 		sub_detection = 10
 		sub_visibility = 11
-		naval_speed = 16
+		naval_speed = 20
 		reliability = 0.8
 		naval_range = 1800
 		max_strength = 200

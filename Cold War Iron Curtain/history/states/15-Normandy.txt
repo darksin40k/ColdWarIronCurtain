@@ -30,7 +30,7 @@ state = {
 
 			industrial_complex = 2
 			dockyard = 1
-			agri_industrial_complex = 3
+			agri_industrial_complex = 2
 			
 			fossil_fuel_powerplant = 2
 			
@@ -47,7 +47,7 @@ state = {
 	provinces = {
 		539 553 3579 6449 6599 9550 11521 11535 
 	}
-	manpower = 2332100
+	manpower = 1453000
 	buildings_max_level_factor = 1.000
-	state_category = pop2dev2
+	state_category = pop1dev2
 }

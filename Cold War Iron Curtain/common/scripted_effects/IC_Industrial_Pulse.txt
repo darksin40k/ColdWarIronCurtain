@@ -2,6 +2,7 @@ industrial_pulse = {
 	
 	set_variable = { oil_consumption = 1 }
 	set_variable = { steel_consumption = 1 }
+	set_variable = { aluminium_consumption = 1 }
 	set_variable = { dockyard_consumption = 1 }
 	set_variable = { nuclear_reactor_electricity_consumption = 2 }
 	set_variable = { nuclear_reactor_chromium_consumption = 2 }
@@ -146,6 +147,22 @@ industrial_pulse = {
 			}
 			add_to_variable = { farm_tech = 0.15 }
 		}
+		if = {
+			limit = {
+				controller = {
+					has_tech = agriculture_VII
+				}
+			}
+			add_to_variable = { farm_tech = 0.15 }
+		}
+		if = {
+			limit = {
+				controller = {
+					has_tech = agriculture_VIII
+				}
+			}
+			add_to_variable = { farm_tech = 0.15 }
+		}
 		
 		#Water Infra Modifiers
 		if = {
@@ -209,43 +226,55 @@ industrial_pulse = {
 			limit = {
 				controller = { has_idea = sov_crop_rotation }
 			}
-			multiply_variable = { farm_output = 0.1 }
+			multiply_variable = { farm_output = 1.1 }
 		}
 		if = {
 			limit = {
 				controller = { has_idea = sov_agr_subs }
 			}
-			multiply_variable = { farm_output = 0.05 }
+			multiply_variable = { farm_output = 1.05 }
 		}
 		if = {
 			limit = {
 				controller = { has_idea = sov_agr_prod_choose }
 			}
-			multiply_variable = { farm_output = 0.05 }
+			multiply_variable = { farm_output = 1.05 }
 		}
 		if = {
 			limit = {
 				controller = { has_idea = sov_agr_ca_pop }
 			}
-			multiply_variable = { farm_output = 0.025 }
+			multiply_variable = { farm_output = 1.025 }
 		}
 		if = {
 			limit = {
 				controller = { has_idea = sov_agr_bur_reduce }
 			}
-			multiply_variable = { farm_output = 0.025 }
+			multiply_variable = { farm_output = 1.025 }
 		}
 		if = {
 			limit = {
 				controller = { has_idea = sov_agr_proc_mod }
 			}
-			multiply_variable = { farm_output = 0.05 }
+			multiply_variable = { farm_output = 1.05 }
 		}
 		if = {
 			limit = {
 				controller = { has_idea = sov_agr_mach_mod }
 			}
-			multiply_variable = { farm_output = 0.05 }
+			multiply_variable = { farm_output = 1.05 }
+		}
+		if = {
+			limit = {
+				controller = { has_idea = sov_ex_meat_production }
+			}
+			multiply_variable = { farm_output = 0.95 }
+		}
+		if = {
+			limit = {
+				controller = { has_idea = sov_sensible_meat }
+			}
+			multiply_variable = { farm_output = 0.975 }
 		}
 		multiply_variable = { farm_output = farm_tech }
 		#multiply_variable = { farm_output = farmBonusTotal }
@@ -575,6 +604,70 @@ industrial_pulse = {
 			add_to_variable = { PREV.food_consumption = 2 }
 
 		}
+		#dev5
+		if = {
+			limit = {
+				has_state_category = pop20dev5
+			}
+			add_to_variable = { PREV.food_consumption = 50 }
+
+
+		}
+		if = {
+			limit = {
+				has_state_category = pop2dev5
+			}
+			add_to_variable = { PREV.food_consumption = 5 }
+
+		}
+		if = {
+			limit = {
+				has_state_category = pop3dev5
+			}
+			add_to_variable = { PREV.food_consumption = 8 }
+
+		}
+		if = {
+			limit = {
+				has_state_category = pop4dev5
+			}
+			add_to_variable = { PREV.food_consumption = 10 }
+
+		}
+		if = {
+			limit = {
+				has_state_category = pop5dev5
+			}
+			add_to_variable = { PREV.food_consumption = 13 }
+
+		}
+		if = {
+			limit = {
+				has_state_category = pop7dev5
+			}
+			add_to_variable = { PREV.food_consumption = 18 }
+
+		}
+		if = {
+			limit = {
+				has_state_category = pop10dev5
+			}
+			add_to_variable = { PREV.food_consumption = 25 }
+
+		}
+		if = {
+			limit = {
+				has_state_category = pop15dev5
+			}
+			add_to_variable = { PREV.food_consumption = 38 }
+		}
+		if = {
+			limit = {
+				has_state_category = pop1dev5
+			}
+			add_to_variable = { PREV.food_consumption = 3 }
+
+		}
 
 
 
@@ -606,6 +699,13 @@ industrial_pulse = {
 	}
 	if = {
 		limit = {
+			has_tech = chemistry_VII
+		}
+		add_to_variable = { tungsten_factory_electricity_consumption = -0.5 }
+		add_to_variable = { synthetic_refinery_electricity_consumption = -0.5 }  
+	}
+	if = {
+		limit = {
 			has_tech = materials_II
 		}
 		add_to_variable = { steel_factory_electricity_consumption = 1 } 
@@ -628,6 +728,13 @@ industrial_pulse = {
 			has_tech = materials_VI
 		}
 		add_to_variable = { steel_factory_electricity_consumption = 1 } 
+	}
+	if = {
+		limit = {
+			has_tech = materials_VII
+		}
+		add_to_variable = { steel_factory_electricity_consumption = 2 } 
+		add_to_variable = { steel_factory_oil_consumption = -0.5 } 
 	}
 	#Dockyard Specific
 	if = {
@@ -665,7 +772,7 @@ industrial_pulse = {
 	}
 	if = {
 		limit = {
-			has_tech = plastics_V
+			has_tech = plastics_VI
 		}
 		add_to_variable = { oil_consumption = -0.1 } 
 	}
@@ -691,14 +798,24 @@ industrial_pulse = {
 	}
 	if = {
 		limit = {
-			has_tech = ecoenergy_III
+			has_tech = ecoenergy_V
+		}
+		add_to_variable = { electricity_consumption = -0.1 }
+	}
+	if = {
+		limit = {
+			has_tech = ecoenergy_VII
 		}
 		add_to_variable = { electricity_consumption = -0.1 }
 	}
 		
 	#Tech/National Spirit modifiers to this building
 
-	add_to_variable = { industrial_complex_quantity = office_park_quantity }
+	set_variable = { office_park_oil_consumption = office_park_quantity }
+	set_variable = { office_park_aluminium_consumption = office_park_quantity }
+	set_variable = { office_park_electricity_consumption = office_park_quantity } 
+	
+	#add_to_variable = { industrial_complex_quantity = office_park_quantity }
 	set_variable = { fossil_fuel_plant_oil_consumption = fossil_fuel_plant_quantity }
 	multiply_variable = { fossil_fuel_plant_oil_consumption = oil_consumption }
 
@@ -709,6 +826,10 @@ industrial_pulse = {
 	multiply_variable = { industrial_complex_oil_consumption = oil_consumption }
 	multiply_variable = { industrial_complex_steel_consumption = steel_consumption }
 	multiply_variable = { industrial_complex_electricity_consumption = electricity_consumption } 
+	
+	multiply_variable = { office_park_oil_consumption = oil_consumption }
+	multiply_variable = { office_park_aluminium_consumption = steel_consumption }
+	multiply_variable = { office_park_electricity_consumption = electricity_consumption } 
 	
 	multiply_variable = { dockyard_consumption = dockyard_quantity }
 
@@ -726,11 +847,14 @@ industrial_pulse = {
 	#Actual Tabulated Consumption
 	set_variable = { oil_consumption = 0 }
 	set_variable = { steel_consumption = 0 }
+	set_variable = { aluminium_consumption = 0 }
 	set_variable = { nuclear_consumption = 0 }
 	set_variable = { electricity_consumption = 0 }
 	
 	add_to_variable = { oil_consumption = industrial_complex_oil_consumption }
 	add_to_variable = { steel_consumption = industrial_complex_steel_consumption }
+	add_to_variable = { oil_consumption = office_park_oil_consumption }
+	add_to_variable = { aluminium_consumption = office_park_aluminium_consumption }
 	add_to_variable = { oil_consumption = fossil_fuel_plant_oil_consumption }
 	
 	add_to_variable = { steel_factory_electricity_consumption = electricity_consumption }
@@ -742,6 +866,7 @@ industrial_pulse = {
 	add_to_variable = { electricity_consumption = industrial_complex_electricity_consumption }
 	add_to_variable = { electricity_consumption = nuclear_reactor_electricity_consumption }
 	add_to_variable = { electricity_consumption = dockyard_consumption }
+	add_to_variable = { electricity_consumption = office_park_electricity_consumption }
 	
 	
 	#round_variable = oil_consumption
@@ -751,6 +876,8 @@ industrial_pulse = {
 	add_to_variable = { foodCheck = food_bonus }
 	add_to_variable = { foodCheck = resource_imported@rubber }
 	set_variable = { food_penalty = 0 }
+	set_variable = { food_penalty_construction = 0 }
+	set_variable = { food_penalty_production = 0 }
 	if = {
 		limit = {
 			check_variable = { foodCheck < food_consumption } 
@@ -767,11 +894,9 @@ industrial_pulse = {
 		
 		set_variable = { food_penalty_production = modifier@production_factory_max_efficiency_factor }
 		multiply_variable = { food_penalty_production = food_penalty }
-		multiply_variable = { food_penalty_production = -1 }
 		
 		set_variable = { food_penalty_construction = modifier@production_speed_buildings_factor }
 		multiply_variable = { food_penalty_construction = food_penalty }
-		multiply_variable = { food_penalty_construction = -1 }
 	}
 	clr_country_flag = food_famine_extreme
 	clr_country_flag = food_famine

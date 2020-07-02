@@ -59,6 +59,7 @@ option = {
 		FRA = {country_event = suezcrisis.4 }
 		ISR = {country_event = suezcrisis.5 }
 		news_event = news.200
+		USA = {complete_national_focus = USA_Suez_Crisis}
 		}
 	}
 
@@ -142,9 +143,11 @@ option = {
 	   name = "We're ready"
 		FRA = {country_event = suezcrisis.8 }
 		ISR = {country_event = OperationKadesh.1 }
-		country_event = {
-			id = suezcrisis.9
-			days = 5
+		ENG = {
+			country_event = {
+				id = suezcrisis.9
+				days = 5
+				}
 			}
 		}
 	}
@@ -215,11 +218,14 @@ fire_only_once = yes
 
 option = {
 	   name = "Very bad!"
-		country_event = {
-			id = suezcrisis.12
-			days = 1
+	   EGY = {
+			country_event = {
+				id = suezcrisis.12
+				days = 1
+				}
 			}
-		}
+	   }
+
 	}
 
 country_event = {
@@ -245,10 +251,10 @@ option = {
 				factor = 100
 				is_historical_focus_on = yes
 			}
-			country_event = suezcrisis.13
+			ENG = { country_event = suezcrisis.13 }
 		}
 			30 = {
-		country_event = suezcrisis.14
+		ENG = { country_event = suezcrisis.14 }
 				}
 			}
 		}
@@ -362,7 +368,7 @@ option = {
 			set_demilitarized_zone = yes
 			}
 		743 = {
-			transfer_state = 743
+			set_demilitarized_zone = yes
 			}
 		add_political_power = 100
 		

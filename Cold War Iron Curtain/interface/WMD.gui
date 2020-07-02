@@ -56,7 +56,7 @@ guiTypes = {
 	}
 	containerWindowType = {
 		name = "wmd_war_list"
-		position = {x=0%% y=69%%}
+		position = {x=0%% y=690}
 		size = { width = 200 height = 300 }
 
 		fade_time = 300
@@ -297,56 +297,6 @@ guiTypes = {
 				maxHeight = 20
 				format = left
 			}
-			instantTextboxType = {
-				name = "tac_chems_header"
-				position = { x = 385 y = 50 }
-				font = "hoi_18mbs"
-				borderSize = {x = 0 y = 0}
-				text = "Tac. Chemical Stock"
-				maxWidth = 240
-				maxHeight = 20
-				format = left
-			}
-			instantTextboxType = {
-				name = "mustard_gas_total"
-				position = { x = 385 y = 75 }
-				font = "hoi_18mbs"
-				borderSize = {x = 0 y = 0}
-				text = "Mustard Gas: [?.MustardGasTotal]"
-				maxWidth = 240
-				maxHeight = 20
-				format = left
-			}
-			instantTextboxType = {
-				name = "napalm_total"
-				position = { x = 385 y = 100 }
-				font = "hoi_18mbs"
-				borderSize = {x = 0 y = 0}
-				text = "Napalm: [?.NapalmTotal]"
-				maxWidth = 240
-				maxHeight = 20
-				format = left
-			}
-			instantTextboxType = {
-				name = "sarin_count"
-				position = { x = 385 y = 125 }
-				font = "hoi_18mbs"
-				borderSize = {x = 0 y = 0}
-				text = "Sarin: [?.SarinTotal]"
-				maxWidth = 240
-				maxHeight = 20
-				format = left
-			}
-			instantTextboxType = {
-				name = "vx_count"
-				position = { x = 385 y = 150 }
-				font = "hoi_18mbs"
-				borderSize = {x = 0 y = 0}
-				text = "VX: [?.VXTotal]"
-				maxWidth = 240
-				maxHeight = 20
-				format = left
-			}
 		}
 
 
@@ -446,7 +396,7 @@ guiTypes = {
 		buttonType = {
 			name = "wmd_tab_open"
 			quadTextureSprite ="GFX_topbar_nuke"			#"GFX_topbar_technology"
-			position = { x= 410 y = 4 }
+			position = { x= 352 y = 4 }
 			Orientation = "UPPER_LEFT"
 			shortcut = "w"
 			clicksound = click_close
@@ -454,9 +404,74 @@ guiTypes = {
 		}
 	}
 	containerWindowType = {
+		name = "wmd_state_list"
+		position = {x=35%% y=690}
+		size = { width = 200 height = 315 }
+
+		fade_time = 300
+		fade_type = linear
+		moveable = no
+		clipping = yes
+		instantTextboxType = {
+			name = "TESTING2"
+			position = { x = 25% y = 15 }
+			font = "hoi_16mbs"
+			text = "Strike List"
+			format = center
+			maxWidth = 150
+			maxHeight = 20
+			fixedsize = yes
+		}
+		containerWindowType = {
+			name = "WMD_menu_state_grid"
+			position = {x=0 y=0}
+			size = { width = 200 height = 315 }
+			margin = { top = 10 bottom = 10 }
+			Orientation = upper_left
+			clipping = yes
+
+
+			verticalScrollbar = "left_vertical_slider"
+		#	horizontalScrollbar = "top_vertical_slider"
+
+			# background is necesarry for scrollbars to work
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_paper_w_frame_bg"
+			}
+			
+			# this grid will be dynamically populated
+
+			gridboxtype = {
+				name = "wmd_state_listing_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 400 height = 100% }
+				slotsize = { width = 200 height = 25 }
+				max_slots_horizontal = 1
+				add_horizontal = yes
+			}   
+		}
+	}
+	containerWindowType = {
+		name = "wmd_state_listing_entry"
+		position = { x = 0 y = 0}
+		size = { width = 300 height = 70 }
+		
+		instantTextboxType = {
+			name = "wmd_state_listing_entry_name"
+			position = { x = -70 y = 25}
+			font = "hoi_16mbs"
+			text = "[THIS.GetFlag][?THIS.GetName]"
+			format = left
+			maxWidth = 175
+			maxHeight = 20
+			fixedsize = yes
+		}
+	}
+	containerWindowType = {
 		name = "wmd_bottom_portion" #Weapon counts
 		position = { x = 0 y = 513 }
-		size = { width = 100%% height = 480 }
+		size = { width = 100%% height = 490 }
 
 		background = {
 			name = "Background"		
@@ -538,6 +553,8 @@ guiTypes = {
 			clicksound = click_open
 			clicksound = click_default
 			buttonFont = "hoi_16mbs"
+			
+			pdx_tooltip = "WMD_Select_Three_TT"
 		} 
 			iconType = {
 				name = "tier3_active" 
@@ -614,39 +631,10 @@ guiTypes = {
 			maxHeight = 40
 			format = left
 		}
-		containerWindowType = {
-			name = "strike_list_description_box"
-			position = { x = 27%% y = 5 }
-			size = { width = 250 height = 145 }
-			background = {
-				name = "Background"		
-				quadTextureSprite ="GFX_tiled_paper_w_frame_bg"
-			}
-			instantTextboxType = {
-				name = "strike_level_select"
-				position = { x = -150 y = 10 }
-				font = "hoi_24header"
-				borderSize = {x = 0 y = 0}
-				text = "Strike Level Select"
-				maxWidth = 550
-				maxHeight = 20
-				format = center
-			}
-			instantTextboxType = {
-				name = "strike_level_desc"
-				position = { x = -150 y = 55 }
-				font = "hoi_24header"
-				borderSize = {x = 0 y = 0}
-				text = [STRIKE_LEVEL_DESC]
-				maxWidth = 550
-				maxHeight = 20
-				format = center
-			}
-		}
 
 		containerWindowType = {
 			name = "strike_list_req_box"
-			position = { x = 69%% y = 35%% }
+			position = { x = 69%% y = 177 }
 			size = { width = 168 height = 315 }
 			background = {
 				name = "Background"		
@@ -676,71 +664,7 @@ guiTypes = {
 
 	}
 	
-	containerWindowType = {
-		name = "wmd_state_list"
-		position = {x=35%% y=69%%}
-		size = { width = 200 height = 315 }
 
-		fade_time = 300
-		fade_type = linear
-		moveable = no
-		clipping = yes
-		instantTextboxType = {
-			name = "TESTING2"
-			position = { x = 25% y = 15 }
-			font = "hoi_16mbs"
-			text = "Strike List"
-			format = center
-			maxWidth = 150
-			maxHeight = 20
-			fixedsize = yes
-		}
-		containerWindowType = {
-			name = "WMD_menu_state_grid"
-			position = {x=0 y=0}
-			size = { width = 200 height = 315 }
-			margin = { top = 10 bottom = 10 }
-			Orientation = upper_left
-			clipping = yes
-
-
-			verticalScrollbar = "left_vertical_slider"
-		#	horizontalScrollbar = "top_vertical_slider"
-
-			# background is necesarry for scrollbars to work
-			background = {
-				name = "Background"
-				quadTextureSprite = "GFX_tiled_paper_w_frame_bg"
-			}
-			
-			# this grid will be dynamically populated
-
-			gridboxtype = {
-				name = "wmd_state_listing_grid"
-				position = { x = 0 y = 0 }
-				size = { width = 400 height = 100% }
-				slotsize = { width = 200 height = 25 }
-				max_slots_horizontal = 1
-				add_horizontal = yes
-			}   
-		}
-	}
-	containerWindowType = {
-		name = "wmd_state_listing_entry"
-		position = { x = 0 y = 0}
-		size = { width = 300 height = 70 }
-		
-		instantTextboxType = {
-			name = "wmd_state_listing_entry_name"
-			position = { x = -70 y = 25}
-			font = "hoi_16mbs"
-			text = "[THIS.GetFlag][?THIS.GetName]"
-			format = left
-			maxWidth = 175
-			maxHeight = 20
-			fixedsize = yes
-		}
-	}
 	containerWindowType = {
 		name = "wmd_list"
 		position = { x = 0 y = 38 }

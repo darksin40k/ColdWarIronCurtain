@@ -1126,7 +1126,7 @@ focus_tree = {
 		x = 34
 		y = 3
 		completion_reward = {
-			news_event = Operation_to_Freedom
+			news_event = Operation_to_Freedom.1
 			capital_scope = {
 				add_manpower = 350000
 			}
@@ -1259,7 +1259,14 @@ focus_tree = {
 		x = 35
 		y = 13
 		completion_reward = {
-			add_ideas = censorship_3
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_1
 		}
 	}
 	focus = {
@@ -2045,6 +2052,14 @@ focus_tree = {
 		y = 14
 		completion_reward = {
 			add_ideas = policy_saga_temp_0
+			hidden_effect = {
+				remove_ideas = policy_saga_temp_0
+				remove_ideas = policy_saga_temp_1
+				remove_ideas = policy_saga_temp_2
+				remove_ideas = policy_saga_temp_3
+				remove_ideas = policy_saga_temp_4
+				remove_ideas = policy_saga_temp_4a
+			}
 		}
 	}
 	focus = {

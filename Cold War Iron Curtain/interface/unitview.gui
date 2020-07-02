@@ -1131,6 +1131,13 @@ guiTypes = {
 			clicksound = click_default
 		}
 
+		iconType = { 
+			name = "fake_unit_icon_indicator"
+			spriteType = "GFX_unit_infantry_icon_medium"
+			position = { x=89 y=3 }
+			scale = 0.7
+		}
+
 		iconType = {
 			name = "bar_org"
 			spriteType = "GFX_navieslist_bar_org"
@@ -1305,7 +1312,7 @@ guiTypes = {
 			name = "label"
 			position = { x = 0 y = 5 }
 			textureFile = ""
-			font = "hoi4_typewriter16"
+			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 140
@@ -1318,7 +1325,7 @@ guiTypes = {
 			name = "value"
 			position = { x = 0 y = 5 }
 			textureFile = ""
-			font = "hoi4_typewriter16"
+			font = "hoi_16mbs"
 			borderSize = {x = 0 y = 0}
 			text = ""
 			maxWidth = 160
@@ -1437,6 +1444,14 @@ guiTypes = {
 			maxWidth = 450
 			maxHeight = 20
 			format = right
+		}
+
+		iconType = {
+			name = "role_icon"
+			position = { x=314 y=6 }
+			spriteType = "GFX_naval_equipment_role_icons"
+			alwaystransparent = yes
+			frame = 1
 		}
 	}
 
@@ -1660,7 +1675,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "base_stats_label"
 					position = { x = 5 y = 14 }
-					font = "hoi4_typewriter22"
+					font = "hoi_18mbs"
 					text = "DESIGNER_BASE_STATS_LABEL"
 					maxWidth = 180
 					maxHeight = 20
@@ -1686,7 +1701,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "combat_stats_label"
 					position = { x = 10 y = 14 }
-					font = "hoi4_typewriter22"
+					font = "hoi_18mbs"
 					text = "DESIGNER_COMBAT_STATS_LABEL"
 					maxWidth = 165
 					maxHeight = 20
@@ -1713,7 +1728,7 @@ guiTypes = {
 				instantTextboxType = {
 					name = "misc_stats_label"
 					position = { x = 10 y = 14 }
-					font = "hoi4_typewriter22"
+					font = "hoi_18mbs"
 					text = "FE_MISC_STATS"
 					maxWidth = 165
 					maxHeight = 20
@@ -2084,6 +2099,16 @@ guiTypes = {
 			quadTextureSprite = "GFX_unit_stats_view_tabs"
 			buttonText = "NAVAL_TERRAIN_LABEL"
 			font = "hoi_18mbs"
+		}
+
+		buttonType = {
+			name = "tab_design"
+			position = { x = 340 y = -10 }
+			Orientation = "LOWER_LEFT"
+			quadTextureSprite = "GFX_unit_stats_view_tabs"
+			buttonText = "NAVAL_DESIGN_LABEL"
+			font = "hoi_18mbs"
+			frame = 2
 		}
 
 		iconType = { 

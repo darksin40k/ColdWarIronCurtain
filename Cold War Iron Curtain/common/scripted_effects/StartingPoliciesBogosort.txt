@@ -41,6 +41,22 @@ starting_policies = {
 					has_idea = policy_taxrate_temp_5
 				}
 			}
+			is_ai = yes
+		}
+		add_ideas = policy_taxrate_temp_3
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_idea = policy_taxrate_temp_1
+					has_idea = policy_taxrate_temp_2
+					has_idea = policy_taxrate_temp_3
+					has_idea = policy_taxrate_temp_4
+					has_idea = policy_taxrate_temp_5
+				}
+			}
+			is_ai = no
 		}
 		add_ideas = policy_taxrate_temp_2
 	}
@@ -48,7 +64,8 @@ starting_policies = {
 	tax_rate = yes
 	edict_expenditure = yes
 	corruption_idea_calc = yes
-	policy_plan_8 = yes
+	policy_plan_9 = yes
+	set_country_flag = fiscal_policies_set
 }
 policy_plan_0 = { #total cost = none
 	add_ideas = policy_military_temp_1
@@ -66,12 +83,12 @@ policy_plan_0 = { #total cost = none
 	set_variable = { bogocheck = 10 }
 }
 policy_plan_1 = { #total cost = 3.33
-	add_ideas = policy_military_temp_2
+	add_ideas = policy_military_temp_1
 	add_ideas = policy_welfare_temp_1
 	add_ideas = policy_cpi_temp_1
 	add_ideas = policy_education_temp_1
 	add_ideas = policy_healthcare_temp_1
-	add_ideas = policy_services_temp_1
+	add_ideas = policy_services_temp_0
 	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
@@ -89,10 +106,10 @@ policy_plan_1 = { #total cost = 3.33
 }
 policy_plan_2 = { #total cost = 8.4
 	add_ideas = policy_military_temp_2
-	add_ideas = policy_welfare_temp_2
+	add_ideas = policy_welfare_temp_1
 	add_ideas = policy_cpi_temp_1
 	add_ideas = policy_education_temp_1
-	add_ideas = policy_healthcare_temp_2
+	add_ideas = policy_healthcare_temp_1
 	add_ideas = policy_services_temp_1
 	military_expenditure = yes
 	welfare_expenditure = yes
@@ -109,10 +126,10 @@ policy_plan_2 = { #total cost = 8.4
 		policy_plan_1 = yes
 	}
 }
-policy_plan_3 = { #total cost = 8.4
+policy_plan_3 = {
 	add_ideas = policy_military_temp_2
 	add_ideas = policy_welfare_temp_2
-	add_ideas = policy_cpi_temp_2
+	add_ideas = policy_cpi_temp_1
 	add_ideas = policy_education_temp_1
 	add_ideas = policy_healthcare_temp_2
 	add_ideas = policy_services_temp_1
@@ -131,13 +148,13 @@ policy_plan_3 = { #total cost = 8.4
 		policy_plan_2 = yes
 	}
 }
-policy_plan_4 = { #total cost = 12.8
+policy_plan_4 = {
 	add_ideas = policy_military_temp_2
 	add_ideas = policy_welfare_temp_2
 	add_ideas = policy_cpi_temp_2
-	add_ideas = policy_education_temp_2
+	add_ideas = policy_education_temp_1
 	add_ideas = policy_healthcare_temp_2
-	add_ideas = policy_services_temp_2
+	add_ideas = policy_services_temp_1
 	set_variable = { bogocheck = 50 }
 	military_expenditure = yes
 	welfare_expenditure = yes
@@ -153,14 +170,14 @@ policy_plan_4 = { #total cost = 12.8
 		policy_plan_3 = yes
 	}
 }
-policy_plan_5 = { #total cost = 12.8
+policy_plan_5a = { #slight toneback
 	add_ideas = policy_military_temp_2
-	add_ideas = policy_welfare_temp_3
+	add_ideas = policy_welfare_temp_2
 	add_ideas = policy_cpi_temp_2
-	add_ideas = policy_education_temp_3
-	add_ideas = policy_healthcare_temp_3
-	add_ideas = policy_services_temp_2
-	set_variable = { bogocheck = 60 }
+	add_ideas = policy_education_temp_2
+	add_ideas = policy_healthcare_temp_2
+	add_ideas = policy_services_temp_1
+	set_variable = { bogocheck = 55 }
 	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
@@ -175,14 +192,36 @@ policy_plan_5 = { #total cost = 12.8
 		policy_plan_4 = yes
 	}
 }
-policy_plan_6 = { 
-	add_ideas = policy_military_temp_3
-	add_ideas = policy_welfare_temp_4
-	add_ideas = policy_cpi_temp_4
-	add_ideas = policy_education_temp_3
-	add_ideas = policy_healthcare_temp_4
+policy_plan_5 = {
+	add_ideas = policy_military_temp_2
+	add_ideas = policy_welfare_temp_2
+	add_ideas = policy_cpi_temp_2
+	add_ideas = policy_education_temp_2
+	add_ideas = policy_healthcare_temp_2
 	add_ideas = policy_services_temp_2
-	set_variable = { bogocheck = 70 }
+	set_variable = { bogocheck = 60 }
+	military_expenditure = yes
+	welfare_expenditure = yes
+	cpi_expenditure = yes
+	edu_expenditure = yes
+	health_expenditure = yes
+	public_expenditure = yes
+	if = {
+		limit = {
+			check_variable = { IncomeCheck < 1 }
+		}
+		clear_all_policies = yes
+		policy_plan_5a = yes
+	}
+}
+policy_plan_6a = { 
+	add_ideas = policy_military_temp_2
+	add_ideas = policy_welfare_temp_2
+	add_ideas = policy_cpi_temp_2
+	add_ideas = policy_education_temp_3
+	add_ideas = policy_healthcare_temp_3
+	add_ideas = policy_services_temp_2
+	set_variable = { bogocheck = 65 }
 	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
@@ -197,13 +236,81 @@ policy_plan_6 = {
 		policy_plan_5 = yes
 	}
 }
+policy_plan_6 = { 
+	add_ideas = policy_military_temp_2
+	add_ideas = policy_welfare_temp_3
+	add_ideas = policy_cpi_temp_2
+	add_ideas = policy_education_temp_3
+	add_ideas = policy_healthcare_temp_3
+	add_ideas = policy_services_temp_2
+	set_variable = { bogocheck = 70 }
+	military_expenditure = yes
+	welfare_expenditure = yes
+	cpi_expenditure = yes
+	edu_expenditure = yes
+	health_expenditure = yes
+	public_expenditure = yes
+	if = {
+		limit = {
+			check_variable = { IncomeCheck < 1 }
+		}
+		clear_all_policies = yes
+		policy_plan_6a = yes
+	}
+}
+policy_plan_7b = { #slight toneback
+	add_ideas = policy_military_temp_2
+	add_ideas = policy_welfare_temp_4
+	add_ideas = policy_cpi_temp_3
+	add_ideas = policy_education_temp_3
+	add_ideas = policy_healthcare_temp_3
+	add_ideas = policy_services_temp_2
+	military_expenditure = yes
+	welfare_expenditure = yes
+	cpi_expenditure = yes
+	edu_expenditure = yes
+	health_expenditure = yes
+	public_expenditure = yes
+	
+	set_variable = { bogocheck = 72.5 }
+	if = {
+		limit = {
+			check_variable = { IncomeCheck < 1 }
+		}
+		clear_all_policies = yes
+		policy_plan_6 = yes
+	}
+}
+policy_plan_7a = { #slight toneback
+	add_ideas = policy_military_temp_2
+	add_ideas = policy_welfare_temp_4
+	add_ideas = policy_cpi_temp_3
+	add_ideas = policy_education_temp_3
+	add_ideas = policy_healthcare_temp_4
+	add_ideas = policy_services_temp_2
+	military_expenditure = yes
+	welfare_expenditure = yes
+	cpi_expenditure = yes
+	edu_expenditure = yes
+	health_expenditure = yes
+	public_expenditure = yes
+	
+	set_variable = { bogocheck = 75 }
+	if = {
+		limit = {
+			check_variable = { IncomeCheck < 1 }
+		}
+		clear_all_policies = yes
+		policy_plan_7b = yes
+	}
+}
 policy_plan_7 = { 
 	add_ideas = policy_military_temp_3
-	add_ideas = policy_welfare_temp_3
+	add_ideas = policy_welfare_temp_4
 	add_ideas = policy_cpi_temp_4
-	add_ideas = policy_education_temp_4
+	add_ideas = policy_education_temp_3
 	add_ideas = policy_healthcare_temp_4
-	add_ideas = policy_services_temp_3
+	add_ideas = policy_services_temp_2
 	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
@@ -217,13 +324,13 @@ policy_plan_7 = {
 			check_variable = { IncomeCheck < 1 }
 		}
 		clear_all_policies = yes
-		policy_plan_6 = yes
+		policy_plan_7a = yes
 	}
 }
 policy_plan_8 = { #total cost = 26.2
 	add_ideas = policy_military_temp_3
-	add_ideas = policy_welfare_temp_4
-	add_ideas = policy_cpi_temp_5
+	add_ideas = policy_welfare_temp_3
+	add_ideas = policy_cpi_temp_4
 	add_ideas = policy_education_temp_4
 	add_ideas = policy_healthcare_temp_4
 	add_ideas = policy_services_temp_3
@@ -240,6 +347,50 @@ policy_plan_8 = { #total cost = 26.2
 		}
 		clear_all_policies = yes
 		policy_plan_7 = yes
+	}
+}
+policy_plan_9a = { #Slight Toneback
+	add_ideas = policy_military_temp_3
+	add_ideas = policy_welfare_temp_4
+	add_ideas = policy_cpi_temp_4
+	add_ideas = policy_education_temp_4
+	add_ideas = policy_healthcare_temp_4
+	add_ideas = policy_services_temp_3
+	set_variable = { bogocheck = 95 }
+	military_expenditure = yes
+	welfare_expenditure = yes
+	cpi_expenditure = yes
+	edu_expenditure = yes
+	health_expenditure = yes
+	public_expenditure = yes
+	if = {
+		limit = {
+			check_variable = { IncomeCheck < 1 }
+		}
+		clear_all_policies = yes
+		policy_plan_8 = yes
+	}
+}
+policy_plan_9 = { 
+	add_ideas = policy_military_temp_3
+	add_ideas = policy_welfare_temp_4
+	add_ideas = policy_cpi_temp_5
+	add_ideas = policy_education_temp_4
+	add_ideas = policy_healthcare_temp_4
+	add_ideas = policy_services_temp_3
+	set_variable = { bogocheck = 100 }
+	military_expenditure = yes
+	welfare_expenditure = yes
+	cpi_expenditure = yes
+	edu_expenditure = yes
+	health_expenditure = yes
+	public_expenditure = yes
+	if = {
+		limit = {
+			check_variable = { IncomeCheck < 1 }
+		}
+		clear_all_policies = yes
+		policy_plan_9a = yes
 	}
 }
 
@@ -411,6 +562,49 @@ default_social_policies = {
 			}
 		}
 		add_ideas = policy_union_temp_1
+	}
+	
+	if = {
+		limit = {
+			NOT = {
+				#Christian#
+				has_country_flag = PR_ChristianityCatholic 
+				has_country_flag = PR_ChristianityProtestant 
+				has_country_flag = PR_ChristianityOrthodox 
+				has_country_flag = PR_ChristianityOriental 
+				#Judaic#
+				has_country_flag = PR_Judaism 
+				#Islamic#
+				has_country_flag = PR_IslamSunni 
+				has_country_flag = PR_IslamShia 
+				has_country_flag = PR_IslamIbadi 
+				#Buddhism#
+				has_country_flag = PR_BuddhismVajrayana 
+				has_country_flag = PR_BuddhismMahayana 
+				has_country_flag = PR_BuddhismThereveda 
+				#Eastern#
+				has_country_flag = PR_Shinto 
+				has_country_flag = PR_TraditionalEastern 
+				has_country_flag = PR_Confucian 
+				#Indo-Iranian#
+				has_country_flag = PR_Hindu 
+				has_country_flag = PR_Sikh 
+				has_country_flag = PR_Jain 
+				has_country_flag = PR_TraditionalIranian
+				#Minor/Esoteric#
+				has_country_flag = PR_Spiritual 
+				has_country_flag = PR_Statist 
+				has_country_flag = PR_CultistSafe
+				has_country_flag = PR_CultistFatal
+				has_country_flag = PR_TraditionalAfrican
+				has_country_flag = PR_TraditionalAmerican
+				has_country_flag = PR_TraditionalOceanic
+				has_country_flag = PR_Nautralist
+				has_country_flag = PR_Furry 
+				has_country_flag = PR_Other 
+			}
+		}
+		major_religion_placeholder = yes
 	}
 	
 	set_country_flag = flag_default_social_set

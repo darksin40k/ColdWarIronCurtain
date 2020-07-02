@@ -386,7 +386,14 @@ focus_tree = {
 		x = 21
 		y = 3
 		completion_reward = {
-			add_ideas = press_censorship_5
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_1
 		}
 	}
 	focus = {
@@ -680,6 +687,7 @@ focus_tree = {
 		x = 32
 		y = 3
 		completion_reward = {
+			custom_effect_tooltip = Resource_Efficiency_TT
 			add_ideas = Resource_Efficiency
 		}
 	}
@@ -1834,7 +1842,14 @@ focus_tree = {
 		x = 23
 		y = 17
 		completion_reward = {
-			add_ideas = default_media_laws_0
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_2
 		}
 	}
 	focus = {

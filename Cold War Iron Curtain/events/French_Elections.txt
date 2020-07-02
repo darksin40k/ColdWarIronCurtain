@@ -59,7 +59,7 @@ country_event = {
 	option = {
 		name = French_PM.2.o.a
 		create_country_leader = {
-			name = "René Pleven"
+			name = "Rene Pleven"
 			picture = "Rene_Pleven.dds"
 			ideology = social_democrat
 		}
@@ -79,10 +79,10 @@ country_event = {
 		}
 	}
 }
-# René Pleven Fall of Government
+# Rene Pleven Fall of Government
 country_event = {
 	id = French_PM.3
-	title = "Fall of René Pleven's Government"
+	title = "Fall of Rene Pleven's Government"
 	desc = French_PM.3.d
 	picture = GFX_report_event_brazil_election_1955
 
@@ -131,8 +131,9 @@ country_event = {
 
 	option = {
 		name = French_PM.4.o.a
+		
 		create_country_leader = {
-			name = "René Pleven"
+			name = "Rene Pleven"
 			picture = "Rene_Pleven.dds"
 			ideology = social_democrat
 		}
@@ -152,10 +153,10 @@ country_event = {
 		}
 	}
 }
-# René Pleven Fall of Government
+# Rene Pleven Fall of Government
 country_event = {
 	id = French_PM.5
-	title = "Fall of René Pleven's Government" 
+	title = "Fall of Rene Pleven's Government" 
 	desc = French_PM.5.d
 	picture = GFX_report_event_brazil_election_1955
 
@@ -200,10 +201,10 @@ country_event = {
 		create_country_leader = {
 			name = "Antoine Pinay"
 			picture = "Antoine_Pinay.dds"
-			ideology = conservatism
+			ideology = Liberal_Conservatism
 		}
 		set_politics = {
-			ruling_party = conservative
+			ruling_party = Liberal_Conservatism
 			elections_allowed = no
 		}
 		hidden_effect = {
@@ -212,6 +213,7 @@ country_event = {
 				id = French_PM.7
 				days = 306
 			}
+
 		}
 		ai_chance = {
 			factor = 1
@@ -231,7 +233,7 @@ country_event = {
 	option = {
 		name = French_PM.7.o.a
 		create_country_leader = {
-			name = "René Mayer"
+			name = "Rene Mayer"
 			picture = "Portrait_FRA_Mayer.dds"
 			ideology = social_liberal
 		}
@@ -251,10 +253,10 @@ country_event = {
 		}
 	}
 }
-# René Mayer Fall of Government
+# Rene Mayer Fall of Government
 country_event = {
 	id = French_PM.8
-	title = "Fall of René Mayer's Government"
+	title = "Fall of Rene Mayer's Government"
 	desc = French_PM.8.d
 	picture = GFX_report_event_brazil_election_1955
 
@@ -266,54 +268,207 @@ country_event = {
 		create_country_leader = {
 			name = "Joseph Laniel"
 			picture = "Portrait_FRA_Laniel.dds"
-			ideology = gaullist
+			ideology = Liberal_Conservatism
 		}
 		set_politics = {
-			ruling_party = conservative
+			ruling_party = Liberal_Conservatism
 			elections_allowed = no
 		}
 		hidden_effect = {
 			set_country_flag = Laniel_PM
 		}
+		country_event = {
+				id = French_PM.9
+				days = 147
+			}
+		#country_event = {
+		#	id = french_elections.11
+		#	days = 170
+		#}
 		ai_chance = {
 			factor = 1
 		}
 	}
 }
+
+#Jospeh Laniel Fall 
+country_event = {
+	id = French_PM.9
+	title = "Fall of Laniel's Government"
+	desc = French_PM.9.desc
+	picture = GFX_report_event_brazil_election_1950
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = {
+		name = French_PM.9.o.a 
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Pierre MendÃ¨s-France"
+			picture = "Portrait_FRA_Mendes_France.dds"
+			ideology = social_liberal
+		}
+		set_politics = {
+			ruling_party = Social_Liberalism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_country_flag = P_M_F
+			country_event = {
+				id = French_PM.10
+				days = 228
+			}
+		}
+	}
+}
+#PMF Fall 
+country_event = {
+	id = French_PM.10
+	title = "Fall of PMF's Government"
+	desc = French_PM.10.desc
+	picture = GFX_report_event_brazil_election_1950
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = {
+		name = French_PM.10.o.a 
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Edgar Faure"
+			picture = "Portrait_FRA_Edgar_Faure.dds"
+			ideology = social_liberal
+		}
+		set_politics = {
+			ruling_party = Social_Liberalism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_country_flag = Edgar_Faure
+		}
+		country_event = {
+				id = French_PM.10
+				days = 330
+			}
+	}
+}
+#Faure Fall 
+country_event = {
+	id = French_PM.11
+	title = "Fall of Guy Mollet's Government"
+	desc = French_PM.11.desc
+	picture = GFX_report_event_brazil_election_1950
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = {
+		name = French_PM.11.o.a 
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Maurice BourgÃ¨s-Maunoury"
+			picture = "Maurice_BourgÃ¨s.dds"
+			ideology = social_liberal
+		}
+		set_politics = {
+			ruling_party = Social_Liberalism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_country_flag = Maurice_PM
+		}
+		country_event = {
+				id = French_PM.12
+				days = 475
+			}
+	}
+}
+##Maurice BourgÃ¨s Fall
+country_event = {
+	id = French_PM.12
+	title = "Fall of BourgÃ¨s-Maunoury's Government"
+	desc = French_PM.12.desc
+	picture = GFX_report_event_brazil_election_1950
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = {
+		name = French_PM.12.o.a 
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "FÃ©lix Gaillard"
+			picture = "Portrait_France_Marcel_Edmond_Naegelen.dds"
+			ideology = social_liberal
+		}
+		set_politics = {
+			ruling_party = Social_Liberalism
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_country_flag = Felix_PM
+		}
+		country_event = {
+				id = French_PM.13
+				days = 108
+			}
+	}
+}
+##"Felix Gaillard fall
+country_event = {
+	id = French_PM.13
+	title = "Fall of Felix Gaillard's Government"
+	desc = French_PM.13.desc
+	picture = GFX_report_event_brazil_election_1950
+
+	fire_only_once = yes 
+	is_triggered_only = yes
+
+	option = {
+		name = French_PM.13.o.a 
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Pierre Pflimlin"
+			picture = "Pierre_Pfimlin.dds"
+			ideology = christian_democracy
+		}
+		set_politics = {
+			ruling_party = Christian_Democratic
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_country_flag = Pierre_PM
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
 	# 1953 Presidential Elections
 country_event = {
 	id = french_elections.11
 	title = "1953 Presidential Elections"
 	desc = french_elections.2.d
 	picture = GFX_report_event_brazil_election_1955
-
-	fire_only_once = yes
 	is_triggered_only = yes
-	trigger = {
-		original_tag = FRA
-		date > 1953.1.1
-		date < 1954.1.1
-	}
-	immediate = {
-		set_country_flag = french_elections_1953
-		complete_national_focus = FRA_1953_Presidential
-	}
 
-	# Marcel-Edmond Naegelen
+
 	option = {
-		name = "Marcel-Edmond Naegelen"
-		create_country_leader = {
-			name = "Marcel-Edmond Naegelen"
-			picture = "Portrait_France_Marcel_Edmond_Naegelen.dds"
-			expire = "1978.4.15"
-			ideology = social_democrat
-		}
+		name = "SFIO Victory"
+
 		set_country_flag = Naegelen_1953
 		complete_national_focus = FRA_SFIO_1953
-		set_politics = {
-			ruling_party = Social_Democratic
-			elections_allowed = no
-		}
+
+		set_country_flag = french_elections_1953
+		complete_national_focus = FRA_1953_Presidential
 		ai_chance = {
 			factor = 40
 			modifier = {
@@ -322,21 +477,15 @@ country_event = {
 			}
 		}
 	}
-	# Paul-Jacques Kalb
+
 	option = {
-		name = "Paul-Jacques Kalb"
-		create_country_leader = {
-			name = "Paul-Jacques Kalb"
-			picture = "Portrait_France_Paul_Jacques_Kalb.dds"
-			expire = "1964.8.19"
-			ideology = gaullist
-		}
+		name = "RPF Victory"
+		set_country_flag = french_elections_1953
+		complete_national_focus = FRA_1953_Presidential
+
 		set_country_flag = Kalb_1953
 		complete_national_focus = FRA_RPF_1953
-		set_politics = {
-			ruling_party = conservative
-			elections_allowed = no
-		}
+
 		ai_chance = {
 			factor = 15
 			modifier = {
@@ -345,21 +494,89 @@ country_event = {
 			}
 		}
 	}
-	# CNIP Victory
 	option = {
-		name = "CNIP Victory"
-		country_event = french_elections.12
+		name = "More Options"
+		country_event = french_elections.111
+	}
+}
+country_event = {
+	id = french_elections.112
+	title = "1953 Presidential Elections"
+	desc = french_elections.2.d
+	picture = GFX_report_event_brazil_election_1955
+	is_triggered_only = yes
+	
+
+	option = {
+		name = "SFIO Victory"
+
+		set_country_flag = Naegelen_1953
+		complete_national_focus = FRA_SFIO_1953
+
+		set_country_flag = french_elections_1953
+		complete_national_focus = FRA_1953_Presidential
+		ai_chance = {
+			factor = 40
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+
+	option = {
+		name = "RPF Victory"
+		set_country_flag = french_elections_1953
+		complete_national_focus = FRA_1953_Presidential
+
+		set_country_flag = Kalb_1953
+		complete_national_focus = FRA_RPF_1953
+	
 		ai_chance = {
 			factor = 15
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = "More Options"
+		country_event = french_elections.111
+	}
+}
+
+country_event = {
+	id = french_elections.111
+	title = "1953 Presidential Elections"
+	desc = french_elections.2.d
+	picture = GFX_report_event_brazil_election_1955
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "More Options"
+		country_event = french_elections.112
+	}
+	option = {
+		name = "CNIP Victory"
+		set_country_flag = french_elections_1953
+		complete_national_focus = FRA_1953_Presidential
+		complete_national_focus = FRA_CNIP_1953
+		country_event = french_elections.12
+		ai_chance = {
+			factor = 50
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 1000
 			}
 		}
 	}
-	# UDSR Victory
 	option = {
 		name = "UDSR Victory"
+		set_country_flag = french_elections_1953
+		complete_national_focus = FRA_1953_Presidential
+		complete_national_focus = FRA_UDSR_1953
 		country_event = french_elections.13
 		ai_chance = {
 			factor = 15
@@ -376,24 +593,15 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_brazil_election_1955
 
-	fire_only_once = yes
 	is_triggered_only = yes
 
 	# Joseph Laniel
 	option = {
 		name = "Joseph Laniel"
-		create_country_leader = {
-			name = "Joseph Laniel"
-			picture = "Portrait_France_Paul_Joseph_Laniel.dds"
-			expire = "1975.4.8"
-			ideology = conservative_liberalism
-		}
+
 		set_country_flag = Laniel_1953
 		complete_national_focus = FRA_CNIP_1953
-		set_politics = {
-			ruling_party = Liberal_Conservatism
-			elections_allowed = no
-		}
+
 		ai_chance = {
 			factor = 15
 			modifier = {
@@ -405,18 +613,10 @@ country_event = {
 	# Louis Jacquinot
 	option = {
 		name = "Louis Jacquinot"
-		create_country_leader = {
-			name = "Louis Jacquinot"
-			picture = "Portrait_France_Paul_Louis_Jacquinot.dds"
-			expire = "1975.4.8"
-			ideology = liberal_conservatism
-		}
+
 		set_country_flag = Jacquinot_1953
 		complete_national_focus = FRA_CNIP_1953
-		set_politics = {
-			ruling_party = Liberal_Conservatism
-			elections_allowed = no
-		}
+
 		ai_chance = {
 			factor = 15
 			modifier = {
@@ -425,21 +625,13 @@ country_event = {
 			}
 		}
 	}
-	# René Coty
+	# Rene Coty
 	option = {
-		name = "René Coty"
-		create_country_leader = {
-			name = "René Coty"
-			picture = "Portrait_France_Paul_Rene_Coty.dds"
-			expire = "1962.11.22"
-			ideology = liberal_conservatism
-		}
+		name = "Rene Coty"
+
 		set_country_flag = Coty_1953
 		complete_national_focus = FRA_CNIP_1953
-		set_politics = {
-			ruling_party = Liberal_Conservatism
-			elections_allowed = no
-		}
+
 		ai_chance = {
 			factor = 15
 			modifier = {
@@ -455,24 +647,14 @@ country_event = {
 	desc = ""
 	picture = GFX_report_event_brazil_election_1955
 
-	fire_only_once = yes
 	is_triggered_only = yes
 
-	# Jean Médecin
+	# Jean M3decin
 	option = {
-		name = "Jean Médecin"
-		create_country_leader = {
-			name = "Jean Médecin"
-			picture = "Portrait_France_Marcel_Jean_Medecin.dds"
-			expire = "1965.12.18"
-			ideology = social_liberal
-		}
+		name = "Jean Medecin"
 		set_country_flag = Medecin_1953
 		complete_national_focus = FRA_UDSR_1953
-		set_politics = {
-			ruling_party = Social_Liberalism
-			elections_allowed = no
-		}
+
 		ai_chance = {
 			factor = 15
 			modifier = {
@@ -481,11 +663,11 @@ country_event = {
 			}
 		}
 	}
-	# François Mitterrand
+	# Franeois Mitterrand
 	option = {
-		name = "François Mitterrand"
+		name = "Franeois Mitterrand"
 		create_country_leader = {
-			name = "François Mitterrand"
+			name = "Francois Mitterrand"
 			picture = "Portrait_France_Francois_Mitterrand.dds"
 			expire = "1996.1.8"
 			ideology = social_liberal
@@ -551,9 +733,9 @@ country_event = {
 			}
 		}
 	}
-	# Troisième Force Majority
+	# Troisieme Force Majority
 	option = {
-		name = "Troisième Force Majority"
+		name = "Troisieme Force Majority"
 		set_country_flag = Troisieme_Force_Majority_1951
 		complete_national_focus = FRA_Troisieme_Force_Coalition_1951
 		set_popularities = {
@@ -581,7 +763,7 @@ country_event = {
 			factor = 15
 			modifier = {
 				is_historical_focus_on = yes
-				factor = 0
+				factor = 100
 			}
 		}
 	}
@@ -626,49 +808,14 @@ country_event = {
 country_event = {
 	id = french_elections.18
 	title = "1956 Legislative Elections"
-	desc = ""
+	desc = french_elections.18.d
 	picture = GFX_report_event_brazil_election_1955
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	# Poujadist Majority
-	option = {
-		name = "Poujadist Majority"
-		trigger = {
-			has_completed_focus = FRA_RPF_1953
-		}
-		set_country_flag = Poujadist_Majority_1956
-		complete_national_focus = FRA_1950s_Poujadists_Majority_56
-		set_popularities = {
-			democratic = 0
-			fascism = 0
-			nationalism = 33
-			monarchism = 0
-			neutrality = 0
-			islamism = 0
-			radical_shiaism = 0
-			Social_Liberalism = 11
-			Salafism = 0
-			Liberal_Conservatism = 0
-			Christian_Democratic = 0
-			socialist = 21
-			liberal = 0
-			trotskyism = 12
-			maoism = 0
-			communism = 15
-			conservative = 8
-			centrist = 0
-			Social_Democratic = 0
-		}
-		ai_chance = {
-			factor = 15
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-		}
-	}
+
 	# Center Right Majority
 	option = {
 		name = "Center Right Majority"
@@ -676,22 +823,22 @@ country_event = {
 		complete_national_focus = FRA_Center_right_56
 		set_party_name = {
 			ideology = Social_Liberalism
-			long_name = "Rassemblement des gauches Républicaine"
+			long_name = "Rassemblement des gauches Republicaines"
 			name = "RDGR"
 		}
 		set_party_name = {
 			ideology = Social_Democratic
-			long_name = "Rassemblement des gauches Républicaine"
+			long_name = "Rassemblement des gauches Republicaines"
 			name = "RDGR"
 		}
 		set_party_name = {
 			ideology = Christian_Democratic
-			long_name = "Rassemblement des gauches Républicaine"
+			long_name = "Rassemblement des gauches Republicaines"
 			name = "RDGR"
 		}
 		set_party_name = {
 			ideology = centrist
-			long_name = "Rassemblement des gauches Républicaine"
+			long_name = "Rassemblement des gauches Republicaines"
 			name = "RDGR"
 		}
 		set_popularities = {
@@ -730,13 +877,135 @@ country_event = {
 		complete_national_focus = FRA_Republican_Front_56
 		set_party_name = {
 			ideology = socialist
-			long_name = "Front républicain"
-			name = "Front républicain"
+			long_name = "Front Republicain"
+			name = "Front Republicain"
 		}
 		set_party_name = {
 			ideology = Social_Democratic
-			long_name = "Front républicain"
-			name = "Front républicain"
+			long_name = "Front Republicain"
+			name = "Front Republicain"
+		}
+		set_popularities = {
+			democratic = 0
+			fascism = 0
+			nationalism = 13
+			monarchism = 0
+			neutrality = 0
+			islamism = 0
+			radical_shiaism = 0
+			Social_Liberalism = 29
+			Salafism = 0
+			Liberal_Conservatism = 0
+			Christian_Democratic = 0
+			socialist = 18
+			liberal = 0
+			trotskyism = 0
+			maoism = 0
+			communism = 25
+			conservative = 0
+			centrist = 0
+			Social_Democratic = 15
+		}
+		set_politics = {
+			ruling_party = Social_Democratic
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Guy Mollet"
+			picture = "Guy_Mollet.dds"
+			ideology = social_democrat
+		}	
+		ai_chance = {
+			factor = 15
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 100
+			}
+		}
+	}
+	option = {
+		name = "More Options"
+		country_event = french_elections.181
+	}
+}
+country_event = {
+	id = french_elections.182
+	title = "1956 Legislative Elections"
+	desc = ""
+	picture = GFX_report_event_brazil_election_1955
+
+	is_triggered_only = yes
+
+	# Poujadist Majority
+
+	# Center Right Majority
+	option = {
+		name = "Center Right Majority"
+		set_country_flag = Center_Right_Majority_1956
+		complete_national_focus = FRA_Center_right_56
+		set_party_name = {
+			ideology = Social_Liberalism
+			long_name = "Rassemblement des gauches Republicaine"
+			name = "RDGR"
+		}
+		set_party_name = {
+			ideology = Social_Democratic
+			long_name = "Rassemblement des gauches Republicaine"
+			name = "RDGR"
+		}
+		set_party_name = {
+			ideology = Christian_Democratic
+			long_name = "Rassemblement des gauches Republicaine"
+			name = "RDGR"
+		}
+		set_party_name = {
+			ideology = centrist
+			long_name = "Rassemblement des gauches Republicaine"
+			name = "RDGR"
+		}
+		set_popularities = {
+			democratic = 0
+			fascism = 0
+			nationalism = 13
+			monarchism = 0
+			neutrality = 0
+			islamism = 0
+			radical_shiaism = 0
+			Social_Liberalism = 33
+			Salafism = 0
+			Liberal_Conservatism = 0
+			Christian_Democratic = 0
+			socialist = 28
+			liberal = 0
+			trotskyism = 0
+			maoism = 0
+			communism = 26
+			conservative = 0
+			centrist = 0
+			Social_Democratic = 0
+		}
+		ai_chance = {
+			factor = 15
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1000
+			}
+		}
+	}
+	# Republican Front Majority
+	option = {
+		name = "Republican Front Majority"
+		set_country_flag = Republican_Front_Majority_1956
+		complete_national_focus = FRA_Republican_Front_56
+		set_party_name = {
+			ideology = socialist
+			long_name = "Front republicain"
+			name = "Front republicain"
+		}
+		set_party_name = {
+			ideology = Social_Democratic
+			long_name = "Front republicain"
+			name = "Front republicain"
 		}
 		set_popularities = {
 			democratic = 0
@@ -767,14 +1036,57 @@ country_event = {
 			}
 		}
 	}
+	option = {
+		name = "More Options"
+		country_event = french_elections.181
+	}
+}
+country_event = {
+	id = french_elections.181
+	title = "1956 Legislative Elections"
+	desc = ""
+	picture = GFX_report_event_brazil_election_1955
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Poujadist Majority"
+		set_country_flag = Poujadist_Majority_1956
+		complete_national_focus = FRA_1950s_Poujadists_Majority_56
+		set_popularities = {
+			democratic = 0
+			fascism = 0
+			nationalism = 33
+			monarchism = 0
+			neutrality = 0
+			islamism = 0
+			radical_shiaism = 0
+			Social_Liberalism = 11
+			Salafism = 0
+			Liberal_Conservatism = 0
+			Christian_Democratic = 0
+			socialist = 21
+			liberal = 0
+			trotskyism = 12
+			maoism = 0
+			communism = 15
+			conservative = 8
+			centrist = 0
+			Social_Democratic = 0
+		}
+		ai_chance = {
+			factor = 15
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
 	# PCF Majority
 	option = {
 		name = "PCF Majority"
-		trigger = {
-			has_completed_focus = FRA_PFC_Majority
-		}
 		set_country_flag = PFC_Majority_1956
-		complete_national_focus = FRA_1956s_PCF_Majority_1956
+		complete_national_focus = FRA_1950s_PCF_Majority_1956
 		set_popularities = {
 			democratic = 0
 			fascism = 0
@@ -803,6 +1115,10 @@ country_event = {
 				factor = 0
 			}
 		}
+	}
+	option = {
+		name = "More Options"
+		country_event = french_elections.182
 	}
 }
 # 1965 Presidential Elections
@@ -855,11 +1171,11 @@ country_event = {
 			}
 		}
 	}
-	# François Mitterrand
+	# Francois Mitterrand
 	option = {
-		name = "François Mitterrand"
+		name = "Francois Mitterrand"
 		create_country_leader = {
-		name = "François Mitterrand"
+		name = "Francois Mitterrand"
 		picture = "Portrait_France_Francois_Mitterrand.dds"
 		expire = "1996.1.8"
 		ideology = socialism
@@ -949,7 +1265,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "François Mitterrand"
+		name = "Francois Mitterrand"
 		trigger = {
 			OR = {
 				has_completed_focus = FRA_60s_Gaullist_Defeat
@@ -958,7 +1274,7 @@ country_event = {
 			}
 		}
 		create_country_leader = {
-		name = "François Mitterrand"
+		name = "Francois Mitterrand"
 		picture = "Portrait_France_Francois_Mitterrand.dds"
 		expire = "1996.1.8"
 		ideology = socialism
@@ -1027,11 +1343,11 @@ country_event = {
 		set_country_flag = french_elections_1974
 	}
 
-	# Valéry Giscard d'Estaing
+	# Valery Giscard d'Estaing
 	option = {
-		name = "Valéry Giscard d'Estaing"
+		name = "Valery Giscard d'Estaing"
 		create_country_leader = {
-			name = "Valéry Giscard d'Estaing"
+			name = "Valery Giscard d'Estaing"
 			picture = Portrait_France_Valery_Giscard_dEstaing.dds
 			ideology = liberal_conservatism
 		}
@@ -1070,9 +1386,9 @@ country_event = {
 		}
 	}
 	option = {
-		name = "François Mitterrand"
+		name = "Francois Mitterrand"
 		create_country_leader = {
-		name = "François Mitterrand"
+		name = "Francois Mitterrand"
 		picture = "Portrait_France_Francois_Mitterrand.dds"
 		expire = "1996.1.8"
 		ideology = socialism
@@ -1134,11 +1450,11 @@ country_event = {
 		date > 1981.1.1
 		date < 1982.1.1
 	}
-	# Valéry Giscard d'Estaing
+	# Valery Giscard d'Estaing
 	option = {
-		name = "Valéry Giscard d'Estaing"
+		name = "Valery Giscard d'Estaing"
 		create_country_leader = {
-			name = "Valéry Giscard d'Estaing"
+			name = "Valery Giscard d'Estaing"
 			picture = Portrait_France_Valery_Giscard_dEstaing.dds
 			ideology = liberal_conservatism
 		}
@@ -1201,9 +1517,9 @@ country_event = {
 		}
 	}
 	option = {
-		name = "François Mitterrand"
+		name = "Francois Mitterrand"
 		create_country_leader = {
-		name = "François Mitterrand"
+		name = "Francois Mitterrand"
 		picture = "Portrait_France_Francois_Mitterrand.dds"
 		expire = "1996.1.8"
 		ideology = socialism
@@ -1262,14 +1578,14 @@ country_event = {
 		set_country_flag = french_elections_1988
 	}
 
-	# Valéry Giscard d'Estaing
+	# Valery Giscard d'Estaing
 	option = {
-		name = "Valéry Giscard d'Estaing"
+		name = "Valery Giscard d'Estaing"
 		trigger = {
 			has_country_flag = VGE_1981
 		}
 		create_country_leader = {
-			name = "Valéry Giscard d'Estaing"
+			name = "Valery Giscard d'Estaing"
 			picture = Portrait_France_Valery_Giscard_dEstaing.dds
 			ideology = liberal_conservatism
 		}
@@ -1332,9 +1648,9 @@ country_event = {
 		}
 	}
 	option = {
-		name = "François Mitterrand"
+		name = "Francois Mitterrand"
 		create_country_leader = {
-		name = "François Mitterrand"
+		name = "Francois Mitterrand"
 		picture = "Portrait_France_Francois_Mitterrand.dds"
 		expire = "1996.1.8"
 		ideology = socialism
@@ -1371,14 +1687,14 @@ country_event = {
 		set_country_flag = french_elections_1995
 	}
 
-	# Valéry Giscard d'Estaing
+	# Valery Giscard d'Estaing
 	option = {
-		name = "Valéry Giscard d'Estaing"
+		name = "Valery Giscard d'Estaing"
 		trigger = {
 			has_country_flag = VGE_1988
 		}
 		create_country_leader = {
-			name = "Valéry Giscard d'Estaing"
+			name = "Valery Giscard d'Estaing"
 			picture = Portrait_France_Valery_Giscard_dEstaing.dds
 			ideology = liberal_conservatism
 		}
@@ -1416,11 +1732,11 @@ country_event = {
 			}
 		}
 	}
-	# Édouard Balladur
+	# Edouard Balladur
 	option = {
-		name = "Édouard Balladur"
+		name = "Edouard Balladur"
 		create_country_leader = {
-			name = "Édouard Balladur"
+			name = "Edouard Balladur"
 			picture = Portrait_France_Edouard_Balladur.dds
 			ideology = gaullist
 		}
@@ -1498,14 +1814,14 @@ country_event = {
 			}
 		}
 	}
-	# Édouard Balladur
+	# Edouard Balladur
 	option = {
-		name = "Édouard Balladur"
+		name = "Edouard Balladur"
 		trigger = {
 			has_country_flag = balladur_1995
 		}
 		create_country_leader = {
-			name = "Édouard Balladur"
+			name = "Edouard Balladur"
 			picture = Portrait_France_Edouard_Balladur.dds
 			ideology = gaullist
 		}
@@ -1604,12 +1920,12 @@ country_event = {
 			}
 		}
 	}
-	# François Bayrou
+	# Francois Bayrou
 	option = {
-		name = "François Bayrou"
+		name = "Francois Bayrou"
 		create_country_leader = {
-			name = "François Bayrou"
-			picture = Portrait_France_François_Bayrou.dds
+			name = "Francois Bayrou"
+			picture = Portrait_France_Francois_Bayrou.dds
 			ideology = liberal_conservatism
 		}
 		set_politics = {
@@ -1625,11 +1941,11 @@ country_event = {
 			}
 		}
 	}
-	# Ségolène Royal
+	# Segolene Royal
 	option = {
-		name = "Ségolène Royal"
+		name = "Segolene Royal"
 		create_country_leader = {
-		name = "Ségolène Royal"
+		name = "Segolene Royal"
 		picture = "Portrait_France_Segolene_Royal.dds"
 		ideology = socialism
 		}
@@ -1710,14 +2026,14 @@ country_event = {
 			}
 		}
 	}
-	# Ségolène Royal
+	# Segolene Royal
 	option = {
-		name = "Ségolène Royal"
+		name = "Segolene Royal"
 		trigger = {
 			has_country_flag = segolene_2007
 		}
 		create_country_leader = {
-		name = "Ségolène Royal"
+		name = "Segolene Royal"
 		picture = "Portrait_France_Segolene_Royal.dds"
 		ideology = socialism
 		}
@@ -1734,11 +2050,11 @@ country_event = {
 			}
 		}
 	}
-	# François Hollande
+	# Francois Hollande
 	option = {
-		name = "François Hollande"
+		name = "Francois Hollande"
 		create_country_leader = {
-		name = "François Hollande"
+		name = "Francois Hollande"
 		picture = "Portrait_France_Francois_Hollande.dds"
 		ideology = socialism
 		}
@@ -1795,11 +2111,11 @@ country_event = {
 		date > 2017.1.1
 		date < 2018.1.1
 	}
-	# François Fillon
+	# Francois Fillon
 	option = {
-		name = "François Fillon"
+		name = "Francois Fillon"
 		create_country_leader = {
-			name = "François Fillon"
+			name = "Francois Fillon"
 			picture = Portrait_France_Francois_Fillon.dds
 			ideology = national_conservatism
 		}
@@ -1816,11 +2132,11 @@ country_event = {
 			}
 		}
 	}
-	# Benoît Hamon
+	# Benoit Hamon
 	option = {
-		name = "Benoît Hamon"
+		name = "Benoit Hamon"
 		create_country_leader = {
-		name = "Benoît Hamon"
+		name = "Benoit Hamon"
 		picture = "Portrait_France_Benoit_Hamon.dds"
 		ideology = socialism
 		}
@@ -1837,14 +2153,14 @@ country_event = {
 			}
 		}
 	}
-	# François Hollande
+	# Francois Hollande
 	option = {
-		name = "François Hollande"
+		name = "Francois Hollande"
 		trigger = {
 			has_country_flag = segolene_2012
 		}
 		create_country_leader = {
-		name = "François Hollande"
+		name = "Francois Hollande"
 		picture = "Portrait_France_Francois_Hollande.dds"
 		ideology = socialism
 		}
@@ -1882,11 +2198,11 @@ country_event = {
 			}
 		}
 	}
-	# Jean-Luc Mélenchon
+	# Jean-Luc Melenchon
 	option = {
-		name = "Jean-Luc Mélenchon"
+		name = "Jean-Luc Melenchon"
 		create_country_leader = {
-		name = "Jean-Luc Mélenchon"
+		name = "Jean-Luc Melenchon"
 		picture = "Portrait_France_Jean_Luc_Melenchon.dds"
 		ideology = democratic_socialist
 		}
@@ -2082,7 +2398,7 @@ country_event = {
 
 	# URP Victory
 	option = {
-		name = "Union Républicaine Populaire Victory"
+		name = "Union Republicaine Populaire Victory"
 		add_popularity = {
 			ideology = conservative
 			popularity = 0.5
@@ -2112,7 +2428,7 @@ country_event = {
 	}
 	# Left Victory
 	option = {
-		name = "Union Républicaine Populaire Victory"
+		name = "Union Republicaine Populaire Victory"
 		add_popularity = {
 			ideology = socialist
 			popularity = 0.2

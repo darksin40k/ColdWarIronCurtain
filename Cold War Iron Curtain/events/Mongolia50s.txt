@@ -48,7 +48,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-	name = "Burkhany orond taivan noirsdoo"
+	name = "Taivan Noirsdoo"
 	kill_country_leader = yes
 		create_country_leader = {
 			name = "Ulsyn Ikh Khural"
@@ -78,8 +78,6 @@ news_event = {
 	picture = GFX_generic_sc_ruling
 	is_triggered_only = yes
 
-	major = yes
-
 	option = {
 	name = "Interesting News"
 	}
@@ -90,8 +88,6 @@ news_event = {
 	desc = mongolia.21.d
 	picture = GFX_generic_sc_ruling
 	is_triggered_only = yes
-
-	major = yes
 
 	option = {
 	name = "Interesting News"
@@ -153,7 +149,11 @@ country_event = {
 			news_event = inner_mongol.5
 		}
 		ai_chance = {
-			factor = 20
+			base = 20
+		modifier = {
+			is_historical_focus_on = yes
+			factor = 0
+			}
 		}
 	}
 	option = {
@@ -162,7 +162,7 @@ country_event = {
 			country_event = inner_mongol.3
 		}
 		ai_chance = {
-			factor = 80
+			base = 80
 		}
 	}
 }
@@ -224,7 +224,9 @@ country_event = {
 
 	option = {
 		name = "A fine idea"
-		country_event = inner_mongol.11
+		MON = {
+			country_event = inner_mongol.11
+		}
 		news_event = inner_mongol.13
 		ai_chance = {
 			factor = 20
@@ -303,13 +305,17 @@ country_event = {
 		complete_national_focus = MON_Accept_Maos_Offer
 		ai_chance = {
 			factor = 20
+			modifier = {
+				is_historical_focus_on = yes 
+				factor = 0
+			}
 		}
 	}
 	option = {
 		name = "Mongolia will remain independent!"
 		PRC = { country_event = mongolia_prc.3 }
 		ai_chance = {
-			factor = 80
+			factor = 80		
 		}
 	}
 }

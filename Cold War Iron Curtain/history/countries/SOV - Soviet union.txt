@@ -258,7 +258,7 @@ add_dynamic_modifier = {
 	modifier = clergy_tolerance
 }
 
-set_variable = { cpsu_strength = -0.10 }
+set_variable = { cpsu_strength_factor = -0.10 }
 
 add_dynamic_modifier = {
 	modifier = cpsu_party_strength
@@ -272,6 +272,7 @@ add_dynamic_modifier = {
 				name = "Gangut-Class" # Battleship (Firepower)
 				type = battle_hull_heavy_ww
 				parent_version = 0
+				name_group = SOV_BB_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_heavy_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -283,13 +284,14 @@ add_dynamic_modifier = {
 					mid_1_custom_slot = ship_AA_gun_1
 					mid_2_custom_slot = ship_armament_light_ww
 					mid_3_custom_slot = ship_armament_medium_ww
-					rear_1_custom_slot = ship_armament_medium_ww
+					rear_1_custom_slot = ship_armament_light_ww
 				}
 			}
 			create_equipment_variant = {
 				name = "Arkhangelsk-Class" # Battleship (Firepower)
 				type = battle_hull_heavy_ww
 				parent_version = 0
+				name_group = SOV_BB_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_heavy_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -301,7 +303,7 @@ add_dynamic_modifier = {
 					mid_1_custom_slot = ship_AA_gun_1
 					mid_2_custom_slot = ship_armament_light_ww
 					mid_3_custom_slot = ship_armament_medium_ww
-					rear_1_custom_slot = ship_armament_medium_ww
+					rear_1_custom_slot = ship_armament_light_ww
 				}
 			}
 			
@@ -309,6 +311,7 @@ add_dynamic_modifier = {
 				name = "Petropavlovsk-Class" # Heavy Cruisers (Firepower)
 				type = battle_hull_medium_ww
 				parent_version = 0
+				name_group = SOV_BC_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -326,6 +329,7 @@ add_dynamic_modifier = {
 				name = "Kirov-Class" # Heavy Cruisers (Firepower)
 				type = battle_hull_medium_ww
 				parent_version = 0
+				name_group = SOV_BC_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -345,6 +349,7 @@ add_dynamic_modifier = {
 				name = "Svetlana-Class" # Cruiser (Antiair/Firepower)
 				type = battle_hull_light_ww
 				parent_version = 0
+				name_group = SOV_CA_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -361,6 +366,7 @@ add_dynamic_modifier = {
 				name = "Admiral Nakhimov-Class" # Cruiser (Antiair/Firepower)
 				type = battle_hull_light_ww
 				parent_version = 0
+				name_group = SOV_CA_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -377,6 +383,7 @@ add_dynamic_modifier = {
 				name = "Murmansk-Class" # Cruiser (Antiair/Firepower)
 				type = battle_hull_light_ww
 				parent_version = 0
+				name_group = SOV_CL_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -396,6 +403,7 @@ add_dynamic_modifier = {
 				name = "Orfey-Class" # Destroyer (Antisub)
 				type = screen_hull_heavy_ww
 				parent_version = 0
+				name_group = SOV_DD_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -412,6 +420,7 @@ add_dynamic_modifier = {
 				name = "Fidonisy-Class" # Destroyer (Antisub)
 				type = screen_hull_heavy_ww
 				parent_version = 0
+				name_group = SOV_DD_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -428,6 +437,7 @@ add_dynamic_modifier = {
 				name = "Leningrad-Class" # Destroyer (Antisub)
 				type = screen_hull_heavy_ww
 				parent_version = 0
+				name_group = SOV_DD_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -444,6 +454,7 @@ add_dynamic_modifier = {
 				name = "Gnevny-Class" # Destroyer (Antisub)
 				type = screen_hull_heavy_ww
 				parent_version = 0
+				name_group = SOV_DD_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -460,6 +471,7 @@ add_dynamic_modifier = {
 				name = "Storozhevoy-Class" # Destroyer (Antisub)
 				type = screen_hull_heavy_ww
 				parent_version = 0
+				name_group = SOV_DD_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_ww
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -475,6 +487,7 @@ add_dynamic_modifier = {
 				name = "Ognevoy-Class" # Destroyer (Antisub)
 				type = screen_hull_heavy_0
 				parent_version = 0
+				name_group = SOV_DD_HISTORICAL
 				modules = {
 					fixed_ship_battery_slot = ship_armament_medium_0
 					fixed_ship_anti_air_slot = ship_AA_gun_1
@@ -489,6 +502,22 @@ add_dynamic_modifier = {
 			}
 			#Town-class USA
 			#Regele-Ferdinand-Class ITA
+			create_equipment_variant = {
+				name = "Regele-Ferdinand-Class" # Destroyer (Antisub)
+				type = screen_hull_heavy_ww
+				parent_version = 0
+				name_group = SOV_DD_HISTORICAL
+				modules = {
+					fixed_ship_battery_slot = ship_armament_medium_ww
+					fixed_ship_anti_air_slot = ship_AA_gun_1
+					fixed_maritime_slot = detection_ww
+					fixed_maritime_slot_2 = sonar_ww
+					fixed_ship_engine_slot = screen_engine_ww
+					fixed_ship_torpedo_slot = torpedo_ww
+					mid_1_custom_slot = torpedo_ww
+					rear_1_custom_slot = ship_subkiller_0
+				}
+			}
 
 		#Submarines
 			
@@ -496,6 +525,7 @@ add_dynamic_modifier = {
 				name = "Dekabrist-Class" # Small-Single Submarine
 				type = sub_hull_ww
 				parent_version = 0
+				name_group = SOV_SS_SHCHUKA
 				modules = {
 					fixed_sub_torpedo_slot = sub_torpedo_ww
 					fixed_maritime_slot = sonar_ww
@@ -508,6 +538,7 @@ add_dynamic_modifier = {
 				name = "Leninets-Class" # Small-Single Submarine
 				type = sub_hull_ww
 				parent_version = 0
+				name_group = SOV_SS_SHCHUKA
 				modules = {
 					fixed_sub_torpedo_slot = sub_torpedo_ww
 					fixed_maritime_slot = sonar_ww
@@ -520,6 +551,7 @@ add_dynamic_modifier = {
 				name = "Shchuka-Class" # Small-Single Submarine
 				type = sub_hull_ww
 				parent_version = 0
+				name_group = SOV_SS_SHCHUKA
 				modules = {
 					fixed_sub_torpedo_slot = sub_torpedo_ww
 					fixed_maritime_slot = sonar_ww
@@ -532,6 +564,7 @@ add_dynamic_modifier = {
 				name = "Pravda-Class" # Small-Single Submarine
 				type = sub_hull_ww
 				parent_version = 0
+				name_group = SOV_SS_SHCHUKA
 				modules = {
 					fixed_sub_torpedo_slot = sub_torpedo_ww
 					fixed_maritime_slot = sonar_ww
@@ -544,6 +577,7 @@ add_dynamic_modifier = {
 				name = "S-Class" # Small-Single Submarine
 				type = sub_hull_ww
 				parent_version = 0
+				name_group = SOV_SS_SHCHUKA
 				modules = {
 					fixed_sub_torpedo_slot = sub_torpedo_ww
 					fixed_maritime_slot = sonar_ww
@@ -556,6 +590,7 @@ add_dynamic_modifier = {
 				name = "M-Class" # Small-Single Submarine
 				type = sub_hull_ww
 				parent_version = 0
+				name_group = SOV_SS_SHCHUKA
 				modules = {
 					fixed_sub_torpedo_slot = sub_torpedo_ww
 					fixed_maritime_slot = sonar_ww
@@ -567,6 +602,7 @@ add_dynamic_modifier = {
 				name = "K-Class" # Small-Single Submarine
 				type = sub_hull_ww
 				parent_version = 0
+				name_group = SOV_SS_SHCHUKA
 				modules = {
 					fixed_sub_torpedo_slot = sub_torpedo_ww
 					fixed_maritime_slot = sonar_ww
@@ -578,6 +614,7 @@ add_dynamic_modifier = {
 				name = "Holland-Class" # Small-Single Submarine
 				type = sub_hull_ww
 				parent_version = 0
+				name_group = SOV_SS_SHCHUKA
 				modules = {
 					fixed_sub_torpedo_slot = sub_torpedo_ww
 					fixed_maritime_slot = sonar_ww
@@ -589,6 +626,7 @@ add_dynamic_modifier = {
 				name = "Kalev-Class" # Small-Single Submarine
 				type = sub_hull_ww
 				parent_version = 0
+				name_group = SOV_SS_SHCHUKA
 				modules = {
 					fixed_sub_torpedo_slot = sub_torpedo_ww
 					fixed_maritime_slot = sonar_ww
@@ -606,6 +644,7 @@ add_dynamic_modifier = {
 			name = "Project 633-class"
 			type = sub_hull_small_single_0  
 			parent_version = 0
+				name_group = SOV_SS_SHCHUKA
 			modules = {
 				fixed_sub_torpedo_slot = sub_torpedo_medium_0
 				fixed_sub_engine_slot = sub_engine_alpha_0
@@ -616,6 +655,66 @@ add_dynamic_modifier = {
 	}
 	set_research_slots = 5
 	oob = "SOV_1960"
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns"}
+	}
+	set_technology = {
+		ww_screens_proletariat = 1
+		frigate_0 = 1
+		destroyer_0 = 1
+		cruiser_0 = 1
+		ww_capitals_proletariat = 1
+		carrier_0 = 1
+		ww_submarines_proletariat = 1
+		attack_submarine_0 = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns"}
+	set_technology = {
+		countermeasures_0 = 1
+		countermeasures_1 = 1
+		countermeasures_2 = 1
+		subkiller_0 = 1
+		subkiller_1 = 1
+		subkiller_2 = 1
+		maritime_sonar_0 = 1
+		maritime_sonar_1 = 1
+		detection_ww = 1
+		maritime_ta_fcs_0 = 1
+		maritime_ta_fcs_1 = 1
+		maritime_ew_ss_0 = 1
+		maritime_ew_ss_1 = 1
+		ww_armaments = 1
+		ship_armament_light_0 = 1
+		ship_armament_light_1 = 1
+		ship_armament_light_2 = 1
+		ship_armament_medium_0 = 1
+		ship_armament_medium_1 = 1
+		ship_armament_medium_2 = 1
+		ship_armament_heavy_0 = 1
+		
+		ww_capitals = 1
+		battle_hull_medium_0 = 1
+		battle_hull_medium_1 = 1
+		ww_carriers = 1
+		carrier_hull_0 = 1
+		
+		ww_submarines = 1
+		torpedo_ww = 1
+		sub_hull_large_single_0 = 1
+		sub_hull_small_single_0 = 1
+		torpedo_small_0 = 1
+		ww_screens = 1
+		screen_hull_heavy_0 = 1
+		screen_hull_medium_0 = 1
+		battle_hull_light_0 = 1
+		screen_hull_heavy_1 = 1
+		screen_hull_medium_1 = 1
+		battle_hull_light_1 = 1
+	}
+}
 	set_technology = {
 
 ##### INFRA #####
@@ -685,7 +784,6 @@ add_dynamic_modifier = {
 		slbm1 = 1
 		irbm1 = 1
 		irbm2 = 1
-		icbm1 = 1
 
 		## Space ##
 		liquid_propelled_rocket = 1
@@ -874,7 +972,7 @@ add_dynamic_modifier = {
 }
 
 set_convoys = 384
-set_stability = 0.55
+set_stability = 0.48
 give_guarantee = TRS
 
 init_influence = yes
@@ -974,6 +1072,8 @@ add_ideas = {
 	agricultural_dysfunction_0
 	policy_taxrate_temp_5
 	Failing_Health_System_5
+	antiquated_infrastructure
+	agricultural_recovery
 	
 	policy_union_temp_4
 	policy_media_temp_0
@@ -1130,7 +1230,7 @@ create_field_marshal = {
 create_field_marshal = {
 	name = "Vasily Danilovich Sokolovsky"
 	id = 19604
-	portrait_path = "gfx/leaders/SOV/FIELD_MARSHALS/Vasily_Danilovich_Sokolovsky.dds"
+	portrait_path = "gfx/leaders/SOV/FIELD_MARSHALS/Vasily_Sokolovsky.dds"
 	traits = { aggressive_assaulter ambusher  }
 	skill = 4
 	attack_skill = 4
@@ -1178,9 +1278,9 @@ create_field_marshal = {
 }
 
 create_field_marshal = {
-	name = "Filipp Golikov"
+	name = "Vasily Chuikov"
 	id = 19802
-	picture = "gfx/leaders/SOV/FIELD_MARSHALS/Vasily_Chuikov.dds"
+	portrait_path = "gfx/leaders/SOV/FIELD_MARSHALS/Vasily_Chuikov.dds"
 	traits = { old_guard }
 	skill = 4
 	attack_skill = 3
@@ -1388,6 +1488,8 @@ create_equipment_variant = {
 		picture = "Leonid_Brezhnev.dds"
 		ideology = stalinism
 	}
+	load_focus_tree = SOV_Brezhnev
+	set_country_flag = focus_tree_73_reset
 }
 
 1970.1.1 = {

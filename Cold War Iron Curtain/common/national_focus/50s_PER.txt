@@ -7,6 +7,7 @@ focus_tree = {
 			tag = PER
 		}
 	}
+	continuous_focus_position = { x = 0 y = 3500 }
 	default = no
 	focus = {
 		id = PER_Repress_the_Tudeh_Party
@@ -1267,8 +1268,13 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = per_1_tt
 			hidden_effect = {
-				add_ideas = press_censorship_5
+					remove_ideas = policy_media_temp_0
+					remove_ideas = policy_media_temp_1
+					remove_ideas = policy_media_temp_2
+					remove_ideas = policy_media_temp_3
+					remove_ideas = policy_media_temp_3a
 			}
+			add_ideas = policy_media_temp_1
 		}
 	}
 	focus = {
@@ -2427,6 +2433,7 @@ focus_tree = {
 		x = 20
 		y = 32
 		completion_reward = {
+			custom_effect_tooltip = Resource_Efficiency_TT
 			add_ideas = Resource_Efficiency
 		}
 	}

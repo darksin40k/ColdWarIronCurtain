@@ -349,7 +349,14 @@ news_event = {
 		name = news.1009.b
 		trigger = { NOT = { tag = PRC } }
 	}
-
+	option = {
+		name = "Play as YANSA"
+		trigger = {
+			is_ai = no
+			tag = CHI
+		}
+		YAN = { change_tag_from = ROOT }
+	}
 }
 
 # PRC declares One China Policy
@@ -424,26 +431,6 @@ news_event = {
 }
 
 # PRC creates People's United Asian Empire
-news_event = {
-	id = news.1013
-	title = news.1013.t
-	desc = news.1013.d
-	picture = GFX_news_event_prc_founding_faction
-
-	major = yes
-	is_triggered_only = yes
-
-	option = {
-		name = news.1013.a
-		trigger = { tag = PRC }
-	}
-
-	option = {
-		name = news.1013.b
-		trigger = { NOT = { tag = PRC } }
-	}
-
-}
 
 # PRC gets accepted into the UN
 news_event = {
@@ -829,8 +816,7 @@ news_event = {
 news_event = {
   id = news.1029
 	title = news.1029.t
-	desc = news.1500.t
-  #PICTURES ARE TEMPORARY
+	desc = news.1029.t
 	picture = GFX_news_event_stalin_death
 
 	major = yes

@@ -752,7 +752,14 @@ focus_tree = {
 		x = 13
 		y = 9
 		completion_reward = {
-			add_ideas = free_press_2
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_3
 		}
 	}
 	focus = {
@@ -2108,6 +2115,14 @@ focus_tree = {
 		x = 17
 		y = 10
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_4
 		}
 	}
@@ -2543,6 +2558,9 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 75
 			add_war_support = 0.02
+			PAK = {
+				country_event = AFG_PAK.24
+			}
 		}
 	}
 	focus = {

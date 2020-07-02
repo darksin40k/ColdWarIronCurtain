@@ -1,6 +1,8 @@
 ideas = {
 	hidden_ideas = {
-		
+		DEFCON_COOLDOWN = {
+			allowed = { always = no }
+		}
 		Major_Power_Spy_Bonus = {
 			removal_cost = -1
 			allowed = { always = no }
@@ -8,6 +10,15 @@ ideas = {
 			modifier = {
 				new_operative_slot_bonus = 5
 				operative_slot = 5
+			}
+		}
+		Major_Power_Spy_Bonus_USA = {
+			removal_cost = -1
+			allowed = { always = no }
+			allowed_civil_war = {  }
+			modifier = {
+				new_operative_slot_bonus = 8
+				operative_slot = 8
 			}
 		}
 		extra_spies = {

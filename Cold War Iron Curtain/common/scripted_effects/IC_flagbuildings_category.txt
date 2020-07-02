@@ -17,8 +17,15 @@ FBU_category_0 = {
 		}
 		FBU_category_0_micro = yes
 	}
+	else_if = {
+		limit = {
+			check_variable = { industrialization_budget > global.UPC_pop1 }
+		}
+		FBU_category_0_nano = yes
+	}
 }
 FBU_category_0_max = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
@@ -32,6 +39,9 @@ FBU_category_0_max = {
 				has_state_category = pop15
 				has_state_category = pop20
 			}
+			NOT = {
+				has_state_flag = upgrade_underway
+			}
 		}
 		Upgrade_Preindustrial_State_effect_budgeted = yes
 	}
@@ -44,22 +54,13 @@ FBU_category_0_max = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_0_max = yes
-	}
-	else_if = {
-		limit = {
-			check_variable = { industrialization_budget > global.UPC_pop10 }
+		else = {
+			FBU_category_0_reduced = yes
 		}
-		FBU_category_0_reduced = yes
 	}
-	else_if = {
-		limit = {
-			check_variable = { industrialization_budget > global.UPC_pop3 }
-		}
-		FBU_category_0_micro = yes
-	}
-	
 }
 FBU_category_0_reduced = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
@@ -70,6 +71,9 @@ FBU_category_0_reduced = {
 				has_state_category = pop5
 				has_state_category = pop7
 				has_state_category = pop10
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
 			}
 		}
 		Upgrade_Preindustrial_State_effect_budgeted = yes
@@ -83,21 +87,22 @@ FBU_category_0_reduced = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_0_reduced = yes
-	}
-	else_if = {
-		limit = {
-			check_variable = { industrialization_budget > global.UPC_pop3 }
+		else = {
+			FBU_category_0_micro = yes
 		}
-		FBU_category_0_micro = yes
 	}
 }
 FBU_category_0_micro = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
 				has_state_category = pop1
 				has_state_category = pop2
 				has_state_category = pop3
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
 			}
 		}
 		Upgrade_Preindustrial_State_effect_budgeted = yes
@@ -111,6 +116,33 @@ FBU_category_0_micro = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_0_micro = yes
+		else = {
+			FBU_category_0_nano = yes
+		}
+	}
+}
+FBU_category_0_nano = {
+	clr_country_flag = state_upgrade_verification
+	random_owned_controlled_state = {
+		limit = {
+			OR = {
+				has_state_category = pop1
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
+			}
+		}
+		Upgrade_Preindustrial_State_effect_budgeted = yes
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { industrialization_budget > global.UPC_pop1 }
+				has_country_flag = state_upgrade_verification
+			}
+		}
+		clr_country_flag = state_upgrade_verification
+		FBU_category_0_nano = yes
 		else = {
 			add_to_variable = { ROOT.currentMoney = industrialization_budget }
 			set_variable = { industrialization_budget = 0 }
@@ -137,8 +169,15 @@ FBU_category_1 = {
 		}
 		FBU_category_1_micro = yes
 	}
+	else_if = {
+		limit = {
+			check_variable = { development_budget > global.UPC_pop1dev1 }
+		}
+		FBU_category_1_nano = yes
+	}
 }
 FBU_category_1_max = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
@@ -152,6 +191,9 @@ FBU_category_1_max = {
 				has_state_category = pop15dev1
 				has_state_category = pop20dev1
 			}
+			NOT = {
+				has_state_flag = upgrade_underway
+			}
 		}
 		Upgrade_Undeveloped_State_effect_budgeted = yes
 	}
@@ -164,22 +206,13 @@ FBU_category_1_max = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_1_max = yes
-	}
-	else_if = {
-		limit = {
-			check_variable = { development_budget > global.UPC_pop10dev1 }
+		else = {
+			FBU_category_1_reduced = yes
 		}
-		FBU_category_1_reduced = yes
 	}
-	else_if = {
-		limit = {
-			check_variable = { development_budget > global.UPC_pop3dev1 }
-		}
-		FBU_category_1_micro = yes
-	}
-	
 }
 FBU_category_1_reduced = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
@@ -190,6 +223,9 @@ FBU_category_1_reduced = {
 				has_state_category = pop5dev1
 				has_state_category = pop7dev1
 				has_state_category = pop10dev1
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
 			}
 		}
 		Upgrade_Undeveloped_State_effect_budgeted = yes
@@ -203,21 +239,22 @@ FBU_category_1_reduced = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_1_reduced = yes
-	}
-	else_if = {
-		limit = {
-			check_variable = { development_budget > global.UPC_pop3dev1 }
+		else = {
+			FBU_category_1_micro = yes
 		}
-		FBU_category_1_micro = yes
 	}
 }
 FBU_category_1_micro = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
 				has_state_category = pop1dev1
 				has_state_category = pop2dev1
 				has_state_category = pop3dev1
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
 			}
 		}
 		Upgrade_Undeveloped_State_effect_budgeted = yes
@@ -231,6 +268,33 @@ FBU_category_1_micro = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_1_micro = yes
+		else = {
+			FBU_category_1_nano = yes
+		}
+	}
+}
+FBU_category_1_nano = {
+	clr_country_flag = state_upgrade_verification
+	random_owned_controlled_state = {
+		limit = {
+			OR = {
+				has_state_category = pop1dev1
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
+			}
+		}
+		Upgrade_Undeveloped_State_effect_budgeted = yes
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { development_budget > global.UPC_pop1dev1 }
+				has_country_flag = state_upgrade_verification
+			}
+		}
+		clr_country_flag = state_upgrade_verification
+		FBU_category_1_nano = yes
 		else = {
 			add_to_variable = { ROOT.currentMoney = development_budget }
 			set_variable = { development_budget = 0 }
@@ -257,8 +321,15 @@ FBU_category_2 = {
 		}
 		FBU_category_2_micro = yes
 	}
+	else_if = {
+		limit = {
+			check_variable = { modernization_budget > global.UPC_pop1dev2 }
+		}
+		FBU_category_2_nano = yes
+	}
 }
 FBU_category_2_max = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
@@ -272,6 +343,9 @@ FBU_category_2_max = {
 				has_state_category = pop15dev2
 				has_state_category = pop20dev2
 			}
+			NOT = {
+				has_state_flag = upgrade_underway
+			}
 		}
 		Upgrade_Developed_State_effect_budgeted = yes
 	}
@@ -284,22 +358,13 @@ FBU_category_2_max = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_2_max = yes
-	}
-	else_if = {
-		limit = {
-			check_variable = { modernization_budget > global.UPC_pop10dev2 }
+		else = {
+			FBU_category_2_reduced = yes
 		}
-		FBU_category_2_reduced = yes
 	}
-	else_if = {
-		limit = {
-			check_variable = { modernization_budget > global.UPC_pop3dev2 }
-		}
-		FBU_category_2_micro = yes
-	}
-	
 }
 FBU_category_2_reduced = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
@@ -310,6 +375,9 @@ FBU_category_2_reduced = {
 				has_state_category = pop5dev2
 				has_state_category = pop7dev2
 				has_state_category = pop10dev2
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
 			}
 		}
 		Upgrade_Developed_State_effect_budgeted = yes
@@ -323,21 +391,22 @@ FBU_category_2_reduced = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_2_reduced = yes
-	}
-	else_if = {
-		limit = {
-			check_variable = { modernization_budget > global.UPC_pop3dev2 }
+		else = {
+			FBU_category_2_micro = yes
 		}
-		FBU_category_2_micro = yes
 	}
 }
 FBU_category_2_micro = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
 				has_state_category = pop1dev2
 				has_state_category = pop2dev2
 				has_state_category = pop3dev2
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
 			}
 		}
 		Upgrade_Developed_State_effect_budgeted = yes
@@ -351,6 +420,33 @@ FBU_category_2_micro = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_2_micro = yes
+		else = {
+			FBU_category_2_nano = yes
+		}
+	}
+}
+FBU_category_2_nano = {
+	clr_country_flag = state_upgrade_verification
+	random_owned_controlled_state = {
+		limit = {
+			OR = {
+				has_state_category = pop1dev2
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
+			}
+		}
+		Upgrade_Developed_State_effect_budgeted = yes
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { modernization_budget > global.UPC_pop1dev2 }
+				has_country_flag = state_upgrade_verification
+			}
+		}
+		clr_country_flag = state_upgrade_verification
+		FBU_category_2_nano = yes
 		else = {
 			add_to_variable = { ROOT.currentMoney = modernization_budget }
 			set_variable = { modernization_budget = 0 }
@@ -377,8 +473,15 @@ FBU_category_3 = {
 		}
 		FBU_category_3_micro = yes
 	}
+	else_if = {
+		limit = {
+			check_variable = { automation_budget > global.UPC_pop1dev3 }
+		}
+		FBU_category_3_nano = yes
+	}
 }
 FBU_category_3_max = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
@@ -392,6 +495,9 @@ FBU_category_3_max = {
 				has_state_category = pop15dev3
 				has_state_category = pop20dev3
 			}
+			NOT = {
+				has_state_flag = upgrade_underway
+			}
 		}
 		Upgrade_Modern_State_effect_budgeted = yes
 	}
@@ -404,22 +510,13 @@ FBU_category_3_max = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_3_max = yes
-	}
-	else_if = {
-		limit = {
-			check_variable = { automation_budget > global.UPC_pop10dev3 }
+		else = {
+			FBU_category_3_reduced = yes
 		}
-		FBU_category_3_reduced = yes
 	}
-	else_if = {
-		limit = {
-			check_variable = { automation_budget > global.UPC_pop3dev3 }
-		}
-		FBU_category_3_micro = yes
-	}
-	
 }
 FBU_category_3_reduced = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
@@ -430,6 +527,9 @@ FBU_category_3_reduced = {
 				has_state_category = pop5dev3
 				has_state_category = pop7dev3
 				has_state_category = pop10dev3
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
 			}
 		}
 		Upgrade_Modern_State_effect_budgeted = yes
@@ -443,21 +543,22 @@ FBU_category_3_reduced = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_3_reduced = yes
-	}
-	else_if = {
-		limit = {
-			check_variable = { automation_budget > global.UPC_pop3dev3 }
+		else = {
+			FBU_category_3_micro = yes
 		}
-		FBU_category_3_micro = yes
 	}
 }
 FBU_category_3_micro = {
+	clr_country_flag = state_upgrade_verification
 	random_owned_controlled_state = {
 		limit = {
 			OR = {
 				has_state_category = pop1dev3
 				has_state_category = pop2dev3
 				has_state_category = pop3dev3
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
 			}
 		}
 		Upgrade_Modern_State_effect_budgeted = yes
@@ -471,6 +572,32 @@ FBU_category_3_micro = {
 		}
 		clr_country_flag = state_upgrade_verification
 		FBU_category_3_micro = yes
+		else = {
+			FBU_category_3_nano = yes
+		}
+	}
+}
+FBU_category_3_nano = {
+	random_owned_controlled_state = {
+		limit = {
+			OR = {
+				has_state_category = pop1dev3
+			}
+			NOT = {
+				has_state_flag = upgrade_underway
+			}
+		}
+		Upgrade_Modern_State_effect_budgeted = yes
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { automation_budget > global.UPC_pop1dev3 }
+				has_country_flag = state_upgrade_verification
+			}
+		}
+		clr_country_flag = state_upgrade_verification
+		FBU_category_3_nano = yes
 		else = {
 			add_to_variable = { ROOT.currentMoney = automation_budget }
 			set_variable = { automation_budget = 0 }

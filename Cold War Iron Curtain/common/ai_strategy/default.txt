@@ -18,6 +18,7 @@ naval_ratios = {
 			has_dlc = "Man the Guns"
 		}
 	}
+	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = role_ratio
@@ -41,6 +42,7 @@ naval_ratios = {
 	enable = {
 		has_dlc = "Man the Guns"
 	}
+	abort_when_not_enabled = yes
 
 
 	ai_strategy = {
@@ -113,9 +115,7 @@ stellar_unit_production_militia = {
 	enable = {
 		num_of_military_factories < 8
 	}
-	abort = {
-		num_of_military_factories > 7
-	}
+	abort_when_not_enabled = yes
 	
 	#ARMY#
 	ai_strategy = {
@@ -135,13 +135,9 @@ stellar_unit_production_militia = {
 stellar_unit_production_basic = {
 	enable = {
 		num_of_military_factories > 7
+		num_of_military_factories < 14
 	}
-	abort = {
-		OR = {
-			num_of_military_factories > 13
-			num_of_military_factories < 8
-		}
-	}
+	abort_when_not_enabled = yes
 	
 	#ARMY#
 	ai_strategy = {
@@ -171,13 +167,9 @@ stellar_unit_production_basic = {
 stellar_unit_production_base = {
 	enable = {
 		num_of_military_factories > 13
+		num_of_military_factories < 22
 	}
-	abort = {
-		OR = {
-			num_of_military_factories > 21
-			num_of_military_factories < 14
-		}
-	}
+	abort_when_not_enabled = yes
 	
 	#ARMY#
 	ai_strategy = {
@@ -219,16 +211,26 @@ stellar_unit_production_base = {
 	}
 }
 
+default_spyplanes_production = {
+	enable = {
+		has_tech = recon0
+		num_of_military_factories > 19
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = scout_plane
+		value = 1
+	}
+}
+
 stellar_unit_production_improved = {
 	enable = {
 		num_of_military_factories > 21
+		num_of_military_factories < 29
 	}
-	abort = {
-		OR = {
-			num_of_military_factories > 28
-			num_of_military_factories < 22
-		}
-	}
+	abort_when_not_enabled = yes
 	
 	#ARMY#
 	ai_strategy = {
@@ -288,13 +290,9 @@ stellar_unit_production_improved = {
 stellar_unit_production_stronk = {
 	enable = {
 		num_of_military_factories > 28
+		num_of_military_factories < 46
 	}
-	abort = {
-		OR = {
-			num_of_military_factories > 45
-			num_of_military_factories < 29
-		}
-	}
+	abort_when_not_enabled = yes
 	
 	#ARMY#
 	ai_strategy = {
@@ -360,9 +358,7 @@ stellar_unit_production_superpower = {
 	enable = {
 		num_of_military_factories > 45
 	}
-	abort = {
-		num_of_military_factories < 46
-	}
+	abort_when_not_enabled = yes
 	
 	#ARMY#
 	ai_strategy = {
@@ -420,7 +416,7 @@ stellar_unit_production_superpower = {
 }
 
 ai_IC_port = {
-	
+	enable = { always = yes }
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
@@ -510,18 +506,28 @@ ai_IC_port = {
 		id = relation
 		value = -9999
 	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = scout_plane
+		value = -99
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = scout_plane
+		value = -99
+	}
 }
 
 ai_unit_production_limiter = {
     enable = {
-        #is_exempt_from_division_limit = no
         check_variable = {
             num_divisions > num_of_factories
         }
     }
     abort = {
         OR = {
-            #is_exempt_from_division_limit = yes
             check_variable = {
                 num_divisions < num_of_factories
             }
@@ -558,6 +564,14 @@ ai_unit_production_limiter = {
 		type = role_ratio
 		id = armor_heavy
 		value = -420
+	}
+	ai_strategy = {
+		type = air_factory_balance
+		value = 50
+	}
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 50
 	}
 }
 
@@ -626,38 +640,13 @@ default_pp_spend_amount = {
 	}
 }
 
-##### VANILLA #####
-default_garrison_production = {
-	enable = {
-		ai_wants_divisions >  12 #Massively decreasing the amount of garrison and suppression the AI wants
-		is_major = yes
-	}
-	abort = {
-		ai_wants_divisions < 13 #Massively decreasing the amount of garrison and suppression the AI wants
-		is_major = no
-	}
-
-	ai_strategy = {
-		type = role_ratio
-		id = garrison
-		value = 5
-	}
-	
-	# Old garrison system against resistance
-	# ai_strategy = {
-	# 	type = role_ratio
-	# 	id = suppression
-	# 	value = 2
-	# }
-}
-
 build_intelligence_agency = {
 	enable = {
-		num_of_civilian_factories > 24
+		num_of_civilian_factories_available_for_projects > 24
 	}
 	abort = {
 		OR = {
-			num_of_civilian_factories < 25
+			num_of_civilian_factories_available_for_projects < 25
 		}
 	}
 
@@ -669,11 +658,17 @@ build_intelligence_agency = {
 }
 build_intelligence_agency2 = {
 	enable = {
-		num_of_civilian_factories > 49
+		OR = {
+			num_of_civilian_factories_available_for_projects > 49
+			AND = {
+				num_of_civilian_factories_available_for_projects > 24
+				agency_upgrade_number < 5
+			}
+		}
 	}
 	abort = {
 		OR = {
-			num_of_civilian_factories < 50
+			num_of_civilian_factories_available_for_projects < 50
 		}
 	}
 
@@ -685,11 +680,17 @@ build_intelligence_agency2 = {
 }
 build_intelligence_agency3 = {
 	enable = {
-		num_of_civilian_factories > 74
+		OR = {
+			num_of_civilian_factories_available_for_projects > 74
+			AND = {
+				num_of_civilian_factories_available_for_projects > 49
+				agency_upgrade_number < 15
+			}
+		}
 	}
 	abort = {
 		OR = {
-			num_of_civilian_factories < 75
+			num_of_civilian_factories_available_for_projects < 75
 		}
 	}
 
@@ -727,7 +728,7 @@ addintelligence_agency_normal_upgrade_prio = {
 	ai_strategy = {
 		type = intelligence_agency_branch_desire_factor
 		id = branch_crypto
-		value = 2000
+		value = 1500
 	}	
 }
 
@@ -739,5 +740,67 @@ put_garrisons_on_high_prio = {
 	ai_strategy = {
 		type = garrison_reinforcement_priority
 		value = 100 # positive is high prio, negative is low prio
+	}
+}
+
+stellar_peacetime_economics = { #Peacetime Economy Ratios
+	enable = {
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = -50
+	}
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 15
+	}
+}
+stellar_building_targets = { #Building Targets for Custom Buildings
+	enable = { num_of_civilian_factories > 9 }
+	ai_strategy = {
+		type = building_target
+		id = office_park
+		value = 1
+	}
+	ai_strategy = {
+		type = building_target
+		id = agri_industrial_complex
+		value = 1
+	}
+}
+stellar_small_economy_power = { #Small AI-Controlled Economies' Powerplant Construction Targets
+	enable = {
+		NOT = { num_of_civilian_factories > global.ai_renewable_point }
+	}
+	abort = { num_of_civilian_factories > global.ai_renewable_point }
+	ai_strategy = {
+		type = building_target
+		id = fossil_fuel_powerplant
+		value = 1
+	}
+}
+stellar_large_economy_power = { #Large AI-Controlled Economies' Powerplant Construction Targets
+	enable = {
+		num_of_civilian_factories > global.ai_renewable_point
+		NOT = { num_of_civilian_factories < global.ai_renewable_point }
+	}
+	abort = { num_of_civilian_factories > global.ai_renewable_point }
+	ai_strategy = {
+		type = building_target
+		id = fossil_fuel_powerplant
+		value = 1
+	}
+	ai_strategy = {
+		type = building_target
+		id = renewable_powerplant
+		value = 1
+	}
+	ai_strategy = {
+		type = building_target
+		id = nuclear_powerplant
+		value = 1
 	}
 }

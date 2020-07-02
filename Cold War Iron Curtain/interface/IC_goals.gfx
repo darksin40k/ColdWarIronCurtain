@@ -1,4 +1,198 @@
 spriteTypes = {
+	#New Doggo Icons 5/28/2020
+	SpriteType = {
+		name = "GFX_AidThePahlaviRegime"
+		texturefile = "gfx/interface/goals/AidThePahlaviRegime.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AllowPRCAscenionToUN"
+		texturefile = "gfx/interface/goals/AllowPRCAscenionToUN.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ArmIsrael"
+		texturefile = "gfx/interface/goals/ArmIsrael.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ArmLonNol"
+		texturefile = "gfx/interface/goals/ArmLonNol.dds" 
+	}
+	SpriteType = {
+		name = "GFX_BeginTheVietnamWar"
+		texturefile = "gfx/interface/goals/BeginTheVietnamWar.dds" 
+	}
+	SpriteType = {
+		name = "GFX_CapitalizeOnSino_SovietSplit"
+		texturefile = "gfx/interface/goals/CapitalizeOnSino-SovietSplit.dds" 
+	}
+	SpriteType = {
+		name = "GFX_CondemnChineseAggression"
+		texturefile = "gfx/interface/goals/CondemnChineseAggression.dds" 
+	}
+	SpriteType = {
+		name = "GFX_IncreaseInfluenceInPersianGulf"
+		texturefile = "gfx/interface/goals/IncreaseInfluenceInPersianGulf.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AmericanWarAgainstPRC"
+		texturefile = "gfx/interface/goals/JointSoviet-AmericanWarAgainstPRC.dds" 
+	}
+	SpriteType = {
+		name = "GFX_LimitInvolvementInVietnam"
+		texturefile = "gfx/interface/goals/LimitInvolvementInVietnam.dds" 
+	}
+	SpriteType = {
+		name = "GFX_LowerGlobalTensions"
+		texturefile = "gfx/interface/goals/LowerGlobalTensions.dds" 
+	}
+	SpriteType = {
+		name = "GFX_MiddleEasternAffairs"
+		texturefile = "gfx/interface/goals/MiddleEasternAffairs.dds" 
+	}
+	SpriteType = {
+		name = "GFX_NegotiateOverVietnam"
+		texturefile = "gfx/interface/goals/NegotiateOverVietnam.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OmaniAid"
+		texturefile = "gfx/interface/goals/OmaniAid.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OutreachToBeijing"
+		texturefile = "gfx/interface/goals/OutreachToBeijing.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OutreachToIsrael"
+		texturefile = "gfx/interface/goals/OutreachToIsrael.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OutreachToMoscow"
+		texturefile = "gfx/interface/goals/OutreachToMoscow.dds" 
+	}
+	SpriteType = {
+		name = "GFX_PressureHanoi"
+		texturefile = "gfx/interface/goals/PressureHanoi.dds" 
+	}
+	SpriteType = {
+		name = "GFX_RethinkingOurForeignPolicy"
+		texturefile = "gfx/interface/goals/RethinkingOurForeignPolicy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SaudiAid"
+		texturefile = "gfx/interface/goals/SaudiAid.dds" 
+	}
+	SpriteType = {
+		name = "GFX_StateVisitToPRC"
+		texturefile = "gfx/interface/goals/StateVisitToPRC.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SOV_BMP"
+		texturefile = "gfx/interface/goals/SOV_BMP.dds" 
+	}
+	SpriteType = {
+		name = "GFX_Sov_Flying_Submarine"
+		texturefile = "gfx/interface/goals/Sov_Flying_Submarine.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_Gain_lower_membership_support"
+		texturefile = "gfx/interface/goals/Gain_lower_membership_support.dds" 
+	}
+	SpriteType = {
+		name = "GFX_Critize_Lenningrad_Affair"
+		texturefile = "gfx/interface/goals/Critize_Lenningrad_Affair.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_Khruschev_Legitimacy"
+		texturefile = "gfx/interface/goals/Khruschev_Legitimacy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SubsidizeIranianArmedForces"
+		texturefile = "gfx/interface/goals/SubsidizeIranianArmedForces.dds" 
+	}
+	SpriteType = {
+		name = "GFX_WeaponSalesToIranAndSaudiArabia"
+		texturefile = "gfx/interface/goals/WeaponSalesToIranAndSaudiArabia.dds" 
+	}
+	SpriteType = {
+		name = "GFX_WithdrawFromVietnam"
+		texturefile = "gfx/interface/goals/WithdrawFromVietnam.dds" 
+	}
+
+	#New Doggo Icons 5/26/2020
+	SpriteType = {
+		name = "GFX_AlbertAdministration"
+		texturefile = "gfx/interface/goals/AlbertAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_McGovernAdministration"
+		texturefile = "gfx/interface/goals/McGovernAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AgnewAdministration"
+		texturefile = "gfx/interface/goals/AgnewAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_CarterAdministration"
+		texturefile = "gfx/interface/goals/CarterAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_FordAdministration"
+		texturefile = "gfx/interface/goals/FordAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_GoldwaterAdministration"
+		texturefile = "gfx/interface/goals/GoldwaterAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_HumphreyAdministration"
+		texturefile = "gfx/interface/goals/HumphreyAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_JerryBrownAdministration"
+		texturefile = "gfx/interface/goals/JerryBrownAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_JFKAdministration"
+		texturefile = "gfx/interface/goals/JFKAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_LBJAdministration"
+		texturefile = "gfx/interface/goals/LBJAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_MuskieAdministration"
+		texturefile = "gfx/interface/goals/MuskieAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_NixonAdministration"
+		texturefile = "gfx/interface/goals/NixonAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ReaganAdministration"
+		texturefile = "gfx/interface/goals/ReaganAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_RobertFKennedyAdministration"
+		texturefile = "gfx/interface/goals/RobertFKennedyAdministration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_RockefellerAdministration"
+		texturefile = "gfx/interface/goals/RockefellerAdministration.dds" 
+	}
+	#End of Set
+	SpriteType = {
+		name = "GFX_IBM_olympic"
+		texturefile = "gfx/interface/goals/IBM_olympic.dds" 
+	}
+	SpriteType = {
+		name = "GFX_IBM"
+		texturefile = "gfx/interface/goals/IBM.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ADealWithTheDevil"
+		texturefile = "gfx/interface/goals/ADealWithTheDevil.dds" 
+	}
 	SpriteType = {
 		name = "GFX_ADealWithTheDevil"
 		texturefile = "gfx/interface/goals/ADealWithTheDevil.dds" 
@@ -503,7 +697,7 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_Generic_Airline_Industry"
 		texturefile = "gfx/interface/goals/Generic_Airline_Industry.tga" 
-	}	
+	}
 	###
 	SpriteType = {
 		name = "GFX_UK_Conservative"
@@ -889,6 +1083,12 @@ spriteTypes = {
 		name = "GFX_delhi_pact"
 		texturefile = "gfx/interface/goals/delhi_pact.tga"
 	}
+	
+	SpriteType = {
+		name = "GFX_saf_defence"
+		texturefile = "gfx/interface/goals/saf_defence.tga"
+	}
+
 
 	SpriteType = {
 		name = "GFX_Cut_Welfare"
@@ -2548,7 +2748,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_Communism2"
-		texturefile = "gfx/interface/goals/GFX_Communism2.dds"
+		texturefile = "gfx/interface/goals/Communism2.dds"
 	}
 
 	SpriteType = {
@@ -4798,6 +4998,32 @@ spriteTypes = {
 		name = "GFX_Commie_Treaty"
 		texturefile = "gfx/interface/goals/fracoop/Commie_Treaty.tga" 
 	}
+	
+	SpriteType = {
+		name = "GFX_Karachi_Treaty"
+		texturefile = "gfx/interface/goals/karachiagreement.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_Godse"
+		texturefile = "gfx/interface/goals/godse.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_India_Constitution"
+		texturefile = "gfx/interface/goals/India_Constitution.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_Godse"
+		texturefile = "gfx/interface/goals/godse.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_CRPF"
+		texturefile = "gfx/interface/goals/CRPF.dds" 
+	}
+	
 	SpriteType = {
 		name = "GFX_Soviet_Turkey"
 		texturefile = "gfx/interface/goals/Soviet_Turkey.tga" 
@@ -4963,7 +5189,7 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_IL_28"
 		texturefile = "gfx/interface/goals/IL_28.tga" 
-	}	
+	}
 	SpriteType = {
 		name = "GFX_Qasim_COA"
 		texturefile = "gfx/interface/goals/Qasim_COA.tga" 
@@ -6569,15 +6795,20 @@ spriteTypes = {
 		name = "GFX_wgr"
 		texturefile = "gfx/interface/goals/swe/GFX_wgr.dds"
 	}
-	
 	SpriteType = {
-		name = "goal_ddr_established"
+		name = "GFX_goal_ddr_established"
 		texturefile = "gfx/interface/goals/goal_ddr_established.dds"
 	}
 	
 	SpriteType = {
+		name = "GFX_goal_attack_the_americas"
+		texturefile = "gfx/interface/goals/goal_attack_the_americas.dds"
+	}
+
+	
+	SpriteType = {
 		name = "GFX_soviet_culture"
-		texturefile = "gfx/interface/goals/swe/GFX_soviet_culture.dds"
+		texturefile = "gfx/interface/goals/swe/soviet_culture.dds"
 	}
 	SpriteType = {
 		name = "GFX_soviet_culture2"
@@ -9311,7 +9542,7 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_rotary_phones"
 		texturefile = "gfx/interface/goals/ISR_rotary_phones.dds" 
-	}																		 
+	} 
 	SpriteType = {
 		name = "GFX_goal_generic_positive_trade_relations"
 		texturefile = "gfx/interface/goals/goal_generic_positive_trade_relations.dds"
@@ -10084,7 +10315,7 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_Invest_in_Savoy"
 		texturefile = "gfx/interface/goals/Invest_in_Savoy.dds"
-	}	  
+	}  
 	SpriteType = {		
 		name = "GFX_britiandealbuild"
 		texturefile = "gfx/interface/goals/britiandealbuild.dds"
@@ -12387,6 +12618,11 @@ spriteTypes = {
 		name = "GFX_Spain_Army"
 		texturefile = "gfx/interface/goals/Spain_Army.tga"	  
 	}
+	SpriteType = {
+		name = "GFX_USA_EPA_Icon"
+		texturefile = "gfx/interface/goals/USA_EPA_Icon.tga"	  
+	}
+	
 	#New Higuy SAF Icons
 	SpriteType = {
 		name = "GFX_SAF_Koos_Straus"
@@ -12425,4 +12661,590 @@ spriteTypes = {
 		name = "GFX_Combat_Rising_Prices_ENG"
 		texturefile = "gfx/interface/goals/Combat_Rising_Prices.tga"	  
 	}
+	SpriteType = {
+		name = "GFX_Khruschev_Thaw"
+		texturefile = "gfx/interface/goals/Khruschev_Thaw.dds" 
+	}
+	SpriteType = {
+		name = "GFX_Expand_Chemical_Production_Past_the_Urals"
+		texturefile = "gfx/interface/goals/Expand_Chemical_Production_Past_the_Urals.dds" 
+	}
+	SpriteType = {
+		name = "GFX_Beria_Execution_Goal"
+		texturefile = "gfx/interface/goals/Beria_Execution.dds" 
+	}
+	#New Doggo Icons 5/22/2020
+	SpriteType = {
+		name = "GFX_AidTheFNLA"
+		texturefile = "gfx/interface/goals/AidTheFNLA.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AngolanCivilWar"
+		texturefile = "gfx/interface/goals/AngolanCivilWar.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ClarkAmendment"
+		texturefile = "gfx/interface/goals/ClarkAmendment.dds" 
+	}
+	SpriteType = {
+		name = "GFX_CollabWithSAF"
+		texturefile = "gfx/interface/goals/CollabWithSAF.dds" 
+	}
+	SpriteType = {
+		name = "GFX_UseIsraelToCircumventTheAmendment"
+		texturefile = "gfx/interface/goals/UseIsraelToCircumventTheAmendment.dds" 
+	}
+	SpriteType = {
+		name = "GFX_NearEasternAffairs"
+		texturefile = "gfx/interface/goals/NearEasternAffairs.dds" 
+	}
+	SpriteType = {
+		name = "GFX_IgnoreTheClarkAmendment"
+		texturefile = "gfx/interface/goals/IgnoreTheClarkAmendment.dds" 
+	}
+	#New Doggo Icons 5/19/2020
+	SpriteType = {
+		name = "GFX_ArmIslamicInsurgents"
+		texturefile = "gfx/interface/goals/ArmIslamicInsurgents.dds" 
+	}
+	SpriteType = {
+		name = "GFX_Boycott1980Olympics"
+		texturefile = "gfx/interface/goals/Boycott1980Olympics.dds" 
+	}
+	SpriteType = {
+		name = "GFX_CampDavidAccords"
+		texturefile = "gfx/interface/goals/CampDavidAccords.dds" 
+	}
+	SpriteType = {
+		name = "GFX_DenounceTheSandinistas"
+		texturefile = "gfx/interface/goals/DenounceTheSandinistas.dds" 
+	}
+	SpriteType = {
+		name = "GFX_DiploProtests"
+		texturefile = "gfx/interface/goals/DiploProtests.dds" 
+	}
+	SpriteType = {
+		name = "GFX_FundTheContras"
+		texturefile = "gfx/interface/goals/FundTheContras.dds" 
+	}
+	SpriteType = {
+		name = "GFX_GrainEmbargo"
+		texturefile = "gfx/interface/goals/GrainEmbargo.dds" 
+	}
+	SpriteType = {
+		name = "GFX_IncreaseWeaponShipments"
+		texturefile = "gfx/interface/goals/IncreaseWeaponShipments.dds" 
+	}
+	SpriteType = {
+		name = "GFX_NicaraguanRevolution"
+		texturefile = "gfx/interface/goals/NicaraguanRevolution.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OctoberWar"
+		texturefile = "gfx/interface/goals/OctoberWar.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OfferDiploMediation"
+		texturefile = "gfx/interface/goals/OfferDiploMediation.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OperationNickelGrass"
+		texturefile = "gfx/interface/goals/OperationNickelGrass.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ParisPeaceAccords"
+		texturefile = "gfx/interface/goals/ParisPeaceAccords.dds" 
+	}
+	SpriteType = {
+		name = "GFX_RecognizeTheRegime"
+		texturefile = "gfx/interface/goals/RecognizeTheRegime.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SovietInvasionOfAfghanistan"
+		texturefile = "gfx/interface/goals/SovietInvasionOfAfghanistan.dds" 
+	}
+	SpriteType = {
+		name = "GFX_StayNeutral"
+		texturefile = "gfx/interface/goals/StayNeutral.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SupportIsrael"
+		texturefile = "gfx/interface/goals/SupportIsrael.dds" 
+	}
+	#New Doggo Icons 5/23/2020
+	SpriteType = {
+		name = "GFX_ApproachTheGovernorGeneral"
+		texturefile = "gfx/interface/goals/ApproachTheGovernorGeneral.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AssistChileanArmy"
+		texturefile = "gfx/interface/goals/AssistChileanArmy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_BackElSalvadoranCoup"
+		texturefile = "gfx/interface/goals/BackElSalvadoranCoup.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ChamorroAssassination"
+		texturefile = "gfx/interface/goals/ChamorroAssassination.dds" 
+	}
+	SpriteType = {
+		name = "GFX_DeployMarinesToManagua"
+		texturefile = "gfx/interface/goals/DeployMarinesToManagua.dds" 
+	}
+	SpriteType = {
+		name = "GFX_FallOfTheSomozaRegime"
+		texturefile = "gfx/interface/goals/FallOfTheSomozaRegime.dds" 
+	}
+	SpriteType = {
+		name = "GFX_FundAustralianConservatives"
+		texturefile = "gfx/interface/goals/FundAustralianConservatives.dds" 
+	}
+	SpriteType = {
+		name = "GFX_InfluenceASTPolitics"
+		texturefile = "gfx/interface/goals/InfluenceASTPolitics.dds" 
+	}
+	SpriteType = {
+		name = "GFX_InstallADemocraticRegime"
+		texturefile = "gfx/interface/goals/InstallADemocraticRegime.dds" 
+	}
+	SpriteType = {
+		name = "GFX_KerrAccepts"
+		texturefile = "gfx/interface/goals/KerrAccepts.dds" 
+	}
+	SpriteType = {
+		name = "GFX_KerrRefuses"
+		texturefile = "gfx/interface/goals/KerrRefuses.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OvertActionInNicaragua"
+		texturefile = "gfx/interface/goals/OvertActionInNicaragua.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SandinistanThreat"
+		texturefile = "gfx/interface/goals/SandinistanThreat.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SeekOutFormerNationalGuardElements"
+		texturefile = "gfx/interface/goals/SeekOutFormerNationalGuardElements.dds" 
+	}
+	SpriteType = {
+		name = "GFX_StabilizeSomozasRegime"
+		texturefile = "gfx/interface/goals/StabilizeSomozasRegime.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SupportTheContras"
+		texturefile = "gfx/interface/goals/SupportTheContras.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SupportTheSiegePolicy"
+		texturefile = "gfx/interface/goals/SupportTheSiegePolicy.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SuspendAidToSomoza"
+		texturefile = "gfx/interface/goals/SuspendAidToSomoza.dds" 
+	}
+	SpriteType = {
+		name = "GFX_TheReturnOfSomoza"
+		texturefile = "gfx/interface/goals/TheReturnOfSomoza.dds" 
+	}
+	#New Doggo Icons 4/24/2020
+	SpriteType = {
+		name = "GFX_DomesticOperations"
+		texturefile = "gfx/interface/goals/DomesticOperations.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ExpandHTLINGUAL"
+		texturefile = "gfx/interface/goals/ExpandHTLINGUAL.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OperationMHCHAOS"
+		texturefile = "gfx/interface/goals/OperationMHCHAOS.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OperationMIDNIGHTCLIMAX"
+		texturefile = "gfx/interface/goals/OperationMIDNIGHTCLIMAX.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OperationMockingbird"
+		texturefile = "gfx/interface/goals/OperationMockingbird.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OperationRESISTANCE"
+		texturefile = "gfx/interface/goals/OperationRESISTANCE.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ProjectMERRIMAC"
+		texturefile = "gfx/interface/goals/ProjectMERRIMAC.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ProjectMKNAOMI"
+		texturefile = "gfx/interface/goals/ProjectMKNAOMI.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ProjectMKOFTEN"
+		texturefile = "gfx/interface/goals/ProjectMKOFTEN.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ProjectMKSEARCH"
+		texturefile = "gfx/interface/goals/ProjectMKSEARCH.dds" 
+	}
+	SpriteType = {
+		name = "GFX_UndermineTheAnti_WarMovement"
+		texturefile = "gfx/interface/goals/UndermineTheAnti-WarMovement.dds" 
+	}
+	#New Doggo Icons 4/25/2020
+	SpriteType = {
+		name = "GFX_AidRoyalistDrugSmuggling"
+		texturefile = "gfx/interface/goals/AidRoyalistDrugSmuggling.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ArmCambodia"
+		texturefile = "gfx/interface/goals/ArmCambodia.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ArmLaosRoyalists"
+		texturefile = "gfx/interface/goals/ArmLaosRoyalists.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AssassinateDiem"
+		texturefile = "gfx/interface/goals/AssassinateDiem.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AssassinateTrujilo"
+		texturefile = "gfx/interface/goals/AssassinateTrujilo.dds" 
+	}
+	SpriteType = {
+		name = "GFX_BombThePathetLao"
+		texturefile = "gfx/interface/goals/BombThePathetLao.dds" 
+	}
+	SpriteType = {
+		name = "GFX_CIDGProgram"
+		texturefile = "gfx/interface/goals/CIDGProgram.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ContinueFundingLDP"
+		texturefile = "gfx/interface/goals/ContinueFundingLDP.dds" 
+	}
+	SpriteType = {
+		name = "GFX_CovertAidToThailand"
+		texturefile = "gfx/interface/goals/CovertAidToThailand.dds" 
+	}
+	SpriteType = {
+		name = "GFX_LaunchBayOfPigs"
+		texturefile = "gfx/interface/goals/LaunchBayOfPigs.dds" 
+	}
+	SpriteType = {
+		name = "GFX_LaunchBolivianCoup"
+		texturefile = "gfx/interface/goals/LaunchBolivianCoup.dds" 
+	}
+	SpriteType = {
+		name = "GFX_LaunchIndonesianCoup"
+		texturefile = "gfx/interface/goals/LaunchIndonesianCoup.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OperationNorthwoods"
+		texturefile = "gfx/interface/goals/OperationNorthwoods.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OperationVULCAN"
+		texturefile = "gfx/interface/goals/OperationVULCAN.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OperationWanderingSoul"
+		texturefile = "gfx/interface/goals/OperationWanderingSoul.dds" 
+	}
+	SpriteType = {
+		name = "GFX_PreserveTheDiemRegime"
+		texturefile = "gfx/interface/goals/PreserveTheDiemRegime.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ProvideIntelToGreekJunta"
+		texturefile = "gfx/interface/goals/ProvideIntelToGreekJunta.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SupportGreekJunta"
+		texturefile = "gfx/interface/goals/SupportGreekJunta.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SupportLonNol"
+		texturefile = "gfx/interface/goals/SupportLonNol.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SupportMobutu"
+		texturefile = "gfx/interface/goals/SupportMobutu.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_KoreanDMZCrisis"
+		texturefile = "gfx/interface/goals/KoreanDMZCrisis.dds" 
+	}
+	SpriteType = {
+		name = "GFX_USAStateDepartment"
+		texturefile = "gfx/interface/goals/USAStateDepartment.dds" 
+	}
+	SpriteType = {
+		name = "GFX_LimitedEscalation"
+		texturefile = "gfx/interface/goals/LimitedEscalation.dds" 
+	}
+	SpriteType = {
+		name = "GFX_IncreaseAidToROK"
+		texturefile = "gfx/interface/goals/IncreaseAidToROK.dds" 
+	}
+	SpriteType = {
+		name = "GFX_FortifyTheBorder"
+		texturefile = "gfx/interface/goals/FortifyTheBorder.dds" 
+	}
+	SpriteType = {
+		name = "GFX_Second_Korean_War"
+		texturefile = "gfx/interface/goals/Second_Korean_War.dds" 
+	}
+	SpriteType = {
+		name = "GFX_TrainUruguayanDeathsquads"
+		texturefile = "gfx/interface/goals/TrainUruguayanDeathsquads.dds" 
+	}
+	SpriteType = {
+		name = "GFX_VietnamDesk"
+		texturefile = "gfx/interface/goals/VietnamDesk.dds" 
+	}
+	SpriteType = {
+		name = "GFX_End_the_Phoenix_Program"
+		texturefile = "gfx/interface/goals/ENDTHEPHOENIXPROGRAMFORTHELOVEOFGOD.dds" 
+	}
+	SpriteType = {
+		name = "GFX_OperationSHOCK"
+		texturefile = "gfx/interface/goals/OperationSHOCK.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ExpandThePhoenixProgram"
+		texturefile = "gfx/interface/goals/ExpandThePhoenixProgram.dds" 
+	}
+	#Cambodia
+	SpriteType = {
+		name = "GFX_Lon_Nol_Cambodia"
+		texturefile = "gfx/interface/goals/Lon_Nol_Cambodia.dds" 
+	}
+	#New Doggo Icons 5/30/2020
+	SpriteType = {
+		name = "GFX_AbandonTheMBT70"
+		texturefile = "gfx/interface/goals/AbandonTheMBT70.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AidPortugalInAfrica"
+		texturefile = "gfx/interface/goals/AidPortugalInAfrica.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AllowAmericanVolunteers"
+		texturefile = "gfx/interface/goals/AllowAmericanVolunteers.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AntiSubBallisticMissiles"
+		texturefile = "gfx/interface/goals/Anti-SubBallisticMissiles.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ArmTheHMong"
+		texturefile = "gfx/interface/goals/ArmTheHMong.dds" 
+	}
+	SpriteType = {
+		name = "GFX_AtemptToBridgeTheMissileGap"
+		texturefile = "gfx/interface/goals/AtemptToBridgeTheMissileGap.dds" 
+	}
+	SpriteType = {
+		name = "GFX_CarrierStrikeGroupFormations"
+		texturefile = "gfx/interface/goals/CarrierStrikeGroupFormations.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ChryslerXM1"
+		texturefile = "gfx/interface/goals/ChryslerXM1.dds" 
+	}
+	SpriteType = {
+		name = "GFX_CircumventTheTradeEmbargo"
+		texturefile = "gfx/interface/goals/CircumventTheTradeEmbargo.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ContinueMissilePrioritization"
+		texturefile = "gfx/interface/goals/ContinueMissilePrioritization.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ConventionalReactorDesign"
+		texturefile = "gfx/interface/goals/ConventionalReactorDesign.dds" 
+	}
+	SpriteType = {
+		name = "GFX_CrushTheKhmerRouge"
+		texturefile = "gfx/interface/goals/CrushTheKhmerRouge.dds" 
+	}
+	SpriteType = {
+		name = "GFX_DeployAdvisorsToAlcora"
+		texturefile = "gfx/interface/goals/DeployAdvisorsToAlcora.dds" 
+	}
+	SpriteType = {
+		name = "GFX_EmbraceSystemicDoctrine"
+		texturefile = "gfx/interface/goals/EmbraceSystemicDoctrine.dds" 
+	}
+	SpriteType = {
+		name = "GFX_EncourageM113Exports"
+		texturefile = "gfx/interface/goals/EncourageM113Exports.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ExpandAidToROK"
+		texturefile = "gfx/interface/goals/ExpandAidToROK.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ExpandWarheadProduction"
+		texturefile = "gfx/interface/goals/ExpandWarheadProduction.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ExploreHydrofoilDesigns"
+		texturefile = "gfx/interface/goals/ExploreHydrofoilDesigns.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ExtensiveSupport"
+		texturefile = "gfx/interface/goals/ExtensiveSupport.dds" 
+	}
+	SpriteType = {
+		name = "GFX_HeavyNapalmIntegration"
+		texturefile = "gfx/interface/goals/HeavyNapalmIntegration.dds" 
+	}
+	SpriteType = {
+		name = "GFX_InterveneInCambodia"
+		texturefile = "gfx/interface/goals/InterveneInCambodia.dds" 
+	}
+	SpriteType = {
+		name = "GFX_KitteryShipyardExpansion"
+		texturefile = "gfx/interface/goals/KitteryShipyardExpansion.dds" 
+	}
+	SpriteType = {
+		name = "GFX_LimaTankPlantExplosion"
+		texturefile = "gfx/interface/goals/LimaTankPlantExplosion.dds" 
+	}
+	SpriteType = {
+		name = "GFX_LimitedApproach"
+		texturefile = "gfx/interface/goals/LimitedApproach.dds" 
+	}
+	SpriteType = {
+		name = "GFX_MissileSiloExpansion"
+		texturefile = "gfx/interface/goals/MissileSiloExpansion.dds" 
+	}
+	SpriteType = {
+		name = "GFX_MobileAirfield"
+		texturefile = "gfx/interface/goals/MobileAirfield.dds" 
+	}
+	SpriteType = {
+		name = "GFX_NuclearCarrierDevelopment"
+		texturefile = "gfx/interface/goals/NuclearCarrierDevelopment.dds" 
+	}
+	SpriteType = {
+		name = "GFX_PolarisSLBMDeployment"
+		texturefile = "gfx/interface/goals/PolarisSLBMDeployment.dds" 
+	}
+	SpriteType = {
+		name = "GFX_RecognizeRhodesia2"
+		texturefile = "gfx/interface/goals/RecognizeRhodesia2.dds" 
+	}
+	SpriteType = {
+		name = "GFX_ReEmphasizeAirGunnery"
+		texturefile = "gfx/interface/goals/Re-EmphasizeAirGunnery.dds" 
+	}
+	SpriteType = {
+		name = "GFX_SaltwaterNuclearReactor"
+		texturefile = "gfx/interface/goals/SaltwaterNuclearReactor.dds" 
+	}
+	SpriteType = {
+		name = "GFX_StudyAdvancedShipDesign"
+		texturefile = "gfx/interface/goals/StudyAdvancedShipDesign.dds" 
+	}
+	SpriteType = {
+		name = "GFX_TheM113"
+		texturefile = "gfx/interface/goals/TheM113.dds" 
+	}
+	SpriteType = {
+		name = "GFX_TheM113ArmoredCavalry"
+		texturefile = "gfx/interface/goals/TheM113ArmoredCavalry.dds" 
+	}
+	SpriteType = {
+		name = "GFX_TheMBT70"
+		texturefile = "gfx/interface/goals/TheMBT70.dds" 
+	}
+	SpriteType = {
+		name = "GFX_TheXM803"
+		texturefile = "gfx/interface/goals/TheXM803.dds" 
+	}
+	SpriteType = {
+		name = "GFX_USArmedForces"
+		texturefile = "gfx/interface/goals/USArmedForces.dds" 
+	}
+	SpriteType = {
+		name = "GFX_USMissileCommand"
+		texturefile = "gfx/interface/goals/USMissileCommand.dds" 
+	}
+	SpriteType = {
+		name = "GFX_WidespreadAdoptionOfM16"
+		texturefile = "gfx/interface/goals/WidespreadAdoptionOfM16.dds" 
+	}
+	SpriteType = {
+		name = "GFX_WildWeasels"
+		texturefile = "gfx/interface/goals/WildWeasels.dds" 
+	}
+	SpriteType = {
+		name = "GFX_eric_griffith_jones"
+		texturefile = "gfx/interface/goals/ericjones.dds" 
+	}
+	SpriteType = {
+		name = "GFX_KADU"
+		texturefile = "gfx/interface/goals/KADU.dds" 
+	}
+	SpriteType = {
+		name = "GFX_Kenyan_COA"
+		texturefile = "gfx/interface/goals/KenyanCoatOfArmsGovt.dds" 
+	}
+	SpriteType = {
+		name = "GFX_EAF"
+		texturefile = "gfx/interface/goals/FormationOfTheEastAfricanFed.dds" 
+	}
+	SpriteType = {
+		name = "GFX_KPU"
+		texturefile = "gfx/interface/goals/KPU.dds" 
+	}
+	SpriteType = {
+		name = "GFX_KANU"
+		texturefile = "gfx/interface/goals/KANU.dds" 
+	}
+	SpriteType = {
+		name = "GFX_obamasr"
+		texturefile = "gfx/interface/goals/obamasrdda.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_fakenews"
+		texturefile = "gfx/interface/goals/fakenews.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_centrism"
+		texturefile = "gfx/interface/goals/centrism.dds" 
+	}
+	SpriteType = {
+		name = "GFX_justice"
+		texturefile = "gfx/interface/goals/justice.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_equality"
+		texturefile = "gfx/interface/goals/equality.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_lgblegal"
+		texturefile = "gfx/interface/goals/lgblegal.dds" 
+	}
+	SpriteType = {
+		name = "GFX_lgbpositive"
+		texturefile = "gfx/interface/goals/lgbpositive.dds" 
+	}
+	SpriteType = {
+		name = "GFX_genderacceptance"
+		texturefile = "gfx/interface/goals/genderacceptance.dds" 
+	}
+	
+	
 }

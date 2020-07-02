@@ -814,7 +814,7 @@ continuous_focus_position = { x = 0 y = 4000 }
 				}
 							
 				defender = {
-					state = 1190
+					state = 325
 					num_provinces = 2
 					on_win = Indochina_War.4
 					on_lose = Indochina_War.4
@@ -1121,7 +1121,14 @@ continuous_focus_position = { x = 0 y = 4000 }
 		x = 5
 		y = 24
 		completion_reward = {
-			add_ideas = press_censorship_5
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_1
 		}
 	}
 	focus = {
@@ -1631,11 +1638,11 @@ continuous_focus_position = { x = 0 y = 4000 }
 		completion_reward = {
 			random_list = {
 				50 = {
-					country_event = SS_HATIEN.1
+					#country_event = SS_HATIEN.1
 					add_war_support = -0.05
 				}
 				50 = {
-					country_event = SS_HATIEN.2
+					#country_event = SS_HATIEN.2
 					add_war_support = 0.05
 					add_manpower = 500
 					add_equipment_to_stockpile = {
@@ -1810,11 +1817,13 @@ continuous_focus_position = { x = 0 y = 4000 }
 		x = 20
 		y = 23
 		completion_reward = {
-			remove_ideas = policy_taxrate_temp_1
-			remove_ideas = policy_taxrate_temp_2
-			remove_ideas = policy_taxrate_temp_3
-			remove_ideas = policy_taxrate_temp_4
-			remove_ideas = policy_taxrate_temp_5
+			hidden_effect = {
+				remove_ideas = policy_taxrate_temp_1
+				remove_ideas = policy_taxrate_temp_2
+				remove_ideas = policy_taxrate_temp_3
+				remove_ideas = policy_taxrate_temp_4
+				remove_ideas = policy_taxrate_temp_5
+			}
 			add_ideas = policy_taxrate_temp_4
 			tax_rate = yes		
 		}

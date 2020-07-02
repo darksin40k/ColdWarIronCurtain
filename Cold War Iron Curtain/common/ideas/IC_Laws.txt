@@ -6,14 +6,83 @@ ideas = {
 				always = no
 			}
 		}
+		policy_union_temp_0 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				min_export = 0.10
+				production_factory_max_efficiency_factor = -0.05
+				drift_defence_factor = 0.10
+			}
+		}
+		policy_union_temp_1 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				min_export = -0.05
+				production_factory_max_efficiency_factor = -0.025
+				drift_defence_factor = 0.05
+			}
+		}
+		policy_union_temp_2 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.20
+			}
+		}
+		policy_union_temp_3 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.075
+				min_export = -0.05
+			}
+		}
+		policy_union_temp_4 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.075
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.075
+				min_export = -0.10
+				drift_defence_factor = 0.05
+			}
+		}
+		policy_union_temp_5 = {
+			removal_cost = -1
+			allowed = { always = no } 
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.2
+				production_factory_max_efficiency_factor = 0.05
+				min_export = -0.10
+				drift_defence_factor = 0.10
+			}
+		}
 		policy_saga_temp_0 = {
 			removal_cost = -1
 			allowed = {
 				always = no
 			}
 			modifier = {
-				MONTHLY_POPULATION = 0.1
+				MONTHLY_POPULATION = 0.15
 				drift_defence_factor = 0.25
+				consumer_goods_factor = 0.015
 			}
 		}
 		policy_saga_temp_1 = {
@@ -22,8 +91,9 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				MONTHLY_POPULATION = 0.075
-				drift_defence_factor = 0.15	
+				MONTHLY_POPULATION = 0.1
+				drift_defence_factor = 0.15
+				consumer_goods_factor = 0.01
 			}
 		}
 		policy_saga_temp_2 = {
@@ -41,7 +111,6 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				MONTHLY_POPULATION = 0.025
 				war_support_factor = 0.025
 				conscription_factor = 0.025
 			}
@@ -52,8 +121,9 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				war_support_factor = 0.05
+				war_support_factor = 0.1
 				conscription_factor = 0.05
+				consumer_goods_factor = -0.01
 			}
 		}
 		policy_saga_temp_4a = {
@@ -62,8 +132,9 @@ ideas = {
 				always = no
 			}
 			modifier = {
-				war_support_factor = 0.1
+				war_support_factor = 0.15
 				conscription_factor = 0.05
+				consumer_goods_factor = -0.015
 			}
 		}
 		policy_voting_temp_0 = {
@@ -253,7 +324,7 @@ ideas = {
 				always = no # Added via focus
 			}
 			modifier = {
-				production_factory_efficiency_gain_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.15
 				MONTHLY_POPULATION = 0.45
 				conscription_factor = -0.15
 				research_speed_factor = -0.05
@@ -266,7 +337,7 @@ ideas = {
 				always = no # Added via focus
 			}
 			modifier = {
-				production_factory_efficiency_gain_factor = -0.05
+				production_factory_efficiency_gain_factor = -0.1
 				MONTHLY_POPULATION = 0.30
 				conscription_factor = -0.10
 				research_speed_factor = -0.025
@@ -289,8 +360,11 @@ ideas = {
 			allowed = {
 				always = no # Added via focus
 			}
+			rule = {
+				can_generate_female_aces = yes
+			}
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.025
+				production_factory_efficiency_gain_factor = 0.1
 				MONTHLY_POPULATION = -0.2
 				conscription_factor = 0.10
 				research_speed_factor = 0.025
@@ -301,8 +375,11 @@ ideas = {
 			allowed = {
 				always = no # Added via focus
 			}
+			rule = {
+				can_generate_female_aces = yes
+			}
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.2
 				MONTHLY_POPULATION = -0.25
 				conscription_factor = 0.15
 				research_speed_factor = 0.05
@@ -314,8 +391,11 @@ ideas = {
 			allowed = {
 				always = no # Added via focus
 			}
+			rule = {
+				can_generate_female_aces = yes
+			}
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.075
+				production_factory_efficiency_gain_factor = 0.25
 				MONTHLY_POPULATION = -0.30
 				conscription_factor = 0.25
 				research_speed_factor = 0.05
@@ -329,12 +409,13 @@ ideas = {
 			always = no # Added via focus
 		}
 		modifier = {
-			conscription_factor = -0.25
-			production_speed_state_infrastructure_factor = 0.25
-			production_speed_agri_industrial_complex_factor = 0.25
+			conscription_factor = -0.15
+			production_speed_state_infrastructure_factor = 0.35
+			production_speed_water_infrastructure_factor = 0.35
+			production_speed_agri_industrial_complex_factor = 0.35
 			war_support_factor = 0.15
-			drift_defence_factor = 0.3
-			stability_factor = -0.15
+			drift_defence_factor = 0.45
+			#Stability and production penalties in segregationValue that is raised with this idea
 		}
 	}
 	policy_minorities_temp_1 = { 
@@ -344,12 +425,13 @@ ideas = {
 			always = no # Added via focus
 		}
 		modifier = {
-			conscription_factor = -0.15
-			production_speed_state_infrastructure_factor = 0.1
-			production_speed_agri_industrial_complex_factor = 0.1
+			conscription_factor = -0.10
+			production_speed_state_infrastructure_factor = 0.20
+			production_speed_water_infrastructure_factor = 0.20
+			production_speed_agri_industrial_complex_factor = 0.20
 			war_support_factor = 0.1
-			drift_defence_factor = 0.15
-			stability_factor = -0.1
+			drift_defence_factor = 0.30
+			#Stability and production penalties in segregationValue that is raised with this idea
 		}
 	}
 	policy_minorities_temp_2 = { 
@@ -361,9 +443,10 @@ ideas = {
 		modifier = {
 			conscription_factor = -0.05
 			production_speed_state_infrastructure_factor = 0.05
+			production_speed_water_infrastructure_factor = 0.05
 			production_speed_agri_industrial_complex_factor = 0.05
 			war_support_factor = 0.05
-			stability_factor = -0.05
+			#Stability and production penalties in segregationValue that is raised with this idea
 		}
 	}
 	policy_minorities_temp_3 = {
@@ -375,7 +458,7 @@ ideas = {
 		modifier = {
 			conscription_factor = 0.05
 			research_speed_factor = 0.05
-			war_support_factor = -0.05
+			production_speed_office_park_factor = 0.10
 			drift_defence_factor = -0.1
 			stability_factor = 0.10
 		}
@@ -387,12 +470,10 @@ ideas = {
 			always = no # Added via focus
 		}
 		modifier = {
-			conscription_factor = 0.15
 			research_speed_factor = 0.075
-			production_speed_office_park_factor = 0.10
+			production_speed_office_park_factor = 0.20
 			war_support_factor = -0.1
 			drift_defence_factor = -0.2
-			stability_factor = -0.05
 		}
 	}
 
@@ -662,7 +743,7 @@ ideas = {
 			modifier = {
 				planning_speed = -0.1
 				army_speed_factor = -0.1
-				production_speed_buildings_factor = -0.1
+				production_speed_buildings_factor = -0.2
 			}
 		}
 		SOV_seventh_five_year_plan = { 
@@ -1015,7 +1096,13 @@ ideas = {
 				stability_factor = 0.03
 			}
 		}
-		
+		tax_break = {
+			removal_cost = -1
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.05
+			}		
+		}
 		Compulsory_Religous_Attendance = {
 			allowed = { always = no } 
 			modifier = {
@@ -1781,71 +1868,6 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.04
 				stability_factor = -0.1
-			}
-		}
-		policy_union_temp_0 = {
-			removal_cost = -1
-			allowed = { always = no } 
-			modifier = {
-				production_speed_buildings_factor = 0.2
-				industrial_capacity_factory = 0.15
-				industrial_capacity_dockyard = 0.15
-				min_export = 0.10
-				production_factory_max_efficiency_factor = -0.05
-				drift_defence_factor = 0.10
-			}
-		}
-		policy_union_temp_1 = {
-			removal_cost = -1
-			allowed = { always = no } 
-			modifier = {
-				production_speed_buildings_factor = 0.1
-				industrial_capacity_factory = 0.10
-				industrial_capacity_dockyard = 0.10
-				min_export = -0.05
-				production_factory_max_efficiency_factor = -0.025
-				drift_defence_factor = 0.05
-			}
-		}
-		policy_union_temp_2 = {
-			removal_cost = -1
-			allowed = { always = no } 
-			modifier = {
-				stability_factor = 0.05
-				production_factory_max_efficiency_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.20
-			}
-		}
-		policy_union_temp_3 = {
-			removal_cost = -1
-			allowed = { always = no } 
-			modifier = {
-				stability_factor = 0.05
-				production_factory_efficiency_gain_factor = 0.2
-				production_factory_max_efficiency_factor = 0.075
-				min_export = -0.05
-			}
-		}
-		policy_union_temp_4 = {
-			removal_cost = -1
-			allowed = { always = no } 
-			modifier = {
-				stability_factor = 0.075
-				production_factory_efficiency_gain_factor = 0.2
-				production_factory_max_efficiency_factor = 0.075
-				min_export = -0.10
-				drift_defence_factor = 0.05
-			}
-		}
-		policy_union_temp_5 = {
-			removal_cost = -1
-			allowed = { always = no } 
-			modifier = {
-				stability_factor = 0.05
-				political_power_factor = 0.2
-				production_factory_max_efficiency_factor = 0.05
-				min_export = -0.10
-				drift_defence_factor = 0.10
 			}
 		}
 		banned_strikes = {

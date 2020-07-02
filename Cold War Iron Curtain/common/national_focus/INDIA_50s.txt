@@ -52,7 +52,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IND_The_Karachi_Agreement
-		icon = GFX_Commie_Treaty
+		icon = GFX_Karachi_Treaty
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 29
@@ -917,7 +917,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IND_Execute_Nathuram_Godse
-		icon = GFX_reign_of_terror
+		icon = GFX_Godse
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -931,7 +931,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IND_The_New_Constitution
-		icon = GFX_Paper
+		icon = GFX_India_Constitution
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -949,7 +949,7 @@ focus_tree = {
 	}
 	focus = {
 		id = IND_Central_Reserve_Police_Force_Act
-		icon = GFX_police
+		icon = GFX_CRPF
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1893,6 +1893,14 @@ focus_tree = {
 		x = 23
 		y = 12
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_4
 		}
 	}
@@ -2150,6 +2158,14 @@ focus_tree = {
 		x = 10
 		y = 13
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_0
 		}
 	}
@@ -3061,6 +3077,14 @@ focus_tree = {
 		x = 25
 		y = 36
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_5
 		}
 	}

@@ -44,11 +44,6 @@ country_event = {
 
 	option = {
 		name = "A Sad Day"
-		create_country_leader = {
-			name = "Jussi Saukkonen"
-			picture = "Saukkonen.dds"
-			ideology = Liberal_Conservatism
-		}
 	}
 }
 
@@ -119,16 +114,25 @@ country_event = {
 
 news_event = {
 	id = fin.7
-	title = "[GetNewspaperHeader]Death of Mannerheim"
+	title = "[GetNewspaperHeader]Death of Finnish Marshal Mannerheim"
 	desc = fin.7.d
-	picture = news_event_FIN_mannerheim_funeral
+	picture = GFX_news_event_FIN_mannerheim_funeral
 
 	is_triggered_only = yes
 	major = yes
 	fire_only_once = yes
 
 	option = {
-		name = "Another era ends in our nation"
+		name = "Send Our Condolences"
+		trigger = {
+				NOT = { tag = FIN }
+		}
+	}
+	option = {
+		name = "Kunnioittakaamme suuren vainajan muistoa"
+		trigger = {
+			tag = FIN
+		}
 	}
 }
 country_event = {
@@ -344,7 +348,7 @@ country_event = {
 	desc = fin.20.d
 	picture = GFX_norppa
 	is_triggered_only = yes
-
+	fire_only_once = yes
 	option = {
 		name = "Good news"
 		add_stability = 0.01
@@ -379,12 +383,30 @@ country_event = {
 	id = fin.23
 	title = fin.23.t
 	desc = fin.23.d
-	picture = GFX_report_event_Papagos_funeral
+	picture = GFX_ambulanssi
 	is_triggered_only = yes
 
 	option = {
-		name = "May he rest in peace."
+		name = "...Hertta Kuusinen, the leading female communist."
 		complete_national_focus = FIN_The_Death_of_President_Pekkala
+		complete_national_focus = FIN_President_Kuusinen
+		kill_country_leader = yes
+		create_country_leader = {
+				name = "Hertta Kuusinen"
+				picture = "Hertta_Kuusinen.dds"
+				ideology = neocommunism
+			}
+	}
+	option = {
+		name = "...Eino Kilpi, a moderate socialist."
+		complete_national_focus = FIN_The_Death_of_President_Pekkala
+		complete_national_focus = FIN_President_Kilpi
+		kill_country_leader = yes
+		create_country_leader = {
+				name = "Eino Kilpi"
+				picture = "Kilpi.dds"
+				ideology = democratic_socialist
+			}
 	}
 }
 
@@ -1079,6 +1101,201 @@ country_event = {
 			ideology = vennamolaisuus
 		}
 		add_popularity = { ideology = neutrality popularity = 0.1 }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fin.204
+	title = "The Election of 1974"
+	desc = fin.203.d
+
+	trigger = {
+		tag = FIN
+		date > 1974.1.1
+		date < 1975.1.1
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Derogation for Urho Kekkonen (Keskusta)"
+		trigger = {
+			has_country_leader = {
+				name = "Urho Kekkonen"
+				ruling_only = yes
+			}
+		}
+
+		set_politics = {
+			ruling_party = centrist
+			elections_allowed = yes
+		}
+		add_popularity = { ideology = centrist popularity = 0.1 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+	}
+	option = {
+		name = "Matti Virkkunen (Kok.)"
+
+		set_politics = {
+			ruling_party = Liberal_Conservatism
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Matti Virkkunen"
+			picture = "Matti_Virkkunen.dds"
+			ideology = Liberal_Conservatism
+		}
+		add_popularity = { ideology = Liberal_Conservatism popularity = 0.1 }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fin.205
+	title = "The Election of 1978"
+	desc = fin.203.d
+
+	trigger = {
+		tag = FIN
+		date > 1978.1.1
+		date < 1979.1.1
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Derogation for Urho Kekkonen (Keskusta)"
+		trigger = {
+			has_country_leader = {
+				name = "Urho Kekkonen"
+				ruling_only = yes
+			}
+		}
+
+		set_politics = {
+			ruling_party = centrist
+			elections_allowed = yes
+		}
+		add_popularity = { ideology = centrist popularity = 0.1 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+	}
+	option = {
+		name = "Raino Westerholm (SKL)"
+
+		set_politics = {
+			ruling_party = Christian_Democratic
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Raino Westerholm"
+			picture = "Raino_Westerholm.dds"
+			ideology = christian_democracy
+		}
+		add_popularity = { ideology = Christian_Democratic popularity = 0.1 }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fin.206
+	title = "The Election of 1982"
+	desc = fin.203.d
+
+	trigger = {
+		tag = FIN
+		date > 1982.1.1
+		date < 1983.1.1
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Mauno Koivisto (SDP)"
+
+		set_politics = {
+			ruling_party = Social_Democratic
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Mauno Koivisto"
+			picture = "Maun.dds"
+			ideology = social_democrat
+		}
+		add_popularity = { ideology = Social_Democratic popularity = 0.1 }
+		ai_chance = {
+			factor = 50
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 1
+			}
+		}
+	}
+	option = {
+		name = "Harri Holkeri (Kok.)"
+
+		set_politics = {
+			ruling_party = Liberal_Conservatism
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Harri Holkeri"
+			picture = "Harri_Holkeri.dds"
+			ideology = conservative_liberalism
+		}
+		add_popularity = { ideology = Liberal_Conservatism popularity = 0.1 }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
+	}
+	
+	option = {
+		name = "Johannes Virolainen (Kesk.)"
+
+		set_politics = {
+			ruling_party = centrist
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Johannes Virolainen"
+			picture = "Johannes_Virolainen.dds"
+			ideology = centrism
+		}
+		add_popularity = { ideology = centrist popularity = 0.1 }
 		ai_chance = {
 			factor = 25
 			modifier = {

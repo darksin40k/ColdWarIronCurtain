@@ -71,8 +71,13 @@ biafra_war_categorty = {
 		cost = 0
 		
 		complete_effect = {
-			NGA = { release = BNN }
-			puppet = BNN
+			BNN = {
+				transfer_state = 1014
+			}
+			1014 = {
+				add_core_of = BNN
+			}
+			BFR = { set_autonomy = { target = BNN autonomy_state = autonomy_easternbloc } }
 			news_event = Biafra_War.2
 		}
 	}
@@ -244,7 +249,7 @@ Angolan_War_Decisions_categorty = {
 						check_variable = { POR.victory_points < ANG.ANGOLA_VICTORY_POINTS }
 					}
 				}
-				GBN = {
+				GAB = {
 					transfer_state = 296
 					country_event = gbn_colonial_war.301
 				}
@@ -263,7 +268,7 @@ Angolan_War_Decisions_categorty = {
 				}
 				release = MZB
 				white_peace = MZB
-				news_event = CARNATION_REV.1
+				news_event = Carnation_Revolution.1
 				set_country_flag = CARNATION_REV_SUCCESS
 				set_politics = {
 					ruling_party = neutrality
@@ -297,7 +302,7 @@ Angolan_War_Decisions_categorty = {
 
 			else = {
 				set_country_flag = CARNATION_FAILED
-				news_event = CARNATION_REV.2
+				news_event = Carnation_Revolution.2
 			}
 		}
 

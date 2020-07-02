@@ -83,6 +83,12 @@ focus_tree = {
 			remove_ideas = Iraq_Petroleum_Company
 			add_ideas = nationalized_resources
 			news_event = Qasim.1
+			ENG = { remove_resource_rights = 291 }	
+			ENG = { remove_resource_rights = 812 }	
+			ENG = { remove_resource_rights = 291 }	
+			ENG = { remove_resource_rights = 813 }	
+			ENG = { remove_resource_rights = 811 }	
+			ENG = { remove_resource_rights = 676 }	
 		}
 	}
 	focus = {
@@ -546,7 +552,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = transport_plane_equipment_2
 				amount = 200
-				producer = POL
+				producer = CUM
 			}		
 		}
 	}
@@ -568,7 +574,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_tac_bomber_equipment_1
 				amount = 100
-				producer = POL
+				producer = CUM
 			}		
 		}
 	} 

@@ -156,7 +156,7 @@ add_ideas = {
  cold_war_civil_war_ideological_idea
  Industrial_Reconstruction_3
  fiscal_collapse_3
- 
+ closed_economy
  }
 
 set_convoys = 200
@@ -423,6 +423,7 @@ add_to_array = { influence_array_val = 300 }
 }
 
 1955.1.1 = {
+	set_country_flag = NLF_trigger
 	drop_cosmetic_tag = yes
 	
 		set_popularities = { 

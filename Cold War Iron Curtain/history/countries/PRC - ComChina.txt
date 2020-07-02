@@ -2,7 +2,7 @@
 
 oob = "PRC_1949"
 
-set_research_slots = 3
+set_research_slots = 4
 
 if = {
 	limit = { has_dlc = "Man the Guns"}
@@ -162,22 +162,32 @@ set_variable = { var = domestic_influence_amount value = 10000 }
 		target = XSM
 		type = civil_war
 	}
+	add_ideas = {
+		international_credibility_3
+		agrarian_bourgeoisie_1
+		fiscal_collapse_3
+		PRC_peoples_army
+		closed_economy
+		extensive_conscription
+		tot_economic_mobilisation
+		administration_integration_3
+	}
 }
-
+set_country_flag = weapon_purchasing_CUM_permit
+set_country_flag = weapon_purchasing_MAO_permit
 add_ideas = {
-	closed_economy
-	extensive_conscription
-	tot_economic_mobilisation
-	PRC_peoples_army
+
+	
 	foreign_aggression_policy_6
 	defcon_system_5
 	SOV_government_corruption_endemic
 	banditry
-	fiscal_collapse_3
+	
 	Global_Intervention
-	agrarian_bourgeoisie_1
-	international_credibility_3
-	administration_integration_3
+	
+	
+	
+	Major_Power_Spy_Bonus
 
 	policy_military_temp_3
 	policy_welfare_temp_1
@@ -257,6 +267,39 @@ create_field_marshal = {
 	defense_skill = 4
 	planning_skill = 4
 	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Xu Shiyou"
+	portrait_path = "gfx/leaders/PRC/Army/Xu_Shiyou.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Su Yu"
+	portrait_path = "gfx/leaders/PRC/Army/Su_Yu.dds"
+	traits = {  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Luo Ruiqing"
+	portrait_path = "gfx/leaders/PRC/Army/Luo_Ruiqing.dds"
+	traits = {  }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 create_corps_commander = {
@@ -375,9 +418,11 @@ create_corps_commander = {
 
 1950.5.1 = {
 	drop_cosmetic_tag = yes	
+	white_peace = CHI
 }
 
 1960.1.1 = {
+	
 	remove_ideas = SOV_government_corruption_endemic
 	remove_ideas = banditry
 	remove_ideas = fiscal_collapse_3

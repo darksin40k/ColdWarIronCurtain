@@ -1,5 +1,5 @@
 focus_tree = {
-	id = ENG_1960s
+	id = ENG_60s
 	country = {
 		factor = 0
 		modifier = {
@@ -723,7 +723,14 @@ focus_tree = {
 		x = 24
 		y = 8
 		completion_reward = {
-			add_ideas = free_press_3
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_2
 		}
 	}
 	focus = {
@@ -816,6 +823,14 @@ focus_tree = {
 		x = 27
 		y = 8
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_saga_temp_0
+				remove_ideas = policy_saga_temp_1
+				remove_ideas = policy_saga_temp_2
+				remove_ideas = policy_saga_temp_3
+				remove_ideas = policy_saga_temp_4
+				remove_ideas = policy_saga_temp_4a
+			}
 			add_ideas = policy_saga_temp_2
 		}
 	}
@@ -934,6 +949,14 @@ focus_tree = {
 		x = 27
 		y = 10
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_welfare_temp_0
+				remove_ideas = policy_welfare_temp_1
+				remove_ideas = policy_welfare_temp_2
+				remove_ideas = policy_welfare_temp_3
+				remove_ideas = policy_welfare_temp_4
+				remove_ideas = policy_welfare_temp_5
+			}
 			add_ideas = policy_welfare_temp_4
 		}
 	}
@@ -1142,6 +1165,14 @@ focus_tree = {
 		x = 36
 		y = 7
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_2
 		}
 	}
@@ -1156,6 +1187,7 @@ focus_tree = {
 		x = 38
 		y = 7
 		completion_reward = {
+			custom_effect_tooltip = Resource_Efficiency_TT
 			add_timed_idea = {
 				idea = Resource_Efficiency
 				days = 2250
@@ -1423,6 +1455,14 @@ focus_tree = {
 		x = 40
 		y = 20
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_1
 		}
 	}
@@ -1723,7 +1763,7 @@ focus_tree = {
 				name = cv_cas_bonus
 				bonus = 1.8
 				uses = 1
-				technology = cv_jet_CAS_equipment_4
+				technology = cv_jet_CAS4
 			}		
 		}
 	}
@@ -2111,6 +2151,14 @@ focus_tree = {
 		x = 34
 		y = 14
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_3
 		}
 	}

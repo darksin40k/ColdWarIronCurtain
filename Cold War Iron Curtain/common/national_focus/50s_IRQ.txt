@@ -29,7 +29,9 @@ focus_tree = {
 		cost = 10.00
 		x = 16
 		y = 0
-
+		available = {
+			ISR = { has_completed_focus = ISR_Operation_Erza_and_Neremiah }
+		}
 		completion_reward = { 
 		add_political_power = 50
 		add_stability = -0.05
@@ -42,7 +44,9 @@ focus_tree = {
 		cost = 10.00
 		x = 24
 		y = 0
-
+		available = {
+			date > 1953.05.02
+		}
 		completion_reward = {
 		add_timed_idea = {
 			idea = idea_new_government
@@ -840,6 +844,9 @@ focus_tree = {
 		}
 		x = 33
 		y = 4
+		available = {
+			date > 1959.01.01
+		}
 		completion_reward = {
 			country_event = IRQ.9901
 			SAU = {
@@ -1527,7 +1534,7 @@ focus_tree = {
 		id = IRQ_appoint_a_prince_of_terror
 		icon = GFX_FascistSubterfuge
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = IRQ_their_opinion_is_irrelevant
 		}
@@ -1544,7 +1551,7 @@ focus_tree = {
 		id = IRQ_lower_autonomy
 		icon = GFX_Tension_with_Turkey_rise
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = IRQ_appoint_a_prince_of_terror
 		}
@@ -1730,7 +1737,7 @@ focus_tree = {
 				name = light_air_bonus
 				bonus = 1.25
 				uses = 1
-				category = light_air
+				category = air_single_engine
 			}
 		}
 	}
@@ -1768,7 +1775,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_interceptor_equipment_1
 				amount = 75
-				producer = ENG
+				producer = USA
 			}
 
 		}
@@ -1790,7 +1797,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_interceptor_equipment_2
 				amount = 75
-				producer = ENG
+				producer = CAP
 			}		
 		}
 	}
@@ -1847,7 +1854,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_interceptor_equipment_3
 				amount = 50
-				producer = ENG
+				producer = CAP
 			}
 			air_experience = 10
 		}
@@ -1994,7 +2001,7 @@ focus_tree = {
 		id = IRQ_replace_the_incompetent_officals
 		icon = GFX_goal_generic_neutrality_focus_Arabic
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = IRQ_baban_family
 			focus = IRQ_appoint_a_prince_of_terror
@@ -2230,7 +2237,7 @@ focus_tree = {
 		id = IRQ_increase_military_presence_in_iraqi_kurdistan
 		icon = GFX_Recruitment
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = IRQ_appoint_a_prince_of_terror
 		}
@@ -2248,7 +2255,7 @@ focus_tree = {
 		id = IRQ_stomp_out_further_resistance
 		icon = GFX_StompouttheWeak
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = IRQ_replace_the_incompetent_officals
 		}

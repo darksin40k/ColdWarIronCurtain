@@ -17,7 +17,8 @@
  influence_MIL_ACCESS_CHECK:0 "Does not already have any military treaties with target"
  influence_MAJORITY_TT:0 "Has above 50% Influence"
  influence_FPP_3:0 "At least 3 Foriegn Power Projection Points"
- influence_TRADE_AGREEMENT_TT:0 "Not alreary has a trade agreement with target"
+ influence_TRADE_AGREEMENT_TT:0 "Not already has a trade agreement with target"
+ influence_LOW_TT:0 "Has Above 0.5% Influence"
  
  Influence_Action_1_TT:0 "Must either be already influencing this nation or their is a free influence slot and potential influencer has a higher GDP then the target"
  
@@ -31,8 +32,9 @@
  puppet_influence_send:0 "We have established a §Y[Owner.GetName] Political Office§! in [Root.GetName]'s country and are now in partial control!"
  manipulate_politics_send:0 "We have issued a §YPolitical Warrant§! in [Root.GetName] directly influencing their political system!"
  influence_target_send:0 "We will utilize our assets and influence in this nation to manipulate their administration!"
- trade_agreement_send:0 "We have signed a §YTrade Agreement§! with [Root.GetName]! Trade will be 50% cheaper!"
- 
+ trade_agreement_send:0 "We have will steer trade from [Root.GetName]! Trade will be 50% cheaper!"
+ trade_agreement_yes_send:0 "We're Proposing a trade agreement, if they accept trade will be 50% cheaper!"
+
  start_subsidy_receive:0 "[Root.GetName] has begun paying for §G25%§! of our §Ymilitary expenditures§!!"
  economic_exploitation_receive:0 "[Root.GetName] has established a §Y[Root.GetName] Warrant Office§! in our country and is now in partial control of our economic assets and income!"
  pay_off_debt_receive:0 "[Root.GetName] has paid off a substantial part of our debt!"
@@ -68,9 +70,13 @@
  Influence_Action_PUPPET_TT_2:0 "90% Influence or Higher"
  Influence_Action_PUPPET_TT_3:0 "At least 10 Foriegn Power Projection Points"
  
- OPT_INFLUENCE_TRADE_AGREEMENT_ACTION_TITLE:0 "Trade Agreement"
- OPT_INFLUENCE_TRADE_AGREEMENT_ACTION_ACTION_DESC:0 "Sign a §YBilateral Trade Agreement§! with this country. Trade will be two times cheaper for us!"
- 
+ OPT_INFLUENCE_TRADE_AGREEMENT_ACTION_TITLE:0 "Trade Steering"
+ OPT_INFLUENCE_TRADE_AGREEMENT_YES_ACTION_TITLE:0 "Trade Agreement Proposal"
+ OPT_INFLUENCE_TRADE_AGREEMENT_YES_ACTION_DESC:0 "We'll propose to sign a trade agreement with this country, basically the same as trade steering but we'll ask gently instead of just taking it"
+ OPT_INFLUENCE_TRADE_AGREEMENT_ACTION_ACTION_DESC:0 "We'll steer trade from this country. Trade will be §Gtwo times cheaper§ for us!"
+ OPT_INFLUENCE_TRADE_AGREEMENT_YES_ACTION_ACTION_DESC:0 "We'll sign a trade agreement with this country, basically the same as trade steering but we'll ask gently instead of just taking it"
+
+
  OPT_INFLUENCE_MANIPULATE_POLITICS_ACTION_TITLE:0 "Manipulate Politics"
  OPT_INFLUENCE_MANIPULATE_POLITICS_ACTION_ACTION_DESC:0 "Bribe ministers and spread disinformation to manipulate this nation's politics. Adds 2% of your party's popularity to this country."
  
@@ -139,7 +145,7 @@
  UAR_Libya_decisions_desc:0 "[EGY.GetFlag] Our Current Influence in [LBA.GetNameDef] is:[?LBA.influence_array_calc^LBA.egy_placement|%0] \n[LBA.GetFlag] [LBA.GetAdjective] Domestic Influence is: [?LBA.domestic_influence_amount_calc|%0] "
  UAR_Lebanon_decisions_desc:0 "[EGY.GetFlag] Our Current Influence in [LEB.GetNameDef] is:[?LEB.influence_array_calc^LEB.egy_placement|%0] \n[LEB.GetFlag] [LEB.GetAdjective] Domestic Influence is: [?LEB.domestic_influence_amount_calc|%0] "
  MRT_uar_influence:0 "[EGY.GetFlag] Our Current Influence in [MRT.GetNameDef] is:[?MRT.influence_array_calc^MRT.egy_placement|%0] \n[MRT.GetFlag] [MRT.GetAdjective] Domestic Influence is: [?MRT.domestic_influence_amount_calc|%0] "
- UAR_Morrocco_decisions_desc:0 "[EGY.GetFlag] Our Current Influence in [MOR.GetNameDef] is:[?MOR.influence_array_calc^MOR.egy_placement|%0] \n[MOR.GetFlag] [MOR.GetAdjective] Domestic Influence is: [?MOR.domestic_influence_amount_calc|%0] "
+ UAR_Morocco_decisions_desc:0 "[EGY.GetFlag] Our Current Influence in [MOR.GetNameDef] is:[?MOR.influence_array_calc^MOR.egy_placement|%0] \n[MOR.GetFlag] [MOR.GetAdjective] Domestic Influence is: [?MOR.domestic_influence_amount_calc|%0] "
  UAR_Oman_decisions_desc:0 "[EGY.GetFlag] Our Current Influence in [OMA.GetNameDef] is:[?OMA.influence_array_calc^OMA.egy_placement|%0] \n[OMA.GetFlag] [OMA.GetAdjective] Domestic Influence is: [?OMA.domestic_influence_amount_calc|%0] "
  PAL_uar_influence:0 "[EGY.GetFlag] Our Current Influence in [PAL.GetNameDef] is:[?PAL.influence_array_calc^PAL.egy_placement|%0] \n[PAL.GetFlag] [PAL.GetAdjective] Domestic Influence is: [?PAL.domestic_influence_amount_calc|%0] "
  UAR_Qatar_decisions_desc:0 "[EGY.GetFlag] Our Current Influence in [QAT.GetNameDef] is:[?QAT.influence_array_calc^QAT.egy_placement|%0] \n[QAT.GetFlag] [QAT.GetAdjective] Domestic Influence is: [?QAT.domestic_influence_amount_calc|%0] "
@@ -198,7 +204,7 @@
  Anti_Imperialist_Propaganda_LBA:0 "Condemn [UAR_LBA_imperialist_influence]"
  Integrate_LBA:0 "Propose the Integration of [LBA.GetNameDef]"
  
- UAR_Morrocco_decisions:0 "[MOR.GetFlag] The Pan-Arabist Movement in [MOR.GetName]"
+ UAR_Morocco_decisions:0 "[MOR.GetFlag] The Pan-Arabist Movement in [MOR.GetName]"
  Spread_Pan_Arab_Propaganda_MOR: "Spread Pan-Arab Propaganda"
  Condemn_Monarchy_MOR:0 "Condemn the Decadency of the House of [MOR.GetRulingParty]"
  Influence_Officers_Corp_MOR:0 "Influence the [MOR.GetAdjective] Officer Corp"

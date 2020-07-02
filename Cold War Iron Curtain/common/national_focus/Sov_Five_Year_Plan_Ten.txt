@@ -1,14 +1,20 @@
 	shared_focus = {
 		id = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
-		icon = GFX_SOV_10th_5yp
+		icon = GFX_SOV10th_5yp
 		search_filters = {IC_FILTER}
-		cost = 6
-		x = 25
+		cost = 5.00
+		x = 20
 		y = 21
+		
+		available {
+		    date > 1976.01.01
+			has_country_flag = SOV_9th_5yp_finish
+		}
 		
 		completion_reward = {
 			set_country_flag = SOV_10th_5yp_start
 			add_political_power = -150
+			activate_mission = SOV_10th_5yp_countdown
 		}
 
 	}
@@ -16,17 +22,19 @@
 		id = SOV_ECON_Maintain_Electronic_Efforts
 		icon = GFX_Improved_Electronics
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
 		}
 		
-		completion_reward = {			
+		completion_reward = {
+            add_to_variable = { currentMoney = -400 }
+			custom_effect_tooltip = sov_minus_400_bil_tooltip		
 			custom_effect_tooltip = SOV_ECON_Maintain_Electronic_Efforts_tooltip
 		}
-		
-		x = 9
-		y = 22
+		relative_position_id = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
+		x = -15
+		y = 1
 
 	}
 
@@ -34,7 +42,7 @@
 		id = SOV_ECON_Produce_Affordable_Personal_Computers
 		icon = GFX_goal_generic_computers
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Maintain_Electronic_Efforts
 		}
@@ -43,59 +51,70 @@
 			focus = SOV_ECON_Import_American_Technology
 		}
 		
+		available = {
+			has_completed_focus = SOV_ECON_Affordable_Electronics
+		}
+		
 		completion_reward = {
-            add_to_variable = { sov_10th_5yp_progress = 2 }		
+            add_to_variable = { sov_10th_5yp_progress = 2 }	
+            add_to_variable = { currentMoney = -400 }
+			custom_effect_tooltip = sov_minus_400_bil_tooltip			
 			add_tech_bonus = {
 				bonus = 0.8
 				uses = 1
 				category = electronics
 			}
 		}
-		
-		x = 6
-		y = 23
+		relative_position_id = SOV_ECON_Maintain_Electronic_Efforts
+		x = -3
+		y = 1
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Reward_Private_Discoveries
 		icon = GFX_Gold
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Produce_Affordable_Personal_Computers
 		}
 		
+		
 		completion_reward = {
 		    add_to_variable = { sov_10th_5yp_progress = 2 }
+			add_to_variable = { currentMoney = -200 }
+			custom_effect_tooltip = sov_minus_200_bil_tooltip
 			add_timed_idea = {
 				idea = sov_reward_private_dis
 				days = 1095
 			}
 		}
-		
-		x = 5
-		y = 24
+		relative_position_id = SOV_ECON_Maintain_Electronic_Efforts
+		x = -4
+		y = 2
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Distribute_Computers_to_Soviet_Companies
 		icon = GFX_goal_generic_computers
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Produce_Affordable_Personal_Computers
 		}
 		
 		completion_reward = {
 		    add_to_variable = { sov_10th_5yp_progress = 2 }
+			add_to_variable = { currentMoney = -200 }
+			custom_effect_tooltip = sov_minus_200_bil_tooltip
 			add_timed_idea = {
 				idea = sov_computers_to_companies
 				days = 1095
 			}
 		}
-		
-		x = 7
-		y = 24
+		relative_position_id = SOV_ECON_Maintain_Electronic_Efforts
+		x = -2
+		y = 2
 
 	}
 
@@ -103,7 +122,7 @@
 		id = SOV_ECON_Import_American_Technology
 		icon = GFX_SOV_american_tech
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Maintain_Electronic_Efforts
 		}
@@ -120,15 +139,16 @@
 					
 			
 		}
-		x = 12
-		y = 23
+		relative_position_id = SOV_ECON_Maintain_Electronic_Efforts
+		x = 3
+		y = 1
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Request_IBM_Assitance_with_the_1980_Olympics
-		icon = GFX_goal_unknown
+		icon = GFX_IBM_olympic
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Import_American_Technology
 		}
@@ -138,15 +158,16 @@
 				country_event = sov_ibm_purchase.0
 			}
 		}
-		x = 11
-		y = 24
+		relative_position_id = SOV_ECON_Maintain_Electronic_Efforts
+		x = 2
+		y = 2
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Immitate_Foriegn_Models
 		icon = GFX_SOV_copied_computer
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Import_American_Technology
 		}
@@ -159,16 +180,16 @@
 				category = electronics
 			}
 		}
-		
-		x = 13
-		y = 24
+		relative_position_id = SOV_ECON_Maintain_Electronic_Efforts
+		x = 4
+		y = 2
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Modernize_Economic_Processes
 		icon = GFX_machine_tools
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
 		}
@@ -178,21 +199,22 @@
          	add_political_power = -150		
 			
 		}
-		
-		x = 18
-		y = 22
+		relative_position_id = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
+		x = -6
+		y = 1
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Worker_Self_Management
 		icon = GFX_tribal_factory_workers
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Modernize_Economic_Processes
 		}
-		x = 16
-		y = 23
+		relative_position_id = SOV_ECON_Modernize_Economic_Processes
+		x = -2
+		y = 1
 		
 		completion_reward = {
 		    add_to_variable = { sov_10th_5yp_progress = 2 }	
@@ -207,7 +229,7 @@
 		id = SOV_ECON_Internally_Elected_Supervisors
 		icon = GFX_Social_Modernization
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Worker_Self_Management
 		}
@@ -220,16 +242,16 @@
 				category = management
 			}
 		}
-		
-		x = 16
-		y = 24
+		relative_position_id = SOV_ECON_Modernize_Economic_Processes
+		x = -2
+		y = 2
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Increase_Female_Employment
 		icon = GFX_femicon
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Modernize_Economic_Processes
 		}
@@ -241,27 +263,30 @@
 				days = 1925
 			}				
 		}
-		x = 20
-		y = 23
+		relative_position_id = SOV_ECON_Modernize_Economic_Processes
+		x = 2
+		y = 1
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Improve_the_Quality_of_the_Workplace
 		icon = GFX_Soviet_Loans
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Increase_Female_Employment
 		}
 		
 		completion_reward = {
 		    add_to_variable = { sov_10th_5yp_progress = 2 }	
+			add_to_variable = { currentMoney = -100 }
+			custom_effect_tooltip = sov_minus_100_bil_tooltip
 			add_stability = 0.025
 		}
 
-		
-		x = 20
-		y = 24
+		relative_position_id = SOV_ECON_Modernize_Economic_Processes
+		x = 2
+		y = 2
 
 	}
 	
@@ -269,7 +294,7 @@
 		id = SOV_ECON_Adapt_Production_to_the_Workers
 		icon = GFX_establish_communes
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		
 		prerequisite = {
 			focus = SOV_ECON_Improve_the_Quality_of_the_Workplace
@@ -286,68 +311,75 @@
 			}			
 			
 		}
-		x = 18
-		y = 25
+		relative_position_id = SOV_ECON_Modernize_Economic_Processes
+		x = 0
+		y = 3
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Renovate_Hydrocarbon_Extraction_Facilities
 		icon = GFX_Generic_Resource_Exctraction
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
 		}
 		
 		completion_reward = {
-            add_to_variable = { sov_10th_5yp_progress = 2 }		
+            add_to_variable = { sov_10th_5yp_progress = 2 }	
+            add_to_variable = { currentMoney = -100 }
+			custom_effect_tooltip = sov_minus_100_bil_tooltip			
 			add_tech_bonus = {
 				bonus = 0.6
 				uses = 1
 				category = rgo
 				}
 			}
-			
-		x = 25
-		y = 22
+		relative_position_id = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
+		x = 2
+		y = 1
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Update_Oil_Gas_Industry
 		icon = GFX_SAU_develop_ploesti_oil_fields
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Renovate_Hydrocarbon_Extraction_Facilities
 		}
 		
 		completion_reward = {			
 			custom_effect_tooltip = SOV_ECON_Update_Oil_Gas_Industry_tooltip
+			add_to_variable = { currentMoney = -400 }
+			custom_effect_tooltip = sov_minus_400_bil_tooltip
 		}
-		
-		x = 25
-		y = 23
+		relative_position_id = SOV_ECON_Renovate_Hydrocarbon_Extraction_Facilities
+		x = 0
+		y = 1
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Expand_the_Merchant_Fleet
 		icon = GFX_Generic_Maritime_Trade
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Update_Oil_Gas_Industry
 		}
 		
 		completion_reward = {	
-            add_to_variable = { sov_10th_5yp_progress = 3 }		
+            add_to_variable = { sov_10th_5yp_progress = 3 }	
+            add_to_variable = { currentMoney = -100 }
+			custom_effect_tooltip = sov_minus_100_bil_tooltip			
 			add_equipment_to_stockpile = {
 			type = convoy_1
 			amount = 500
 			}
 		}
-		
-		x = 22
-		y = 24
+		relative_position_id = SOV_ECON_Renovate_Hydrocarbon_Extraction_Facilities
+		x = -3
+		y = 2
 
 	}
 	
@@ -355,17 +387,19 @@
 		id = SOV_ECON_Construct_Hydropower_Plants
 		icon = GFX_Hydroelectric_Dam_Development
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Update_Oil_Gas_Industry
 		}
 		
-		completion_reward = {			
+		completion_reward = {
+            add_to_variable = { currentMoney = -100 }
+			custom_effect_tooltip = sov_minus_100_bil_tooltip		
 			custom_effect_tooltip = SOV_ECO_Construct_Hydropower_Plants_tooltip
 		}
-		
-		x = 25
-		y = 24
+		relative_position_id = SOV_ECON_Renovate_Hydrocarbon_Extraction_Facilities
+		x = 0
+		y = 2
 
 	}
 	
@@ -373,30 +407,32 @@
 		id = SOV_ECON_Chemical_Industry_Modernization
 		icon = GFX_Chemical_Warfare
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 
 		prerequisite = {
 			focus = SOV_ECON_Update_Oil_Gas_Industry
 		}
 		
 		completion_reward = {	
-            add_to_variable = { sov_10th_5yp_progress = 3 }		
+            add_to_variable = { sov_10th_5yp_progress = 3 }
+            add_to_variable = { currentMoney = -100 }
+			custom_effect_tooltip = sov_minus_100_bil_tooltip			
 			add_tech_bonus = {
 				bonus = 0.8
 				uses = 1
 				category = chemistry
 				}
 		}
-			
-		x = 28
-		y = 24
+		relative_position_id = SOV_ECON_Renovate_Hydrocarbon_Extraction_Facilities	
+		x = 3
+		y = 2
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Extreme_Weather_Drilling_Technique_Improvement
 		icon = GFX_SOV_frostpunk_simulator
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Expand_the_Merchant_Fleet
 		}
@@ -415,9 +451,9 @@
 				category = rgo
 				}
 			}
-			
-		x = 25
-		y = 25
+		relative_position_id = SOV_ECON_Renovate_Hydrocarbon_Extraction_Facilities	
+		x = 0
+		y = 3
 
 	}
 	
@@ -425,13 +461,15 @@
 		id = SOV_ECON_Build_the_Baikal_Amur_Mainline_Railroad
 		icon = GFX_Communist_Trains
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
 		}
 		
 		completion_reward = {
-            add_to_variable = { sov_10th_5yp_progress = 3 }		
+            add_to_variable = { sov_10th_5yp_progress = 3 }
+            add_to_variable = { currentMoney = -200 }
+			custom_effect_tooltip = sov_minus_200_bil_tooltip			
 			568 = {
 				add_building_construction = {
 				type = state_infrastructure
@@ -458,22 +496,24 @@
 			}
 			
 		}
-		
-		x = 32
-		y = 22
+		relative_position_id = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
+		x = 10
+		y = 1
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Roadbuilding_in_the_Caucuses
 		icon = GFX_don_volga
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Build_the_Baikal_Amur_Mainline_Railroad
 		}
 		
 		completion_reward = {
-            add_to_variable = { sov_10th_5yp_progress = 3 }		
+            add_to_variable = { sov_10th_5yp_progress = 3 }
+            add_to_variable = { currentMoney = -200 }
+			custom_effect_tooltip = sov_minus_200_bil_tooltip			
 			229 = {
 				add_building_construction = {
 				type = infrastructure
@@ -517,9 +557,9 @@
 				}
 			}
 		}
-			
-		x = 30
-		y = 23
+		relative_position_id = SOV_ECON_Build_the_Baikal_Amur_Mainline_Railroad
+		x = -2
+		y = 1
 
 	}
 	
@@ -527,17 +567,19 @@
 		id = SOV_ECON_Expand_Current_Industries
 		icon = GFX_Economic_Reconstruction_Generic
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Build_the_Baikal_Amur_Mainline_Railroad
 		}
 		
-		completion_reward = {			
+		completion_reward = {
+            add_to_variable = { currentMoney = -200 }
+			custom_effect_tooltip = sov_minus_200_bil_tooltip		
 			custom_effect_tooltip = SOV_ECO_Expand_Current_Industries_tooltip
 		}
-		
-		x = 34
-		y = 23
+		relative_position_id = SOV_ECON_Build_the_Baikal_Amur_Mainline_Railroad
+		x = 2
+		y = 1
 
 	}
 	
@@ -545,7 +587,7 @@
 		id = SOV_ECON_Invest_on_new_factories
 		icon = GFX_XinjiangDevelopment
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Roadbuilding_in_the_Caucuses
 		}
@@ -553,12 +595,14 @@
 			focus = SOV_ECON_Expand_Current_Industries
 		}
 		
-		completion_reward = {			
+		completion_reward = {
+            add_to_variable = { currentMoney = -200 }
+			custom_effect_tooltip = sov_minus_200_bil_tooltip		
 			custom_effect_tooltip = SOV_ECON_Invest_on_new_factories_tooltip
 		}
-		
-		x = 32
-		y = 24
+		relative_position_id = SOV_ECON_Build_the_Baikal_Amur_Mainline_Railroad
+		x = 0
+		y = 2
 
 	}
 	
@@ -566,17 +610,19 @@
 		id = SOV_ECON_A_New_Generation_of_Nuclear_Power_Plants
 		icon = GFX_Fund_Reactors
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Invest_on_new_factories
 		}
 		
-		completion_reward = {			
+		completion_reward = {
+            add_to_variable = { currentMoney = -600 }
+			custom_effect_tooltip = sov_minus_600_bil_tooltip		
 			custom_effect_tooltip = SOV_ECO_10th_Nuclear_plants_tooltip
 		}
-		
-		x = 32
-		y = 25
+		relative_position_id = SOV_ECON_Build_the_Baikal_Amur_Mainline_Railroad
+		x = 0
+		y = 3
 
 	}
 
@@ -584,17 +630,19 @@
 		id = SOV_ECON_Pursue_Agricultural_Investments
 		icon = GFX_Agricultural_Mechanization
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
 		}
 		
-		completion_reward = {			
+		completion_reward = {
+            add_to_variable = { currentMoney = -200 }
+			custom_effect_tooltip = sov_minus_200_bil_tooltip		
 			custom_effect_tooltip = SOV_ECO_Pursue_Agricultural_Investments_tooltip
 		}
-		
-		x = 38
-		y = 22
+		relative_position_id = SOV_ECON_Inaugurate_The_Tenth_Five_Year_Plan
+		x = 17
+		y = 1
 
 	}
 	
@@ -602,18 +650,20 @@
 		id = SOV_ECON_Increase_Purchasing_Power_of_Farmers
 		icon = GFX_increase_kolkhoz_funding
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Pursue_Agricultural_Investments
 		}
 		
 		completion_reward = {
 		    add_to_variable = { sov_10th_5yp_progress = 3 }
+			add_to_variable = { currentMoney = -100 }
+			custom_effect_tooltip = sov_minus_100_bil_tooltip
 			add_stability = 0.025
 		}
-
-		x = 38
-		y = 23
+        relative_position_id = SOV_ECON_Pursue_Agricultural_Investments
+		x = 0
+		y = 1
 
 	}
 
@@ -621,7 +671,7 @@
 		id = SOV_ECON_Improve_Multimodal_Food_Supply
 		icon = GFX_vegetable_gardens
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Increase_Purchasing_Power_of_Farmers
 		}
@@ -634,9 +684,9 @@
 				category = logistics
 				}
 			}
-			
-		x = 36
-		y = 24
+		relative_position_id = SOV_ECON_Pursue_Agricultural_Investments
+		x = -2
+		y = 2
 
 	}
 	
@@ -644,13 +694,15 @@
 		id = SOV_ECON_Develop_the_Rural_Non_Chernozem_Provinces
 		icon = GFX_virgin_lands_campaign
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Increase_Purchasing_Power_of_Farmers
 		}
 		
 		completion_reward = {
 		    add_to_variable = { sov_10th_5yp_progress = 3 }
+			add_to_variable = { currentMoney = -400 }
+			custom_effect_tooltip = sov_minus_400_bil_tooltip
 			add_timed_idea = {
 				idea = sov_rular_attr
 				days = 730
@@ -754,16 +806,16 @@
 						}
 			
 			}
-						
-		x = 40
-		y = 24
+		relative_position_id = SOV_ECON_Pursue_Agricultural_Investments				
+		x = 2
+		y = 2
 
 	}
 	shared_focus = {
 		id = SOV_ECON_Modernize_Food_Processing
 		icon = GFX_farmer_debt_relief
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Develop_the_Rural_Non_Chernozem_Provinces
 		}
@@ -771,13 +823,16 @@
 		prerequisite = {
 			focus = SOV_ECON_Improve_Multimodal_Food_Supply
 		}
-		x = 38
-		y = 25
+		relative_position_id = SOV_ECON_Pursue_Agricultural_Investments
+		x = 0
+		y = 3
 		
 		completion_reward = {
 		    add_to_variable = { sov_10th_5yp_progress = 3 }
+			add_to_variable = { currentMoney = -200 }
+			custom_effect_tooltip = sov_minus_200_bil_tooltip
 			add_timed_idea = {
-				idea = sov_food_proc_mod 
+				idea = sov_agr_proc_mod 
 				days = 1925
 			}
 			custom_effect_tooltip = SOV_ECON_Modernize_Food_Processing_tooltip
@@ -788,7 +843,7 @@
 		id = SOV_ECON_Export_Electronics_Technology_to_the_Eastern_Bloc
 		icon = GFX_Warsaw_Pact
 		search_filters = {IC_FILTER}
-		cost = 6
+		cost = 5.00
 		prerequisite = {
 			focus = SOV_ECON_Distribute_Computers_to_Soviet_Companies
 			focus = SOV_ECON_Reward_Private_Discoveries
@@ -797,12 +852,27 @@
 		}
 		
 		completion_reward = {	
-            add_to_variable = { sov_10th_5yp_progress = 2 }		
+            add_to_variable = { sov_10th_5yp_progress = 5 }		
+			POL = {
+				country_event = sov_sell_tech.0
+			}
+			DDR = {
+				country_event = sov_sell_tech.0
+			}
+			CZE = {
+				country_event = sov_sell_tech.0
+			}
+			HUN = {
+				country_event = sov_sell_tech.0
+			}
+			ROM = {
+				country_event = sov_sell_tech.0
+			}
 			
 		}
-		
-		x = 9
-		y = 25
+		relative_position_id = SOV_ECON_Maintain_Electronic_Efforts
+		x = 0
+		y = 3
 
 	}
 	

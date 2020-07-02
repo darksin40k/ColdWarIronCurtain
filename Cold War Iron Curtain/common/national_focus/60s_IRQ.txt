@@ -1964,7 +1964,7 @@ focus_tree = {
 							name = light_air_bonus
 							bonus = 0.1
 							uses = 1
-							category = light_air
+							category = air_single_engine
 						}
 					SYR = {
 							air_experience = 5
@@ -1972,7 +1972,7 @@ focus_tree = {
 									name = light_air_bonus
 									bonus = 0.1
 									uses = 1
-									category = light_air
+									category = air_single_engine
 								}
 						}
 				}
@@ -2013,7 +2013,7 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = jet_multirole_equipment_3
 							amount = 800
-							producer = TUR
+							producer = CUM
 						}
 				}
 
@@ -2149,7 +2149,7 @@ focus_tree = {
 							name = light_air_bonus
 							bonus = 0.1
 							uses = 1
-							category = light_air
+							category = air_single_engine
 						}
 					SYR = {
 							air_experience = 5
@@ -2157,7 +2157,7 @@ focus_tree = {
 									name = light_air_bonus
 									bonus = 0.1
 									uses = 1
-									category = light_air
+									category = air_single_engine
 								}
 						}
 				}

@@ -1,0 +1,14 @@
+ARG_Fix_Chile = {
+    enable = { 
+        tag = ARG 
+    }
+	abort_when_not_enabled = yes
+    ai_strategy = {
+        type = ignore_claim 
+		id = CHL
+    }
+    ai_strategy = {
+        type = ignore
+		id = CHL
+    }
+}

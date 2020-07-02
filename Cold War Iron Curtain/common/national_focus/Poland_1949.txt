@@ -260,7 +260,7 @@
 		x = 10
 		y = 9
 		completion_reward = {
-			add_to_variable = { cpsu_strength = 0.05 }
+			add_to_variable = { cpsu_strength_factor = 0.05 }
 			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}	
@@ -342,7 +342,7 @@
 		x = 8
 		y = 4
 		completion_reward = {
-			add_to_variable = { cpsu_strength = 0.05 }
+			add_to_variable = { cpsu_strength_factor = 0.05 }
 			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
 	}
@@ -1226,7 +1226,7 @@
 		x = 8
 		y = 7
 		completion_reward = {
-			add_to_variable = { cpsu_strength = 0.05 }
+			add_to_variable = { cpsu_strength_factor = 0.05 }
 			add_political_power = 50
 			custom_effect_tooltip = cpsu_strength_increase_TT
 		}
@@ -1315,7 +1315,14 @@
 		x = 20
 		y = 13
 		completion_reward = {
-			add_ideas = censorship_1
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_2
 		}	
 	}
 	focus = {
@@ -1712,7 +1719,7 @@
 		x = 19
 		y = 20
 		completion_reward = {
-			add_to_variable = { cpsu_strength = 0.1 }
+			add_to_variable = { cpsu_strength_factor = 0.1 }
 		}
 	}
 	focus = {
@@ -1880,7 +1887,7 @@
 		}
 	}
 	focus = {
-		id = POL_Launch_Anti_Semetic_Campaign
+		id = POL_Launch_Anti_Semitic_Campaign
 		icon = GFX_Persecute_Jews
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -1906,7 +1913,7 @@
 			focus = POL_Deny_the_Katyn_Massacre
 		}
 		prerequisite = {
-			focus = POL_Launch_Anti_Semetic_Campaign
+			focus = POL_Launch_Anti_Semitic_Campaign
 		}
 		x = 28
 		y = 24

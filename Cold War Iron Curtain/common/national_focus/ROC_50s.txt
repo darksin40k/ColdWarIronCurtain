@@ -45,6 +45,7 @@ focus_tree = {
 		y = 10
 		available = {
 			date > 1954.1.1
+			has_completed_focus = CHI_One_China_One_Formosa
 		}
 		completion_reward = {
 			country_event = Taiwan_Elections.1
@@ -59,6 +60,7 @@ focus_tree = {
 		y = 16
 		available = {
 			date > 1958.1.1
+			has_completed_focus = CHI_One_China_One_Formosa
 		}
 		completion_reward = {
 			country_event = Taiwan_Elections.2
@@ -1010,7 +1012,14 @@ focus_tree = {
 		x = 33
 		y = 9
 		completion_reward = {
-			add_ideas = press_censorship_5
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_0
 		}
 	}
 	focus = {
@@ -1100,6 +1109,14 @@ focus_tree = {
 		x = 29
 		y = 13
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_0
 		}
 	}
@@ -1619,6 +1636,11 @@ focus_tree = {
 				ruling_party = nationalism
 				elections_allowed = no
 			}
+			set_party_name = { 
+				ideology = nationalism 
+				long_name = "Taiwan Zaijiefang Lianmeng" 
+				name = "TZL" 
+			}
 			create_country_leader = {
 				name = "The Formosan League for Reemancipation"
 				picture = "Council.dds"
@@ -1640,6 +1662,7 @@ focus_tree = {
 			news_event = Formosa.12
 			add_political_power = 150
 			add_stability = 0.05
+			set_cosmetic_tag = ROC_formosa
 		}
 	}
 	focus = {
@@ -1700,7 +1723,15 @@ focus_tree = {
 		y = 7
 		completion_reward = {
 			remove_ideas = repression
-			
+			add_ideas = policy_minorities_temp_3
+			hidden_effect = {
+				remove_ideas = policy_minorities_temp_0
+				remove_ideas = policy_minorities_temp_1
+				remove_ideas = policy_minorities_temp_2
+				remove_ideas = policy_minorities_temp_3
+				remove_ideas = policy_minorities_temp_4
+				remove_ideas = policy_minorities_temp_4a
+			}
 		}
 	}
 	focus = {
@@ -2372,8 +2403,15 @@ focus_tree = {
 		x = 71
 		y = 14
 			completion_reward = {
-					add_ideas = free_press_5
-				}
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+				add_ideas = policy_media_temp_2
+			}
 	}
 	focus = {
 		id = CHI_Infrastructure_Modernization
@@ -2722,6 +2760,14 @@ focus_tree = {
 		x = 58
 		y = 13
 		completion_reward = {
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
 			add_ideas = policy_union_temp_5
 		}
 	}
@@ -2997,7 +3043,14 @@ focus_tree = {
 		x = 23
 		y = 11
 		completion_reward = {
-            add_ideas = default_media_laws_0
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_2
         }
 	}
 	focus = {

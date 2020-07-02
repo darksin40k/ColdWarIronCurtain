@@ -353,8 +353,10 @@ uia_decisions = {
 		icon = generic_civil_support
 		visible = {
 			has_variable = current_country_state_decision
+			NOT = { has_country_flag = uia_crushed }
 		}
 		available = {
+			NOT = { has_country_flag = uia_crushed }
 			has_country_flag = ukranian_seccessionism
 			divisions_in_state = {
 				size > 1
@@ -362,11 +364,14 @@ uia_decisions = {
 			}
 			
 		}
+		cancel_trigger = {
+			has_country_flag = uia_crushed
+		}
 		ai_will_do = {
 			factor = 1
 		}
 		fire_only_once = no
-		days_re_enable = 75
+		days_re_enable = 35
 		
 		fixed_random_seed = no
 		
@@ -401,7 +406,7 @@ uia_decisions = {
 			factor = 1
 		}
 		fire_only_once = no
-		days_re_enable = 180
+		days_re_enable = 50
 		
 		fixed_random_seed = no
 		
@@ -485,6 +490,7 @@ uia_decisions = {
 
 		available = {
 			#has_country_flag = uia_crushed
+			always = no
 			divisions_in_state = {
 				size > 4
 				state = 89
@@ -514,12 +520,11 @@ uia_decisions = {
 		}
 
 		days_mission_timeout = 60
-
+		cancel_trigger = {
+			has_country_flag = uia_crushed
+		}
 		activation = {
 			has_country_flag = ukranian_seccessionism
-			NOT = {
-				has_country_flag = uia_crushed
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -584,6 +589,7 @@ uia_decisions = {
 
 		timeout_effect = {
 			#Outer Area
+			activate_mission = The_Ukranian_Insurgent_Army
 			random_list = {
 				25 = {
 					add_to_variable = { ukranian_insurgency = 1 } 

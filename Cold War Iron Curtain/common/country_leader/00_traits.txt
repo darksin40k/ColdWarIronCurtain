@@ -30,7 +30,7 @@ leader_traits = {
 	Agricultural_Decentralisation_Advocate2 = {
 		random = no
 		political_power_gain = -0.10
-		stability_weekly = 0.10
+		stability_factor = 0.05
 	}
 	Corrupt = {
 		random = yes
@@ -91,7 +91,7 @@ leader_traits = {
 	
 	Chairman_Mao = {
 		random = no
-		political_power_factor = 0.15
+		political_power_factor = 0.25
 		military_leader_cost_factor = -0.10
 		trade_laws_cost_factor = -0.10
 	}
@@ -605,7 +605,7 @@ military_leader_cost_factor = -0.20
 	
 	Megalomaniac_Ideologue = {
 		random = no
-		consumer_goods_factor = 0.10
+		consumer_goods_factor = 0.02
 		MONTHLY_POPULATION = -0.05
 		max_command_power = 50
 	}
@@ -4582,6 +4582,9 @@ military_leader_cost_factor = 0.25
 		war_support_factor = -0.25
 		drift_defence_factor = 1.00
 		consumer_goods_factor = 0.05
+		trade_laws_cost_factor = 8.0
+		mobilization_laws_cost_factor = 8.0
+		economy_cost_factor = 20.0
 		
     }
     deplorable_belgian_colonialist = {
@@ -4591,7 +4594,9 @@ military_leader_cost_factor = 0.25
 		war_support_factor = -0.25
 		drift_defence_factor = 1.00
 		consumer_goods_factor = 0.10
-		
+		trade_laws_cost_factor = 20.0
+		mobilization_laws_cost_factor = 20.0
+		economy_cost_factor = 20.0
     }
     deplorable_spanish_colonialist = {
 		random = no
@@ -4600,7 +4605,9 @@ military_leader_cost_factor = 0.25
 		war_support_factor = -0.25
 		drift_defence_factor = 1.00
 		consumer_goods_factor = 0.10
-		
+		trade_laws_cost_factor = 20.0
+		mobilization_laws_cost_factor = 20.0
+		economy_cost_factor = 20.0
     }
 	staunch_atlanticist = { 
 		random = no 

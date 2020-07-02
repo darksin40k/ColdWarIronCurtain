@@ -14,7 +14,6 @@ country_event = {
 		country_event = congo.2
 		set_global_flag = congo_crisis_historical
 	}
-	#Another option: suggest to Generalis
 }
 
 #Janssens fired
@@ -56,23 +55,33 @@ country_event = {
                 factor = 2
             }
         }
-		KAG = { transfer_state = 538 }
+		add_ideas = congo_crisis_idea
+		DOC = {
+			delete_unit = {
+				state = 538
+				disband = yes
+			}
+		}
+
+		KAG = { transfer_state = 538 add_ideas = congo_crisis_idea }
 		declare_war_on = { target = KAG type = annex_everything }
 		KAG = { load_oob = KAG_1949 }
 		BEL = { country_event = { id = congo.4 hours = 1 } }
 		set_global_flag = katanga_seceded
 		KAG = {
 			load_oob = "generic_insurgency"
-			capital_scope = { create_unit = { division = "name = \"1st Revolutionary Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 1.0" owner = THIS } create_unit = { division = "name = \"2nd Revolutionary Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 1.0" owner = THIS }  create_unit = { division = "name = \"3rd Revolutionary Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 1.0" owner = THIS }  create_unit = { division = "name = \"4th Revolutionary Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 1.0" owner = THIS } }
+			capital_scope = { create_unit = { division = "name = \"1st Revolutionary Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 1.0" owner = THIS } create_unit = { division = "name = \"2nd Revolutionary Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 1.0" owner = THIS }  create_unit = { division = "name = \"3rd Revolutionary Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 1.0" owner = THIS } }
 		}
 		load_oob = _un_peacekeepers
-			capital_scope = { create_unit = { division = "name = \"UN Peacekeepers\" division_template = \"UN Peacekeepers\" start_experience_factor = 1.0" owner = DOC } create_unit = { division = "name = \"UN Peacekeepers\" division_template = \"UN Peacekeepers\" start_experience_factor = 1.0" owner = DOC } }
+			capital_scope = { create_unit = { division = "name = \"1st UN Peacekeepers Division\" division_template = \"UN Peacekeepers\" start_experience_factor = 1.0" owner = DOC } create_unit = { division = "name = \"2nd UN Peacekeepers Regiment\" division_template = \"UN Peacekeepers\" start_experience_factor = 1.0" owner = DOC } create_unit = { division = "name = \"3rd UN Peacekeepers Regiment\" division_template = \"UN Peacekeepers\" start_experience_factor = 1.0" owner = DOC } }
 	}
 	option = {
 		name = congo.3.b
+		
 		ai_chance = {
-			factor = 10
+			factor = 0
 		}
+		set_global_flag = katanga_seceded
 		release = KAG
 		KAG = { load_oob = KAG_1949 }
 	}
@@ -142,8 +151,14 @@ country_event = {
 		SKS = { transfer_state = 1207 }
 		declare_war_on = { target = SKS type = annex_everything }
 		set_global_flag = south_kasai_seceded
+		DOC = {
+			delete_unit = {
+				state = 1207
+				disband = yes
+			}
+		}
 		hidden_effect = {
-			SKS = { load_oob = SKS_1960 }
+			SKS = { load_oob = SKS_1960 add_ideas = congo_crisis_idea }
 		}
 		SKS = {
 			load_oob = "generic_insurgency"
@@ -153,8 +168,9 @@ country_event = {
 	option = {
 		name = congo.5.b
 		ai_chance = {
-			factor = 10
+			factor = 0
 		}
+		set_global_flag = south_kasai_seceded
 		release = SKS
 		hidden_effect = {
 			SKS = { load_oob = SKS_1960 }
@@ -172,18 +188,19 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
-			capital_scope = { create_unit = { division = "name = \"UN Peacekeepers\" division_template = \"UN Peacekeepers\" start_experience_factor = 1.0" owner = DOC } }
+			capital_scope = { create_unit = { division = "name = \"UN Peacekeepers\" division_template = \"UN Peacekeepers\" start_experience_factor = 1.0" owner = DOC } }						
 			COG = {
 				transfer_state = 718
 				transfer_state = 826
 				transfer_state = 827
 				transfer_state = 822
 				declare_war_on = { target = DOC type = annex_everything }
+				add_ideas = congo_crisis_idea
 				load_oob = "generic_insurgency"
 				load_focus_tree = DOC_60s
 				complete_national_focus = DOC_Appoint_Mpolo
 				complete_national_focus = DOC_Consolidate_Support_in_the_Armed_Forces
-				capital_scope = { create_unit = { division = "name = \"1st Revolutionary Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 1.0" owner = THIS } create_unit = { division = "name = \"2nd Revolutionary Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 1.0" owner = THIS }  create_unit = { division = "name = \"3rd Revolutionary Infantry Division\" division_template = \"Infantry Division\" start_experience_factor = 1.0" owner = THIS } }
+				load_oob = COG_1949
 			}
 			CUB = {
 				add_ideas = foreign_aggression_policy_6
@@ -324,7 +341,7 @@ country_event = {
 #
 country_event = {
 	id = congo.10
-	title = "Eugène Jungers Retires as Governor"
+	title = "Eugene Jungers Retires as Governor"
 	desc = congo.10.d
 
 	fire_only_once = yes
@@ -332,7 +349,7 @@ country_event = {
 
 	immediate = {
 		create_country_leader = {
-			name = "Léo Pétillon"
+			name = "LÃ©o PÃ©tillon"
 			picture = "Leo_Petillon.dds"
 			ideology = colonial_regime
 			traits = {
@@ -342,7 +359,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Welcome Léo Pétillon!"
+		name = "Welcome Leo Petillon!"
 	}
 }
 country_event = {
@@ -355,6 +372,29 @@ country_event = {
 
 	immediate = {
 		white_peace = KAG
+	}
+
+	option = {
+		name = "We have been utterly defeated"
+	}
+}
+country_event = {
+	id = congo.12
+	title = "Free Republic of the Congo is Victorious"
+	desc = congo.12.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		white_peace = COG
+		release = KAG
+		COG = {
+			annex_country = {
+				target = DOC
+				transfer_troops = yes
+			}
+		}
 	}
 
 	option = {

@@ -1234,7 +1234,14 @@ focus_tree = {
 		x = 33
 		y = 10
 		completion_reward = {
-			add_ideas = censorship_2
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_1
 		}	
 	}
 	focus = {
@@ -3333,7 +3340,9 @@ focus_tree = {
 		x = 31
 		y = 27
 		completion_reward = {
+			custom_effect_tooltip = Resource_Efficiency_TT
 			add_timed_idea = {
+				
 				idea = Resource_Efficiency
 				days = 2250
 			}

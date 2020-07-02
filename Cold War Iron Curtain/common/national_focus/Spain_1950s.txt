@@ -134,7 +134,7 @@ focus_tree = {
 				name = light_air_bonus
 				bonus = 1.75
 				uses = 1
-				category = light_air
+				category = air_single_engine
 			}
 		}
 	}
@@ -565,7 +565,14 @@ focus_tree = {
 		x = 28
 		y = 3
 		completion_reward = {
-			add_ideas = press_censorship_5
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_0
 		}
 	}
 	focus = {
@@ -722,7 +729,7 @@ focus_tree = {
 
 	}
 	focus = {
-		id = SPR_Spanish_Morrocco
+		id = SPR_Spanish_Morocco
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
@@ -740,11 +747,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_Resist_Calls_From_Morrocco
+		id = SPR_Resist_Calls_From_Morocco
 		icon = GFX_IntotheFlames
 		cost = 10.00
 		prerequisite = {
-			focus = SPR_Spanish_Morrocco
+			focus = SPR_Spanish_Morocco
 		}
 		x = 42
 		y = 2
@@ -769,7 +776,7 @@ focus_tree = {
 		icon = GFX_Freedom
 		cost = 10.00
 		prerequisite = {
-			focus = SPR_Spanish_Morrocco
+			focus = SPR_Spanish_Morocco
 		}
 		x = 46
 		y = 2
@@ -897,7 +904,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_Return_Cape_Juby_to_Morrocco
+		id = SPR_Return_Cape_Juby_to_Morocco
 		icon = GFX_StolenPapers
 		cost = 10.00
 		prerequisite = {
@@ -941,7 +948,7 @@ focus_tree = {
 			focus = SPR_Force_Nomadic_Settlement
 		}
 		mutually_exclusive = {
-			focus = SPR_Return_Cape_Juby_to_Morrocco
+			focus = SPR_Return_Cape_Juby_to_Morocco
 		}
 		x = 54
 		y = 3
@@ -1342,7 +1349,6 @@ focus_tree = {
 		y = 10
         #not sure for this
 		completion_reward = {
-			remove_ideas = policy_union_temp_0 
 			add_ideas = banned_strikes
 		}
 	}
@@ -1452,7 +1458,7 @@ focus_tree = {
 			focus = SPR_Embrace_the_Opus_Dei
 		}
 		prerequisite = {
-			focus = SPR_Enlist_the_Support_of_the_IMF focus = SPR_Increase_Anti_Semetic_Rhetoric
+			focus = SPR_Enlist_the_Support_of_the_IMF focus = SPR_Increase_Anti_Semitic_Rhetoric
 		}
 
 		x = 30
@@ -1487,7 +1493,15 @@ focus_tree = {
 		x = 61
 		y = 2
         completion_reward = {
-			add_ideas = policy_union_temp_0
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
+			add_ideas = policy_union_temp_3
 			add_timed_idea = {
 				idea = martial_law
 				days = 365
@@ -1550,7 +1564,15 @@ focus_tree = {
 		x = 42
 		y = 11
 	   completion_reward = {
-		remove_ideas = policy_union_temp_0 
+			hidden_effect = {
+				remove_ideas = policy_union_temp_0
+				remove_ideas = policy_union_temp_1
+				remove_ideas = policy_union_temp_2
+				remove_ideas = policy_union_temp_3
+				remove_ideas = policy_union_temp_4
+				remove_ideas = policy_union_temp_5
+			}
+			add_ideas = policy_union_temp_5
 		add_ideas = national_syndicalist_unions
 	   }
 	}
@@ -1680,7 +1702,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SPR_Increase_Anti_Semetic_Rhetoric
+		id = SPR_Increase_Anti_Semitic_Rhetoric
 		icon = GFX_Persecute_Jews
 		cost = 10.00
 		prerequisite = {

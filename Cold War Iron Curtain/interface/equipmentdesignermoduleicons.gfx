@@ -524,11 +524,19 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/modules/torpedo_medium_0.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_torpedo_ww"
+		name = "GFX_SMI_ship_torpedo_ww"
 		textureFile = "gfx/interface/equipmentdesigner/modules/torpedo_small_0.dds"
 	}
 	spriteType = {
-		name = "GFX_SMI_ww_torpedo"
+		name = "GFX_SMI_ship_ww_torpedo"
+		textureFile = "gfx/interface/equipmentdesigner/modules/torpedo_small_0.dds"
+	}
+	spriteType = {
+		name = "GFX_SMI_sub_torpedo_ww"
+		textureFile = "gfx/interface/equipmentdesigner/modules/torpedo_small_0.dds"
+	}
+	spriteType = {
+		name = "GFX_SMI_sub_ww_torpedo"
 		textureFile = "gfx/interface/equipmentdesigner/modules/torpedo_small_0.dds"
 	}
 	spriteType = {
@@ -911,6 +919,10 @@ spriteTypes = {
 	
 ######## Ship module slot icons
 	
+	spriteType = {
+		name = "GFX_EMI_torpedo_ww"
+		textureFile = "gfx/interface/equipmentdesigner/modules/torpedo_small_0.dds"
+	}
 	spriteType = {
 		name = "GFX_EMSI_fixed_ship_secondaries_slot"
 		textureFile = "gfx/interface/equipmentdesigner/naval/module_slots/icons/secondaries.dds"

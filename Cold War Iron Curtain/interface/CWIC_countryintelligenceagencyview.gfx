@@ -22,5 +22,13 @@ spriteTypes = {
 		name = "GFX_agency_guerilla"
 		texturefile = "gfx/interface/operatives/icons/agency_guerilla.dds"
 	}
+	spriteType = {
+		name = "GFX_agency_audit"
+		texturefile = "gfx/interface/operatives/icons/agency_audit.dds"
+	}
+	spriteType = {
+		name = "GFX_agency_influence_defense"
+		texturefile = "gfx/interface/operatives/icons/agency_influence_defense.dds"
+	}
 
 }

@@ -93,7 +93,7 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "resources"
-					position = { x = 80 y = 16§ }
+					position = { x = 42 y = 16§ }
 					size = { width = 100% height = 60 }
 						
 					buttonType = {
@@ -118,50 +118,8 @@ guiTypes = {
 					}
 					
 					buttonType = {
-						name = "rubber_icon"
-						position = { x=70 y=2 }
-						spriteType = "GFX_resources_strip"
-						frame = 3
-						#pdx_tooltip = "PRODUCTION_MATERIALS_RUBBER"
-					}
-					
-					instantTextboxType = {
-						name = "rubber_value"
-						position = { x = 101 y = 5 }
-						textureFile = ""
-						font = "hoi_18mbs"
-						borderSize = {x = 0 y = 0}
-						text = "999"
-						maxWidth = 50
-						maxHeight = 20
-						format = left
-						#pdx_tooltip = "PRODUCTION_MATERIALS_RUBBER"
-					}
-					
-					buttonType = {
-						name = "steel_icon"
-						position = { x=140 y=2 }
-						spriteType = "GFX_resources_strip"
-						frame = 5
-						#pdx_tooltip = "PRODUCTION_MATERIALS_STEEL"
-					}
-					
-					instantTextboxType = {
-						name = "steel_value"
-						position = { x = 171 y = 5 }
-						textureFile = ""
-						font = "hoi_18mbs"
-						borderSize = {x = 0 y = 0}
-						text = "999"
-						maxWidth = 50
-						maxHeight = 20
-						format = left
-						#pdx_tooltip = "PRODUCTION_MATERIALS_STEEL"
-					}
-					
-					buttonType = {
 						name = "aluminium_icon"
-						position = { x=210 y=2 }
+						position = { x=75 y=0 }
 						spriteType = "GFX_resources_strip"
 						frame = 2
 						#pdx_tooltip = "PRODUCTION_MATERIALS_ALUMINIUM"
@@ -169,7 +127,7 @@ guiTypes = {
 					
 					instantTextboxType = {
 						name = "aluminium_value"
-						position = { x = 241 y = 5 }
+						position = { x = 106 y = 5 }
 						textureFile = ""
 						font = "hoi_18mbs"
 						borderSize = {x = 0 y = 0}
@@ -181,8 +139,30 @@ guiTypes = {
 					}
 					
 					buttonType = {
+						name = "rubber_icon"
+						position = { x=150 y=2 }
+						spriteType = "GFX_resources_strip"
+						frame = 3
+						#pdx_tooltip = "PRODUCTION_MATERIALS_RUBBER"
+					}
+					
+					instantTextboxType = {
+						name = "rubber_value"
+						position = { x = 181 y = 5 }
+						textureFile = ""
+						font = "hoi_18mbs"
+						borderSize = {x = 0 y = 0}
+						text = "999"
+						maxWidth = 50
+						maxHeight = 20
+						format = left
+						#pdx_tooltip = "PRODUCTION_MATERIALS_RUBBER"
+					}
+													
+									
+					buttonType = {
 						name = "tungsten_icon"
-						position = { x=280 y=2 }
+						position = { x=220 y=2 }
 						spriteType = "GFX_resources_strip"
 						frame = 4
 						#pdx_tooltip = "PRODUCTION_MATERIALS_TUNGSTEN"
@@ -190,7 +170,7 @@ guiTypes = {
 					
 					instantTextboxType = {
 						name = "tungsten_value"
-						position = { x = 309 y = 5 }
+						position = { x = 251 y = 5 }
 						textureFile = ""
 						font = "hoi_18mbs"
 						borderSize = {x = 0 y = 0}
@@ -200,10 +180,31 @@ guiTypes = {
 						format = left
 						#pdx_tooltip = "PRODUCTION_MATERIALS_TUNGSTEN"
 					}
+					
+					buttonType = {
+						name = "steel_icon"
+						position = { x=285 y=2 }
+						spriteType = "GFX_resources_strip"
+						frame = 5
+						#pdx_tooltip = "PRODUCTION_MATERIALS_STEEL"
+					}
+					
+					instantTextboxType = {
+						name = "steel_value"
+						position = { x = 314 y = 5 }
+						textureFile = ""
+						font = "hoi_18mbs"
+						borderSize = {x = 0 y = 0}
+						text = "999"
+						maxWidth = 50
+						maxHeight = 20
+						format = left
+						#pdx_tooltip = "PRODUCTION_MATERIALS_STEEL"
+					}
 				
 					buttonType = {
 						name = "chromium_icon"
-						position = { x=350 y=2 }
+						position = { x=355 y=2 }
 						spriteType = "GFX_resources_strip"
 						frame = 6
 						#pdx_tooltip = "PRODUCTION_MATERIALS_CHROMIUM"
@@ -211,7 +212,28 @@ guiTypes = {
 
 					instantTextboxType = {
 						name = "chromium_value"
-						position = { x = 381 y = 5 }
+						position = { x = 386 y = 5 }
+						textureFile = ""
+						font = "hoi_18mbs"
+						borderSize = {x = 0 y = 0}
+						text = "999"
+						maxWidth = 50
+						maxHeight = 20
+						format = left
+						#pdx_tooltip = "PRODUCTION_MATERIALS_CHROMIUM"
+					}
+
+					buttonType = {
+						name = "electricity_icon"
+						position = { x=425 y=2 }
+						spriteType = "GFX_resources_strip"
+						frame = 6
+						#pdx_tooltip = "PRODUCTION_MATERIALS_CHROMIUM"
+					}
+					
+					instantTextboxType = {
+						name = "electricity_value"
+						position = { x = 454 y = 5 }
 						textureFile = ""
 						font = "hoi_18mbs"
 						borderSize = {x = 0 y = 0}
@@ -1407,9 +1429,10 @@ guiTypes = {
 			gridBoxType = {
 				name = "ship_type_grid"
 				position = { x=0 y=0 }
-				size = { width=353 height=57 }
+				size = { width=353 height=81 }
 				slotsize = { width=88 height=27 }
 				max_slots_horizontal = 4
+				max_slots_vertical = 3
 				format = "UPPER_LEFT"
 			}
 
@@ -1559,13 +1582,6 @@ guiTypes = {
 			quadTextureSprite = "GFX_prod_land_equipment_item_large"
 			clicksound = click_default
 		}
-
-		iconType = {
-			name ="outdated_equipment_overlay"
-			spriteType = "GFX_outdated_equipment_overlay"
-			position = {  x=4 y=31 }
-			alwaystransparent = yes			
-		}
 		
 		iconType = {
 			name ="equipment_icon"
@@ -1573,6 +1589,13 @@ guiTypes = {
 			position = { x=94 y=70 }
 			centerposition = yes
 			alwaystransparent = yes
+		}
+
+		iconType = {
+			name ="outdated_equipment_overlay"
+			spriteType = "GFX_outdated_equipment_overlay"
+			position = {  x=4 y=31 }
+			alwaystransparent = yes			
 		}
 
 		iconType = {
@@ -2423,13 +2446,6 @@ guiTypes = {
 			quadTextureSprite = "GFX_prod_naval_equipment_item_large"
 			clicksound = click_default
 		}
-		
-		iconType = {
-			name ="outdated_equipment_overlay"
-			spriteType = "GFX_outdated_equipment_overlay"
-			position = { x=4 y=31 }
-			alwaystransparent = yes			
-		}
 				
 		iconType = {
 			name ="equipment_designer"
@@ -2493,6 +2509,13 @@ guiTypes = {
 			spriteType = "GFX_technology_medium"
 			position = { x=94 y=70 }
 			centerposition = yes
+			alwaystransparent = yes			
+		}
+
+		iconType = {
+			name ="outdated_equipment_overlay"
+			spriteType = "GFX_outdated_equipment_overlay"
+			position = { x=4 y=31 }
 			alwaystransparent = yes			
 		}
 		
@@ -3626,13 +3649,6 @@ guiTypes = {
 		}
 
 		iconType = {
-			name ="outdated_equipment_overlay"
-			spriteType = "GFX_outdated_equipment_overlay"
-			position = { x=9 y=5 }
-			alwaystransparent = yes			
-		}
-
-		iconType = {
 			name = "prod_line_glow"
 			position = { x = 9 y = 7 }
 			spriteType = "GFX_new_equipment_glow"
@@ -3643,6 +3659,7 @@ guiTypes = {
 			name ="equipment_icon"
 			spriteType = "GFX_technology_medium"
 			position = { x=175 y=46 }
+			scale = 0.95
 			centerposition = yes
 			alwaystransparent = yes
 		}
@@ -3673,29 +3690,6 @@ guiTypes = {
 			name = "carrier_fighter_icon"
 			position = { x = 230 y = 55 }
 			spriteType = "GFX_airwing_carrier_icon"
-			alwaystransparent = yes
-		}
-		
-		instantTextboxType = {
-			name = "name"
-			position = { x = 20 y = 6 }
-			font = "hoi_18mbs"
-			text = "Maus"
-			maxWidth = 200
-			maxHeight = 20
-			fixedsize = yes
-			format = left
-			alwaystransparent = yes
-		}
-
-		instantTextboxType = {
-			name = "general_name"
-			position = { x = 20 y = 22 }
-			font = "hoi_16mbs"
-			text = "Perkele-tankki"
-			maxWidth = 150
-			maxHeight = 30
-			format = left
 			alwaystransparent = yes
 		}
 		
@@ -3743,6 +3737,36 @@ guiTypes = {
 		}
 
 		iconType = {
+			name ="outdated_equipment_overlay"
+			spriteType = "GFX_outdated_equipment_overlay"
+			position = { x=82 y=6 }
+			alwaystransparent = yes			
+		}
+
+		instantTextboxType = {
+			name = "name"
+			position = { x = 20 y = 6 }
+			font = "hoi_18mbs"
+			text = "Maus"
+			maxWidth = 200
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "general_name"
+			position = { x = 20 y = 22 }
+			font = "hoi_16mbs"
+			text = "Perkele-tankki"
+			maxWidth = 150
+			maxHeight = 30
+			format = left
+			alwaystransparent = yes
+		}
+
+		iconType = {
 			name ="design_invalid"
 			spriteType = "GFX_design_not_valid"
 			position = { x = 230 y = 10 }
@@ -3766,13 +3790,6 @@ guiTypes = {
 		}
 
 		iconType = {
-			name ="outdated_equipment_overlay"
-			spriteType = "GFX_outdated_naval_equipment_overlay"
-			position = { x=15 y=7 }
-			alwaystransparent = yes			
-		}
-
-		iconType = {
 			name = "prod_line_glow"
 			position = { x = 14 y = 7 }
 			spriteType = "GFX_new_naval_equipment_glow"
@@ -3784,7 +3801,7 @@ guiTypes = {
 			spriteType = "GFX_technology_medium"
 			position = { x=205 y=49 }
 			centerposition = yes
-			scale = 0.9
+			scale = 0.95
 			alwaystransparent = yes
 		}
 		
@@ -3807,33 +3824,6 @@ guiTypes = {
 			spriteType = "GFX_naval_equipment_role_icons"
 			position = { x = 25 y = 35 }
 			scale = 0.865
-			alwaystransparent = yes
-		}
-
-		instantTextboxType = {
-			name = "name"
-			position = { x = 28 y = 6 }
-			textureFile = ""
-			font = "hoi_18mbs"
-			borderSize = {x = 0 y = 0}
-			text = "Maus"
-			maxWidth = 290
-			maxHeight = 20
-			format = left
-			fixedsize = yes
-			alwaystransparent = yes
-		}
-
-		instantTextboxType = {
-			name = "general_name"
-			position = { x = 30 y = 22 }
-			textureFile = ""
-			font = "hoi_16mbs"
-			borderSize = {x = 0 y = 0}
-			text = "Perkele-tankki"
-			maxWidth = 160
-			maxHeight = 30
-			format = left
 			alwaystransparent = yes
 		}
 		
@@ -3872,7 +3862,41 @@ guiTypes = {
 			format = left
 			alwaystransparent = yes
 		}
+
+		iconType = {
+			name ="outdated_equipment_overlay"
+			spriteType = "GFX_outdated_naval_equipment_overlay"
+			position = { x=115 y=9 }
+			alwaystransparent = yes			
+		}
 		
+		instantTextboxType = {
+			name = "name"
+			position = { x = 28 y = 6 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "Maus"
+			maxWidth = 290
+			maxHeight = 20
+			format = left
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "general_name"
+			position = { x = 30 y = 22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "Perkele-tankki"
+			maxWidth = 160
+			maxHeight = 30
+			format = left
+			alwaystransparent = yes
+		}
+
 		iconType = {
 			name ="design_invalid"
 			spriteType = "GFX_design_not_valid"

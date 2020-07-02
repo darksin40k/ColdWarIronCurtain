@@ -4,7 +4,7 @@ state = {
 	name = "STATE_873"
 
 	history = {
-		owner = RAJ
+		owner = CHI
 		set_state_flag = mountains
 		set_state_flag = lakes
 		set_state_flag = small

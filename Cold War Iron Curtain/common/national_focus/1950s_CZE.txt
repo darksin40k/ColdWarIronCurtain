@@ -43,6 +43,9 @@ focus_tree = {
 		bypass = {
 			has_global_flag = Twentieth_Congress_of_the_CPSU
 		}
+		completion_reward = {
+			country_event = Czechoslovakia.2
+		}
 	}
 	focus = {
 		id = CZE_The_Czechoslovak_Peoples_Army
@@ -321,7 +324,14 @@ focus_tree = {
 		x = 6
 		y = 3
 		completion_reward = {
-			add_ideas = press_censorship_5
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_0
 		}
 	}
 	focus = {
@@ -2001,7 +2011,14 @@ focus_tree = {
 		x = 12
 		y = 14
 		completion_reward = {
-			add_ideas = censorship_2
+			hidden_effect = {
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+			}
+			add_ideas = policy_media_temp_1
 		}
 	}
 	focus = {

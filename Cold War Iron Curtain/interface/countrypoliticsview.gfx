@@ -151,6 +151,10 @@ spriteTypes = {
 		name = "GFX_autonomy_supervised_state_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_supervised_state.dds"
 	}
+	spriteType = {
+		name = "GFX_autonomy_UN_Trust_Territory_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_trust_territory_icon.dds"
+	}
 	#-------------
 
 	spriteType = {
@@ -651,6 +655,11 @@ spriteTypes = {
 		pause_on_loop = 0.0
 		alwaystransparent = yes
 		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+
+	spriteType = {
+		name = "GFX_focus_window"
+		texturefile = "gfx/interface/FocusWindow.dds"
 	}
 	
 }

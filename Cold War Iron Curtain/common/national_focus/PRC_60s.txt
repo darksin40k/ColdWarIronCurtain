@@ -72,31 +72,28 @@
 				remove_ideas = famine5
 				add_ideas = famine4
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine4
 				}
 				remove_ideas = famine4
 				add_ideas = famine3
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine3
 				}
 				remove_ideas = famine3
 				add_ideas = famine2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine2
 				}
 				remove_ideas = famine2
 				add_ideas = famine
 			}			
-			if = {
-				limit = {
-					has_idea = famine
-				}
+			else = {
 				remove_ideas = famine
 			}
 		}
@@ -123,31 +120,28 @@
 				remove_ideas = famine5
 				add_ideas = famine4
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine4
 				}
 				remove_ideas = famine4
 				add_ideas = famine3
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine3
 				}
 				remove_ideas = famine3
 				add_ideas = famine2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine2
 				}
 				remove_ideas = famine2
 				add_ideas = famine
 			}			
-			if = {
-				limit = {
-					has_idea = famine
-				}
+			else = {
 				remove_ideas = famine
 			}
 		}
@@ -177,34 +171,32 @@
 				remove_ideas = famine5
 				add_ideas = famine4
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine4
 				}
 				remove_ideas = famine4
 				add_ideas = famine3
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine3
 				}
 				remove_ideas = famine3
 				add_ideas = famine2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine2
 				}
 				remove_ideas = famine2
 				add_ideas = famine
 			}			
-			if = {
-				limit = {
-					has_idea = famine
-				}
+			else = {
+
 				remove_ideas = famine
 			}
-		}
+		}	
 	}
 	shared_focus = {
 		id = PRC_60s_Agricultural_Investments
@@ -289,33 +281,31 @@
 				remove_ideas = famine5
 				add_ideas = famine4
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine4
 				}
 				remove_ideas = famine4
 				add_ideas = famine3
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine3
 				}
 				remove_ideas = famine3
 				add_ideas = famine2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine2
 				}
 				remove_ideas = famine2
 				add_ideas = famine
 			}			
-			if = {
-				limit = {
-					has_idea = famine
-				}
+			else = {
+
 				remove_ideas = famine
-			}
+			}		
 		}
 	}
 	shared_focus = {
@@ -351,33 +341,31 @@
 				remove_ideas = famine5
 				add_ideas = famine4
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine4
 				}
 				remove_ideas = famine4
 				add_ideas = famine3
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine3
 				}
 				remove_ideas = famine3
 				add_ideas = famine2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = famine2
 				}
 				remove_ideas = famine2
 				add_ideas = famine
 			}			
-			if = {
-				limit = {
-					has_idea = famine
-				}
+			else = {
+
 				remove_ideas = famine
-			}
+			}		
 		}
 	}
 	shared_focus = {
@@ -501,7 +489,7 @@
 			create_country_leader = {
 				name = "Liu Shaoqi"
 				desc = ""
-				picture = "Liu_Shaoqi.dds"
+				picture = "Portrait_China_Liu_Shaoqi.dds"
 				ideology = maoist
 				traits = { 
 				}
@@ -643,7 +631,7 @@
 		x = 27
 		y = 4
 		available = {
-			has_army_experience < 25
+			has_army_experience > 25
 		}
 		completion_reward = {
 			army_experience = -25
@@ -1754,9 +1742,7 @@
 			NOT = { has_war_with = PRC }
 		}
 		completion_reward = {
-			SOV ={
-				country_event = ZhenbaoConflict.20
-			}
+			add_threat = -10
 		}
 	}
 	shared_focus = {
@@ -2439,17 +2425,15 @@
 				remove_ideas = Industrial_Reconstruction_3
 				add_ideas = Industrial_Reconstruction_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = Industrial_Reconstruction_2
 				}
 				remove_ideas = Industrial_Reconstruction_2
 				add_ideas = Industrial_Reconstruction_1
 			}
-			if = {
-				limit = {
-					has_idea = Industrial_Reconstruction_1
-				}
+			else = {
+
 				remove_ideas = Industrial_Reconstruction_1
 			}
 		}
@@ -2505,17 +2489,15 @@
 				remove_ideas = Industrial_Reconstruction_3
 				add_ideas = Industrial_Reconstruction_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = Industrial_Reconstruction_2
 				}
 				remove_ideas = Industrial_Reconstruction_2
 				add_ideas = Industrial_Reconstruction_1
 			}
-			if = {
-				limit = {
-					has_idea = Industrial_Reconstruction_1
-				}
+			else = {
+
 				remove_ideas = Industrial_Reconstruction_1
 			}
 		}
@@ -2544,17 +2526,15 @@
 				remove_ideas = Industrial_Reconstruction_3
 				add_ideas = Industrial_Reconstruction_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = Industrial_Reconstruction_2
 				}
 				remove_ideas = Industrial_Reconstruction_2
 				add_ideas = Industrial_Reconstruction_1
 			}
-			if = {
-				limit = {
-					has_idea = Industrial_Reconstruction_1
-				}
+			else = {
+	
 				remove_ideas = Industrial_Reconstruction_1
 			}
 		}
