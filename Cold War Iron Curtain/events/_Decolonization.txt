@@ -15,6 +15,11 @@ country_event = {
 		name = decolonization.1.a
 		CMR = {
 			drop_cosmetic_tag = yes
+			create_country_leader = {
+				name = "Ahmadou Ahidjo"
+				picture = "Ahmadou_Ahidjo.dds"
+				ideology = pan_africanism
+			}
 			set_politics = {
 				ruling_party = nationalism
 				last_election = "1960.1.1"
@@ -63,7 +68,7 @@ country_event = {
 	}
 }
 
-#British Cameroons - Mandate Expired
+#Northern British Cameroons - Mandate Expired
 country_event = {
 	id = decolonization.2
 	title = decolonization.2.t
@@ -72,14 +77,11 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 
-	option = {
-		name = decolonization.2.a
+	immediate = {
 		if = {
 			limit = {
-				country_exists = CMR
 				country_exists = NGA
 			}
-			CMR = { transfer_state = 1105 }
 			NGA = { transfer_state = 1106 }
 		}
 		if = {
@@ -96,6 +98,9 @@ country_event = {
 			}
 			CMR = { transfer_state = 1105 transfer_state = 1106 }
 		}
+	}
+	option = {
+		name = decolonization.2.a
 	}
 }
 #French Togoland - Mandate Expired
@@ -199,6 +204,12 @@ country_event = {
 		825 = {
 			remove_core_of = RWA
 		}
+		1365 = {
+			remove_core_of = RWA
+		}
+		1366 = {
+			remove_core_of = RWA
+		}
 	}
 }
 
@@ -216,7 +227,7 @@ country_event = {
 		set_autonomy = { target = DOC autonomy_state = autonomy_free }
 		DOC = {
 			create_country_leader = {
-				name = "Joseph-D�sir� Mobutu"
+				name = "Joseph-Désiré Mobutu"
 				picture = "Joseph_Desire_Mobutu.dds"
 				desc = "POLITICS_JDMOBUTU_DESC"
 				ideology = military_junta
@@ -270,7 +281,13 @@ country_event = {
 			create_country_leader = {
 				name = "Julius Nyerere"
 				picture = "Julius_Nyerere.dds"
-				ideology = african_socialism
+				ideology = ujamaa
+			traits = {
+				ujamaa_theorist
+				international_affairs_expert
+				believer_in_african_democracy
+				former_teacher
+			}
 			}
 			add_popularity = {
 				ideology = socialist
@@ -755,6 +772,10 @@ country_event = {
 				long_name = "Malawi Congress Party"
 				name = "MCP"
 			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1.0
+			}
 		}
 	}
 }
@@ -1200,6 +1221,10 @@ country_event = {
 		set_autonomy = { target = NGA autonomy_state = autonomy_free }
 		NGA = {
 			hidden_effect = {
+				set_province_name = {
+					id = 14318
+					name = Calabar
+				}
 				drop_cosmetic_tag = yes
 				set_cosmetic_tag = NGA_FED
 				set_politics = {
@@ -1226,8 +1251,10 @@ country_event = {
 					name = "UMBC"
 				}
 				remove_unit_leader = 834624
-				remove_unit_leader = 756124
 				remove_unit_leader = 3567831
+				remove_unit_leader = 756124
+				
+				
 				create_field_marshal = {
 					name = "Johnson Aguiyi Ironsi"
 					portrait_path = "gfx/leaders/NGA/Johnson_Aguiyi_Ironsi.dds"
@@ -1239,6 +1266,7 @@ country_event = {
 					#planning_skill = 1
 					#logistics_skill = 1
 				}
+				
 				create_field_marshal = {
 					name = "Mohammed Shuwa"
 					portrait_path = "gfx/leaders/NGA/Mohammed_Shuwa.dds"
@@ -1300,6 +1328,36 @@ country_event = {
 					#planning_skill = 1
 					#logistics_skill = 1
 				}
+				create_corps_commander = {
+					name = "Theophilus Danjuma"
+					portrait_path = "gfx/leaders/NGA/Theophilus_Danjuma.dds"
+					traits = { politically_connected }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					#planning_skill = 1
+					#logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Hassan Katsina"
+					portrait_path = "gfx/leaders/NGA/Hassan_Katsina.dds"
+					traits = { politically_connected }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					#planning_skill = 1
+					#logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Yakubu Gowon"
+					portrait_path = "gfx/leaders/NGA/Yakubu_Gowon.dds"
+					traits = { career_officer }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					#planning_skill = 1
+					#logistics_skill = 1
+				}
 			}
 		}
 	}
@@ -1328,15 +1386,16 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	immediate = {
+		set_global_flag = west_sahara_war
 		MRT = {
 			transfer_state = 1364
 			transfer_state = 1363
-			set_country_flag = west_sahara_war
+			set_country_flag = west_sahara_war_mrt
 		}
 		MOR = {
 			transfer_state = 699
 			transfer_state = 1001
-			set_country_flag = west_sahara_war
+			set_country_flag = west_sahara_war_mor
 		}
 		699 = {
 			remove_core_of = MRT
@@ -1348,6 +1407,27 @@ country_event = {
 	option = {
 		name = "This is unfortunate"
 		news_event = newsdecolonization.42
+	}
+}
+#Southern British Cameroons - Mandate Expired
+country_event = {
+	id = decolonization.43
+	title = "End of Southern Cameroons Mandate"
+	desc = decolonization.43.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		if = {
+			limit = {
+				country_exists = CMR
+			}
+			CMR = { transfer_state = 1105 }
+		}
+	}
+	option = {
+		name = "Good Luck Cameroon"
 	}
 }
 news_event = {

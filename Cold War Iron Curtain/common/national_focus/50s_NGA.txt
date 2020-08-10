@@ -767,7 +767,7 @@ focus_tree = {
 			add_resource = {
 				type = steel
 				amount = 5
-				state = 1166
+				state = 1405
 			}
 		}
 	}
@@ -786,7 +786,7 @@ focus_tree = {
 			add_resource = {
 				type = steel
 				amount = 5
-				state = 1122
+				state = 1402
 			}
 		}
 	}
@@ -805,7 +805,7 @@ focus_tree = {
 			add_resource = {
 				type = aluminium
 				amount = 5
-				state = 1166
+				state = 1330
 			}
 		}
 	}
@@ -843,7 +843,7 @@ focus_tree = {
 			add_resource = {
 				type = oil
 				amount = 2
-				state = 1122
+				state = 1402
 			}
 		}
 	}
@@ -933,8 +933,8 @@ focus_tree = {
 			add_political_power = +25
 			add_resource = {
 				type = oil
-				amount = 10
-				state = 1014
+				amount = 12
+				state = 1403
 			}
 		}
 	}
@@ -953,7 +953,7 @@ focus_tree = {
 			add_resource = {
 				type = oil
 				amount = 15
-				state = 1122
+				state = 1402
 			}
 		}
 	}
@@ -1053,7 +1053,7 @@ focus_tree = {
 			focus = NGA_1950_expand_nigerian_domestic_exports
 		}
 		completion_reward = {
-			1166 = {	
+			1405 = {	
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {	
 					
@@ -1112,7 +1112,7 @@ focus_tree = {
 			focus = NGA_1950_build_a_peanut_plant
 		}
 		completion_reward = {
-			1166 = {	
+			1405 = {	
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {	
 					
@@ -1262,7 +1262,7 @@ focus_tree = {
 			focus = NGA_1950_build_a_cocoa_plant_in_Ibadan
 		}
 		completion_reward = {	
-			1122 = {
+			1402 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {	
 						
@@ -1475,6 +1475,9 @@ focus_tree = {
 		cost = 10.00
 		x = 16
 		y = 10
+		mutually_exclusive = {
+			focus = NGA_1950_the_kano_accords
+		}
 		available = {
 			has_country_flag = colony_won
 		}
@@ -1564,6 +1567,9 @@ focus_tree = {
 		cost = 10.00
 		x = 12
 		y = 10
+		mutually_exclusive = {
+			focus = NGA_1950_a_unitary_nigeria
+		}
 		available = {
 			date > 1958.1.1
 		}
@@ -1589,7 +1595,11 @@ focus_tree = {
 			focus = NGA_1950_the_kano_accords
 		}
 		completion_reward = {	
-
+			country_event = nga50.8
+			remove_ideas = {
+				NGA_north_south_tension_very_high
+			}
+			custom_effect_tooltip = nga.tt.11
 		}
 	}
 	focus = {
@@ -1606,7 +1616,11 @@ focus_tree = {
 			focus = NGA_1950_the_kano_accords
 		}
 		completion_reward = {	
-
+			country_event = nga50.9
+			remove_ideas = {
+				NGA_north_south_tension_very_high
+			}
+			custom_effect_tooltip = nga.tt.12
 		}
 	}
 	focus = {
@@ -1618,12 +1632,12 @@ focus_tree = {
 		y = 12
 		prerequisite = {
 			focus = NGA_1950_binational_state
-		}
-		prerequisite = {
 			focus = NGA_1950_partition_nigeria
 		}
+		
 		completion_reward = {	
-			add_stability = 0.02
+			add_political_power = 200
+			add_stability = 0.25
 		}
 	}
 	focus = {
@@ -2564,7 +2578,7 @@ focus_tree = {
 		}
 		completion_reward = {	
 			add_tech_bonus = {
-				bonus = 0.15
+				bonus = 0.75
 				uses = 2
 				category = industry
 			}
@@ -2582,7 +2596,7 @@ focus_tree = {
 		}
 		completion_reward = {	
 			add_tech_bonus = {
-				bonus = 0.15
+				bonus = 0.75
 				uses = 2
 				category = land_doctrine
 			}

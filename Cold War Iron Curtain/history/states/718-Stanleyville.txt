@@ -14,13 +14,8 @@ state = {
 		set_state_flag = small
 		set_state_flag = poor
 		add_core_of = DOC
-		add_core_of = COG
 		victory_points = {
 			4941 2
-		}
-		1965.1.1 = {
-			remove_core_of = COG
-
 		}
 		1998.1.1 = {
 			owner = COG
@@ -43,7 +38,18 @@ state = {
 	}
 
 	provinces = {
-		4941 11611 
+		4941 
+		11611 
+		14898
+		14886
+		14874
+		14860
+		14846
+		14859
+		14879
+		14885
+		14891
+
 	}
 	manpower = 3229078
 	buildings_max_level_factor = 1.000

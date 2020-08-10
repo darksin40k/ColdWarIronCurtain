@@ -4,6 +4,8 @@
 set_country_flag = tech_gfx_african
 set_country_flag = tech_alignment_eastern
 
+set_country_flag = non_arab_league
+
 #TECH/OOBS
 
 oob = "MOR_1949"
@@ -244,5 +246,7 @@ add_to_array = { influence_array = FRA.id }
 add_to_array = { influence_array_val = 1500 }
 add_to_array = { influence_array = SPR.id }
 add_to_array = { influence_array_val = 500 }
-
+ 
+set_variable = { French_Population = 500000 }
+set_variable = { Jewish_Population = 250000 }
 

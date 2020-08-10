@@ -95,8 +95,8 @@ set_variable = { var = domestic_influence_amount value = 1200 }
 		fascism = 0
 		nationalism = 0
 		monarchism = 0
-		neutrality = 100
-		islamism = 0
+		neutrality = 0
+		islamism = 100
 		radical_shiaism = 0
 		Social_Democratic = 0
 		Social_Liberalism = 0
@@ -113,7 +113,7 @@ set_variable = { var = domestic_influence_amount value = 1200 }
 	}
 
 	set_politics = {
-		ruling_party = monarchism
+		ruling_party = islamism
 		last_election = "1945.1.1"
 		election_frequency = 48
 		elections_allowed = no
@@ -127,5 +127,10 @@ create_country_leader = {
 	name = "Hassan Usman Katsina"
 	picture = "Hassan_Usman_Katsina.dds"
 	ideology = military_junta
+}
+create_country_leader = {
+	name = "Ahmadu Bello"
+	picture = "Ahmadu_Bello.dds"
+	ideology = national_conservatism
 }
 

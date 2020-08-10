@@ -236,12 +236,14 @@ focus_tree = {
 		cost = 10.00
 		x = 8
 		y = 6
+		available = {
+			NOT = {
+				has_government = neutrality
+			}
+		}
 		prerequisite = {
 			focus = KEN_60s_malcolm_mcdonald_as_governor
 			focus = KEN_60s_eric_griffith_jones_keeps_power
-		}
-		bypass = {
-			has_government = conservative
 		}
 		completion_reward = {
 			add_autonomy_ratio = {
@@ -804,7 +806,7 @@ focus_tree = {
 	}
 	focus = {
 		id = KEN_60s_unban_the_kenyan_african_national_union
-		icon = GFX_KAU_established
+		icon = GFX_KANU
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = -14
@@ -2404,12 +2406,11 @@ focus_tree = {
 		cost = 10.00
 		x = 32
 		y = 7
-		available = {
-			OR = {
-				has_government = conservative					
-				has_completed_focus = KEN_60_facilitate_the_united_country_party
-				has_completed_focus = KEN_60_exile_jomo_kenyatta
-			}
+		prerequisite = {
+			focus = KEN_60_exile_jomo_kenyatta
+		}
+		prerequisite = {
+			focus = KEN_60_facilitate_the_united_country_party
 		}
 		completion_reward = {
 			country_event = kenya.38

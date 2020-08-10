@@ -141,6 +141,9 @@ country_event = {
 			name = "Evelyn Baring"
 			picture = "Sir_Evelyn_Baring.dds"
 			ideology = colonial_regime
+			traits = {
+				colonial_governor
+			}
 		}
 	}
 }
@@ -204,7 +207,6 @@ country_event = {
 
 	option = {
 		name = "Was he really guilty?"
-
 	}
 }
 country_event = {
@@ -306,11 +308,21 @@ country_event = {
 	title = "The inauguration of Michael Blundell"
 	desc = "Running on the platform of expanding exclusivity of the white highlands, Michael Blundell has been elected governor of Kenya"
 	immediate = {
-		set_politics = {
-			ruling_party = conservative
-			elections_allowed = no
+		hidden_effect = {
+			set_politics = {
+				ruling_party = conservative
+				elections_allowed = no
+			}
+			add_popularity = { ideology = conservative popularity = 0.35 }
+			add_popularity = { ideology = nationalism popularity = 0.05 }
+			add_popularity = { ideology = socialist popularity = 0.05 }
+			add_popularity = { ideology = neutrality popularity = -0.5 }
+			set_party_name = {
+				ideology = neutrality
+				name = "K-MJ"
+				long_name = "the Kenyan Military Junta"
+			}
 		}
-		add_popularity = { ideology = conservative popularity = 0.35 }
 	}
 	trigger = {
 		tag = KEN
@@ -352,6 +364,9 @@ country_event = {
 			name = "Patrick Muir Renison"
 			picture = "Sir_Patrick_Muir_Renison.dds"
 			ideology = colonial_regime
+			traits = {
+				colonial_governor
+			}
 		}
 	}
 	is_triggered_only = yes
@@ -397,7 +412,7 @@ country_event = {
 country_event = {
 	id = kenya.19
 	title = "The Direction of the Protectorate"
-	desc = "This decade is turbulent for the British Colonies. We are clearly a component of an obsolete and antiquated system. Shall the selfish perserve their own power, or will reign over an uhuru Kenya"
+	desc = "This decade is turbulent for the British Colonies. We are clearly a component of an obsolete and antiquated system. Shall the selfish perserve their own power, or will majority rule reign over an uhuru Kenya?"
 	trigger = {
 		tag = KEN
 	}
@@ -408,6 +423,9 @@ country_event = {
 			name = "Eric Griffith Jones"
 			picture = "Sir_Eric_Griffith_Jones.dds"
 			ideology = colonial_regime
+			traits = {
+				colonial_governor
+			}
 		}
 	}
 	option = {
@@ -432,6 +450,9 @@ country_event = {
 			name = "Malcolm MacDonald"
 			picture = "Malcolm_Macdonald.dds"
 			ideology = colonial_regime
+			traits = {
+				reformist_colonial_governor
+			}
 		}
 	}
 }
@@ -1018,6 +1039,14 @@ country_event = {
 	}
 	is_triggered_only = yes
 	fire_only_once = yes
+	immediate = {
+		hidden_effect = {
+			remove_unit_leader = 034725
+			remove_unit_leader = 023685
+			remove_unit_leader = 649378
+			remove_unit_leader = 94245
+		}
+	}
 	option = {
 		name = "Side with the UCP"
 		set_province_name = { id = 1939 name = "Coldbrook" }
@@ -1033,6 +1062,48 @@ country_event = {
 			size = 0.5
 			capital = 13785
 			states = { 10761 1292 10976 1291}
+		}
+		hidden_effect = {
+			create_corps_commander = {
+				name = "Robert Hinde"
+				portrait_path = "gfx/leaders/KEN/Robert_Hinde.dds"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+			create_field_marshal = {
+				name = "George Erskine"
+				portrait_path = "gfx/leaders/KEN/George_Erskine.dds"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+			create_field_marshal = {
+				name = "Frank Kitson"
+				portrait_path = "gfx/leaders/KEN/Frank_Kitson.dds"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Archibald Wavell"
+				portrait_path = "gfx/leaders/KEN/Archibald_Wavell.dds"
+				traits = {  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
 		}
 	}
 	option = {
@@ -1068,6 +1139,35 @@ country_event = {
 			ideology = fascism
 			popularity = 1.0
 		}
+		hidden_effect = {
+			create_field_marshal = {
+				name = "Stanley Mathenge"
+				portrait_path = "gfx/leaders/KIK/Stanley_Mathenge.dds"
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+				create_field_marshal = {
+				name = "Musa Mwariama"
+				portrait_path = "gfx/leaders/KIK/Musa_Mwariama.dds"
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+				create_field_marshal = {
+				name = "Waruhiu Itote"
+				portrait_path = "gfx/leaders/KIK/Waruhiu_Itote.dds"
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				#planning_skill = 1
+				#logistics_skill = 1
+			}
+		}
 	}
 }
 country_event = {
@@ -1084,9 +1184,17 @@ country_event = {
 		drop_cosmetic_tag = yes
 		clr_country_flag = kenya_dominion
 		set_country_flag = kenya_free
-		remove_unit_leader = 649378
-		remove_unit_leader = 94245
-		remove_unit_leader = 034725
+		if = {
+			limit = {
+				NOT = {
+					has_government = conservative
+				}
+			}
+			remove_unit_leader = 649378
+			remove_unit_leader = 94245
+			remove_unit_leader = 034725
+			remove_unit_leader = 023685
+		}
 	}
 	is_triggered_only = yes
 	fire_only_once = yes
