@@ -17,14 +17,14 @@ state = {
 			state_infrastructure = 1
 			agri_industrial_complex = 1
 		}
-		1976 = {
+		1976.1.1 = {
 			set_province_name = {
 				id = 14675
 				name = "Loubomo"
 
 			}
 		}
-		1991 = {
+		1991.1.1 = {
 			set_province_name = {
 				id = 14675
 				name = "Dolisie"
@@ -73,7 +73,7 @@ state = {
 		#Indo-Iranian#
 		set_variable = { ReligionHindu = 0 }
 		set_variable = { ReligionSikh = 0 }
-		set_variable = { ReligionJain = 0 }
+		set_variable = { ReligionNavayana = 0 }
 		set_variable = { ReligionTraditionalIranian = 0 }
 		#Irreligious#
 		set_variable = { ReligionIrreligious = 0 }

@@ -70,6 +70,13 @@ korean_war_prc_category = {
 				threat = 20
 				name = korean_war_intervantion
 			}
+			custom_effect_tooltip = korean_war_devestation_tt
+			hidden_effect = {
+				news_event = {
+					id = korean_war_devestation.1
+					days = 182
+				}
+			}
 			
 	   	KPA = {
 			load_oob = PRC_communist_reinforcements_Korean_War_initial
@@ -463,7 +470,8 @@ korean_war_prc_category = {
 				has_government = communism
 				has_government = maoism
 			}
-			date > 1950.6.25
+			has_country_flag = kor_war_clear
+			date > 1950.6.1
 			date < 1960.1.1
 		}
 
