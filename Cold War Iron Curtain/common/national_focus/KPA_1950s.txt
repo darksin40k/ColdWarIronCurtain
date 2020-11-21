@@ -11,7 +11,7 @@ focus_tree = {
 	focus = {
 		id = KPA_The_Stalinization_of_North_Korea 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_The_Stalinization_of_North_Korea"}
-		icon = GFX_goal_unknown
+		icon = GFX_The_Sovietization_of_North_Korea
 		cost = 10.00
 		x = 6
 		y = 0
@@ -34,7 +34,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Establish_Room_35 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Establish_Room_35"}
-		icon = GFX_goal_unknown
+		icon = GFX_Room_35
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Infilitrate_the_Democratic_Party
@@ -51,7 +51,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Premier_Kim_il_Sung 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Premier_Kim_il_Sung"}
-		icon = GFX_goal_unknown
+		icon = GFX_Premier_Kim_il_Sung
 		cost = 10.00
 		x = 19
 		y = 0
@@ -100,11 +100,17 @@ focus_tree = {
 		available = {
 			has_completed_focus = KPA_Rebuild_Hydroelctric_Dams
 		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = DDR_idea_first_five_year_plan
+				days = 1825
+			}
+		}
 	}
 	focus = {
 		id = KPA_Emulate_Soviet_Culture 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Emulate_Soviet_Culture"}
-		icon = GFX_goal_unknown
+		icon = GFX_Emulate_Soviet_Culture
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Stalinization_of_North_Korea
@@ -132,14 +138,14 @@ focus_tree = {
 				remove_ideas = policy_religion_temp_1
 				remove_ideas = policy_religion_temp_2
 				remove_ideas = policy_religion_temp_3
-				remove_ideas = policy_religion_temp_31
+				remove_ideas = policy_religion_temp_3a
 			}
 		}
 	}
 	focus = {
 		id = KPA_Crackdown_on_Nationalist_Christians 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Crackdown_on_Nationalist_Christians"}
-		icon = GFX_goal_unknown
+		icon = GFX_Crackdown_on_Christian_Nationalists
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Enforce_State_Atheism
@@ -169,7 +175,20 @@ focus_tree = {
 		}
 		x = 5
 		y = 8
-
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {	
+						
+					type = steel_factory
+						
+					level = 2
+						
+					instant_build = yes
+							
+				}
+			}			
+		}
 	}
 	focus = {
 		id = KPA_Rehabilitate_the_Coal_Sector 
@@ -181,7 +200,20 @@ focus_tree = {
 		}
 		x = 3
 		y = 9
-
+		completion_reward = {
+			capital_scope = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}	
+			}
+			747 = {
+				add_resource = {
+					type = steel
+					amount = 10
+				}				
+			}
+		}
 	}
 	focus = {
 		id = KPA_Increase_Machine_Tools_Production 
@@ -193,7 +225,14 @@ focus_tree = {
 		}
 		x = 5
 		y = 14
-
+			completion_reward = {
+					add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 1
+							uses = 2
+							category = industry
+						}
+				}
 	}
 	focus = {
 		id = KPA_Expand_the_Taian_Electric_Appliances_Factory 
@@ -205,12 +244,25 @@ focus_tree = {
 		}
 		x = 3
 		y = 15
-
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {	
+						
+					type = industrial_complex
+						
+					level = 2
+						
+					instant_build = yes
+							
+				}
+			}			
+		}
 	}
 	focus = {
 		id = KPA_Embrace_Socialist_Realism 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Embrace_Socialist_Realism"}
-		icon = GFX_goal_unknown
+		icon = GFX_KPA_Socialist_Realism_2
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Emulate_Soviet_Culture
@@ -224,7 +276,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Establish_The_Writers_Union 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Establish_The_Writers_Union"}
-		icon = GFX_goal_unknown
+		icon = GFX_Expand_the_Writers_Union
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Embrace_Socialist_Realism
@@ -233,12 +285,13 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			add_research_slot = 1
+			country_event = Han_Sorya.1
 		}
 	}
 	focus = {
 		id = KPA_Promote_Russian_Language_Educaiton 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Promote_Russian_Language_Educaiton"}
-		icon = GFX_goal_unknown
+		icon = GFX_Encourage_Russian_Language_Education
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Establish_The_Writers_Union
@@ -313,7 +366,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Purge_the_Japanese_Collaborationist_Bureacracy 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Purge_the_Japanese_Collaborationist_Bureacracy"}
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_Japanese_Collaborators
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Stalinization_of_North_Korea
@@ -327,26 +380,55 @@ focus_tree = {
 	focus = {
 		id = KPA_Establish_the_Political_Security_Agency 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Establish_the_Political_Security_Agency"}
-		icon = GFX_goal_unknown
+		icon = GFX_Establish_Political_Security_Agency
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Purge_the_Japanese_Collaborationist_Bureacracy
 		}
 		x = 6
 		y = 4
-
+		completion_reward = {		
+			add_to_variable = { gulag_factor_neg = -0.01 }		
+			add_to_variable = { gulag_factor_five = 0.05 }			
+			custom_effect_tooltip = gulag_factor_increase_TT
+		}
 	}
 	focus = {
 		id = KPA_Establish_Collective_Farms 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Establish_Collective_Farms"}
-		icon = GFX_goal_unknown
+		icon = GFX_Establish_Collective_Farms
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Three_Year_Plan
 		}
 		x = 7
 		y = 8
-
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agri_industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agri_industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agri_industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = KPA_Modernize_Fertilizer_Production 
@@ -358,7 +440,14 @@ focus_tree = {
 		}
 		x = 7
 		y = 14
-
+		completion_reward = {
+			add_tech_bonus = {
+				name = agri_tech_bonus
+				bonus = 2
+				uses = 2
+				category = agriculture
+			}
+		}
 	}
 	focus = {
 		id = KPA_Co_Opt_Non_Communist_Partie 
@@ -377,7 +466,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Infilitrate_the_Democratic_Party 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Infilitrate_the_Democratic_Party"}
-		icon = GFX_goal_unknown
+		icon = GFX_Infilitrate_the_NK_Democratic_Party
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Co_Opt_Non_Communist_Partie
@@ -399,12 +488,18 @@ focus_tree = {
 		}
 		x = 9
 		y = 9
-
+		completion_reward = {
+			add_to_variable = {
+				farmBonus = 0.10
+			}	
+			custom_effect_tooltip = farmBonus_increase_TT
+			
+		}
 	}
 	focus = {
 		id = KPA_Major_Chinee_Financial_Grants 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Major_Chinee_Financial_Grants"}
-		icon = GFX_goal_unknown
+		icon = GFX_KPA_Chinese_Financial_Grants
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Establish_Collective_Farms
@@ -414,7 +509,29 @@ focus_tree = {
 		}
 		x = 6
 		y = 9
-
+		completion_reward = {
+			for_loop_effect = {
+				end = influence_array^num
+				value = v
+				if = {
+					limit = {
+						check_variable = { influence_array^v = PRC }
+					}
+					add_to_variable = { influence_array_val^v = 100 }
+					set_country_flag = found
+				}
+			}
+			if = {
+				limit = { NOT = { has_country_flag = found } }
+					add_to_array = { influence_array = PRC.id }
+					add_to_array = { influence_array_val = 100 }
+			}
+			clr_country_flag = found
+			recalculate_influence = yes	
+			custom_effect_tooltip = PRC_INFLUENCE_GAIN_TT	
+			add_to_variable = { currentMoney = 50 }
+			custom_effect_tooltip = ADD_50_MIL_TT			
+		}
 	}
 	focus = {
 		id = KPA_Increase_Irrigation_Networks 
@@ -452,7 +569,14 @@ focus_tree = {
 		}
 		x = 4
 		y = 10
-
+		completion_reward = {
+			746 = {
+				add_resource = {
+					type = chromium
+					amount = 25
+				}
+			}
+		}
 	}
 	focus = {
 		id = KPA_Mass_Rural_Investments 
@@ -464,7 +588,15 @@ focus_tree = {
 		}
 		x = 9
 		y = 15
-
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_timed_idea = {
+				idea = rural_development_spirit
+				days = 2250
+			}			
+		}
 	}
 	focus = {
 		id = KPA_Invest_in_the_Chongjin_Textile_Mill 
@@ -479,12 +611,25 @@ focus_tree = {
 		}
 		x = 6
 		y = 15
-
+		completion_reward = {
+			748 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {	
+						
+					type = industrial_complex
+						
+					level = 2
+						
+					instant_build = yes
+							
+				}				
+			}
+		}
 	}
 	focus = {
 		id = KPA_Increase_Workers_Pay 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Increase_Workers_Pay"}
-		icon = GFX_goal_unknown
+		icon = GFX_Increase_Workers_Wages
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Mass_Rural_Investments
@@ -526,19 +671,22 @@ focus_tree = {
 	focus = {
 		id = KPA_Reaffirm_The_United_Front 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Reaffirm_The_United_Front"}
-		icon = GFX_goal_unknown
+		icon = GFX_Reaffirm_the_United_Front
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Subsidize_the_Chondoist_Chongu_Party
 		}
 		x = 12
 		y = 3
-
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.02
+		}
 	}
 	focus = {
 		id = KPA_Expand_the_Democratic_Youth_League_of_Korea 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Expand_the_Democratic_Youth_League_of_Korea"}
-		icon = GFX_goal_unknown
+		icon = GFX_Expand_the_Democratic_Youth_League_of_Korea
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Establish_Room_35
@@ -555,7 +703,7 @@ focus_tree = {
 	focus = {
 		id = KPA_An_Asian_Peoples_Democracy 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_An_Asian_Peoples_Democracy"}
-		icon = GFX_goal_unknown
+		icon = GFX_An_Asian_Peoples_Democracy
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Establish_the_Political_Security_Agency
@@ -600,7 +748,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Purge_the_Domestic_Faction 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Purge_the_Domestic_Faction"}
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_the_Domestic_Faction
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Premier_Kim_il_Sung
@@ -614,7 +762,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Integrate_the_intelligentsia  
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Integrate_the_intelligentsia "}
-		icon = GFX_goal_unknown
+		icon = GFX_Integrate_the_Intelligenista
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Premier_Kim_il_Sung
@@ -628,7 +776,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Establish_the_Korean_Workers_Party 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Establish_the_Korean_Workers_Party"}
-		icon = GFX_goal_unknown
+		icon = GFX_Korean_Workers_Party_Established
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Integrate_the_intelligentsia 
@@ -654,7 +802,7 @@ focus_tree = {
 	focus = {
 		id = KPA_The_Fatherland_Liberation_War 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_The_Fatherland_Liberation_War"}
-		icon = GFX_goal_unknown
+		icon = GFX_The_Fatherland_Liberation_War
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Establish_the_Korean_Workers_Party
@@ -669,7 +817,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Launch_Sweeping_Purges 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Launch_Sweeping_Purges"}
-		icon = GFX_goal_unknown
+		icon = GFX_Launch_Sweeping_Purges
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Fatherland_Liberation_War
@@ -692,7 +840,7 @@ focus_tree = {
 	focus = {
 		id = KPA_The_Structure_of_The_Workers_Party 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_The_Structure_of_The_Workers_Party"}
-		icon = GFX_goal_unknown
+		icon = GFX_Direction_of_the_Korean_Workers_Party
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Launch_Sweeping_Purges
@@ -706,7 +854,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Reverse_the_Purges 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Reverse_the_Purges"}
-		icon = GFX_goal_unknown
+		icon = GFX_Halt_the_Purges
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Structure_of_The_Workers_Party
@@ -730,7 +878,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Emulate_the_Soviet_Model 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Emulate_the_Soviet_Model"}
-		icon = GFX_goal_unknown
+		icon = GFX_Emulate_the_Soviet_Model
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Structure_of_The_Workers_Party
@@ -753,7 +901,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Execute_Cho_man_sik 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Execute_Cho_man_sik"}
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_Cho_Man_Sik
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Launch_Sweeping_Purges
@@ -771,7 +919,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Launch_New_Show_Trials 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Launch_New_Show_Trials"}
-		icon = GFX_goal_unknown
+		icon = GFX_Begin_the_Show_Trials
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Execute_Cho_man_sik
@@ -790,7 +938,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Finding_a_Scapegoat 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Finding_a_Scapegoat"}
-		icon = GFX_goal_unknown
+		icon = GFX_Find_a_Scapegoat
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Launch_Sweeping_Purges
@@ -806,7 +954,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Criticize_The_Inability_of_the_Domestic_Faction 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Criticize_The_Inability_of_the_Domestic_Faction"}
-		icon = GFX_goal_unknown
+		icon = GFX_Inability_of_the_Domestic_Faction
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Finding_a_Scapegoat
@@ -832,7 +980,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Purge_Southern_Communists 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Purge_Southern_Communists"}
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_the_Southern_Communists
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Criticize_The_Inability_of_the_Domestic_Faction
@@ -883,7 +1031,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Korean_Peoples_Army_Airforce 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Korean_Peoples_Army_Airforce"}
-		icon = GFX_goal_unknown
+		icon = GFX_Korean_Peoples_Airforce_Roundel
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Korean_Peoples_Army
@@ -933,7 +1081,7 @@ focus_tree = {
 		x = 25
 		y = 6
 		completion_reward = {
-			retire_unit_leader = 33003
+			remove_unit_leader  = 33003
 			for_loop_effect = {
 				end = influence_array^num
 				value = v
@@ -955,7 +1103,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Empower_the_State_Security_Apparatus 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Empower_the_State_Security_Apparatus"}
-		icon = GFX_goal_unknown
+		icon = GFX_Empower_the_State_Security_Apparatus
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Blame_Yanan_Generals_for_Disaster
@@ -969,7 +1117,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Arrest_Pak_Hon-yong 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Arrest_Pak_Hon-yong"}
-		icon = GFX_goal_unknown
+		icon = GFX_Arrest_Pak_Hon_Yong
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Empower_the_State_Security_Apparatus
@@ -989,7 +1137,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Import_Soviet_Lavochkin_La_9s 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Import_Soviet_Lavochkin_La_9s"}
-		icon = GFX_goal_unknown
+		icon = GFX_Import_LA9_KPA
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Korean_Peoples_Army_Airforce
@@ -1007,7 +1155,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Soviet_MiG_15s 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Soviet_MiG_15s"}
-		icon = GFX_goal_unknown
+		icon = GFX_focus_soviet_mig_15
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Import_Soviet_Lavochkin_La_9s
@@ -1028,7 +1176,7 @@ focus_tree = {
 	focus = {
 		id = KPA_MiG_21s 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_MiG_21s"}
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_MiG_21
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Soviet_MiG_15s
@@ -1046,7 +1194,7 @@ focus_tree = {
 	focus = {
 		id = KPA_The_Korean_Peoples_Army_Ground_Force 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_The_Korean_Peoples_Army_Ground_Force"}
-		icon = GFX_goal_unknown
+		icon = GFX_Korean_Peoples_Army_Ground_Forces
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Korean_Peoples_Army
@@ -1060,7 +1208,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Soviet_T_34_85s 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Soviet_T_34_85s"}
-		icon = GFX_goal_unknown
+		icon = GFX_KPA_Import_T34s
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Korean_Peoples_Army_Ground_Force
@@ -1078,7 +1226,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Soviet_Weapon_Shipments 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Soviet_Weapon_Shipments"}
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_Weapon_Shipments_KPA
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Korean_Peoples_Army_Ground_Force
@@ -1096,7 +1244,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Import_the_PT_76 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Import_the_PT_76"}
-		icon = GFX_goal_unknown
+		icon = GFX_PT_76
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Soviet_Weapon_Shipments
@@ -1117,7 +1265,7 @@ focus_tree = {
 	focus = {
 		id = KPA_The_Type_58_Assault_Rifle 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_The_Type_58_Assault_Rifle"}
-		icon = GFX_goal_unknown
+		icon = GFX_Type_58_KPA
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Import_the_PT_76
@@ -1134,7 +1282,7 @@ focus_tree = {
 	focus = {
 		id = KPA_The_Korean_Peoples_Navy 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_The_Korean_Peoples_Navy"}
-		icon = GFX_goal_unknown
+		icon = GFX_The_Korean_Peoples_Navy
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Korean_Peoples_Army
@@ -1187,7 +1335,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Expand_the_Wonsan_Naval_Base 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Expand_the_Wonsan_Naval_Base"}
-		icon = GFX_goal_unknown
+		icon = GFX_Expand_Wonson_Naval_Base
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Increase_Naval_Landing_Capabilitites
@@ -1231,7 +1379,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Expand_the_Personality_Cult 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Expand_the_Personality_Cult"}
-		icon = GFX_goal_unknown
+		icon = GFX_Expand_the_Personality_Cult_KPA
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Death_of_Stalin
@@ -1254,9 +1402,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = KPA_Purge_Ho_ka_i 
+		id = KPA_Purge_Ho_ka_i
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Purge_Ho_ka_i"}
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_Ho_Ka_I
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Reverse_the_Purges
@@ -1273,7 +1421,7 @@ focus_tree = {
 	focus = {
 		id = KPA_An_Elite_Communist_Party 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_An_Elite_Communist_Party"}
-		icon = GFX_goal_unknown
+		icon = GFX_Elite_Communist_Party
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Emulate_the_Soviet_Model
@@ -1290,7 +1438,7 @@ focus_tree = {
 	focus = {
 		id = KPA_The_Rehabilitation_of_the_Workers_Party 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_The_Rehabilitation_of_the_Workers_Party"}
-		icon = GFX_goal_unknown
+		icon = GFX_Rehabilitate_the_Korean_Workers_Party
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_An_Elite_Communist_Party
@@ -1340,7 +1488,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Rebuild_Hydroelctric_Dams 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Rebuild_Hydroelctric_Dams"}
-		icon = GFX_goal_unknown
+		icon = GFX_Hydroelectric_Dams_New
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Increase_Irrigation_Networks
@@ -1350,7 +1498,30 @@ focus_tree = {
 		}
 		x = 6
 		y = 11
-
+		completion_reward = {
+			1205 = {
+				add_building_construction = {
+					type = water_infrastructure
+					level = 1
+					instant_build = yes
+				}		
+				add_resource = {
+					type = electricity
+					amount = 20
+				}				
+			}
+			747 = {
+				add_building_construction = {
+					type = water_infrastructure
+					level = 1
+					instant_build = yes
+				}		
+				add_resource = {
+					type = electricity
+					amount = 20
+				}				
+			}
+		}
 	}
 	focus = {
 		id = KPA_Electrify_the_Cooperatives 
@@ -1365,7 +1536,13 @@ focus_tree = {
 		}
 		x = 4
 		y = 16
-
+		completion_reward = {
+			add_to_variable = {
+				farmBonus = 0.10
+			}	
+			custom_effect_tooltip = farmBonus_increase_TT
+			
+		}
 	}
 	focus = {
 		id = KPA_Complete_the_Currency_Reform 
@@ -1380,7 +1557,9 @@ focus_tree = {
 		}
 		x = 6
 		y = 17
-
+		completion_reward = {
+			remove_ideas = Inflation_Crisis
+		}
 	}
 	focus = {
 		id = KPA_The_Death_of_Stalin 
@@ -1408,7 +1587,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Execute_Ho_ka_i 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Execute_Ho_ka_i"}
-		icon = GFX_goal_unknown
+		icon = GFX_Execute_Ho_Ka_i
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Expand_the_Personality_Cult
@@ -1437,19 +1616,60 @@ focus_tree = {
 	focus = {
 		id = KPA_Execute_Pak_Hon-yong 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Execute_Pak_Hon-yong"}
-		icon = GFX_goal_unknown
+		icon = GFX_Execute_Pak_Hon_Yong
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Promote_Kims_Supporters
 		}
 		x = 22
 		y = 11
-
+		completion_reward = {
+			news_event = KPA_Purge.7
+			add_to_variable = { gulag_factor_neg = -0.01 }		
+			add_to_variable = { gulag_factor_five = 0.05 }			
+			custom_effect_tooltip = gulag_factor_increase_TT			
+			if = {
+				limit = {
+					has_idea = disjointed_party_apparatus5
+				}
+				remove_ideas = disjointed_party_apparatus5
+				add_ideas = disjointed_party_apparatus4
+			}
+			else_if = {
+				limit = {
+					has_idea = disjointed_party_apparatus4
+				}
+				remove_ideas = disjointed_party_apparatus4
+				add_ideas = disjointed_party_apparatus3
+			}
+			else_if = {
+				limit = {
+					has_idea = disjointed_party_apparatus3
+				}
+				remove_ideas = disjointed_party_apparatus3
+				add_ideas = disjointed_party_apparatus2
+			}
+			else_if = {
+				limit = {
+					has_idea = disjointed_party_apparatus2
+				}
+				remove_ideas = disjointed_party_apparatus2
+				add_ideas = disjointed_party_apparatus1
+			}
+			else_if = {
+				limit = {
+					has_idea = disjointed_party_apparatus1
+				}
+				remove_ideas = disjointed_party_apparatus1
+			}
+			else = {
+			}			
+		}
 	}
 	focus = {
 		id = KPA_The_August_Faction_Incident 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_The_August_Faction_Incident"}
-		icon = GFX_goal_unknown
+		icon = GFX_August_Faction_Incident
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Establishing_Juche
@@ -1463,7 +1683,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Execute_Pak_Il-u 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Execute_Pak_Il-u"}
-		icon = GFX_goal_unknown
+		icon = GFX_Execute_Pak_Il_U
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Promote_Kims_Supporters
@@ -1473,12 +1693,29 @@ focus_tree = {
 		}
 		x = 19
 		y = 11
-
+		completion_reward = {
+			add_political_power = 50
+			for_loop_effect = {
+				end = influence_array^num
+				value = v
+				if = {
+					limit = {
+						check_variable = { influence_array^v = PRC }
+					}
+					add_to_variable = { influence_array_val^v = -100 }
+					set_country_flag = found
+				}
+			}
+			clr_country_flag = found
+			recalculate_influence = yes	
+			custom_effect_tooltip = PRC_INFLUENCE_LOWER_TT				
+			news_event = KPA_Purge.9
+		}
 	}
 	focus = {
 		id = KPA_Tour_the_Eastern_Bloc 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Tour_the_Eastern_Bloc"}
-		icon = GFX_goal_unknown
+		icon = GFX_Tour_Eastern_Bloc_Green
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Execute_Pak_Il-u
@@ -1488,7 +1725,73 @@ focus_tree = {
 		}
 		x = 20
 		y = 12
-
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = +0.05
+			}
+			news_event = KPA_FOR.1
+			add_opinion_modifier = { 
+				target = HUN
+				modifier = medium_increase 
+			}
+			HUN = {
+				add_opinion_modifier = {
+					target = KPA
+					modifier = medium_increase 
+				}
+			}
+			add_opinion_modifier = { 
+				target = POL
+				modifier = medium_increase 
+			}
+			POL = {
+				add_opinion_modifier = {
+					target = KPA
+					modifier = medium_increase 
+				}
+			}
+			add_opinion_modifier = { 
+				target = ROM
+				modifier = medium_increase 
+			}
+			ROM = {
+				add_opinion_modifier = {
+					target = KPA
+					modifier = medium_increase 
+				}
+			}
+			add_opinion_modifier = { 
+				target = CZE
+				modifier = medium_increase 
+			}
+			CZE = {
+				add_opinion_modifier = {
+					target = KPA
+					modifier = medium_increase 
+				}
+			}
+			add_opinion_modifier = { 
+				target = DDR
+				modifier = medium_increase 
+			}
+			DDR = {
+				add_opinion_modifier = {
+					target = KPA
+					modifier = medium_increase 
+				}
+			}
+			add_opinion_modifier = { 
+				target = BUL
+				modifier = medium_increase 
+			}
+			BUL = {
+				add_opinion_modifier = {
+					target = KPA
+					modifier = medium_increase 
+				}
+			}
+		}
 	}
 	focus = {
 		id = KPA_A_New_Milestone_in_the_International_Workers_Movement_and_the_Might_of_Proletariat 
@@ -1510,7 +1813,7 @@ focus_tree = {
 	focus = {
 		id = KPA_The_Second_Arduous_March 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_The_Second_Arduous_March"}
-		icon = GFX_goal_unknown
+		icon = GFX_The_Second_Arduous_March
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_August_Faction_Incident
@@ -1524,7 +1827,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Purge_the_Yanan_Faction 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Purge_the_Yanan_Faction"}
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_Yanan_Faction
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Second_Arduous_March
@@ -1597,7 +1900,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Purge_the_Soviet_Faction 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Purge_the_Soviet_Faction"}
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_the_Soviet_Faction
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Second_Arduous_March
@@ -1670,7 +1973,7 @@ focus_tree = {
 	focus = {
 		id = KPA_The_Guerila_Faction_Triumphant 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_The_Guerila_Faction_Triumphant"}
-		icon = GFX_goal_unknown
+		icon = GFX_KPA_Guerila_Faction_Triumphant
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Purge_the_Soviet_Faction
@@ -1732,7 +2035,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Reduce_Soviet_Influence 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Reduce_Soviet_Influence"}
-		icon = GFX_goal_unknown
+		icon = GFX_Decrease_Soviet_Culture
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Decrease_Russian_Language_Education
@@ -1742,12 +2045,48 @@ focus_tree = {
 		}
 		x = 25
 		y = 18
-
+		completion_reward = {
+			for_loop_effect = {
+				end = influence_array^num
+				value = v
+				if = {
+					limit = {
+						check_variable = { influence_array^v = SOV }
+					}
+					add_to_variable = { influence_array_val^v = -100 }
+					set_country_flag = found
+				}
+			}
+			recalculate_influence = yes	
+			custom_effect_tooltip = SOV_INFLUENCE_DECREASE_TT	
+			if = {
+				limit = {
+					has_idea = cultural_fragmentation3
+				}
+				remove_ideas = cultural_fragmentation3
+				add_ideas = cultural_fragmentation2
+			}
+			else_if = {
+				limit = {
+					has_idea = cultural_fragmentation2
+				}
+				remove_ideas = cultural_fragmentation2
+				add_ideas = cultural_fragmentation1
+			}
+			else_if = {
+				limit = {
+					has_idea = cultural_fragmentation1
+				}
+				remove_ideas = cultural_fragmentation1
+			}
+			else = {
+			}
+		}
 	}
 	focus = {
 		id = KPA_Condemn_Foriegn_Cultural_Influenes 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Condemn_Foriegn_Cultural_Influenes"}
-		icon = GFX_goal_unknown
+		icon = GFX_Condemn_foreign_cultural_influence
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Guerila_Faction_Triumphant
@@ -1757,12 +2096,38 @@ focus_tree = {
 		}
 		x = 23
 		y = 18
-
+		completion_reward = {
+			custom_effect_tooltip = domestic_influence_gain
+			add_to_variable = { var = domestic_influence_amount value = 100 }
+			recalculate_influence = yes			
+			if = {
+				limit = {
+					has_idea = cultural_fragmentation3
+				}
+				remove_ideas = cultural_fragmentation3
+				add_ideas = cultural_fragmentation2
+			}
+			else_if = {
+				limit = {
+					has_idea = cultural_fragmentation2
+				}
+				remove_ideas = cultural_fragmentation2
+				add_ideas = cultural_fragmentation1
+			}
+			else_if = {
+				limit = {
+					has_idea = cultural_fragmentation1
+				}
+				remove_ideas = cultural_fragmentation1
+			}
+			else = {
+			}
+		}
 	}
 	focus = {
 		id = KPA_Empower_Han_Sorya 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Empower_Han_Sorya"}
-		icon = GFX_goal_unknown
+		icon = GFX_Empower_Han_Sorya
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Purge_the_Yanan_Faction
@@ -1770,6 +2135,7 @@ focus_tree = {
 		x = 21
 		y = 17
 		completion_reward = {
+			country_event = Han_Sorya.2
 			if = {
 				limit = {
 					has_idea = asian_illiteracy_3
@@ -1804,14 +2170,50 @@ focus_tree = {
 	focus = {
 		id = KPA_Decrease_Russian_Language_Education 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Decrease_Russian_Language_Education"}
-		icon = GFX_goal_unknown
+		icon = GFX_Decrease_Russian_Education
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Purge_the_Soviet_Faction
 		}
 		x = 27
 		y = 17
-
+		completion_reward = {
+			for_loop_effect = {
+				end = influence_array^num
+				value = v
+				if = {
+					limit = {
+						check_variable = { influence_array^v = SOV }
+					}
+					add_to_variable = { influence_array_val^v = -100 }
+					set_country_flag = found
+				}
+			}
+			recalculate_influence = yes	
+			custom_effect_tooltip = SOV_INFLUENCE_DECREASE_TT	
+			if = {
+				limit = {
+					has_idea = cultural_fragmentation3
+				}
+				remove_ideas = cultural_fragmentation3
+				add_ideas = cultural_fragmentation2
+			}
+			else_if = {
+				limit = {
+					has_idea = cultural_fragmentation2
+				}
+				remove_ideas = cultural_fragmentation2
+				add_ideas = cultural_fragmentation1
+			}
+			else_if = {
+				limit = {
+					has_idea = cultural_fragmentation1
+				}
+				remove_ideas = cultural_fragmentation1
+			}
+			else = {
+			}
+		}
 	}
 	focus = {
 		id = KPA_The_Consolidaiton_of_Power 
@@ -1826,24 +2228,55 @@ focus_tree = {
 		}
 		x = 24
 		y = 19
-
+		completion_reward = {
+			add_stability = 0.03
+			set_country_flag = kim_korea_solidified
+			custom_effect_tooltip = domestic_influence_gain
+			add_to_variable = { var = domestic_influence_amount value = 100 }		
+		}
 	}
 	focus = {
 		id = KPA_Dismiss_Han_Sorya 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Dismiss_Han_Sorya"}
-		icon = GFX_goal_unknown
+		icon = GFX_Dismiss_Han_Sorya
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_General_Secretary_Choe_Chang-ik
 		}
 		x = 12
 		y = 16
+		completion_reward = {
+			remove_ideas = socialist_realism
+			country_event = Han_Sorya.3
+			if = {
+				limit = {
+					has_idea = cultural_fragmentation3
+				}
+				remove_ideas = cultural_fragmentation3
+				add_ideas = cultural_fragmentation2
+			}
+			else_if = {
+				limit = {
+					has_idea = cultural_fragmentation2
+				}
+				remove_ideas = cultural_fragmentation2
+				add_ideas = cultural_fragmentation1
+			}
+			else_if = {
+				limit = {
+					has_idea = cultural_fragmentation1
+				}
+				remove_ideas = cultural_fragmentation1
+			}
+			else = {
+			}
 
+		}
 	}
 	focus = {
 		id = KPA_Purge_the_Guerila_Faction 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Purge_the_Guerila_Faction"}
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_the_Guerilla_Faction
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_General_Secretary_Choe_Chang-ik
@@ -1894,7 +2327,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Dismantle_the_Personality_Cult 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Dismantle_the_Personality_Cult"}
-		icon = GFX_goal_unknown
+		icon = GFX_Dismantle_the_Personality_Cult_KPA
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Dismiss_Han_Sorya
@@ -1904,24 +2337,65 @@ focus_tree = {
 		}
 		x = 14
 		y = 17
-		
-	}
+		completion_reward = {
+			news_event = PWK.20
+			remove_dynamic_modifier = {
+				modifier = personality_cult_strength
+			}
+		}
+	}	
 	focus = {
 		id = KPA_Increase_Chinese_Cultural_Influences 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Increase_Chinese_Cultural_Influences"}
-		icon = GFX_goal_unknown
+		icon = GFX_Increase_Chinese_Influence
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Dismiss_Han_Sorya
 		}
 		x = 11
 		y = 17
-
+		completion_reward = {
+			for_loop_effect = {
+				end = influence_array^num
+				value = v
+				if = {
+					limit = {
+						check_variable = { influence_array^v = SOV }
+					}
+					add_to_variable = { influence_array_val^v = -100 }
+					set_country_flag = found
+				}
+			}
+			recalculate_influence = yes	
+			custom_effect_tooltip = SOV_INFLUENCE_DECREASE_TT	
+			if = {
+				limit = {
+					has_idea = cultural_fragmentation3
+				}
+				remove_ideas = cultural_fragmentation3
+				add_ideas = cultural_fragmentation2
+			}
+			else_if = {
+				limit = {
+					has_idea = cultural_fragmentation2
+				}
+				remove_ideas = cultural_fragmentation2
+				add_ideas = cultural_fragmentation1
+			}
+			else_if = {
+				limit = {
+					has_idea = cultural_fragmentation1
+				}
+				remove_ideas = cultural_fragmentation1
+			}
+			else = {
+			}
+		}
 	}
 	focus = {
 		id = KPA_Encourage_Chinese_Language_Education 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Encourage_Chinese_Language_Education"}
-		icon = GFX_goal_unknown
+		icon = GFX_Encourage_Chinese_Language_Education
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Dismantle_the_Personality_Cult
@@ -2046,7 +2520,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Purge_Kim_Loyalists 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Purge_Kim_Loyalists"}
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_Kim_Loyalists
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Dismantle_the_Personality_Cult
@@ -2118,7 +2592,7 @@ focus_tree = {
 	focus = {
 		id = KPA_General_Secretary_Choe_Chang-ik 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_General_Secretary_Choe_Chang-ik"}
-		icon = GFX_goal_unknown
+		icon = GFX_General_Secritary_Choe_Chang_Ik
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_August_Faction_Incident
@@ -2137,7 +2611,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Promote_Kims_Supporters 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Promote_Kims_Supporters"}
-		icon = GFX_goal_unknown
+		icon = GFX_Promote_Kim_Supporters
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_The_Death_of_Stalin
@@ -2157,7 +2631,7 @@ focus_tree = {
 	focus = {
 		id = KPA_Establishing_Juche 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = KPA_Establishing_Juche"}
-		icon = GFX_goal_unknown
+		icon = GFX_Establish_Juche
 		cost = 10.00
 		prerequisite = {
 			focus = KPA_Tour_the_Eastern_Bloc

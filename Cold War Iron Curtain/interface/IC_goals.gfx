@@ -1,5 +1,219 @@
 spriteTypes = {
 	SpriteType = {
+		name = "GFX_Crackdown_on_Christian_Nationalists"
+		texturefile = "gfx/interface/goals/Crackdown_on_Christian_Nationalists.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Emulate_Soviet_Culture"
+		texturefile = "gfx/interface/goals/Emulate_Soviet_Culture.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Condemn_foreign_cultural_influence"
+		texturefile = "gfx/interface/goals/Condemn_foreign_cultural_influence.tga" 
+	}
+	SpriteType = {
+		name = "GFX_KPA_Socialist_Realism_1"
+		texturefile = "gfx/interface/goals/KPA_Socialist_Realism_1.tga" 
+	}
+	SpriteType = {
+		name = "GFX_KPA_Socialist_Realism_2"
+		texturefile = "gfx/interface/goals/KPA_Socialist_Realism_2.tga" 
+	}     
+	SpriteType = {
+		name = "GFX_Promote_Kim_Supporters"
+		texturefile = "gfx/interface/goals/Promote_Kim_Supporters.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Establish_Juche"
+		texturefile = "gfx/interface/goals/Establish_Juche.tga" 
+	}
+	SpriteType = {
+		name = "GFX_August_Faction_Incident"
+		texturefile = "gfx/interface/goals/August_Faction_Incident.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Establish_Political_Security_Agency"
+		texturefile = "gfx/interface/goals/Establish_Political_Security_Agency.tga" 
+	}
+	SpriteType = {
+		name = "GFX_KPA_Chinese_Financial_Grants"
+		texturefile = "gfx/interface/goals/KPA_Chinese_Financial_Grants.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Soviet_Weapon_Shipments_KPA"
+		texturefile = "gfx/interface/goals/Soviet_Weapon_Shipments_KPA.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Soviet_Weapon_Shipments_KPA_Alt"
+		texturefile = "gfx/interface/goals/Soviet_Weapon_Shipments_KPA_Alt.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Import_LA9_KPA"
+		texturefile = "gfx/interface/goals/Import_LA9_KPA.tga" 
+	}
+	SpriteType = {
+		name = "GFX_KPA_Import_T34s"
+		texturefile = "gfx/interface/goals/KPA_Import_T34s.tga" 
+	}
+	SpriteType = {
+		name = "GFX_KPA_Guerila_Faction_Triumphant"
+		texturefile = "gfx/interface/goals/KPA_Guerila_Faction_Triumphant.tga" 
+	}
+	SpriteType = {
+		name = "GFX_An_Asian_Peoples_Democracy"
+		texturefile = "gfx/interface/goals/An_Asian_Peoples_Democracy.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Korean_Peoples_Airforce_Roundel"
+		texturefile = "gfx/interface/goals/Korean_Peoples_Airforce_Roundel.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Type_58_KPA"
+		texturefile = "gfx/interface/goals/Type_58_KPA.tga" 
+	}
+	
+	SpriteType = {
+		name = "GFX_Reaffirm_the_United_Front"
+		texturefile = "gfx/interface/goals/Reaffirm_the_United_Front.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Pardon_Bazzaz"
+		texturefile = "gfx/interface/goals/Pardon_Bazzaz.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Purge_Ho_Ka_I"
+		texturefile = "gfx/interface/goals/Purge_Ho_Ka_I.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Encourage_Russian_Language_Education"
+		texturefile = "gfx/interface/goals/Encourage_Russian_Language_Education.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Encourage_Chinese_Language_Education"
+		texturefile = "gfx/interface/goals/Encourage_Chinese_Language_Education.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Purge_the_Southern_Communists"
+		texturefile = "gfx/interface/goals/Purge_the_Southern_Communists.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Increase_Chinese_Influence"
+		texturefile = "gfx/interface/goals/Increase_Chinese_Influence.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Begin_the_Show_Trials"
+		texturefile = "gfx/interface/goals/Begin_the_Show_Trials.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Elite_Communist_Party"
+		texturefile = "gfx/interface/goals/Elite_Communist_Party.tga" 
+	}
+
+	SpriteType = {
+		name = "GFX_Execute_Pak_Hon_Yong"
+		texturefile = "gfx/interface/goals/Execute_Pak_Hon_Yong.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Purge_Japanese_Collaborators"
+		texturefile = "gfx/interface/goals/Purge_Japanese_Collaborators.tga" 
+	}
+	SpriteType = {  
+		name = "GFX_Room_35"
+		texturefile = "gfx/interface/goals/Room_35.tga" 
+	}
+	SpriteType = {  
+		name = "GFX_Tour_Eastern_Bloc_Green"
+		texturefile = "gfx/interface/goals/Tour_Eastern_Bloc_Green.tga" 
+	}
+	SpriteType = {  
+		name = "GFX_Union_of_Arab_Republics"
+		texturefile = "gfx/interface/Union_of_Arab_Republics.tga" 
+	}
+	SpriteType = {  
+		name = "GFX_Arab_Gulf_Academy"
+		texturefile = "gfx/interface/Arab_Gulf_Academy.tga" 
+	}
+	SpriteType = {  
+		name = "GFX_Tour_Eastern_Bloc_Red"
+		texturefile = "gfx/interface/goals/Tour_Eastern_Bloc_Red.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Decrease_Soviet_Culture"
+		texturefile = "gfx/interface/goals/Decrease_Soviet_Culture.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Purge_Yanan_Faction"
+		texturefile = "gfx/interface/goals/Purge_Yanan_Faction.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Rehabilitate_the_Korean_Workers_Party"
+		texturefile = "gfx/interface/goals/RehabilitateE_the_Korean_Workers_Party.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Emulate_the_Soviet_Model"
+		texturefile = "gfx/interface/goals/Emulate_the_Soviet_Model.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Purge_the_Domestic_Faction"
+		texturefile = "gfx/interface/goals/Purge_the_Domestic_Faction.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Purge_the_Soviet_Faction"
+		texturefile = "gfx/interface/goals/Purge_the_Soviet_Faction.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Purge_the_Guerilla_Faction"
+		texturefile = "gfx/interface/goals/Purge_the_Guerilla_Faction.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Premier_Kim_il_Sung"
+		texturefile = "gfx/interface/goals/Premier_Kim_il_Sung.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Launch_Sweeping_Purges"
+		texturefile = "gfx/interface/goals/Launch_Sweeping_Purges.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Integrate_the_Intelligenista"
+		texturefile = "gfx/interface/goals/Integrate_the_Intelligenista.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Halt_the_Purges"
+		texturefile = "gfx/interface/goals/Halt_the_Purges.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Find_a_Scapegoat"
+		texturefile = "gfx/interface/goals/Find_a_Scapegoat.tga" 
+	}
+	SpriteType = {
+		name = "GFX_The_Fatherland_Liberation_War"
+		texturefile = "gfx/interface/goals/The_Fatherland_Liberation_War.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Execute_Pak_Il_U"
+		texturefile = "gfx/interface/goals/Execute_Pak_Il_U.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Execute_Ho_Ka_i"
+		texturefile = "gfx/interface/goals/Execute_Ho_Ka_i.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Dismantle_the_Personality_Cult_KPA"
+		texturefile = "gfx/interface/goals/Dismantle_the_Personality_Cult_KPA.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Direction_of_the_Korean_Workers_Party"
+		texturefile = "gfx/interface/goals/Direction_of_the_Korean_Workers_Party.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Inability_of_the_Domestic_Faction"
+		texturefile = "gfx/interface/goals/Inability_of_the_Domestic_Faction.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Arrest_Pak_Hon_Yong"
+		texturefile = "gfx/interface/goals/Arrest_Pak_Hon_Yong.tga" 
+	}
+	SpriteType = {
 		name = "GFX_SAF_On_Strike"
 		texturefile = "gfx/interface/goals/SAF_On_Strike.dds" 
 	}
@@ -7,6 +221,16 @@ spriteTypes = {
 		name = "GFX_SAF_The_Happiest_Police_State"
 		texturefile = "gfx/interface/goals/SAF_The_Happiest_Police_State.dds" 
 	}
+	SpriteType = {
+		name = "GFX_Korean_Workers_Party_Established"
+		texturefile = "gfx/interface/goals/Korean_Workers_Party_Established.tga" 
+	}
+	SpriteType = {
+		name = "GFX_Purge_Cho_Man_Sik"
+		texturefile = "gfx/interface/goals/Purge_Cho_Man_Sik.tga" 
+	}
+	
+	
 	SpriteType = {
 		name = "GFX_SAF_Operation_Bluewildbees"
 		texturefile = "gfx/interface/goals/SAF_Operation_Bluewildbees.dds" 
@@ -2226,6 +2450,78 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ETR_Army"
 		texturefile = "gfx/interface/goals/ETR_Army.tga"
+	}
+	SpriteType = {
+		name = "GFX_Dismiss_Han_Sorya"
+		texturefile = "gfx/interface/goals/Dismiss_Han_Sorya.tga"
+	}
+	SpriteType = {
+		name = "GFX_Hydroelectric_Dams_New"
+		texturefile = "gfx/interface/goals/Hydroelectric_Dams_New.tga"
+	}
+	SpriteType = {
+		name = "GFX_Purge_Kim_Loyalists"
+		texturefile = "gfx/interface/goals/Purge_Kim_Loyalists.tga"
+	}
+	SpriteType = {
+		name = "GFX_Increase_Workers_Wages"
+		texturefile = "gfx/interface/goals/Increase_Workers_Wages.tga"
+	}
+	SpriteType = {
+		name = "GFX_Expand_the_Democratic_Youth_League_of_Korea"
+		texturefile = "gfx/interface/goals/Expand_the_Democratic_Youth_League_of_Korea.tga"
+	}
+	SpriteType = {
+		name = "GFX_Empower_Han_Sorya"
+		texturefile = "gfx/interface/goals/Empower_Han_Sorya.tga"
+	}
+	SpriteType = {
+		name = "GFX_Empower_the_State_Security_Apparatus"
+		texturefile = "gfx/interface/goals/Empower_the_State_Security_Apparatus.tga"
+	}
+	SpriteType = {
+		name = "GFX_Establish_Collective_Farms"
+		texturefile = "gfx/interface/goals/Establish_Collective_Farms.tga"
+	}
+	SpriteType = {
+		name = "GFX_Expand_the_Personality_Cult_KPA"
+		texturefile = "gfx/interface/goals/Expand_the_Personality_Cult_KPA.tga"
+	}
+	SpriteType = {
+		name = "GFX_The_Sovietization_of_North_Korea"
+		texturefile = "gfx/interface/goals/The_Sovietization_of_North_Korea.tga"
+	}
+	SpriteType = {
+		name = "GFX_The_Second_Arduous_March"
+		texturefile = "gfx/interface/goals/The_Second_Arduous_March.tga"
+	}
+	SpriteType = {
+		name = "GFX_The_Korean_Peoples_Navy"
+		texturefile = "gfx/interface/goals/The_Korean_Peoples_Navy.tga"
+	}
+	SpriteType = {
+		name = "GFX_Korean_Peoples_Army_Ground_Forces"
+		texturefile = "gfx/interface/goals/Korean_Peoples_Army_Ground_Forces.tga"
+	}
+	SpriteType = {
+		name = "GFX_General_Secritary_Choe_Chang_Ik"
+		texturefile = "gfx/interface/goals/General_Secritary_Choe_Chang_Ik.tga"
+	}
+	SpriteType = {
+		name = "GFX_Infilitrate_the_NK_Democratic_Party"
+		texturefile = "gfx/interface/goals/Infilitrate_the_NK_Democratic_Party.tga"
+	}
+	SpriteType = {
+		name = "GFX_Expand_Wonson_Naval_Base"
+		texturefile = "gfx/interface/goals/Expand_Wonson_Naval_Base.tga"
+	}
+	SpriteType = {
+		name = "GFX_Expand_the_Writers_Union"
+		texturefile = "gfx/interface/goals/Expand_the_Writers_Union.tga"
+	}
+	SpriteType = {
+		name = "GFX_Decrease_Russian_Education"
+		texturefile = "gfx/interface/goals/Decrease_Russian_Education.tga"
 	}
 	
 	SpriteType = {

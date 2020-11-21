@@ -1679,7 +1679,12 @@ focus_tree = {
 		x = 16
 		y = 14
 		completion_reward = {
-			news_event = mongolia.20
+			if = {
+				limit = {
+					has_government = communism
+				}
+				news_event = mongolia.20
+			}
 		}
 	}
 	focus = {

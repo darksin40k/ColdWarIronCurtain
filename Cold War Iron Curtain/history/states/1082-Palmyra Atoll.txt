@@ -8,6 +8,7 @@ state = {
 		set_state_flag = lakes
 		set_state_flag = micro
 		set_state_flag = developed
+		set_variable = { show_demographics_disabled = 1 }
 		buildings = {
 			infrastructure = 1
 			state_infrastructure = 1
@@ -23,5 +24,5 @@ state = {
 	}
 	manpower = 4
 	buildings_max_level_factor = 1.000
-	state_category = pop1
+	state_category = enclave
 }
