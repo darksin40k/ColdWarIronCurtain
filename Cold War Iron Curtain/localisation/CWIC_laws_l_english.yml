@@ -149,18 +149,18 @@
  MEDIA_POL_3a_desc:0 "\n-§YDrift Defence§! §R-20%§!\n-§YOffice Park Con Speed§! §G+15%§!\n-§YWar Support§! §G+10%§!\n-§YStability§! §R-10%§!"
  MEDIA_POL_change_reaction_desc:0 "Media Shakeup Effects Active\n§R-5%§! §YStability§!\n§R-25%§! §YPolitical Power§!"
  
- WOM_POL_0:0 "Current Effects:\n-§YProduction Eff. Gain§! §R-15%§!\n-§YPopulation Growth§! §C+45%§!\n-§YRecruitable Pop Factor§! §R-15%§!\n-§YResearch Speed§! §R-5%§!\n-§YStability§! §G+10%§!"
- WOM_POL_1:0 "Current Effects:\n-§YProduction Eff. Gain§! §R-1%§!\n-§YPopulation Growth§! §C+30%§!\n-§YRecruitable Pop Factor§! §R-10%§!\n-§YResearch Speed§! §R-2.5%§!\n-§YStability§! §G+5%§!"
- WOM_POL_2:0 "Current Effects:\n-§YPopulation Growth§! §C+15%§!\n-§YRecruitable Pop Factor§! §R-5%§!\n-§YResearch Speed§! §R-1%§!\n-§YStability§! §G+5%§!"
- WOM_POL_3:0 "Current Effects:\n-§YProduction Eff. Gain§! §G+10%§!\n-§YPopulation Growth§! §C-20%§!\n-§YRecruitable Pop Factor§! §G+10%§!\n-§YResearch Speed§! §G+2.5%§!"
- WOM_POL_4:0 "Current Effects:\n-§YProduction Eff. Gain§! §G+20%§!\n-§YPopulation Growth§! §C-25%§!\n-§YRecruitable Pop Factor§! §G+15%§!\n-§YResearch Speed§! §G+5%§!\n-§YStability§! §R-5%§!"
- WOM_POL_4a:0 "Current Effects:\n-§YProduction Eff. Gain§! §G+25%§!\n-§YPopulation Growth§! §C-30%§!\n-§YRecruitable Pop Factor§! §G+25%§!\n-§YResearch Speed§! §G+5%§!\n-§YStability§! §R-10%§!" 
- WOM_POL_0_desc:0 "-§YProduction Eff. Gain§! §R-10%§!\n-§YPopulation Growth§! §C+45%§!\n-§YRecruitable Pop Factor§! §R-15%§!\n-§YResearch Speed§! §R-5%§!\n-§YStability§! §G+10%§!"
- WOM_POL_1_desc:0 "-§YProduction Eff. Gain§! §R-5%§!\n-§YPopulation Growth§! §C+30%§!\n-§YRecruitable Pop Factor§! §R-10%§!\n-§YResearch Speed§! §R-2.5%§!\n-§YStability§! §G+5%§!"
- WOM_POL_2_desc:0 "-§YPopulation Growth§! §C+15%§!\n-§YRecruitable Pop Factor§! §R-5%§!\n-§YResearch Speed§! §R-1%§!\n-§YStability§! §G+5%§!"
- WOM_POL_3_desc:0 "-§YProduction Eff. Gain§! §G+2.5%§!\n-§YPopulation Growth§! §C-20%§!\n-§YRecruitable Pop Factor§! §G+10%§!\n-§YResearch Speed§! §G+2.5%§!"
- WOM_POL_4_desc:0 "-§YProduction Eff. Gain§! §G+5%§!\n-§YPopulation Growth§! §C-25%§!\n-§YRecruitable Pop Factor§! §G+15%§!\n-§YResearch Speed§! §G+5%§!\n-§YStability§! §R-5%§!"
- WOM_POL_4a_desc:0 "-§YProduction Eff. Gain§! §G+7.5%§!\n-§YPopulation Growth§! §C-30%§!\n-§YRecruitable Pop Factor§! §G+25%§!\n-§YResearch Speed§! §G+5%§!\n-§YStability§! §R-10%§!"
+ WOM_POL_0:0 "Current Effects:\n-§YProduction Eff. Gain§! §R-15%§!\n-§YPopulation Growth§! §C+45%§!\n-§YRecruitable Pop Factor§! §R-15%§!\n-§YStability§! §G+10%§!"
+ WOM_POL_1:0 "Current Effects:\n-§YProduction Eff. Gain§! §R-1%§!\n-§YPopulation Growth§! §C+30%§!\n-§YRecruitable Pop Factor§! §R-10%§!\n-§YStability§! §G+5%§!"
+ WOM_POL_2:0 "Current Effects:\n-§YPopulation Growth§! §C+15%§!\n-§YRecruitable Pop Factor§! §R-5%§!\n-§YStability§! §G+5%§!"
+ WOM_POL_3:0 "Current Effects:\n-§YProduction Eff. Gain§! §G+10%§!\n-§YPopulation Growth§! §C-20%§!\n-§YRecruitable Pop Factor§! §G+10%§!"
+ WOM_POL_4:0 "Current Effects:\n-§YProduction Eff. Gain§! §G+20%§!\n-§YPopulation Growth§! §C-25%§!\n-§YRecruitable Pop Factor§! §G+15%§!\n-§YStability§! §R-5%§!"
+ WOM_POL_4a:0 "Current Effects:\n-§YProduction Eff. Gain§! §G+25%§!\n-§YPopulation Growth§! §C-30%§!\n-§YRecruitable Pop Factor§! §G+25%§!\n-§YStability§! §R-10%§!" 
+ WOM_POL_0_desc:0 "-§YProduction Eff. Gain§! §R-10%§!\n-§YPopulation Growth§! §C+45%§!\n-§YRecruitable Pop Factor§! §R-15%§!\n-§YStability§! §G+10%§!"
+ WOM_POL_1_desc:0 "-§YProduction Eff. Gain§! §R-5%§!\n-§YPopulation Growth§! §C+30%§!\n-§YRecruitable Pop Factor§! §R-10%§!\n-§YStability§! §G+5%§!"
+ WOM_POL_2_desc:0 "-§YPopulation Growth§! §C+15%§!\n-§YRecruitable Pop Factor§! §R-5%§!\n-§YStability§! §G+5%§!"
+ WOM_POL_3_desc:0 "-§YProduction Eff. Gain§! §G+2.5%§!\n-§YPopulation Growth§! §C-20%§!\n-§YRecruitable Pop Factor§! §G+10%§!"
+ WOM_POL_4_desc:0 "-§YProduction Eff. Gain§! §G+5%§!\n-§YPopulation Growth§! §C-25%§!\n-§YRecruitable Pop Factor§! §G+15%§!\n-§YStability§! §R-5%§!"
+ WOM_POL_4a_desc:0 "-§YProduction Eff. Gain§! §G+7.5%§!\n-§YPopulation Growth§! §C-30%§!\n-§YRecruitable Pop Factor§! §G+25%§!\\n-§YStability§! §R-10%§!"
  WOM_POL_regression_reaction_desc:0 "Women's Rights Protests in Progress\n§R-15%§! §YStability§!\n\n§YClick to open response event to handle the situation§!"
  WOM_POL_promotion_reaction_desc:0 "Anti-Women's Rights Reaction Active\n§R-10%§! §YStability§!\n\n§YClick to open response event to handle the situation§!"
  
@@ -742,10 +742,46 @@
  ReligionOther_desc:0 "These are traditions and religions, often centuries old, that emerged among small communities or within specific geographic spaces. Often the isolation of such communities, due to either their small size or geographic limitations, has allowed these practices to continue without hinderance from more prevalent faiths. As technology and states grow more sophisticated, such communities will likely be more exposed to new ideas of religion."
  
  
+ ReligionChineseSalvationist:0 "Chinese Salvationists faiths refer to a myriad of religious sects focused on ideas of moral purity and salvation through following the teachings of a charismatic person. Many consider these sects as the fourth major Chinese historical religious tradition. Salvationist sects are present across China, though especially in the north and northeast. Although these sects often face state suppression, these movements continue to flourish with new sects being found almost every decade. The Chinese state has historically been concerned that an especially ambitious Salvationist sect leader could be a source of rebellion and unrest."
+ ReligionZionistChristian:0 "The Zionist Christian churches proliferated in southern Africa during in the early twentieth century. The faith is especially popular among the African population who have combined Christian beliefs and practices with traditional African religions. Faith healing and spiritual revelations are a key part of practitioners. The churches are noteworthy for their ceremonies and symbolic rituals, often involving special garments and river baptisms. In some churches, large, open-air services involving African-based music and dance are common. As the faith become more embedded among African communities, analysts predict it may eventually emerge as the principle Christian denomination practiced in southern Africa."
+ ReligionMessianicChristian:0 "This religion, founded in Belgian Congo, is based on the teachings of Simon Kimbangu who founded his church in 1921. It is one of the few independent churches founded by Africans. Kimbangu, a Baptist teacher, started his church and mass movement after gaining fame for his ability to miraculously heal people and his interpretation of the bible. Although he was detained by the Belgian authorities, his church endures and is one of the largest churches in Congo. The church has an extensive hierarchy and preaches a puritan set of beliefs including a rejection of violence, dance, tobacco, alcohol, and polygamy. Despite efforts by authorities to suppress the church, it continues to grow and offer a strict structure that many central Africans admire."
+
+ tourism_info:0 "Tourist Level: [?tourism_infrastructure]"
+
+ Religious_Decisions:0 "Religion Decisions"
+ Religious_Decisions_desc:0 ""
+
+ setup_protestant_missions_TT:0 "§C-Will Establish Protestant Missions in all States§!"
+ protestant_missionary_activity_TT:0 "§C-Will Gradually Increase the Protestant Population Nationwide\n-10% Building Speed Bonus\n-Will Slowly Give Free Investments into Industrializaiton and Development Funds for the first two levels of development\n-The Longer this is active the more expensive late game development will become\n-[USA.GetNameWithFlag] Influence will Slowly Increase\n-May Destabilize the Nation if Protestantism is not the predominant  religion\n-Random Monthly Chance of a free missing technology if missing any of the pre-requiste techs for upgrading states to either Industrialized or Developed status\n-Will Slowly Increase Conservative Support (Max 25%)§!"
+
+ Invite_Protestant_Missionaries:0 "Invite Protestant Missionaries"
+ Suspend_Protestant_Missionry_Activity:0 "Suspend Protestant Proselytization"
+ Protestant_Missionaries:0 "Active Protestant Missionaries"
+
+ Invite_Sunni_Missionaries:0 "Invite Sunni Missionaries"
+ Suspend_Sunni_Missionry_Activity:0 "Suspend Sunni Proselytization"
+ Sunni_Missionaries:0 "Active Sunni Missionaries"
+
+ Invite_Shia_Missionaries:0 "Invite Shia Missionaries"
+ Suspend_Shia_Missionry_Activity:0 "Suspend Shia Proselytization"
+ Shia_Missionaries:0 "Active Shia Missionaries"
+
+
+ setup_shia_missions_TT:0 "§C-Will Establish Shia Missions in all States§!"
+ shia_missionary_activity_TT:0 "§C-Will Gradually Increase the Shia Population Nationwide\n-10% Conscription Factor Bonus\n-Increase Volunteers Limit by 2\n-The Longer this is active the more expensive late game development will become\n-[PER.GetNameWithFlag] Influence will Slowly Increase\n-May Destabilize the Nation if Shia is not the predominant  religion\n-While Active, Recieve a 25% Bonus to RGO Techs]\n-40% Trade Discount with Iran\n-Will Slowly Increase Shia Islamist Support (Max 25%)§!"
+
+ setup_sunni_missions_TT:0 "§C-Will Establish Sunni Missions in all States§!" 
+ sunni_missionary_activity_TT:0 "§C-Will Gradually Increase the Sunni Population Nationwide\n-Random Monthly Chance of Recieving Financial Supprot from the Arab Gulf\n-The Longer this is active the more expensive late game development will become\n-[SAU.GetNameWithFlag] Influence will Slowly Increase\n-May Destabilize the Nation if Sunni is not the predominant  religion\n-While Active, Recieve a 25% Bonus to RGO Techs]n-25% Trade Discount with several Middle Eastern and Arab Gulf Nations\n-Will Slowly Increase Islamist Support (Max 25%)§!"
+
+ setup_catholic_missions_TT:0 "§C-Will Establish Catholic Missions in all States§!"
+ missionary_qualification_check_TT:0 "Is an Under Developed Nation"
+ catholic_missionary_activity_TT:0 "§C-Will Gradually Increase the Catholic Population Nationwide\n-Political Power Factor Bonus 15%\n-Will Slowly Give Free Investments into Industrializaiton and Development Funds for the first two levels of development\n-The Longer this is active the more expensive late game development will become\n-[VTC.GetNameWithFlag] Influence will Slowly Increase\n-May Destabilize the Nation if Catholicism is not the predominant  religion\n-Random Monthly Chance of a free missing technology if missing any of the pre-requiste techs for upgrading states to either Industrialized or Developed status\n-Will Slowly Increase Christian Democratic Support (Max 25%)§!"
+
+ Invite_Catholic_Missionaries:0 "Invite Catholic Missionaries"
+ Suspend_Catholic_Missionry_Activity:0 "Suspend Catholic Proselytization"
+ Catholic_Missionaries:0 "Active Catholic Missionaries"
  
- 
- 
- 
+ anti_religion_campaign_TT:0 "Launch a new anti religion campaign. This will increase Atheist support accross the nation."
  
  Metric_Conversion_Act:0 "Metric Conversion Act"
  Mass_Transit_Revitilization_Act:0 "Mass Transit Revitilization Act"
