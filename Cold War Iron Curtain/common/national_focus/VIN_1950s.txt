@@ -747,7 +747,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Establish_the_Pathet_Lao 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Establish_the_Pathet_Lao"}
-		icon = GFX_goal_unknown
+		icon = GFX_Establish_the_Pathet_Lao
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -825,7 +825,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Begin_the_Offensives 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Begin_the_Offensives"}
-		icon = GFX_goal_unknown
+		icon = GFX_Begin_the_Offensive
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -843,7 +843,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Strike_Dong_Khe 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Strike_Dong_Khe"}
-		icon = GFX_goal_unknown
+		icon = GFX_Battle_of_Don_Khe
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -878,7 +878,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_North_First_Outlook 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_North_First_Outlook"}
-		icon = GFX_goal_unknown
+		icon = GFX_North_First_Outlook
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -894,7 +894,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Abide_by_the_Accords 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Abide_by_the_Accords"}
-		icon = GFX_goal_unknown
+		icon = GFX_Abide_by_the_geneva_Accords
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -910,7 +910,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Combat_Operation_Passage_to_Freedom 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Combat_Operation_Passage_to_Freedom"}
-		icon = GFX_goal_unknown
+		icon = GFX_Passing_Freedom
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -927,7 +927,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Recall_Our_Southern_Comrades 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Recall_Our_Southern_Comrades"}
-		icon = GFX_goal_unknown
+		icon = GFX_Withdraw_southern_comrades
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -944,7 +944,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_A_Peaceful_Struggle 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_A_Peaceful_Struggle"}
-		icon = GFX_goal_unknown
+		icon = GFX_Peaceful_struggle
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -986,7 +986,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_The_Bandung_Conference 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_The_Bandung_Conference"}
-		icon = GFX_goal_unknown
+		icon = GFX_The_bandung_conference
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1118,7 +1118,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Safeguard_the_Pathet_Lao 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Safeguard_the_Pathet_Lao"}
-		icon = GFX_goal_unknown
+		icon = GFX_Safegaurde_the_pathet_lao
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1157,7 +1157,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Ignore_Southern_VWP_Objections 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Ignore_Southern_VWP_Objections"}
-		icon = GFX_goal_unknown
+		icon = GFX_Ignore_southern_VWP_objectons
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1208,7 +1208,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Force_the_Closure_of_the_American_Consulate 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Force_the_Closure_of_the_American_Consulate"}
-		icon = GFX_goal_unknown
+		icon = GFX_Force_Closure_of_the_American_consulate
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1559,7 +1559,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_The_Battle_of_Coloniale_Route_4 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_The_Battle_of_Coloniale_Route_4"}
-		icon = GFX_goal_unknown
+		icon = GFX_The_Battle_of_Coloniale_route_four
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1591,7 +1591,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Captured_French_Infantry_Equipment 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Captured_French_Infantry_Equipment"}
-		icon = GFX_goal_unknown
+		icon = GFX_Captured_French_Infantry_Equipment
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1610,7 +1610,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Aquisitioned_French_Artillery 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Aquisitioned_French_Artillery"}
-		icon = GFX_goal_unknown
+		icon = GFX_Acquisition_French_artillery
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1629,7 +1629,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Prepare_to_Strike_the_De_Lattre_Line 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Prepare_to_Strike_the_De_Lattre_Line"}
-		icon = GFX_goal_unknown
+		icon = GFX_strike_the_de_latter_line
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1648,7 +1648,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Strike_Vinh_Yen 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Strike_Vinh_Yen"}
-		icon = GFX_goal_unknown
+		icon = GFX_Strike_Vin_Yenh
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1680,7 +1680,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Attack_Mao_Khe 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Attack_Mao_Khe"}
-		icon = GFX_goal_unknown
+		icon = GFX_Attack_Mao_Khe
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1712,7 +1712,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_The_Battle_of_the_Day_River 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_The_Battle_of_the_Day_River"}
-		icon = GFX_goal_unknown
+		icon = GFX_The_battle_of_the_day_river
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1744,7 +1744,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Propaganda_Warfare 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Propaganda_Warfare"}
-		icon = GFX_goal_unknown
+		icon = GFX_Propaganda_Warfare
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1762,7 +1762,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Recover_Our_Losses 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Recover_Our_Losses"}
-		icon = GFX_goal_unknown
+		icon = GFX_Recover_Our_Losses
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1781,7 +1781,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_The_Hoa_Binh_Campaign 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_The_Hoa_Binh_Campaign"}
-		icon = GFX_goal_unknown
+		icon = GFX_Hoa_Binh_Campaign
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1815,7 +1815,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Seize_the_Black_River_Valley 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Seize_the_Black_River_Valley"}
-		icon = GFX_goal_unknown
+		icon = GFX_Battle_of_Black_River_Valley
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1847,7 +1847,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Raid_French_Supply_Lines 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Raid_French_Supply_Lines"}
-		icon = GFX_goal_unknown
+		icon = GFX_Raid_French_Supply_Lines
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1866,7 +1866,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_The_Invasion_of_Laos 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_The_Invasion_of_Laos"}
-		icon = GFX_goal_unknown
+		icon = GFX_Invade_Laos
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1899,7 +1899,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_The_57_Days_of_Hell 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_The_57_Days_of_Hell"}
-		icon = GFX_goal_unknown
+		icon = GFX_57_days_of_hell
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1918,7 +1918,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_The_Battle_of_Dien_Bien_Phu 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_The_Battle_of_Dien_Bien_Phu"}
-		icon = GFX_goal_unknown
+		icon = GFX_The_Battle_of_Dien_Bien_Phu
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1950,7 +1950,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Raid_French_Laotian_Bases 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Raid_French_Laotian_Bases"}
-		icon = GFX_goal_unknown
+		icon = GFX_Raid_French_Laotian_bases
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -1982,7 +1982,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Establish_Viengxay_Tunnel_Network 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Establish_Viengxay_Tunnel_Network"}
-		icon = GFX_goal_unknown
+		icon = GFX_Establish_viengxay_tunnel_network
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2000,7 +2000,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Transfer_Authority_to_the_Pathet_Lao 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Transfer_Authority_to_the_Pathet_Lao"}
-		icon = GFX_goal_unknown
+		icon = GFX_Transfer_authority_to_the_pathet_lao
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2022,7 +2022,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Failure_of_the_Refferendum 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Failure_of_the_Refferendum"}
-		icon = GFX_goal_unknown
+		icon = GFX_Failure_of_the_Reforendum
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2038,7 +2038,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Ignore_the_Plight_of_our_Southern_Comrades 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Ignore_the_Plight_of_our_Southern_Comrades"}
-		icon = GFX_goal_unknown
+		icon = GFX_Ignore_the_plight_of_our_southern_comrades
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2230,7 +2230,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Maintain_the_Personality_Cult 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Maintain_the_Personality_Cult"}
-		icon = GFX_goal_unknown
+		icon = GFX_Maintain_the_personality_cult
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2248,7 +2248,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Continue_to_Ignore_the_Protests_of_the_Southern_Faction 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Continue_to_Ignore_the_Protests_of_the_Southern_Faction"}
-		icon = GFX_goal_unknown
+		icon = GFX_Continue_to_ignore_the_protests_of_the_southern_faction
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2266,7 +2266,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Restoring_the_Northern_Economy 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Restoring_the_Northern_Economy"}
-		icon = GFX_goal_unknown
+		icon = GFX_Restart_the_Northern_Economy
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2302,7 +2302,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Acknwoledge_the_Failure_of_the_Geneva_Accords 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Acknwoledge_the_Failure_of_the_Geneva_Accords"}
-		icon = GFX_goal_unknown
+		icon = GFX_Acknowledge_the_failure_of_the_Geneva_accords
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2321,7 +2321,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Reject_The_Errors_of_Stalin 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Reject_The_Errors_of_Stalin"}
-		icon = GFX_goal_unknown
+		icon = GFX_Reject_the_errors_of_Stalin
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2344,7 +2344,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Release_Political_Prisoners 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Release_Political_Prisoners"}
-		icon = GFX_goal_unknown
+		icon = GFX_Release_political_prisoners
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2467,7 +2467,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Allow_Targetted_Assasinations 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Allow_Targetted_Assasinations"}
-		icon = GFX_goal_unknown
+		icon = GFX_Allow_targeted_assassinations
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2485,7 +2485,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Announce_the_Three_Year_Plan 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Announce_the_Three_Year_Plan"}
-		icon = GFX_goal_unknown
+		icon = GFX_Three_Year_Plan
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2506,7 +2506,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Attempt_To_Salvage_Geneva 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Attempt_To_Salvage_Geneva"}
-		icon = GFX_goal_unknown
+		icon = GFX_Attempt_to_Salvage_Geneva
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2542,7 +2542,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Invest_in_Modern_Industry 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Invest_in_Modern_Industry"}
-		icon = GFX_goal_unknown
+		icon = GFX_Invest_in_modern_industry
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2597,7 +2597,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Collaboration_with_the_Bourgeois 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Collaboration_with_the_Bourgeois"}
-		icon = GFX_goal_unknown
+		icon = GFX_Collaboration_the_the_bourgeois
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2633,7 +2633,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_The_Fifteenth_Plenum_of_the_VWP 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_The_Fifteenth_Plenum_of_the_VWP"}
-		icon = GFX_goal_unknown
+		icon = GFX_Fifthteen_Plenum_of_the_VWP
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2643,7 +2643,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 			focus = VIN_Collectivize_the_Countryside
 		}
 		prerequisite = {
-			focus = VIN_Invest_in_Modern_Industry
+			focus = VIN_Invest_in_Modern_Industry 
 		}
 		x = 36
 		y = 19
@@ -2654,7 +2654,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_General_Secretary_Le_Duan 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_General_Secretary_Le_Duan"}
-		icon = GFX_goal_unknown
+		icon = GFX_Lee_Duan
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2669,7 +2669,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_General_Secretary_Vo_Nguyen_Giap 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_General_Secretary_Vo_Nguyen_Giap"}
-		icon = GFX_goal_unknown
+		icon = GFX_Vo_Nguyen_Giap
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2684,7 +2684,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_General_Secretary_Truong_Chinh 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_General_Secretary_Truong_Chinh"}
-		icon = GFX_goal_unknown
+		icon = GFX_Truong_chinh
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2699,7 +2699,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Restart_the_War_In_the_South 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Restart_the_War_In_the_South"}
-		icon = GFX_goal_unknown
+		icon = GFX_Restart_the_War_in_the_South
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2730,7 +2730,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Repeal_Liberalization_Measures 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Repeal_Liberalization_Measures"}
-		icon = GFX_goal_unknown
+		icon = GFX_Repeal_liberalization_measures
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2745,7 +2745,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Reactivate_Southern_Cells 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Reactivate_Southern_Cells"}
-		icon = GFX_goal_unknown
+		icon = GFX_Reactivate_southern_cells
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2766,7 +2766,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Continue_North_First_Endeavors 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Continue_North_First_Endeavors"}
-		icon = GFX_goal_unknown
+		icon = GFX_North_First_outlook
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2784,7 +2784,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Side_with_the_Soviets 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Side_with_the_Soviets"}
-		icon = GFX_goal_unknown
+		icon = GFX_Side_with_the_Soviets
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2810,7 +2810,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Allow_Moderate_Liberalization 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Allow_Moderate_Liberalization"}
-		icon = GFX_goal_unknown
+		icon = GFX_VIN_Allow_Moderate_Liberalization
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2854,7 +2854,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Side_with_Mao 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Side_with_Mao"}
-		icon = GFX_Comrade_Mao
+		icon = GFX_Side_with_Mao
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2898,7 +2898,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Purge_the_Moderates_and_Southerners 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Purge_the_Moderates_and_Southerners"}
-		icon = GFX_goal_unknown
+		icon = GFX_Purge_moderates_and_southerners
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2916,7 +2916,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Sideline_Moderate_Officials 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Sideline_Moderate_Officials"}
-		icon = GFX_goal_unknown
+		icon = GFX_Sideline_the_moderates
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {
@@ -2937,7 +2937,7 @@ custom_effect_tooltip = gulag_factor_increase_TT
 	focus = {
 		id = VIN_Sideline_Southern_Radicals 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = VIN_Sideline_Southern_Radicals"}
-		icon = GFX_goal_unknown
+		icon = GFX_Sideline_southern_radicals
 		search_filters = {IC_FILTER}
 		cost = 5.00
 		prerequisite = {

@@ -1,0 +1,46 @@
+﻿l_english:
+
+ sf_forces:0 "Special Forces" # has to be repeated (already in technologies) for Categories
+
+#from temp
+ sf_bonus:0 "Special Forces Bonus"
+ med_tank_bonus:0 "Main Battle Tank Bonus"
+ mech_bonus:0 "Mechanized Bonus"
+ infantry_bonus_generic:0 "Infantry Bonus"
+ light_armor_bonus:0 "Light Armor Bonus"
+ motor_bonus:0 "Motorized Bonus"
+ naval_heli_plane_bonus:0 "Naval Helicopter Bonus"
+ lt_air_bonus:0 "Light Airplane Bonus"
+ radar_bonus:0 "Radar Bonus"
+ chemical_weapon_bonus:0 "Chemical Weapon Bonus"
+ armor_heavy_bonus:0 "Heavy Armor Bonus"
+ screen_hull_heavy_bonus:0 "Screen Bonus"
+ strat_bomber_bonus:0 "Strategic Bomber Bonus"
+ fighter_interceptor_bonus:0 "Interceptor Bonus"
+ electronics_tech_bonus:0 "Electronics Technology Bonus"
+
+# were missing from 50s Generic
+ cat_medium_armor_research:0 "Main Battle Tank Research Speed"
+ cat_heavy_armor_research:0 "Heavy Armor Research Speed"
+ organic_research:0 "Organic research Speed"
+ ecoenergy_research:0 "Ecological Energy Research Speed"
+ renewables_research:0 "Renewable Energy Research Speed"
+ ss_tech_research:0 "Submarines Research Speed"
+ carrier_tech_research:0 "Carriers Research Speed"
+ screen_tech_research:0 "Screen Ships Research Speed"
+ capital_tech_research:0 "Capital Ships Research Speed"
+ naval_bomber_research:0 "Naval Bombers Research Speed"
+ tp_tech_research:0 "Transports Research Speed"
+ marine_tech_research:0 "Marines Research Speed"
+ tactical_bomber_research:0 "Tactical Bombers Research Speed"
+ cat_strategic_bomber_research:0 "Strategic Bombers Research Speed"
+ transport_air_research:0 "Air Transport Research Speed"
+ air_quad_engine:0 "Four-Engine Airplanes"
+ infantry_tech_research:0 "Infantry Research Speed"
+
+# missing
+ anti_communist_propaganda:0 "Anti-Communist Propaganda"
+ Fight_Crime:0 "Fight Crime"
+ National_Export_Import_Corporation:0 "National Import/Export Corporation"
+ INTEL_EFFICIENCY:0 "Intel efficiency: $VAL|%+$"
+ ESTIMATED_NAVAL_POWER_SUPREMACY:0 "Friendly supremacy: $US|0Y$\nEnemy supremacy: $THEM|Y$"

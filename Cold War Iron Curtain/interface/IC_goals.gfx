@@ -13818,7 +13818,1353 @@ spriteTypes = {
 		name = "GFX_materialism"
 		texturefile = "gfx/interface/goals/materialism.dds" 
 	}
+	SpriteType = {
+		name = "GFX_Attempt_to_Salvage_Geneva"
+		texturefile = "gfx/interface/goals/Attempt_to_Salvage_Geneva.tga" 
+	}	
+	SpriteType = {
+		name = "GFX_VIN_Allow_Moderate_Liberalization"
+		texturefile = "gfx/interface/goals/VIN_Allow_Moderate_Liberalization.tga" 
+	}		
+	SpriteType = {
+		name = "GFX_Fifthteen_Plenum_of_the_VWP"
+		texturefile = "gfx/interface/goals/Fifthteen_Plenum_of_the_VWP.tga" 
+	}
+	SpriteType = {
+		name = "GFX_North_First_Outlook"
+		texturefile = "gfx/interface/goals/North_First_outlook.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Abide_by_the_geneva_Accords"
+		texturefile = "gfx/interface/goals/Abide_by_the_geneva_Accords.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Acknowledge_the_failure_of_the_Geneva_accords"
+		texturefile = "gfx/interface/goals/Acknowledge_the_failure_of_the_Geneva_accords.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_57_days_of_hell"
+		texturefile = "gfx/interface/goals/57_days_of_hell.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Allow_targeted_assassinations"
+		texturefile = "gfx/interface/goals/Allow_targeted_assassinations.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Attack_Mao_Khe"
+		texturefile = "gfx/interface/goals/Attack_Mao_Khe.tga" 	
+	}
 	
-	
-	
+	SpriteType = {
+		name = "GFX_Battle_of_Black_River_Valley"
+		texturefile = "gfx/interface/goals/Battle_of_Black_River_Valley.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Battle_of_Don_Khe"
+		texturefile = "gfx/interface/goals/Battle_of_Don_Khe.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Begin_the_Offensive"
+		texturefile = "gfx/interface/goals/Begin_the_Offensive.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Captured_French_Infantry_Equipment"
+		texturefile = "gfx/interface/goals/Captured_French_Infantry_Equipment.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Collaboration_the_the_bourgeois"
+		texturefile = "gfx/interface/goals/Collaboration_the_the_bourgeois.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Establish_the_Pathet_Lao"
+		texturefile = "gfx/interface/goals/Establish_the_Pathet_Lao.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Acquisition_French_artillery"
+		texturefile = "gfx/interface/goals/Acquisition_French_artillery.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Continue_to_ignore_the_protests_of_the_southern_faction"
+		texturefile = "gfx/interface/goals/Continue_to_ignore_the_protests_of_the_southern_faction.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Establish_viengxay_tunnel_network"
+		texturefile = "gfx/interface/goals/Establish_viengxay_tunnel_network.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Failure_of_the_Reforendum"
+		texturefile = "gfx/interface/goals/Failure_of_the_Reforendum.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Force_Closure_of_the_American_consulate"
+		texturefile = "gfx/interface/goals/Force_Closure_of_the_American_consulate.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Ignore_the_plight_of_our_southern_comrades"
+		texturefile = "gfx/interface/goals/Ignore_the_plight_of_our_southern_comrades.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Invade_Laos"
+		texturefile = "gfx/interface/goals/Invade_Laos.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Invest_in_modern_industry"
+		texturefile = "gfx/interface/goals/Invest_in_modern_industry.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Lee_Duan"
+		texturefile = "gfx/interface/goals/Lee_Duan.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Maintain_the_personality_cult"
+		texturefile = "gfx/interface/goals/Maintain_the_personality_cult.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Peaceful_struggle"
+		texturefile = "gfx/interface/goals/Peaceful_struggle.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Propaganda_Warfare"
+		texturefile = "gfx/interface/goals/Propaganda_Warfare.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Purge_moderates_and_southerners"
+		texturefile = "gfx/interface/goals/Purge_moderates_and_southerners.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Raid_French_Laotian_bases"
+		texturefile = "gfx/interface/goals/Raid_French_Laotian_bases.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Reactivate_southern_cells"
+		texturefile = "gfx/interface/goals/Reactivate_southern_cells.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Recover_Our_Losses"
+		texturefile = "gfx/interface/goals/Recover_Our_Losses.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Reject_the_errors_of_Stalin"
+		texturefile = "gfx/interface/goals/Reject_the_errors_of_Stalin.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Release_political_prisoners"
+		texturefile = "gfx/interface/goals/Release_political_prisoners.tga" 	
+	}			
+	SpriteType = {
+		name = "GFX_strike_the_de_latter_line"
+		texturefile = "gfx/interface/goals/strike_the_de_latter_line.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Strike_Vin_Yenh"
+		texturefile = "gfx/interface/goals/Strike_Vin_Yenh.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_The_battle_of_the_day_river"
+		texturefile = "gfx/interface/goals/The_battle_of_the_day_river.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_The_Battle_of_Dien_Bien_Phu"
+		texturefile = "gfx/interface/goals/The_Battle_of_Dien_Bien_Phu.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Transfer_authority_to_the_pathet_lao"
+		texturefile = "gfx/interface/goals/Transfer_authority_to_the_pathet_lao.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Restart_the_Northern_Economy"
+		texturefile = "gfx/interface/goals/Restart_the_Northern_Economy.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Allow_targeted_assassinations"
+		texturefile = "gfx/interface/goals/Allow_targeted_assassinations.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Three_Year_Plan"
+		texturefile = "gfx/interface/goals/Three_Year_Plan.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Vo_Nguyen_Giap"
+		texturefile = "gfx/interface/goals/Vo_Nguyen_Giap.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Truong_chinh"
+		texturefile = "gfx/interface/goals/Truong_chinh.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Restart_the_War_in_the_South"
+		texturefile = "gfx/interface/goals/Restart_the_War_in_the_South.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Repeal_liberalization_measures"
+		texturefile = "gfx/interface/goals/Repeal_liberalization_measures.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Side_with_the_Soviets"
+		texturefile = "gfx/interface/goals/Side_with_the_Soviets.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Side_with_Mao"
+		texturefile = "gfx/interface/goals/Side_with_Mao.tga" 	
+	}								
+	SpriteType = {
+		name = "GFX_Sideline_the_moderates"
+		texturefile = "gfx/interface/goals/Sideline_the_moderates.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_Sideline_southern_radicals"
+		texturefile = "gfx/interface/goals/Sideline_southern_radicals.tga" 	
+	}						
+	SpriteType = {
+		name = "GFX_North_First_outlook"
+		texturefile = "gfx/interface/goals/North_First_outlook.tga" 	
+	}							
+	SpriteType = {
+		name = "GFX_apoint_Diljas_as_president_2"
+		texturefile = "gfx/interface/goals/apoint_Diljas_as_president_2.tga" 	
+	}										
+	SpriteType = {
+		name = "GFX_Imprison_Rajk"
+		texturefile = "gfx/interface/goals/Imprison_Rajk.tga" 	
+	}										
+	SpriteType = {
+		name = "GFX_Premire_Imre_Nagy"
+		texturefile = "gfx/interface/goals/Premire_Imre_Nagy.tga" 	
+	}										
+	SpriteType = {
+		name = "GFX_Primire_Jonas_Kadar"
+		texturefile = "gfx/interface/goals/Primire_Jonas_Kadar.tga" 	
+	}										
+	SpriteType = {
+		name = "GFX_Rehabilitate_Kadar"
+		texturefile = "gfx/interface/goals/Rehabilitate_Kadar.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Hungarian_Peoples_Air_Force"
+		texturefile = "gfx/interface/goals/Hungarian_Peoples_Air_Force.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Hungarian_Peoples_Army_ground_force"
+		texturefile = "gfx/interface/goals/Hungarian_Peoples_Army_ground_force.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Hungarian_Air_Defense_2"
+		texturefile = "gfx/interface/goals/Hungarian_Air_Defense_2.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Hungarian_Army_3"
+		texturefile = "gfx/interface/goals/Hungarian_Army_3.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Role_Out_Rajak"
+		texturefile = "gfx/interface/goals/Role_Out_Rajak.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Rehabilitate_Kadar"
+		texturefile = "gfx/interface/goals/Rehabilitate_Kadar.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Safegaurde_the_pathet_lao"
+		texturefile = "gfx/interface/goals/Safegaurde_the_pathet_lao.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_The_Battle_of_Coloniale_route_four"
+		texturefile = "gfx/interface/goals/The_Battle_of_Coloniale_route_four.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Raid_French_Supply_Lines"
+		texturefile = "gfx/interface/goals/Raid_French_Supply_Lines.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Hoa_Binh_Campaign"
+		texturefile = "gfx/interface/goals/Hoa_Binh_Campaign.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_The_bandung_conference"
+		texturefile = "gfx/interface/goals/The_bandung_conference.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Withdraw_southern_comrades"
+		texturefile = "gfx/interface/goals/Withdraw_southern_comrades.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Passing_Freedom"
+		texturefile = "gfx/interface/goals/Passing_Freedom.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Ignore_southern_VWP_objectons"
+		texturefile = "gfx/interface/goals/Ignore_southern_VWP_objectons.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Withdraw_southern_comrades"
+		texturefile = "gfx/interface/goals/Withdraw_southern_comrades.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_ETR_KMT_victory"
+		texturefile = "gfx/interface/goals/ETR_KMT_victory.tga" 	
+	}					
+	SpriteType = {
+		name = "GFX_ahmetjan_qasimi_consolidates_power"
+		texturefile = "gfx/interface/goals/ahmetjan_qasimi_consolidates_power.tga" 	
+	}					
+	SpriteType = {
+		name = "GFX_The_Marshal_Triumphant"
+		texturefile = "gfx/interface/goals/The_Marshal_Triumphant.tga" 	
+	}					
+	SpriteType = {
+		name = "GFX_Yulners_consolidates_Power"
+		texturefile = "gfx/interface/goals/Yulners_consolidates_Power.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Let_Gorbachev_Handle_Policy"
+		texturefile = "gfx/interface/goals/Let_Gorbachev_Handle_Policy.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Appoint_andropov_to_head_of_the_KGB"
+		texturefile = "gfx/interface/goals/Appoint_andropov_to_head_of_the_KGB.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Let_schelokov_handle_repressions"
+		texturefile = "gfx/interface/goals/Let_schelokov_handle_repressions.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Forbid_Solzhenitsyn_from_collecting_the_Nobel_prize"
+		texturefile = "gfx/interface/goals/Forbid_Solzhenitsyn_from_collecting_the_Nobel_prize.tga" 	
+	}			
+	SpriteType = {
+		name = "GFX_Maintain_stance_towards_Russian_nationalism"
+		texturefile = "gfx/interface/goals/Maintain_stance_towards_Russian_nationalism.tga" 	
+	}			
+	SpriteType = {
+		name = "GFX_Intensify_Slavic_Nationalism"
+		texturefile = "gfx/interface/goals/Intensify_Slavic_Nationalism.tga" 	
+	}			
+	SpriteType = {
+		name = "GFX_Incite_Russian_cross_ural_migration"
+		texturefile = "gfx/interface/goals/Incite_Russian_cross_ural_migration.tga" 	
+	}			
+	SpriteType = {
+		name = "GFX_Encourage_Russian_Language_Education"
+		texturefile = "gfx/interface/goals/Encourage_Russian_Language_Education.tga" 	
+	}			
+	SpriteType = {
+		name = "GFX_Abolish_tribal_function"
+		texturefile = "gfx/interface/goals/Abolish_tribal_function.tga" 	
+	}			
+	SpriteType = {
+		name = "GFX_Elite_Communist_Party"
+		texturefile = "gfx/interface/goals/Elite_Communist_Party.tga" 	
+	}			
+	SpriteType = {
+		name = "GFX_Abandon_Siberian_Development"
+		texturefile = "gfx/interface/goals/Abandon_Siberian_Development.tga" 	
+	}			
+	SpriteType = {
+		name = "GFX_Increase_Siberian_Industrialization"
+		texturefile = "gfx/interface/goals/Increase_Siberian_Industrialization.tga" 	
+	}			
+	SpriteType = {
+		name = "GFX_Follow_Tikhonovs_lead"
+		texturefile = "gfx/interface/goals/Follow_Tikhonovs_lead.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Deal_with_the_Sakharov_case"
+		texturefile = "gfx/interface/goals/Deal_with_the_Sakharov_case.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_the_celostnost"
+		texturefile = "gfx/interface/goals/the_celostnost.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Deport_Central_Asians_Through_the_Urals"
+		texturefile = "gfx/interface/goals/Deport_Central_Asians_Through_the_Urals.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Intensify_Slavic_Nationalism"
+		texturefile = "gfx/interface/goals/Intensify_Slavic_Nationalism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Promote_stability"
+		texturefile = "gfx/interface/goals/Promote_stability.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Deal_with_the_Sakharov_case"
+		texturefile = "gfx/interface/goals/Deal_with_the_Sakharov_case.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Spiral_into_political_stiffening"
+		texturefile = "gfx/interface/goals/Spiral_into_political_stiffening.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Stir_up_soviet_patriotism"
+		texturefile = "gfx/interface/goals/Stir_up_soviet_patriotism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Use_the_Black_Market_as_a_Cushon"
+		texturefile = "gfx/interface/goals/Use_the_Black_Market_as_a_Cushon.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Integrate_illegal_traders_into_the_party"
+		texturefile = "gfx/interface/goals/Integrate_illegal_traders_into_the_party.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Integrate_the_RemainingPatches"
+		texturefile = "gfx/interface/goals/Integrate_the_RemainingPatches.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Call_For_National_Stability"
+		texturefile = "gfx/interface/goals/Call_For_National_Stability.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Implement_Harsh_Monitary_Reform"
+		texturefile = "gfx/interface/goals/Implement_Harsh_Monitary_Reform.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_combat_the_parallel_economy"
+		texturefile = "gfx/interface/goals/combat_the_parallel_economy.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Deal_Multiply_special_rewards"
+		texturefile = "gfx/interface/goals/Multiply_special_rewards.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Intensify_idiological_represion"
+		texturefile = "gfx/interface/goals/Intensify_idiological_represion.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Elevate_Brezhnev_to_Marshal_of_the_Soviet_Union"
+		texturefile = "gfx/interface/goals/Elevate_Brezhnev_to_Marshal_of_the_Soviet_Union.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Give_Up_on_the_cohesion_dream"
+		texturefile = "gfx/interface/goals/Give_Up_on_the_cohesion_dream.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Feudalize_soviet_officers"
+		texturefile = "gfx/interface/goals/Feudalize_soviet_officers.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Crack_Down_On_The_Black_Market"
+		texturefile = "gfx/interface/goals/Crack_Down_On_The_Black_Market.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Multiply_special_rewards"
+		texturefile = "gfx/interface/goals/Multiply_special_rewards.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Rehabilitate_Purged_KPA_Writers"
+		texturefile = "gfx/interface/goals/Rehabilitate_Purged_KPA_Writers.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_A_developed_socialism"
+		texturefile = "gfx/interface/goals/A_developed_socialism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Real_Socialism"
+		texturefile = "gfx/interface/goals/Real_Socialism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Extend_minimum_sentences"
+		texturefile = "gfx/interface/goals/Extend_minimum_sentences.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_National_Populism"
+		texturefile = "gfx/interface/goals/National_Populism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Deal_with_the_Sakharov_case"
+		texturefile = "gfx/interface/goals/Deal_with_the_Sakharov_case.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Expand_asylums"
+		texturefile = "gfx/interface/goals/Expand_asylums.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Encourage_Nepotism"
+		texturefile = "gfx/interface/goals/Encourage_Nepotism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Hygene"
+		texturefile = "gfx/interface/goals/Hygene.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_allow_private_plots"
+		texturefile = "gfx/interface/goals/allow_private_plots.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_reject_price_increase"
+		texturefile = "gfx/interface/goals/reject_price_increase.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Use_Brezhnev_as_a_Figurhead"
+		texturefile = "gfx/interface/goals/Use_Brezhnev_as_a_Figurhead.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Peaceful_managment"
+		texturefile = "gfx/interface/goals/Peaceful_managment.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_intimidate_intelegent_people"
+		texturefile = "gfx/interface/goals/intimidate_intelegent_people.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Linear_Programing"
+		texturefile = "gfx/interface/goals/Linear_Programing.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_tilt_inflation"
+		texturefile = "gfx/interface/goals/tilt_inflation.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Produce_system_analysis"
+		texturefile = "gfx/interface/goals/Produce_system_analysis.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Fight_Against_Tech_obsolesence"
+		texturefile = "gfx/interface/goals/Fight_Against_Tech_obsolesence.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Replace_workers_with_robotics"
+		texturefile = "gfx/interface/goals/Replace_workers_with_robotics.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Soviet_Computer_system_2"
+		texturefile = "gfx/interface/goals/Soviet_Computer_system_2.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_support_allende"
+		texturefile = "gfx/interface/goals/support_allende.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Iraq_treaty_of_friendship"
+		texturefile = "gfx/interface/goals/Iraq_treaty_of_friendship.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Improve_relations_with_Libya"
+		texturefile = "gfx/interface/goals/Improve_relations_with_Libya.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_strenthen_ties_with_syria"
+		texturefile = "gfx/interface/goals/strenthen_ties_with_syria.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_the_T72"
+		texturefile = "gfx/interface/goals/the_T72.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_improve_the_T64"
+		texturefile = "gfx/interface/goals/improve_the_T64.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Focus_on_Airborne_Cavalry"
+		texturefile = "gfx/interface/goals/Focus_on_Airborne_Cavalry.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Thermobaric_ATGM_warheads"
+		texturefile = "gfx/interface/goals/Thermobaric_ATGM_warheads.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Diplomacy_with_Poland"
+		texturefile = "gfx/interface/goals/Diplomacy_with_Poland.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Fix_Khruschevs_shortcomings"
+		texturefile = "gfx/interface/goals/Fix_Khruschevs_shortcomings.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_A_BMP_for_the_VDV"
+		texturefile = "gfx/interface/goals/A_BMP_for_the_VDV.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Improve_Long_Range_Paratrooper_Capability"
+		texturefile = "gfx/interface/goals/Improve_Long_Range_Paratrooper_Capability.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Advanced_Airborne_Armor"
+		texturefile = "gfx/interface/goals/Advanced_Airborne_Armor.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_ZSU_afghanski"
+		texturefile = "gfx/interface/goals/ZSU_afghanski.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_ATGMS_to_outrage_the_west"
+		texturefile = "gfx/interface/goals/ATGMS_to_outrage_the_west.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Gun_ATGMs_for_AT_guns"
+		texturefile = "gfx/interface/goals/Gun_ATGMs_for_AT_guns.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Abandon_the_Missle_tank_Fantisy"
+		texturefile = "gfx/interface/goals/Abandon_the_Missle_tank_Fantisy.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Restore_rights_to_oppressed_nationalities"
+		texturefile = "gfx/interface/goals/Restore_rights_to_oppressed_nationalities.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Crush_Spider"
+		texturefile = "gfx/interface/goals/Crush_Spider.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Establish_an_inquiry_about_youth_and_socialism"
+		texturefile = "gfx/interface/goals/Establish_an_inquiry_about_youth_and_socialism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Crack_down_on_intellectual_reformism"
+		texturefile = "gfx/interface/goals/Crack_down_on_intellectual_reformism.tga" 	
+	}
+	SpriteType = {
+		name = "GFX_Ameliorate_proper_use_of_ideology"
+		texturefile = "gfx/interface/goals/Ameliorate_proper_use_of_ideology.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Improve_Civil_Implication_in_political_matters"
+		texturefile = "gfx/interface/goals/Improve_Civil_Implication_in_political_matters.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Bring_the_soviet_people_into_line"
+		texturefile = "gfx/interface/goals/Bring_the_soviet_people_into_line.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_encourage_reactionary_propaganda"
+		texturefile = "gfx/interface/goals/encourage_reactionary_propaganda.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Combat_alchoholism"
+		texturefile = "gfx/interface/goals/Combat_alchoholism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Raise_Tax_on_Alchohol"
+		texturefile = "gfx/interface/goals/Raise_Tax_on_Alchohol.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Criminalize_intoxication"
+		texturefile = "gfx/interface/goals/Criminalize_intoxication.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_sway_the_people"
+		texturefile = "gfx/interface/goals/sway_the_people.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Avoid_police"
+		texturefile = "gfx/interface/goals/Avoid_police.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Nuclear_war"
+		texturefile = "gfx/interface/goals/Nuclear_war.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_The_Brezhnev_Doctrine"
+		texturefile = "gfx/interface/goals/The_Brezhnev_Doctrine.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Increase_Collegiality_of_power"
+		texturefile = "gfx/interface/goals/Increase_Collegiality_of_power.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Set_up_sensible_prevention_programs"
+		texturefile = "gfx/interface/goals/Set_up_sensible_prevention_programs.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Use_national_Pride_to_combat_alcoholism"
+		texturefile = "gfx/interface/goals/Use_national_Pride_to_combat_alcoholism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Establish_new_Prevention_Programs"
+		texturefile = "gfx/interface/goals/Establish_new_Prevention_Programs.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Link_Crime_rise_to_intoxication"
+		texturefile = "gfx/interface/goals/Link_Crime_rise_to_intoxication.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Provide_psychological_support"
+		texturefile = "gfx/interface/goals/Provide_psychological_support.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Fund_social_integration_Programs"
+		texturefile = "gfx/interface/goals/Fund_social_integration_Programs.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Begin_the_7_year_plan"
+		texturefile = "gfx/interface/goals/Begin_the_7_year_plan.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Propose_Fleet_limit_treaty"
+		texturefile = "gfx/interface/goals/Propose_Fleet_limit_treaty.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Develope_East_German_Chemical_Industry"
+		texturefile = "gfx/interface/goals/Develope_East_German_Chemical_Industry.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Fuel_Hungarian_Civil_Aviation_Giant"
+		texturefile = "gfx/interface/goals/Fuel_Hungarian_Civil_Aviation_Giant.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Finance_Polish_Conglomorants"
+		texturefile = "gfx/interface/goals/Finance_Polish_Conglomorants.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Help_Bulgaria_With_Farming"
+		texturefile = "gfx/interface/goals/Help_Bulgaria_With_Farming.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Hault_Overselous_Communist_Parties"
+		texturefile = "gfx/interface/goals/Hault_Overselous_Communist_Parties.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Draft_a_huge_stimulus_package"
+		texturefile = "gfx/interface/goals/Draft_a_huge_stimulus_package.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Joint_Soviet_Czech_automobile_industry"
+		texturefile = "gfx/interface/goals/Joint_Soviet_Czech_automobile_industry.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Launch_International_detente"
+		texturefile = "gfx/interface/goals/Launch_International_detente.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Apoint_Merkolouv_as_head_of_the_MVD"
+		texturefile = "gfx/interface/goals/Apoint_Merkolouv_as_head_of_the_MVD.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Exicute_Buglanin"
+		texturefile = "gfx/interface/goals/Exicute_Buglanin.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Replace_Molotov_With_Kosygin"
+		texturefile = "gfx/interface/goals/Replace_Molotov_With_Kosygin.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_KGB_Judiciary_powers"
+		texturefile = "gfx/interface/goals/KGB_Judiciary_powers.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Decide_Zhukovs_Fate"
+		texturefile = "gfx/interface/goals/Decide_Zhukovs_Fate.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Second_Great_Purge"
+		texturefile = "gfx/interface/goals/Second_Great_Purge.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Purge_Lysenko2"
+		texturefile = "gfx/interface/goals/Purge_Lysenko2.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Imprison_Molotov"
+		texturefile = "gfx/interface/goals/Imprison_Molotov.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Anti_stalinism"
+		texturefile = "gfx/interface/goals/Anti_stalinism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Normalize_Yugoslav_Relations"
+		texturefile = "gfx/interface/goals/Normalize_Yugoslav_Relations.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Hault_the_five_Year_Plan"
+		texturefile = "gfx/interface/goals/Hault_the_five_Year_Plan.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Found_the_KGB"
+		texturefile = "gfx/interface/goals/Found_the_KGB.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Japanese_peace_treaty_compromise"
+		texturefile = "gfx/interface/goals/Japanese_peace_treaty_compromise.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Fund_Indochinese_development"
+		texturefile = "gfx/interface/goals/Fund_Indochinese_development.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Soften_credit_access_to_Mao"
+		texturefile = "gfx/interface/goals/Soften_credit_access_to_Mao.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Joint_Korean_civilian_development"
+		texturefile = "gfx/interface/goals/Joint_Korean_civilian_development.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Develop_Chinese_border_infrastructure"
+		texturefile = "gfx/interface/goals/Develop_Chinese_border_infrastructure.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Fund_Burmese_shipyards_and_ports"
+		texturefile = "gfx/interface/goals/Fund_Burmese_shipyards_and_ports.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Renounce_Chinese_border_claims"
+		texturefile = "gfx/interface/goals/Renounce_Chinese_border_claims.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Indian_industrial_kickstart"
+		texturefile = "gfx/interface/goals/Indian_industrial_kickstart.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Increase_KGB_Funding"
+		texturefile = "gfx/interface/goals/Increase_KGB_Funding.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Denounce_Recent_Violent_Outbursts"
+		texturefile = "gfx/interface/goals/Denounce_Recent_Violent_Outbursts.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Reshuffle_the_politburo"
+		texturefile = "gfx/interface/goals/Reshuffle_the_politburo.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Allow_military_service_in_the_KGB"
+		texturefile = "gfx/interface/goals/Allow_military_service_in_the_KGB.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Increase_merkoulovs_progression"
+		texturefile = "gfx/interface/goals/Increase_merkoulovs_progression.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Reinstate_penal_battalions"
+		texturefile = "gfx/interface/goals/Reinstate_penal_battalions.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Power_struggle"
+		texturefile = "gfx/interface/goals/Power_struggle.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Help_Mongolian_Agriculture"
+		texturefile = "gfx/interface/goals/Help_Mongolian_Agriculture.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Asian_relations_warming"
+		texturefile = "gfx/interface/goals/Asian_relations_warming.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Heal_European_relations"
+		texturefile = "gfx/interface/goals/Heal_European_relations.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Indochina_Peace"
+		texturefile = "gfx/interface/goals/Indochina_Peace.tga" 	
+	}				
+	SpriteType = {
+		name = "GFX_Purge_Hardliners"
+		texturefile = "gfx/interface/goals/Purge_Hardliners.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Frame_Voroshilov"
+		texturefile = "gfx/interface/goals/Frame_Voroshilov.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Raise_Komsomol_funding"
+		texturefile = "gfx/interface/goals/Raise_Komsomol_funding.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Turn_the_Komsomol_into_a_spy_network"
+		texturefile = "gfx/interface/goals/Turn_the_Komsomol_into_a_spy_network.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Negotiate_common_commercial_border"
+		texturefile = "gfx/interface/goals/Negotiate_common_commercial_border.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Encourage_European_tech_transfer"
+		texturefile = "gfx/interface/goals/Encourage_European_tech_transfer.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Prepare_conferences_to_settle_the_economic_union"
+		texturefile = "gfx/interface/goals/Prepare_conferences_to_settle_the_economic_union.tga" 	
+	}				
+	SpriteType = {
+		name = "GFX_Create_a_common_agricultural_policy"
+		texturefile = "gfx/interface/goals/Create_a_common_agricultural_policy.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Found_the_Pan_European_Union"
+		texturefile = "gfx/interface/goals/Found_the_Pan_European_Union.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Force_eastern_European_military_spending_limitation"
+		texturefile = "gfx/interface/goals/Force_eastern_European_military_spending_limitation.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Abandon_Pharaonic_projects"
+		texturefile = "gfx/interface/goals/Abandon_Pharaonic_projects.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Put_upper_limit_military_spending"
+		texturefile = "gfx/interface/goals/Put_upper_limit_military_spending.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Exchange_Rate"
+		texturefile = "gfx/interface/goals/Exchange_Rate.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Inaugurate_pan_European_research_grants"
+		texturefile = "gfx/interface/goals/Inaugurate_pan_European_research_grants.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Form_Licensing_Office"
+		texturefile = "gfx/interface/goals/Form_Licensing_Office.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_European_Scale_Wargames"
+		texturefile = "gfx/interface/goals/European_Scale_Wargames.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Prepare_an_inter_European_investment_plan"
+		texturefile = "gfx/interface/goals/Prepare_an_inter_European_investment_plan.tga" 	
+	}				
+	SpriteType = {
+		name = "GFX_Turn_Reparations_into_Foreign_direct_investments"
+		texturefile = "gfx/interface/goals/Turn_Reparations_into_Foreign_direct_investments.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Soviet_Conglomorates"
+		texturefile = "gfx/interface/goals/Soviet_Conglomorates.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Participate_in_Euratom"
+		texturefile = "gfx/interface/goals/Participate_in_Euratom.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Soften_quotas_for_the_state_farms"
+		texturefile = "gfx/interface/goals/Soften_quotas_for_the_state_farms.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Fragment_Large_Farms"
+		texturefile = "gfx/interface/goals/Fragment_Large_Farms.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Propose_border_demilitarization_accords_with_west_Germany"
+		texturefile = "gfx/interface/goals/Propose_border_demilitarization_accords_with_west_Germany.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Propose_unified_deutchmark_zone"
+		texturefile = "gfx/interface/goals/Propose_unified_deutchmark_zone.tga" 	
+	}						
+	SpriteType = {
+		name = "GFX_Finance_escs_mediteranien_ports"
+		texturefile = "gfx/interface/goals/Finance_escs_mediteranien_ports.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Raise_Prucurement_prices"
+		texturefile = "gfx/interface/goals/Raise_Prucurement_prices.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Reallow_workforce_mobility"
+		texturefile = "gfx/interface/goals/Reallow_workforce_mobility.tga" 	
+	}				
+	SpriteType = {
+		name = "GFX_Maintain_factory_Discipline"
+		texturefile = "gfx/interface/goals/Maintain_factory_Discipline.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Expand_eastern_European_commissions_power"
+		texturefile = "gfx/interface/goals/Expand_eastern_European_commissions_power.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Prepare_Agrarian_Legislation"
+		texturefile = "gfx/interface/goals/Prepare_Agrarian_Legislation.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Declare_a_renewed_soviet_agriculture"
+		texturefile = "gfx/interface/goals/Declare_a_renewed_soviet_agriculture.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Invest_in_cutting_edge_sectors"
+		texturefile = "gfx/interface/goals/Invest_in_cutting_edge_sectors.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Intensify_electronics_developments"
+		texturefile = "gfx/interface/goals/Intensify_electronics_developments.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Build_up_chemical_industry"
+		texturefile = "gfx/interface/goals/Build_up_chemical_industry.tga" 	
+	}						
+	SpriteType = {
+		name = "GFX_Redirect_Engineers_to_the_Civilian_Sector"
+		texturefile = "gfx/interface/goals/Redirect_Engineers_to_the_Civilian_Sector.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Build_Petrochemical_plants_in_baku"
+		texturefile = "gfx/interface/goals/Build_Petrochemical_plants_in_baku.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Insert_the_conglomerates_in_the_global_economy"
+		texturefile = "gfx/interface/goals/Insert_the_conglomerates_in_the_global_economy.tga" 	
+	}				
+	SpriteType = {
+		name = "GFX_Restart_public_works_projects"
+		texturefile = "gfx/interface/goals/Restart_public_works_projects.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Improve_inner_oblast_highways"
+		texturefile = "gfx/interface/goals/Improve_inner_oblast_highways.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Connect_the_caucus_republics"
+		texturefile = "gfx/interface/goals/Connect_the_caucus_republics.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Modernize_Train_engines_from_coal_to_fuel"
+		texturefile = "gfx/interface/goals/Modernize_Train_engines_from_coal_to_fuel.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Develop_Gaz_group"
+		texturefile = "gfx/interface/goals/Develop_Gaz_group.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Encourage_IZHMASH_truck_production"
+		texturefile = "gfx/interface/goals/Encourage_IZHMASH_truck_production.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Begin_international_market_research"
+		texturefile = "gfx/interface/goals/Begin_international_market_research.tga" 	
+	}						
+	SpriteType = {
+		name = "GFX_Unlock_funds_to_adjust_for_quality"
+		texturefile = "gfx/interface/goals/Unlock_funds_to_adjust_for_quality.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_One_Family_one_car"
+		texturefile = "gfx/interface/goals/One_Family_one_car.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Manufacture_TVs"
+		texturefile = "gfx/interface/goals/Manufacture_TVs.tga" 	
+	}				
+	SpriteType = {
+		name = "GFX_Increase_agricultural_investments"
+		texturefile = "gfx/interface/goals/Increase_agricultural_investments.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Create_water_Commission"
+		texturefile = "gfx/interface/goals/Create_water_Commission.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Renounce_forced_collectivization"
+		texturefile = "gfx/interface/goals/Renounce_forced_collectivization.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Limit_Maximum_Farmland_Ownership"
+		texturefile = "gfx/interface/goals/Limit_Maximum_Farmland_Ownership.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Transform_machine_tractor_stations"
+		texturefile = "gfx/interface/goals/Transform_machine_tractor_stations.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Prevent_Kulakism_Resurgence"
+		texturefile = "gfx/interface/goals/Prevent_Kulakism_Resurgence.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Prepare_for_a_new_agricultural_era"
+		texturefile = "gfx/interface/goals/Prepare_for_a_new_agricultural_era.tga" 	
+	}	
+	SpriteType = {
+		name = "GFX_Further_Subsidy_Pharmaceutical_Companies"
+		texturefile = "gfx/interface/goals/Further_Subsidy_Pharmaceutical_Companies.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Allow_more_funds_for_Moskovitch"
+		texturefile = "gfx/interface/goals/Allow_more_funds_for_Moskovitch.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Household_well-being_committee"
+		texturefile = "gfx/interface/goals/Household_well-being_committee.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Paper"
+		texturefile = "gfx/interface/goals/Paper.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Encourage_synthesized_fabric_innovations"
+		texturefile = "gfx/interface/goals/Encourage_synthesized_fabric_innovations.tga" 	
+	}						
+	SpriteType = {
+		name = "GFX_The_Great_Consumer_shift"
+		texturefile = "gfx/interface/goals/The_Great_Consumer_shift.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Advance_appliance_production"
+		texturefile = "gfx/interface/goals/Advance_appliance_production.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Create_subsidiaries_in_the_Baltics"
+		texturefile = "gfx/interface/goals/Create_subsidiaries_in_the_Baltics.tga" 	
+	}				
+	SpriteType = {
+		name = "GFX_Develop_consumer_hubs"
+		texturefile = "gfx/interface/goals/Develop_consumer_hubs.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Massively_provide_food_cooking_goods"
+		texturefile = "gfx/interface/goals/Massively_provide_food_cooking_goods.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Stimulate_touristic_outlook"
+		texturefile = "gfx/interface/goals/Stimulate_touristic_outlook.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Promote_red_tourism"
+		texturefile = "gfx/interface/goals/Promote_red_tourism.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Create_Joint_Comecon_Touristic_Commissions"
+		texturefile = "gfx/interface/goals/Create_Joint_Comecon_Touristic_Commissions.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Develop_Black_Sea_resorts"
+		texturefile = "gfx/interface/goals/Develop_Black_Sea_resorts.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Increase_Skiing"
+		texturefile = "gfx/interface/goals/Increase_Skiing.tga" 	
+	}						
+	SpriteType = {
+		name = "GFX_Form_Cruise_Agencies"
+		texturefile = "gfx/interface/goals/Form_Cruise_Agencies.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_Increase_Workers_Wages"
+		texturefile = "gfx/interface/goals/Increase_Workers_Wages.tga" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}				
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}				
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}						
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}				
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}						
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}				
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}				
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}						
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}				
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}						
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}				
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}		
+	SpriteType = {
+		name = "GFX_"
+		texturefile = "gfx/interface/goals/" 	
+	}																																																			
 }

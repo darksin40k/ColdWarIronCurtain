@@ -5,9 +5,109 @@ focus_tree = {
 		factor = 1
 	}
 	default = yes
+
 	focus = {
-		id = interior_external 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_external"}
+		id = interior_minister 
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_minister"}
+		icon = GFX_Freedom
+		search_filters = {IC_FILTER}
+		cost = 1.00
+		prerequisite = {
+			focus = reshuffle_cabinet
+		}
+		x = 57
+		y = 1
+		completion_reward = {
+			country_event = ic_generic_events.5
+		}
+	}
+
+	focus = {
+		id = interior_civil_1 
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_civil_1"}
+		icon = GFX_goal_generic_secret_weapon
+		search_filters = {IC_FILTER}
+		cost = 10.00
+		prerequisite = {
+			focus = interior_minister
+		}
+		mutually_exclusive = {
+			focus = interior_internal_1
+			focus = interior_external_1
+		}
+		x = 55
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_manpower = -1000
+			}
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = interior_civil_2 
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_civil_2"}
+		icon = GFX_police
+		search_filters = {IC_FILTER}
+		cost = 10.00
+		prerequisite = {
+			focus = interior_civil_1
+		}
+		x = 55
+		y = 3
+		completion_reward = {
+			add_ideas = police_state
+			add_popularity = {
+				ideology = nationalism
+				popularity = 0.02
+			}
+			add_popularity = {
+				ideology = trotskyism
+				popularity = 0.02
+			}
+		}
+	}
+
+	focus = {
+		id = interior_internal_1 
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_internal_1"}
+		icon = GFX_goal_BEL_FreeSchools
+		search_filters = {IC_FILTER}
+		cost = 10.00
+		prerequisite = {
+			focus = interior_minister
+		}
+		mutually_exclusive = {
+			focus = interior_civil_1
+			focus = interior_external_1
+		}
+		x = 57
+		y = 2
+		completion_reward = {
+			add_ideas = internal_audits
+		}
+	}
+
+	focus = {
+		id = interior_internal_2 
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_internal_2"}
+		icon = GFX_DeathTracks2
+		search_filters = {IC_FILTER}
+		cost = 10.00
+		prerequisite = {
+			focus = interior_internal_1
+		}
+		x = 57
+		y = 3
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = interior_external_1
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_external_1"}
 		icon = GFX_Brainpower
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -20,31 +120,31 @@ focus_tree = {
 		}
 		x = 59
 		y = 2
-			
-			completion_reward = {
-					add_ideas = intel_network
-				}
-
+		completion_reward = {
+			add_ideas = intel_network
+		}
 	}
+
 	focus = {
-		id = interior_externalplus 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_externalplus"}
+		id = interior_external_2 
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_external_2"}
 		icon = GFX_KanslergadeMeeting
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
-			focus = interior_external
+			focus = interior_external_1
 		}
 		x = 59
 		y = 3
 		completion_reward = {
-			add_ideas = thicc_intel_network
 			remove_ideas = intel_network
+			add_ideas = thicc_intel_network
 		}
 	}
+
 	focus = {
 		id = military_naval_expansion 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = military_naval_expansion"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = military_naval_expansion"}
 		icon = GFX_focus_generic_navy_battleship2
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -54,16 +154,19 @@ focus_tree = {
 		x = 57
 		y = 6
 		available = {
-			AND = {
-				any_state = {
-					is_coastal = yes
-					is_controlled_by = ROOT
-				}
-				NOT = {
-					has_idea = infrastructure_boost_general
-					has_idea = civilian_boost_general
-					has_idea = military_boost_general
-					has_idea = navy_boost_general
+			NOT = {
+				has_idea = infrastructure_boost_general
+				has_idea = civilian_boost_general
+				has_idea = military_boost_general
+				has_idea = navy_boost_general
+			}
+			any_owned_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+				OR = {
+					owner = {
+						num_of_military_factories > 4
+					}
 				}
 			}
 		}
@@ -76,7 +179,7 @@ focus_tree = {
 			if = {
 				limit = {
 					owner = {
-						num_of_military_factories > 10
+						num_of_military_factories > 4
 					}
 				}
 				random_owned_controlled_state = {
@@ -98,109 +201,10 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = interior_minister 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_minister"}
-		icon = GFX_Freedom
-		search_filters = {IC_FILTER}
-		cost = 1.00
-		prerequisite = {
-			focus = reshuffle_cabinet
-		}
-		x = 57
-		y = 1
-			
-			completion_reward = {
-					country_event = ic_generic_events.5
-				}
 
-	}
-	focus = {
-		id = interior_civil_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_civil_1"}
-		icon = GFX_goal_generic_secret_weapon
-		search_filters = {IC_FILTER}
-		cost = 10.00
-		prerequisite = {
-			focus = interior_minister
-		}
-		mutually_exclusive = {
-			focus = interior_internal_1
-			focus = interior_external
-		}
-		x = 55
-		y = 2
-			
-			completion_reward = {
-					random_owned_controlled_state = {
-							add_manpower = -1000
-						}
-					add_stability = 0.10
-				}
-
-	}
-	focus = {
-		id = interior_civil_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_civil_2"}
-		icon = GFX_police
-		search_filters = {IC_FILTER}
-		cost = 10.00
-		prerequisite = {
-			focus = interior_civil_1
-		}
-		x = 55
-		y = 3
-			
-			completion_reward = {
-					add_ideas = police_state
-			add_popularity = {
-				ideology = nationalism
-				popularity = 0.02
-			}
-			add_popularity = {
-				ideology = trotskyism
-				popularity = 0.02
-			}
-				}
-
-	}
-	focus = {
-		id = interior_internal_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_internal_1"}
-		icon = GFX_goal_BEL_FreeSchools
-		search_filters = {IC_FILTER}
-		cost = 10.00
-		prerequisite = {
-			focus = interior_minister
-		}
-		mutually_exclusive = {
-			focus = interior_civil_1
-			focus = interior_external
-		}
-		x = 57
-		y = 2
-		completion_reward = {
-			add_ideas = internal_audits
-		}
-	}
-	focus = {
-		id = interior_internal_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = interior_internal_2"}
-		icon = GFX_DeathTracks2
-		search_filters = {IC_FILTER}
-		cost = 10.00
-		prerequisite = {
-			focus = interior_internal_1
-		}
-		x = 57
-		y = 3
-		completion_reward = {
-			add_stability = 0.05
-		}
-	}
 	focus = {
 		id = civilian_industrialize 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = civilian_industrialize"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = civilian_industrialize"}
 		icon = GFX_focus_generic_industry_3
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -241,9 +245,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = education_minister 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_minister"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_minister"}
 		icon = GFX_prioritize_western_education
 		search_filters = {IC_FILTER}
 		cost = 1.00
@@ -252,15 +257,14 @@ focus_tree = {
 		}
 		x = 51
 		y = 1
-			
-			completion_reward = {
-					country_event = ic_generic_events.4
-				}
-
+		completion_reward = {
+			country_event = ic_generic_events.4
+		}
 	}
+
 	focus = {
 		id = education_progressive_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_progressive_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_progressive_1"}
 		icon = GFX_focus_research2
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -273,19 +277,18 @@ focus_tree = {
 		}
 		x = 49
 		y = 2
-			
-			completion_reward = {
-					add_ideas = creative_education
+		completion_reward = {
+			add_ideas = creative_education
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.03
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = education_progressive_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_progressive_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_progressive_2"}
 		icon = GFX_Agriculture_2
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -294,19 +297,19 @@ focus_tree = {
 		}
 		x = 49
 		y = 3
-			completion_reward = {
-				remove_ideas = creative_education
-				add_ideas = academic_state
+		completion_reward = {
+			remove_ideas = creative_education
+			add_ideas = academic_state
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.02
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = education_conservative_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_conservative_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_conservative_1"}
 		icon = GFX_StolenPapers
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -319,9 +322,8 @@ focus_tree = {
 		}
 		x = 51
 		y = 2
-			
-			completion_reward = {
-					add_ideas = more_escuelas
+		completion_reward = {
+			add_ideas = more_escuelas
 			add_popularity = {
 				ideology = centrist
 				popularity = 0.01
@@ -330,12 +332,12 @@ focus_tree = {
 				ideology = conservative
 				popularity = 0.01
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = education_conservative_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_conservative_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_conservative_2"}
 		icon = GFX_Gre_Education_Reform
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -344,18 +346,19 @@ focus_tree = {
 		}
 		x = 51
 		y = 3
-			completion_reward = {
-				add_ideas = patriotic_schools
+		completion_reward = {
+			remove_ideas = more_escuelas
+			add_ideas = patriotic_schools
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.02
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = education_militarist_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_militarist_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_militarist_1"}
 		icon = GFX_mass_conscription
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -368,19 +371,18 @@ focus_tree = {
 		}
 		x = 53
 		y = 2
-			
-			completion_reward = {
-					add_ideas = military_colleges
+		completion_reward = {
+			add_ideas = military_youth_focus
 			add_popularity = {
 				ideology = nationalism
 				popularity = 0.04
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = education_militarist_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_militarist_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = education_militarist_2"}
 		icon = GFX_goal_generic_more_territorial_claims
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -389,19 +391,19 @@ focus_tree = {
 		}
 		x = 53
 		y = 3
-			
-			completion_reward = {
-					add_ideas = military_youth_focus
+		completion_reward = {
+			remove_ideas = military_youth_focus
+			add_ideas = military_colleges
 			add_popularity = {
 				ideology = nationalism
 				popularity = 0.04
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = civilian_urban_renewal 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = civilian_urban_renewal"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = civilian_urban_renewal"}
 		icon = GFX_gre_housing_1
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -419,6 +421,13 @@ focus_tree = {
 				has_idea = military_boost_general
 				has_idea = navy_boost_general
 			}
+			any_owned_state = {
+				OR = {
+					owner = {
+						num_of_factories > 4
+					}
+				}
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -433,7 +442,7 @@ focus_tree = {
 						include_locked = yes
 					}
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -445,16 +454,17 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = military_revise_plans 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = military_revise_plans"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = military_revise_plans"}
 		icon = GFX_focus_generic_little_entente
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
 			focus = interior_civil_2
 			focus = interior_internal_2
-			focus = interior_externalplus
+			focus = interior_external_2
 		}
 		x = 57
 		y = 5
@@ -488,9 +498,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = defense_minister 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_minister"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_minister"}
 		icon = GFX_focus_chi_army_reform
 		search_filters = {IC_FILTER}
 		cost = 1.00
@@ -499,15 +510,14 @@ focus_tree = {
 		}
 		x = 63
 		y = 1
-			
-			completion_reward = {
-					country_event = ic_generic_events.6
-				}
-
+		completion_reward = {
+			country_event = ic_generic_events.6
+		}
 	}
+
 	focus = {
 		id = defense_quartermaster_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_quartermaster_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_quartermaster_1"}
 		icon = GFX_black_military
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -520,15 +530,14 @@ focus_tree = {
 		}
 		x = 61
 		y = 2
-			
-			completion_reward = {
-					add_ideas = veteran_affairs_generic
-				}
-
+		completion_reward = {
+			add_ideas = veteran_affairs_generic
+		}
 	}
+
 	focus = {
 		id = defense_quartermaster_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_quartermaster_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_quartermaster_2"}
 		icon = GFX_president_rhee
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -537,19 +546,19 @@ focus_tree = {
 		}
 		x = 61
 		y = 3
-			
-			completion_reward = {
-				add_ideas = vet_aff_and_relief
+		completion_reward = {
+			remove_ideas = veteran_affairs_generic
+			add_ideas = vet_aff_and_relief
 			add_popularity = {
 				ideology = democratic
 				popularity = 0.02
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = defense_reformer_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_reformer_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_reformer_1"}
 		icon = GFX_PreparetheTroops
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -562,15 +571,14 @@ focus_tree = {
 		}
 		x = 63
 		y = 2
-			
-			completion_reward = {
-					add_ideas = more_mil_staff
-				}
-
+		completion_reward = {
+			add_ideas = more_mil_staff
+		}
 	}
+
 	focus = {
 		id = defense_reformer_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_reformer_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_reformer_2"}
 		icon = GFX_focus_internal_dissent
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -579,14 +587,60 @@ focus_tree = {
 		}
 		x = 63
 		y = 3
-			completion_reward = {
-					add_ideas = even_more_mil_staff
-				}
-
+		completion_reward = {
+			remove_ideas = more_mil_staff
+			add_ideas = even_more_mil_staff
+		}
 	}
+
+	focus = {
+		id = defense_finance_hawk_1 
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_finance_hawk_1"}
+		icon = GFX_RootoutFunding
+		search_filters = {IC_FILTER}
+		cost = 10.00
+		prerequisite = {
+			focus = defense_minister
+		}
+		mutually_exclusive = {
+			focus = defense_reformer_1
+			focus = defense_quartermaster_1
+		}
+		x = 65
+		y = 2
+		completion_reward = {
+			add_ideas = cheap_army
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.01
+			}
+		}
+	}
+
+	focus = {
+		id = defense_finance_hawk_2 
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_finance_hawk_2"}
+		icon = GFX_focus_generic_license_production
+		search_filters = {IC_FILTER}
+		cost = 10.00
+		prerequisite = {
+			focus = defense_finance_hawk_1
+		}
+		x = 65
+		y = 3
+		completion_reward = {
+			remove_ideas = cheap_army
+			add_ideas = cheap_ass_army
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.02
+			}
+		}
+	}
+
 	focus = {
 		id = army_intelligence 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = army_intelligence"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = army_intelligence"}
 		icon = GFX_goal_BEL_FederalParliament
 		search_filters = {IC_FILTER}
 		cost = 8.00
@@ -596,13 +650,12 @@ focus_tree = {
 		}
 		x = 6
 		y = 7
-			
-			completion_reward = {
-					army_experience = 10
-					add_ideas = army_intel
-				}
-
+		completion_reward = {
+			army_experience = 10
+			add_ideas = army_intel
+		}
 	}
+
 	focus = {
 		id = infantry_manufacturing 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = infantry_manufacturing"}
@@ -648,6 +701,9 @@ focus_tree = {
 		prerequisite = {
 			focus = escort_focus
 			focus = naval_organization
+		}
+		prerequisite = {
+			focus = shore_bombardment_focus
 		}
 		x = 14
 		y = 6
@@ -765,51 +821,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = defense_finance_hawk_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_finance_hawk_1"}
-		icon = GFX_RootoutFunding
-		search_filters = {IC_FILTER}
-		cost = 10.00
-		prerequisite = {
-			focus = defense_minister
-		}
-		mutually_exclusive = {
-			focus = defense_reformer_1
-			focus = defense_quartermaster_1
-		}
-		x = 65
-		y = 2
-			
-			completion_reward = {
-					add_ideas = cheap_army
-			add_popularity = {
-				ideology = liberal
-				popularity = 0.01
-			}
-				}
-
-	}
-	focus = {
-		id = defense_finance_hawk_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = defense_finance_hawk_2"}
-		icon = GFX_focus_generic_license_production
-		search_filters = {IC_FILTER}
-		cost = 10.00
-		prerequisite = {
-			focus = defense_finance_hawk_1
-		}
-		x = 65
-		y = 3
-		completion_reward = {
-			add_ideas = cheap_ass_army
-			add_popularity = {
-				ideology = liberal
-				popularity = 0.02
-			}
-		}
-
-	}
-	focus = {
 		id = military_industrial_complex 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = military_industrial_complex"}
 		icon = GFX_goal_generic_construct_mil_factory
@@ -829,6 +840,11 @@ focus_tree = {
 				has_idea = military_boost_general
 				has_idea = navy_boost_general
 			}
+			any_owned_state = {
+				owner = {
+					num_of_factories > 4
+				}
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -843,7 +859,7 @@ focus_tree = {
 						include_locked = yes
 					}
 					owner = {
-						num_of_military_factories > 10
+						num_of_military_factories > 4
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -857,7 +873,7 @@ focus_tree = {
 	}
 	focus = {
 		id = infrastructure_revise_planning 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = infrastructure_revise_planning"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = infrastructure_revise_planning"}
 		icon = GFX_canal
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -873,6 +889,11 @@ focus_tree = {
 				has_idea = military_boost_general
 				has_idea = navy_boost_general
 			}
+			any_owned_state = {
+				owner = {
+					num_of_factories > 4
+				}
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -886,7 +907,7 @@ focus_tree = {
 						size > 0
 					}
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				add_building_construction = {
@@ -902,7 +923,7 @@ focus_tree = {
 						size > 0
 					}
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				add_building_construction = {
@@ -918,7 +939,7 @@ focus_tree = {
 						size > 1
 					}
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				add_building_construction = {
@@ -929,9 +950,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = civilian_urban_services 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = civilian_urban_services"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = civilian_urban_services"}
 		icon = GFX_Focus_Tokyo
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -947,6 +969,20 @@ focus_tree = {
 				has_idea = military_boost_general
 				has_idea = navy_boost_general
 			}
+			any_owned_state = {
+				owner = {
+					num_of_factories > 4
+				}
+				owner = {
+					num_of_factories > 9
+				}
+				owner = {
+					num_of_factories > 14
+				}
+				owner = {
+					num_of_factories > 19
+				}
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -961,7 +997,7 @@ focus_tree = {
 						include_locked = yes
 					}
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -978,7 +1014,7 @@ focus_tree = {
 						size > 0
 					}
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				add_building_construction = {
@@ -994,7 +1030,7 @@ focus_tree = {
 						size > 1
 					}
 					owner = {
-						num_of_factories > 20
+						num_of_factories > 9
 					}
 				}
 				add_building_construction = {
@@ -1010,7 +1046,7 @@ focus_tree = {
 						size > 1
 					}
 					owner = {
-						num_of_factories > 30
+						num_of_factories > 14
 					}
 				}
 				add_building_construction = {
@@ -1026,7 +1062,7 @@ focus_tree = {
 						size > 1
 					}
 					owner = {
-						num_of_factories > 40
+						num_of_factories > 19
 					}
 				}
 				add_building_construction = {
@@ -1037,9 +1073,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = military_increase_spending 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = military_increase_spending"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = military_increase_spending"}
 		icon = GFX_focus_generic_tank_production
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -1055,6 +1092,13 @@ focus_tree = {
 				has_idea = military_boost_general
 				has_idea = navy_boost_general
 			}
+			any_owned_state = {
+				OR = {
+					owner = {
+						num_of_military_factories > 4
+					}
+				}
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -1069,7 +1113,7 @@ focus_tree = {
 						include_locked = yes
 					}
 					owner = {
-						num_of_military_factories > 10
+						num_of_military_factories > 4
 					}
 				}
 				add_extra_state_shared_building_slots = 1
@@ -1081,9 +1125,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = mil_naval_bases 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = mil_naval_bases"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = mil_naval_bases"}
 		icon = GFX_goal_generic_construct_naval_dockyard
 		search_filters = {IC_FILTER}
 		cost = 5.00
@@ -1099,6 +1144,25 @@ focus_tree = {
 			any_state = {
 				is_coastal = yes
 				is_controlled_by = ROOT
+			}
+			any_owned_state = {
+				OR = {
+					owner = {
+						num_of_military_factories > 4
+					}
+					owner = {
+						num_of_military_factories > 9
+					}
+					owner = {
+						num_of_military_factories > 14
+					}
+					owner = {
+						num_of_military_factories > 19
+					}
+					owner = {
+						num_of_military_factories > 24
+					}
+				}
 			}
 		}
 		completion_reward = {
@@ -1118,7 +1182,7 @@ focus_tree = {
 							include_locked = yes
 						}
 						owner = {
-							num_of_military_factories > 10
+							num_of_military_factories > 4
 						}
 					}
 					add_building_construction = {
@@ -1136,7 +1200,7 @@ focus_tree = {
 							include_locked = yes
 						}
 						owner = {
-							num_of_military_factories > 20
+							num_of_military_factories > 9
 						}
 					}
 					add_building_construction = {
@@ -1154,7 +1218,7 @@ focus_tree = {
 							include_locked = yes
 						}
 						owner = {
-							num_of_military_factories > 30
+							num_of_military_factories > 14
 						}
 					}
 					add_building_construction = {
@@ -1172,7 +1236,7 @@ focus_tree = {
 							include_locked = yes
 						}
 						owner = {
-							num_of_military_factories > 40
+							num_of_military_factories > 19
 						}
 					}
 					add_building_construction = {
@@ -1190,7 +1254,7 @@ focus_tree = {
 							include_locked = yes
 						}
 						owner = {
-							num_of_military_factories > 50
+							num_of_military_factories > 24
 						}
 					}
 					add_building_construction = {
@@ -1202,9 +1266,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = mil_air_bases 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = mil_air_bases"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = mil_air_bases"}
 		icon = GFX_goal_continuous_air_production
 		search_filters = {IC_FILTER}
 		cost = 5.00
@@ -1216,18 +1281,25 @@ focus_tree = {
 		}
 		x = 48
 		y = 7
+		available = {
+			any_owned_state = {
+				OR = {
+					owner = {
+						num_of_military_factories > 4
+					}
+				}
+			}
+		}
 		completion_reward = {
 			air_experience = 25
 			random_owned_controlled_state = {
 				limit = {
-					AND = {
-						free_building_slots = {
-							building = air_base
-							size > 2
-						}
-						owner = {
-							num_of_military_factories > 10
-						}
+					free_building_slots = {
+						building = air_base
+						size > 2
+					}
+					owner = {
+						num_of_military_factories > 4
 					}
 				}
 				add_building_construction = {
@@ -1238,9 +1310,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = mil_radar 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = mil_radar"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = mil_radar"}
 		icon = GFX_focus_generic_cryptologic_bomb
 		search_filters = {IC_FILTER}
 		cost = 2.00
@@ -1262,9 +1335,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = finalize_research_facility_low 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finalize_research_facility_low"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finalize_research_facility_low"}
 		icon = GFX_Focus_IssueType64s
 		search_filters = {IC_FILTER}
 		cost = 1.00
@@ -1279,20 +1353,19 @@ focus_tree = {
 		}
 		x = 6
 		y = 6
-			
-			completion_reward = {
-					army_experience = 50
-					remove_ideas = low_cost_facility
-					remove_ideas = infantry_facility
-					remove_ideas = infantry_cost_minus
-					remove_ideas = light_armor_cost_minus
-					remove_ideas = airborne_facility
-					remove_ideas = motor_cost_minus
-					remove_ideas = motor_facility
-					add_ideas = low_cost_facility_final
-				}
-
+		completion_reward = {
+			army_experience = 50
+			remove_ideas = low_cost_facility
+			remove_ideas = infantry_facility
+			remove_ideas = infantry_cost_minus
+			remove_ideas = light_armor_cost_minus
+			remove_ideas = airborne_facility
+			remove_ideas = motor_cost_minus
+			remove_ideas = motor_facility
+			add_ideas = low_cost_facility_final
+		}
 	}
+
 	focus = {
 		id = finalize_naval_facility_flexible 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finalize_naval_facility_flexible"}
@@ -2667,7 +2740,7 @@ focus_tree = {
 	}
 	focus = {
 		id = naval_repair 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = naval_repair"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = naval_repair"}
 		icon = GFX_goal_generic_construct_naval_dockyard
 		search_filters = {IC_FILTER}
 		cost = 8.00
@@ -2675,15 +2748,17 @@ focus_tree = {
 			focus = capital_attack
 			focus = navy_air_production
 		}
+		prerequisite = {
+			focus = marine_focus
+		}
 		x = 20
-		y = 6
-			
-			completion_reward = {
-					navy_experience = 10
-					add_ideas = naval_repair_facility
-				}
-
+		y = 6	
+		completion_reward = {
+			navy_experience = 10
+			add_ideas = naval_repair_facility
+		}
 	}
+
 	focus = {
 		id = guardian_angels 
  completion_reward = {log = "[GetDateText]: [Root.GetName]: id = guardian_angels"}
@@ -2893,7 +2968,7 @@ focus_tree = {
 	}
 	focus = {
 		id = finance_welfare_warrior_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_welfare_warrior_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_welfare_warrior_1"}
 		icon = GFX_focus_generic_concessions
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -2905,20 +2980,19 @@ focus_tree = {
 			focus = finance_finance_hawk_1
 		}
 		x = 31
-		y = 2
-			
-			completion_reward = {
-					add_ideas = safety_net
+		y = 2			
+		completion_reward = {
+			add_ideas = safety_net
 			add_popularity = {
 				ideology = socialist
 				popularity = 0.02
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = finance_welfare_warrior_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_welfare_warrior_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_welfare_warrior_2"}
 		icon = GFX_ReopentheStockMarkets
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -2926,10 +3000,10 @@ focus_tree = {
 			focus = finance_welfare_warrior_1
 		}
 		x = 31
-		y = 3
-			
-			completion_reward = {
-							add_ideas = welfare_state_plus
+		y = 3 
+		completion_reward = {
+			remove_ideas = safety_net
+			add_ideas = welfare_state_plus
 			add_popularity = {
 				ideology = maoism
 				popularity = 0.01
@@ -2938,12 +3012,12 @@ focus_tree = {
 				ideology = socialist
 				popularity = 0.01
 			}
-				}
+		}
 
 	}
 	focus = {
 		id = finance_subsidizer_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_subsidizer_1"}
+ 		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_subsidizer_1"}
 		icon = GFX_SAU_develop_ploesti_oil_fields
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -2956,9 +3030,8 @@ focus_tree = {
 		}
 		x = 33
 		y = 2
-			
-			completion_reward = {
-					add_ideas = subsidies_basic
+		completion_reward = {
+			add_ideas = subsidies_basic
 			add_popularity = {
 				ideology = Social_Democratic
 				popularity = 0.01
@@ -2967,12 +3040,12 @@ focus_tree = {
 				ideology = centrist
 				popularity = 0.01
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = finance_subsidizer_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_subsidizer_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_subsidizer_2"}
 		icon = GFX_SAU_develop_the_heavy_industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -2981,8 +3054,9 @@ focus_tree = {
 		}
 		x = 33
 		y = 3
-			completion_reward = {
-							add_ideas = subsidy_economy
+		completion_reward = {
+			remove_ideas = subsidies_basic
+			add_ideas = subsidy_economy
 			add_popularity = {
 				ideology = Social_Democratic
 				popularity = 0.01
@@ -2991,12 +3065,12 @@ focus_tree = {
 				ideology = centrist
 				popularity = 0.01
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = finance_finance_hawk_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_finance_hawk_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_finance_hawk_1"}
 		icon = GFX_InvestInNatal
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3009,9 +3083,8 @@ focus_tree = {
 		}
 		x = 35
 		y = 2
-			
-			completion_reward = {
-					add_ideas = save_money
+		completion_reward = {
+			add_ideas = save_money
 			add_popularity = {
 				ideology = liberal
 				popularity = 0.01
@@ -3020,12 +3093,12 @@ focus_tree = {
 				ideology = Liberal_Conservatism
 				popularity = 0.01
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = finance_finance_hawk_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_finance_hawk_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = finance_finance_hawk_2"}
 		icon = GFX_focus_renounce_the_treaty_of_triannon
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3034,18 +3107,19 @@ focus_tree = {
 		}
 		x = 35
 		y = 3
-			completion_reward = {
-							add_ideas = save_more_money
+		completion_reward = {
+			remove_ideas = save_money
+			add_ideas = save_more_money
 			add_popularity = {
 				ideology = liberal
 				popularity = 0.03
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = infrastructure_interstate 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = infrastructure_interstate"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = infrastructure_interstate"}
 		icon = GFX_FocusBuildRoads
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3063,6 +3137,11 @@ focus_tree = {
 				has_idea = military_boost_general
 				has_idea = navy_boost_general
 			}
+			any_owned_state = {
+				owner = {
+					num_of_factories > 4
+				}
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -3089,7 +3168,7 @@ focus_tree = {
 						size > 0
 					}
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				add_building_construction = {
@@ -3105,7 +3184,7 @@ focus_tree = {
 						size > 1
 					}
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				add_building_construction = {
@@ -3116,9 +3195,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = infrastructure_railway 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = infrastructure_railway"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = infrastructure_railway"}
 		icon = GFX_FocusBuildRailroads
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3134,6 +3214,11 @@ focus_tree = {
 				has_idea = military_boost_general
 				has_idea = navy_boost_general
 			}
+			any_owned_state = {
+				owner = {
+					num_of_factories > 4
+				}
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -3160,7 +3245,7 @@ focus_tree = {
 						size > 0
 					}
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				add_building_construction = {
@@ -3176,7 +3261,7 @@ focus_tree = {
 						size > 1
 					}
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				add_building_construction = {
@@ -3187,9 +3272,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = health_minister 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_minister"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_minister"}
 		icon = GFX_SEATO
 		search_filters = {IC_FILTER}
 		cost = 1.00
@@ -3199,14 +3285,14 @@ focus_tree = {
 		x = 39
 		y = 1
 			
-			completion_reward = {
-					country_event = ic_generic_events.2
-				}
-
+		completion_reward = {
+			country_event = ic_generic_events.2
+		}
 	}
+
 	focus = {
 		id = health_socialist_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_socialist_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_socialist_1"}
 		icon = GFX_Protest_in_favor_of_Cyprus
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3219,19 +3305,18 @@ focus_tree = {
 		}
 		x = 37
 		y = 2
-			
-			completion_reward = {
-					add_ideas = socialism_healthcare
+		completion_reward = {
+			add_ideas = socialism_healthcare
 			add_popularity = {
 				ideology = socialist
 				popularity = 0.02
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = health_socialist_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_socialist_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_socialist_2"}
 		icon = GFX_healthcare
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3240,18 +3325,19 @@ focus_tree = {
 		}
 		x = 37
 		y = 3
-			completion_reward = {
-							add_ideas = communism_healthcare
+		completion_reward = {
+			remove_ideas = socialism_healthcare
+			add_ideas = communism_healthcare
 			add_popularity = {
 				ideology = communism
 				popularity = 0.02
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = health_technocrat_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_technocrat_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_technocrat_1"}
 		icon = GFX_focus_research
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3263,10 +3349,9 @@ focus_tree = {
 			focus = health_finance_hawk_1
 		}
 		x = 39
-		y = 2
-			
-			completion_reward = {
-					add_ideas = medical_science
+		y = 2	
+		completion_reward = {
+			add_ideas = medical_science
 			add_popularity = {
 				ideology = centrist
 				popularity = 0.01
@@ -3275,12 +3360,12 @@ focus_tree = {
 				ideology = Social_Liberalism
 				popularity = 0.01
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = health_technocrat_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_technocrat_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_technocrat_2"}
 		icon = GFX_focus_research2
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3289,18 +3374,19 @@ focus_tree = {
 		}
 		x = 39
 		y = 3
-			completion_reward = {
-							add_ideas = medical_apotheosis
+		completion_reward = {
+			remove_ideas = medical_science
+			add_ideas = medical_apotheosis
 			add_popularity = {
 				ideology = Social_Liberalism
 				popularity = 0.02
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = health_finance_hawk_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_finance_hawk_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_finance_hawk_1"}
 		icon = GFX_goal_generic_neutrality_focus_Arabic
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3313,9 +3399,8 @@ focus_tree = {
 		}
 		x = 41
 		y = 2
-			
-			completion_reward = {
-					add_ideas = reduce_medical_bills
+		completion_reward = {
+			add_ideas = reduce_medical_bills
 			add_popularity = {
 				ideology = liberal
 				popularity = 0.01
@@ -3324,12 +3409,12 @@ focus_tree = {
 				ideology = Liberal_Conservatism
 				popularity = 0.01
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = health_finance_hawk_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_finance_hawk_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = health_finance_hawk_2"}
 		icon = GFX_goal_generic_neutrality_focus
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3338,18 +3423,19 @@ focus_tree = {
 		}
 		x = 41
 		y = 3
-			completion_reward = {
-							add_ideas = privatized_healthcare
+		completion_reward = {
+			remove_ideas = reduce_medical_bills
+			add_ideas = privatized_healthcare
 			add_popularity = {
 				ideology = liberal
 				popularity = 0.03
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = infrastructure_urban 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = infrastructure_urban"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = infrastructure_urban"}
 		icon = GFX_goal_generic_construction2
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3401,9 +3487,10 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = industry_minister 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_minister"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_minister"}
 		icon = GFX_focus_generic_industry_1
 		search_filters = {IC_FILTER}
 		cost = 1.00
@@ -3412,15 +3499,14 @@ focus_tree = {
 		}
 		x = 45
 		y = 1
-			
-			completion_reward = {
-					country_event = ic_generic_events.3
-				}
-
+		completion_reward = {
+			country_event = ic_generic_events.3
+		}
 	}
+
 	focus = {
 		id = industry_communist_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_communist_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_communist_1"}
 		icon = GFX_goal_ghetto_nkvd
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3433,19 +3519,18 @@ focus_tree = {
 		}
 		x = 43
 		y = 2
-			
-			completion_reward = {
-					add_ideas = activate_communism
+		completion_reward = {
+			add_ideas = activate_communism
 			add_popularity = {
 				ideology = communism
 				popularity = 0.02
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = industry_communist_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_communist_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_communist_2"}
 		icon = GFX_FactoryTown
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3454,8 +3539,9 @@ focus_tree = {
 		}
 		x = 43
 		y = 3
-			completion_reward = {
-							add_ideas = communism_intensifies
+		completion_reward = {
+			remove_ideas = activate_communism
+			add_ideas = communism_intensifies
 			add_popularity = {
 				ideology = communism
 				popularity = 0.01
@@ -3464,12 +3550,12 @@ focus_tree = {
 				ideology = trotskyism
 				popularity = 0.01
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = industry_rural_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_rural_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_rural_1"}
 		icon = GFX_Focus_RuralHousing
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3482,9 +3568,8 @@ focus_tree = {
 		}
 		x = 45
 		y = 2
-			
-			completion_reward = {
-					add_ideas = rural_development_spirit
+		completion_reward = {
+			add_ideas = rural_development_spirit
 			add_popularity = {
 				ideology = centrist
 				popularity = 0.01
@@ -3493,12 +3578,12 @@ focus_tree = {
 				ideology = maoism
 				popularity = 0.01
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = industry_rural_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_rural_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_rural_2"}
 		icon = GFX_focus_drought_relief
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3507,9 +3592,9 @@ focus_tree = {
 		}
 		x = 45
 		y = 3
-			completion_reward = {
-							remove_ideas = rural_development_spirit
-							add_ideas = have_furries_control_government
+		completion_reward = {
+			remove_ideas = rural_development_spirit
+			add_ideas = have_furries_control_government
 			add_popularity = {
 				ideology = centrist
 				popularity = 0.01
@@ -3522,12 +3607,12 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.04
 			}
-				}
-
+		}
 	}
+
 	focus = {
 		id = industry_capitalist_1 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_capitalist_1"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_capitalist_1"}
 		icon = GFX_CapitalistSystems
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3540,7 +3625,6 @@ focus_tree = {
 		}
 		x = 47
 		y = 2
-			
 		completion_reward = {
 			add_ideas = activate_capitalism
 			add_popularity = {
@@ -3552,11 +3636,11 @@ focus_tree = {
 				popularity = 0.01
 			}
 		}
-
 	}
+
 	focus = {
 		id = industry_capitalist_2 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_capitalist_2"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = industry_capitalist_2"}
 		icon = GFX_the_consequences_of_failure
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3573,11 +3657,11 @@ focus_tree = {
 				popularity = 0.03
 			}
 		}
-
 	}
+
 	focus = {
 		id = civilian_rust_belt 
- completion_reward = {log = "[GetDateText]: [Root.GetName]: id = civilian_rust_belt"}
+		completion_reward = {log = "[GetDateText]: [Root.GetName]: id = civilian_rust_belt"}
 		icon = GFX_focus_generic_industry_2
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -3595,6 +3679,13 @@ focus_tree = {
 				has_idea = military_boost_general
 				has_idea = navy_boost_general
 			}
+			any_owned_state = {
+				OR = {
+					owner = {
+						num_of_factories > 4
+					}
+				}
+			}
 		}
 		completion_reward = {
 			add_timed_idea = {
@@ -3604,7 +3695,7 @@ focus_tree = {
 			if = {
 				limit = {
 					owner = {
-						num_of_factories > 10
+						num_of_factories > 4
 					}
 				}
 				random_owned_controlled_state = {
