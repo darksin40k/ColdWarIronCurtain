@@ -211,7 +211,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1950"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -223,7 +223,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1955"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -235,7 +235,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1960"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -247,7 +247,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1965"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -259,7 +259,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1970"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -271,7 +271,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1975"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -283,7 +283,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1980"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -295,7 +295,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1985"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -307,7 +307,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1990"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -319,7 +319,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1995"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -331,7 +331,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "2000"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -343,7 +343,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "2005"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -363,7 +363,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1950"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -375,7 +375,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1955"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -387,7 +387,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1960"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -399,7 +399,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1965"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -411,7 +411,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1970"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -423,7 +423,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1975"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -435,7 +435,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1980"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -447,7 +447,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1985"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -459,7 +459,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1990"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -471,7 +471,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1995"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -483,7 +483,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "2000"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -495,7 +495,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "2005"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3121,7 +3121,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = { x = 0 y = 0}
 						text = "COMBAT SUPPORT"
-						maxWidth = 600
+						maxWidth = 220
 						maxHeight = 62
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3146,7 +3146,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = { x = 0 y = 0}
 						text = "1940"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3158,7 +3158,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = { x = 0 y = 0}
 						text = "1945"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3169,7 +3169,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = { x = 0 y = 0}
 						text = "1950"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3180,7 +3180,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = { x = 0 y = 0}
 						text = "1960"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3191,7 +3191,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = { x = 0 y = 0}
 						text = "1970"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3202,7 +3202,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = { x = 0 y = 0}
 						text = "1980"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3213,7 +3213,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = { x = 0 y = 0}
 						text = "1990"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3224,7 +3224,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = { x = 0 y = 0}
 						text = "2000"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3537,7 +3537,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1942"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3549,7 +3549,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1944"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3561,7 +3561,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1947"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3573,7 +3573,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1950"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3585,7 +3585,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1960"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3597,7 +3597,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1965"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3609,7 +3609,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1975"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3621,7 +3621,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1985"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3633,7 +3633,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "1995"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3645,7 +3645,7 @@ guiTypes = {
 					font = "hoi_36header"
 					borderSize = { x = 0 y = 0}
 					text = "2005"
-					maxWidth = 170
+					maxWidth = 80
 					maxHeight = 32
 					format = left
 					Orientation = "UPPER_LEFT"
@@ -3846,7 +3846,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1935"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3858,7 +3858,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1940"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3870,7 +3870,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1945"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3882,7 +3882,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1950"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3894,7 +3894,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1955"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3906,7 +3906,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1960"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3918,7 +3918,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1965"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3930,7 +3930,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1970"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3942,7 +3942,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1975"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3954,7 +3954,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1980"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3966,7 +3966,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1985"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3978,7 +3978,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1990"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -3990,7 +3990,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1995"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4002,7 +4002,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "2000"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4014,7 +4014,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "2005"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4076,7 +4076,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1935"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4088,7 +4088,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1940"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4100,7 +4100,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1945"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4112,7 +4112,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1950"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4124,7 +4124,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1955"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4136,7 +4136,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1960"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4148,7 +4148,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1965"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4160,7 +4160,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1970"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4172,7 +4172,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1975"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4184,7 +4184,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1980"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4196,7 +4196,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1985"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4208,7 +4208,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1990"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4220,7 +4220,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "1995"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4232,7 +4232,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "2000"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
@@ -4244,7 +4244,7 @@ guiTypes = {
 						font = "hoi_36header"
 						borderSize = {x = 0 y = 4}
 						text = "2005"
-						maxWidth = 170
+						maxWidth = 80
 						maxHeight = 32
 						format = left
 						Orientation = "UPPER_LEFT"
