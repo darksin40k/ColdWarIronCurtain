@@ -45,10 +45,6 @@
 		fire_only_once = no
 		cost = 0
 
-		modifier = {
-			
-		}
-
 		ai_will_do = {
 			factor = 0
 			modifier = {
@@ -119,19 +115,19 @@
 		}
 
 		#is_good = yes
-
+        days_remove = 30
 		selectable_mission = yes
 		days_mission_timeout = 30
-		
+        targeted_modifier = { tag = PER trade_cost_for_target_factor = -0.40 } 
+        targeted_modifier = { tag = YEM trade_cost_for_target_factor = -0.25 } 		
         modifier = {
             MONTHLY_POPULATION = 0.35
-		    targeted_modifier = { tag = PER trade_cost_for_target_factor = -0.40 } 
-            targeted_modifier = { tag = YEM trade_cost_for_target_factor = -0.25 } 
+
             send_volunteer_size = 2
             conscription_factor = 0.10
-            research_bonus = {
-                rgo = 0.25
-            }
+        }
+        research_bonus = {
+            rgo = 0.25
         }
 		
 		timeout_effect = {
@@ -223,10 +219,6 @@
 		fire_only_once = no
 		cost = 0
 
-		modifier = {
-			
-		}
-
 		ai_will_do = {
 			factor = 0
 			modifier = {
@@ -297,18 +289,18 @@
 		}
 
 		#is_good = yes
-
+        days_remove = 30
 		selectable_mission = yes
 		days_mission_timeout = 30
-		
+        targeted_modifier = { tag = SAU trade_cost_for_target_factor = -0.25 } 
+        targeted_modifier = { tag = QAT trade_cost_for_target_factor = -0.25 } 
+        targeted_modifier = { tag = LBA trade_cost_for_target_factor = -0.25 } 
+        targeted_modifier = { tag = JOR trade_cost_for_target_factor = -0.25 } 
+        targeted_modifier = { tag = UAE trade_cost_for_target_factor = -0.25 } 
+        targeted_modifier = { tag = KUW trade_cost_for_target_factor = -0.25 } 		
         modifier = {
             MONTHLY_POPULATION = 0.35
-		    targeted_modifier = { tag = SAU trade_cost_for_target_factor = -0.25 } 
-            targeted_modifier = { tag = QAT trade_cost_for_target_factor = -0.25 } 
-            targeted_modifier = { tag = LBA trade_cost_for_target_factor = -0.25 } 
-            targeted_modifier = { tag = JOR trade_cost_for_target_factor = -0.25 } 
-            targeted_modifier = { tag = UAE trade_cost_for_target_factor = -0.25 } 
-            targeted_modifier = { tag = KUW trade_cost_for_target_factor = -0.25 } 
+
             research_bonus = {
                 rgo = 0.25
             }
@@ -411,10 +403,6 @@
 		fire_only_once = no
 		cost = 0
 
-		modifier = {
-			
-		}
-
 		ai_will_do = {
 			factor = 0
 			modifier = {
@@ -485,7 +473,7 @@
 		}
 
 		#is_good = yes
-
+        days_remove = 30
 		selectable_mission = yes
 		days_mission_timeout = 30
 		
@@ -613,10 +601,6 @@
 		fire_only_once = no
 		cost = 0
 
-		modifier = {
-			
-		}
-
 		ai_will_do = {
 			factor = 0
 			modifier = {
@@ -687,7 +671,7 @@
 		}
 
 		#is_good = yes  
-
+        days_remove = 30
 		selectable_mission = yes
 		days_mission_timeout = 30
 		

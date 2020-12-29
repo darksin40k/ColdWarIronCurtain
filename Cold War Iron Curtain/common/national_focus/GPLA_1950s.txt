@@ -14,7 +14,7 @@ focus_tree = {
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 6
-		y = 0
+		y = 8
 		completion_reward = {
 			add_ideas = revolutionary_fervor
 		}
@@ -23,8 +23,8 @@ focus_tree = {
 		id = PDG_The_Greek_Civil_War
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
-		x = 21
+		cost = 1.00
+		x = 31
 		y = 0
 		completion_reward = {
 			add_manpower = 5000
@@ -35,9 +35,9 @@ focus_tree = {
 		id = PDG_The_Greek_Liberation_War
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
-		x = 37
-		y = 0
+		cost = 5.00
+		x = 60
+		y = 8
 		completion_reward = {
 			army_experience = 25
 			navy_experience = 25
@@ -48,9 +48,9 @@ focus_tree = {
 		id = PDG_The_Korean_War
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
-		x = 32
-		y = 5
+		cost = 1.00
+		x = 62
+		y = 17
         available = {
             KOR = {
                 has_war_with = KPA
@@ -67,9 +67,9 @@ focus_tree = {
 		id = PDG_The_Partition_of_Turkey
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
-		x = 42
-		y = 5
+		cost = 1.00
+		x = 43
+		y = 17
 		available = {
 			always = no
 		}
@@ -79,9 +79,9 @@ focus_tree = {
 		id = PDG_The_Cyprus_Emergency
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
-		x = 3
-		y = 6
+		cost = 1.00
+		x = 53`
+		y = 17
 		available = {
 			always = no
 		}
@@ -91,8 +91,8 @@ focus_tree = {
 		id = PDG_The_XX_Congress_of_the_CPSU
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
-		x = 23
+		cost = 1.00
+		x = 33
 		y = 23
 		available = {
 			always = no
@@ -106,11 +106,11 @@ focus_tree = {
 		id = PDG_Execute_Zachariadis
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Align_with_Tito
 		}
-		x = 10
+		x = 20
 		y = 29
 		completion_reward = {
 			news_event = PDG_Purge.100
@@ -121,11 +121,11 @@ focus_tree = {
 		id = PDG_Dismiss_Florakis
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Align_with_Tito
 		}
-		x = 14
+		x = 24
 		y = 29
 		completion_reward = {
 			news_event = PDG_Purge.101
@@ -136,11 +136,11 @@ focus_tree = {
 		id = PDG_Align_with_Tito
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Marshal_Markos_Vafiadis
 		}
-		x = 12
+		x = 22
 		y = 28
 
 	}
@@ -153,7 +153,7 @@ focus_tree = {
 			focus = PDG_Sovietization_of_Greece
 		}
 		x = 2
-		y = 1
+		y = 9
 
 	}
 	focus = {
@@ -165,7 +165,7 @@ focus_tree = {
 			focus = PDG_Establish_the_Ministry_of_Culture
 		}
 		x = 0
-		y = 2
+		y = 10
 		completion_reward = {
 			add_ideas = socialist_realism
 		}
@@ -179,19 +179,26 @@ focus_tree = {
 			focus = PDG_Embrace_Socialist_Realism
 		}
 		x = 0
-		y = 3
+		y = 11
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}	
 
 	}
 	focus = {
 		id = PDG_Reactionary_Greeks_are_still_Reactionaries
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = PDG_The_Cyprus_Emergency
 		}
-		x = 1
-		y = 7
+		x = 50
+		y = 18
 		available = {
 			NOT = {
 				has_completed_focus = PDG_Reactionary_Greeks_are_still_Greeks
@@ -211,7 +218,7 @@ focus_tree = {
 			focus = PDG_Establish_the_Ministry_of_Culture
 		}
 		x = 4
-		y = 2
+		y = 10
 		completion_reward = {
 			add_ideas = workers_culture
 		}
@@ -226,7 +233,7 @@ focus_tree = {
 			focus = PDG_Utilize_Mass_Media_for_Propaganda
 		}
 		x = 4
-		y = 3
+		y = 11
 			
 	}
 	focus = {
@@ -241,19 +248,19 @@ focus_tree = {
 			focus = PDG_Expand_Rizospastis
 		}
 		x = 2
-		y = 4
+		y = 12
 
 	}
 	focus = {
 		id = PDG_Reactionary_Greeks_are_still_Greeks
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = PDG_The_Cyprus_Emergency
 		}
-		x = 6
-		y = 7
+		x = 55
+		y = 18
 		available = {
 			NOT = {
 				has_completed_focus = PDG_Reactionary_Greeks_are_still_Reactionaries
@@ -268,8 +275,8 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Reactionary_Greeks_are_still_Greeks
 		}
-		x = 4
-		y = 8
+		x = 57
+		y = 19
 		completion_reward = {
 			custom_effect_tooltip = incease_eoka_support
 			add_to_variable = {
@@ -286,7 +293,10 @@ focus_tree = {
 			focus = PDG_Sovietization_of_Greece
 		}
 		x = 6
-		y = 1
+		y = 9
+		completion_reward = {
+			remove_ideas = banditry
+		}
 
 	}
 	focus = {
@@ -298,7 +308,7 @@ focus_tree = {
 			focus = PDG_Liquidate_the_Greek_Mafia
 		}
 		x = 6
-		y = 4
+		y = 12
 
 	}
 	focus = {
@@ -310,7 +320,7 @@ focus_tree = {
 			focus = PDG_Sovietization_of_Greece
 		}
 		x = 10
-		y = 1
+		y = 9
 		completion_reward = {
 			add_political_power = 100
 			add_popularity = {
@@ -329,7 +339,7 @@ focus_tree = {
 			focus = PDG_Force_Left_Wing_Party_Mergers
 		}
 		x = 8
-		y = 2
+		y = 10
 		completion_reward = {
 			add_ideas = idea_young_pioneers
 		}
@@ -343,7 +353,7 @@ focus_tree = {
 			focus = PDG_Establish_the_Greek_Pioneers
 		}
 		x = 8
-		y = 3
+		y = 11
 		completion_reward = {
 			add_ideas = PDG_kgb
 		}
@@ -356,8 +366,8 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Reactionary_Greeks_are_still_Greeks
 		}
-		x = 8
-		y = 8
+		x = 53
+		y = 19
 		completion_reward = {
 			SOV = {
 				country_event = PDG_CYP.1
@@ -373,7 +383,7 @@ focus_tree = {
 			focus = PDG_Force_Left_Wing_Party_Mergers
 		}
 		x = 12
-		y = 2
+		y = 10
 		completion_reward = {
 			add_ideas = marxist_escuelas
 		}
@@ -387,7 +397,7 @@ focus_tree = {
 			focus = PDG_Reform_the_Education_System
 		}
 		x = 12
-		y = 3
+		y = 11
 
 	}
 	focus = {
@@ -402,7 +412,7 @@ focus_tree = {
 			focus = PDG_Establish_Secret_Police
 		}
 		x = 10
-		y = 4
+		y = 12
 		completion_reward = {
 			add_ideas = one_party_state
 		}
@@ -422,7 +432,7 @@ focus_tree = {
 			focus = PDG_Found_the_Ionnina_Film_Academy
 		}
 		x = 6
-		y = 5
+		y = 13
 		completion_reward = {
 			add_ideas = revolutionary_exporter
 		}
@@ -431,11 +441,14 @@ focus_tree = {
 		id = PDG_A_Page_from_the_Liberation_Wars
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = PDG_The_Greek_Civil_War
 		}
-		x = 17
+		mutually_exclusive = {
+			focus = PDG_Continue_the_Conventional_War
+		}
+		x = 27
 		y = 1
 
 	}
@@ -443,11 +456,11 @@ focus_tree = {
 		id = PDG_Disrupt_Enemy_Communication_Lines
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_A_Page_from_the_Liberation_Wars
 		}
-		x = 15
+		x = 25
 		y = 2
 
 	}
@@ -455,11 +468,11 @@ focus_tree = {
 		id = PDG_Take_Out_Local_Collaborators
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_Disrupt_Enemy_Communication_Lines
 		}
-		x = 15
+		x = 25
 		y = 3
 
 	}
@@ -467,11 +480,11 @@ focus_tree = {
 		id = PDG_Assasinate_Enemy_Officers
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_A_Page_from_the_Liberation_Wars
 		}
-		x = 19
+		x = 29
 		y = 2
 
 	}
@@ -479,11 +492,11 @@ focus_tree = {
 		id = PDG_Big_Tito_for_Equipment
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_Assasinate_Enemy_Officers
 		}
-		x = 19
+		x = 29
 		y = 3
 
 	}
@@ -491,11 +504,11 @@ focus_tree = {
 		id = PDG_Appeal_for_Recognition_Accross_the_Socialist_World
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Greek_Civil_War
 		}
-		x = 21
+		x = 31
 		y = 5
 
 	}
@@ -503,11 +516,14 @@ focus_tree = {
 		id = PDG_Continue_the_Conventional_War
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = PDG_The_Greek_Civil_War
 		}
-		x = 25
+		mutually_exclusive = {
+			focus =PDG_A_Page_from_the_Liberation_Wars 
+		}
+		x = 35
 		y = 1
 
 	}
@@ -515,11 +531,11 @@ focus_tree = {
 		id = PDG_A_Greek_Red_Army
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_Continue_the_Conventional_War
 		}
-		x = 25
+		x = 35
 		y = 2
 
 	}
@@ -527,11 +543,11 @@ focus_tree = {
 		id = PDG_Athenian_Justice
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_A_Greek_Red_Army
 		}
-		x = 23
+		x = 33
 		y = 3
 
 	}
@@ -539,11 +555,11 @@ focus_tree = {
 		id = PDG_Macedonian_Tactics
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_A_Greek_Red_Army
 		}
-		x = 27
+		x = 37
 		y = 3
 
 	}
@@ -551,14 +567,14 @@ focus_tree = {
 		id = PDG_Spartan_Discpline
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_Macedonian_Tactics
 		}
 		prerequisite = {
 			focus = PDG_Athenian_Justice
 		}
-		x = 25
+		x = 35
 		y = 4
 
 	}
@@ -566,11 +582,11 @@ focus_tree = {
 		id = PDG_Launch_the_Great_Offensive
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_Spartan_Discpline
 		}
-		x = 25
+		x = 35
 		y = 5
 
 	}
@@ -578,11 +594,11 @@ focus_tree = {
 		id = PDG_Just_Keep_Pushing
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_Launch_the_Great_Offensive
 		}
-		x = 25
+		x = 35
 		y = 6
 
 	}
@@ -590,12 +606,12 @@ focus_tree = {
 		id = PDG_The_Greek_Peoples_Liberation_Airforce
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = PDG_The_Greek_Liberation_War
 		}
-		x = 31
-		y = 1
+		x = 54
+		y = 9
 		completion_reward = {
 			air_experience = 50
 		}
@@ -604,12 +620,12 @@ focus_tree = {
 		id = PDG_Purchase_Soviet_Yaks
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Greek_Peoples_Liberation_Airforce
 		}
-		x = 29
-		y = 2
+		x = 52
+		y = 10
 		completion_reward = {
 			create_equipment_variant = { 
 				name = "Yakovlev Yak-18" 
@@ -632,114 +648,114 @@ focus_tree = {
 		id = PDG_Condemn_South_Korean_Aggression
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Korean_War
 		}
 
-		x = 29
-		y = 6
+		x = 59
+		y = 18
 
 	}
 	focus = {
 		id = PDG_Construct_Airstrips_on_the_Turkish_Border
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Greek_Peoples_Liberation_Airforce
 		}
-		x = 33
-		y = 2
+		x = 56
+		y = 10
 
 	}
 	focus = {
 		id = PDG_Establish_the_Athens_Flight_School
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Construct_Airstrips_on_the_Turkish_Border
 		}
 		prerequisite = {
 			focus = PDG_Purchase_Soviet_Yaks
 		}
-		x = 31
-		y = 3
+		x = 54
+		y = 11
 
 	}
 	focus = {
 		id = PDG_Begin_Domestic_Fighter_Developments
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Establish_the_Athens_Flight_School
 		}
-		x = 31
-		y = 4
+		x = 54
+		y = 12
 
 	}
 	focus = {
 		id = PDG_Limited_Intervention
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Korean_War
 		}
-		x = 34
-		y = 6
+		x = 64
+		y = 18
 
 	}
 	focus = {
 		id = PDG_Deploy_Advisors
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Limited_Intervention
 		}
-		x = 32
-		y = 7
+		x = 62
+		y = 19
 
 	}
 	focus = {
 		id = PDG_Send_Guns
 		icon = GFX_goal_unknown
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Limited_Intervention
 		}
-		x = 36
-		y = 7
+		x = 66
+		y = 19
 
 	}
 	focus = {
 		id = PDG_Send_Non_Combat_Auxillary_Units
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Send_Guns
 		}
 		prerequisite = {
 			focus = PDG_Deploy_Advisors
 		}
-		x = 34
-		y = 8
+		x = 64
+		y = 20
 
 	}
 	focus = {
 		id = PDG_The_Greek_Peoples_Liberation_Army_Ground_Forces
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Greek_Liberation_War
 		}
-		x = 37
-		y = 1
+		x = 60
+		y = 9
 		completion_reward = {
 			army_experience = 50
 		}
@@ -748,23 +764,23 @@ focus_tree = {
 		id = PDG_Utilize_Captured_Fascist_Equipment
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Greek_Peoples_Liberation_Army_Ground_Forces
 		}
-		x = 35
-		y = 2
+		x = 58
+		y = 10
 	}
 	focus = {
 		id = PDG_A_Greek_AK
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Greek_Peoples_Liberation_Army_Ground_Forces
 		}
-		x = 39
-		y = 2
+		x = 62
+		y = 10
 		completion_reward = {
 			set_technology = {
 				infantry_equip_2 = 1
@@ -776,121 +792,121 @@ focus_tree = {
 		id = PDG_Embrace_Soviet_Doctrine
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_A_Greek_AK
 		}
 		prerequisite = {
 			focus = PDG_Utilize_Captured_Fascist_Equipment
 		}
-		x = 37
-		y = 3
+		x = 60
+		y = 11
 
 	}
 	focus = {
 		id = PDG_License_Soviet_Tank_Models
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Embrace_Soviet_Doctrine
 		}
-		x = 37
-		y = 4
+		x = 60
+		y = 12
 
 	}
 	focus = {
 		id = PDG_Ban_Turkish_Education
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Partition_of_Turkey
 		}
 		x = 41
-		y = 6
+		y = 18
 
 	}
 	focus = {
 		id = PDG_Appoint_Loyal_Greeks_to_Local_Government
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Ban_Turkish_Education
 		}
-		x = 39
-		y = 7
+		x = 40
+		y = 19
 
 	}
 	focus = {
 		id = PDG_The_Greek_Peoples_Liberation_Navy
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Greek_Liberation_War
 		}
-		x = 43
-		y = 1
+		x = 66
+		y = 9
 
 	}
 	focus = {
 		id = PDG_Repurpose_Civilian_Vessels
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Greek_Peoples_Liberation_Navy
 		}
-		x = 41
-		y = 2
+		x = 64
+		y = 10
 
 	}
 	focus = {
 		id = PDG_Purge_the_Turkish_Bureacracy
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Partition_of_Turkey
 		}
-		x = 43
-		y = 6
+		x = 45
+		y = 18
 
 	}
 	focus = {
 		id = PDG_Launch_Deportation_Campaigns
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Ban_Turkish_Education
 		}
 		prerequisite = {
 			focus = PDG_Purge_the_Turkish_Bureacracy
 		}
-		x = 42
-		y = 7
+		x = 46
+		y = 19
 
 	}
 	focus = {
 		id = PDG_Crack_Down_on_Seperatists
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Purge_the_Turkish_Bureacracy
 		}
-		x = 45
-		y = 7
+		x = 43
+		y = 19
 
 	}
 	focus = {
 		id = PDG_Rename_Izmir_and_Istanbul
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Launch_Deportation_Campaigns
 		}
@@ -900,47 +916,47 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Appoint_Loyal_Greeks_to_Local_Government
 		}
-		x = 42
-		y = 8
+		x = 43
+		y = 20
 
 	}
 	focus = {
 		id = PDG_Our_Ancient_Capital
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Rename_Izmir_and_Istanbul
 		}
-		x = 42
-		y = 9
+		x = 43
+		y = 21
 
 	}
 	focus = {
 		id = PDG_Build_Dry_Dock_in_Southern_Greece
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_The_Greek_Peoples_Liberation_Navy
 		}
-		x = 45
-		y = 2
+		x = 68
+		y = 10
 
 	}
 	focus = {
 		id = PDG_Emphasize_Submarine_Production
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Build_Dry_Dock_in_Southern_Greece
 		}
 		prerequisite = {
 			focus = PDG_Repurpose_Civilian_Vessels
 		}
-		x = 43
-		y = 3
+		x = 66
+		y = 11
 
 	}
 	focus = {
@@ -951,15 +967,15 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Emphasize_Submarine_Production
 		}
-		x = 43
-		y = 4
+		x = 66
+		y = 12
 
 	}
 	focus = {
 		id = PDG_Operate_in_the_Shadows
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_Big_Tito_for_Equipment
 		}
@@ -975,11 +991,11 @@ focus_tree = {
 		id = PDG_Request_Bulgarian_and_Albanian_Intervention
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_Operate_in_the_Shadows
 		}
-		x = 17
+		x = 27
 		y = 5
 
 	}
@@ -987,11 +1003,11 @@ focus_tree = {
 		id = PDG_Just_Keep_Holding
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_Request_Bulgarian_and_Albanian_Intervention
 		}
-		x = 17
+		x = 27
 		y = 6
 
 	}
@@ -999,13 +1015,13 @@ focus_tree = {
 		id = PDG_Establish_the_Democratic_Republic_of_Greece
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 2.00
 		prerequisite = {
 			focus = PDG_Just_Keep_Holding
 			focus = PDG_Appeal_for_Recognition_Accross_the_Socialist_World
 			focus = PDG_Just_Keep_Pushing
 		}
-		x = 21
+		x = 31
 		y = 7
 		available = {
 			always = no
@@ -1016,38 +1032,38 @@ focus_tree = {
 		id = PDG_Backstab_the_EOKA
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Petition_Soviets_to_Intervene
 		}
 		prerequisite = {
 			focus = PDG_Increase_Ethnic_Tension
 		}
-		x = 6
-		y = 9
+		x = 55
+		y = 20
 
 	}
 	focus = {
 		id = PDG_Achieve_Enosis
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Backstab_the_EOKA
 		}
-		x = 6
-		y = 10
+		x = 55
+		y = 21
 
 	}
 	focus = {
 		id = PDG_Premier_Nikos_Zachariadis
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3.00
 		prerequisite = {
 			focus = PDG_Establish_the_Democratic_Republic_of_Greece
 		}
-		x = 21
+		x = 31
 		y = 8
 		completion_reward = {
 			retire_country_leader = yes
@@ -1070,11 +1086,11 @@ focus_tree = {
 		id = PDG_Purge_Remaining_Fascist_Collaborators
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Premier_Nikos_Zachariadis
 		}
-		x = 23
+		x = 33
 		y = 9
 		completion_reward = {
 			add_political_power = 150
@@ -1085,11 +1101,11 @@ focus_tree = {
 		id = PDG_Execute_Stefanos_Sarafis
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Premier_Nikos_Zachariadis
 		}
-		x = 19
+		x = 29
 		y = 9
 
 	}
@@ -1097,14 +1113,14 @@ focus_tree = {
 		id = PDG_More_Than_Just_a_Port
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = PDG_Purge_Remaining_Fascist_Collaborators
 		}
 		prerequisite = {
 			focus = PDG_Execute_Stefanos_Sarafis
 		}
-		x = 21
+		x = 31
 		y = 10
 
 	}
@@ -1116,7 +1132,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_More_Than_Just_a_Port
 		}
-		x = 21
+		x = 31
 		y = 11
 
 	}
@@ -1128,7 +1144,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_More_Than_Just_a_Port
 		}
-		x = 12
+		x = 22
 		y = 11
 		completion_reward = {
 			add_popularity = {
@@ -1206,7 +1222,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Relations_with_the_Socialist_World
 		}
-		x = 12
+		x = 22
 		y = 12
 	completion_reward = {
 			add_political_power = 100
@@ -1222,7 +1238,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Relations_with_the_Socialist_World
 		}
-		x = 15
+		x = 25
 		y = 12
 
 	}
@@ -1234,7 +1250,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Relations_with_the_Socialist_World
 		}
-		x = 9
+		x = 19
 		y = 12
 
 	}
@@ -1246,7 +1262,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Establish_Balkan_Embassies
 		}
-		x = 9
+		x = 19
 		y = 14
 
 	}
@@ -1258,7 +1274,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Reaffirm_Allegiance_to_the_Soviets
 		}
-		x = 12
+		x = 22
 		y = 14
 
 	}
@@ -1270,7 +1286,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Comrades_in_the_East
 		}
-		x = 15
+		x = 25
 		y = 14
 
 	}
@@ -1288,7 +1304,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Compensate_Bulgaria_and_Albania
 		}
-		x = 12
+		x = 22
 		y = 15
 
 	}
@@ -1300,7 +1316,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Commence_Reconstruction
 		}
-		x = 21
+		x = 31
 		y = 12
 
 	}
@@ -1312,7 +1328,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Hire_Soviet_Economic_Advisors
 		}
-		x = 19
+		x = 29
 		y = 13
 
 	}
@@ -1324,7 +1340,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Hire_Soviet_Economic_Advisors
 		}
-		x = 23
+		x = 33
 		y = 13
 
 	}
@@ -1339,7 +1355,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Collective_the_Peasants
 		}
-		x = 21
+		x = 31
 		y = 14
 
 	}
@@ -1351,9 +1367,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Collective_the_Peasants
 		}
-		x = 18
+		x = 28
 		y = 14
-	completion_reward = {
+		completion_reward = {
 			add_timed_idea = {
 				idea = agrarian_reform
 				days = 1625
@@ -1368,7 +1384,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Encourage_Heavy_Industry_Growth_in_Zagoria
 		}
-		x = 24
+		x = 34
 		y = 14
 
 	}
@@ -1383,10 +1399,16 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Commence_Currency_Reform
 		}
-		x = 22
+		x = 32
 		y = 15
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = literacy_campaign
+				days = 1625
+			}
+		}
 	}
+
 	focus = {
 		id = PDG_Found_the_Zachariadis_University_of_Science_and_Culture
 		icon = GFX_goal_unknown
@@ -1398,9 +1420,9 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Emergency_Aid_to_the_Rural_Peasants
 		}
-		x = 20
+		x = 30
 		y = 15
-	completion_reward = {
+		completion_reward = {
 			add_research_slot = 1
 		}
 
@@ -1422,7 +1444,10 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Remove_LEEA_Oversight
 		}
-		x = 21
+		prerequisite = {
+			focus = PDG_Force_Markos_Vafeiadis_to_Leave_the_Part
+		}
+		x = 31
 		y = 16
 
 	}
@@ -1434,7 +1459,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_More_Than_Just_a_Port
 		}
-		x = 33
+		x = 43
 		y = 11
 		completion_reward = {
 			create_intelligence_agency = { 
@@ -1451,7 +1476,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Found_the_LEEA
 		}
-		x = 33
+		x = 43
 		y = 12
 		completion_reward = {
 			add_to_variable = { gulag_factor = 0.01 }					
@@ -1468,7 +1493,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Found_the_LEEA
 		}
-		x = 37
+		x = 47
 		y = 12
 		completion_reward = {
 			add_to_variable = { gulag_factor = 0.01 }					
@@ -1486,7 +1511,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Empower_the_Ministry_of_State_Security
 		}
-		x = 35
+		x = 45
 		y = 13
 
 	}
@@ -1498,7 +1523,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Empower_the_Ministry_of_State_Security
 		}
-		x = 39
+		x = 49
 		y = 13
 
 	}
@@ -1510,7 +1535,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Dismiss_the_Social_Democrats
 		}
-		x = 39
+		x = 49
 		y = 14
 
 	}
@@ -1522,7 +1547,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Execute_Suspected_SOE_Agents
 		}
-		x = 35
+		x = 45
 		y = 14
 
 	}
@@ -1537,7 +1562,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Open_Investigations_into_Party_Officials
 		}
-		x = 37
+		x = 47
 		y = 15
 
 	}
@@ -1549,7 +1574,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Found_the_LEEA
 		}
-		x = 29
+		x = 39
 		y = 12
 		completion_reward = {
 			add_to_variable = { gulag_factor = 0.01 }					
@@ -1567,8 +1592,14 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Launch_Political_Repression_Campaign
 		}
-		x = 27
+		mutually_exclusive = {
+			focus = PDG_Ignore_Growing_Dissent
+		}
+		x = 37
 		y = 13
+		completion_reward = {
+			add_ideas = police_state
+		}	
 	}
 	focus = {
 		id = PDG_Ignore_Growing_Dissent
@@ -1578,7 +1609,10 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Launch_Political_Repression_Campaign
 		}
-		x = 31
+		mutually_exclusive = {
+			focus = PDG_Utilize_NKVD_Tactics
+		}
+		x = 41
 		y = 13
 
 	}
@@ -1590,7 +1624,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Ignore_Growing_Dissent
 		}
-		x = 31
+		x = 41
 		y = 14
 
 	}
@@ -1602,7 +1636,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Utilize_NKVD_Tactics
 		}
-		x = 27
+		x = 37
 		y = 14
 		completion_reward = {
 			add_to_variable = { gulag_factor = 0.01 }					
@@ -1622,7 +1656,7 @@ focus_tree = {
 			focus = PDG_Tolerate_Private_Criticism
 			focus = PDG_Round_Up_Portential_Dissidents
 		}
-		x = 29
+		x = 39
 		y = 15
 		completion_reward = {
 			add_to_variable = { gulag_factor = 0.01 }					
@@ -1640,7 +1674,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Stability_in_Greece
 		}
-		x = 8
+		x = 18
 		y = 17
 		completion_reward = {
 			country_event = PDG_Religion.1
@@ -1654,7 +1688,10 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_The_Fate_of_the_Greek_Orthodox_Church
 		}
-		x = 5
+		mutually_exclusive = {
+			focus = PDG_The_Albanian_Model
+		}
+		x = 15
 		y = 18
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = -0.05 }
@@ -1670,7 +1707,10 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_The_Fate_of_the_Greek_Orthodox_Church
 		}
-		x = 11
+		mutually_exclusive = {
+			focus = PDG_The_Romanian_Model
+		}
+		x = 21
 		y = 18
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = 0.05 }
@@ -1687,8 +1727,13 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_The_Romanian_Model
 		}
-		x = 5
+		x = 15
 		y = 19
+		completion_reward = {
+			add_to_variable = { clergy_persecution_factor = -0.05 }
+			add_to_variable = { clergy_persecution_negative = 0.05  }
+			custom_effect_tooltip = clergy_persecution_decrease_TT
+		}
 
 	}
 	focus = {
@@ -1699,8 +1744,11 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Reforming_the_Church
 		}
-		x = 3
+		x = 13
 		y = 20
+		completion_reward = {
+			add_ideas = Red_Churches
+		}
 
 	}
 	focus = {
@@ -1711,8 +1759,13 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Reforming_the_Church
 		}
-		x = 7
+		x = 17
 		y = 20
+		completion_reward = {
+			add_to_variable = { clergy_persecution_factor = -0.05 }
+			add_to_variable = { clergy_persecution_negative = 0.05  }
+			custom_effect_tooltip = clergy_persecution_decrease_TT
+		}
 
 	}
 	focus = {
@@ -1726,8 +1779,13 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Appoint_Loyal_Clergy_Members
 		}
-		x = 5
+		x = 15
 		y = 21
+		completion_reward = {
+			add_to_variable = { clergy_persecution_factor = -0.05 }
+			add_to_variable = { clergy_persecution_negative = 0.05  }
+			custom_effect_tooltip = clergy_persecution_decrease_TT
+		}
 
 	}
 	focus = {
@@ -1738,8 +1796,14 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_The_Albanian_Model
 		}
-		x = 11
+		x = 21
 		y = 19
+		completion_reward = {
+			add_to_variable = { clergy_persecution_factor = 0.05 }
+			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
+		}
+
 
 	}
 	focus = {
@@ -1750,8 +1814,14 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Decapitate_the_Church
 		}
-		x = 9
+		x = 19
 		y = 20
+		completion_reward = {
+			add_to_variable = { clergy_persecution_factor = 0.05 }
+			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
+		}
+
 
 	}
 	focus = {
@@ -1762,9 +1832,15 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Decapitate_the_Church
 		}
-		x = 13
+		x = 23
 		y = 20
-
+		completion_reward = {
+			add_to_variable = { clergy_persecution_factor = 0.05 }
+			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
+			add_stability = -0.03
+			add_ideas = secular_influence
+		}
 	}
 	focus = {
 		id = PDG_Liquidate_the_Churchs_Assets
@@ -1777,9 +1853,13 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Close_the_Monasteries_and_Convents
 		}
-		x = 11
+		x = 21
 		y = 21
-
+		completion_reward = {
+			add_to_variable = { clergy_persecution_factor = 0.05 }
+			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
+		}
 	}
 	focus = {
 		id = PDG_Launch_the_First_Five_Year_Plan
@@ -1789,7 +1869,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Stability_in_Greece
 		}
-		x = 21
+		x = 31
 		y = 17
 		completion_reward = {
 			add_timed_idea = {
@@ -1807,7 +1887,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Launch_the_First_Five_Year_Plan
 		}
-		x = 19
+		x = 29
 		y = 18
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1844,7 +1924,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Launch_the_First_Five_Year_Plan
 		}
-		x = 23
+		x = 33
 		y = 18
 		completion_reward = {
 			add_tech_bonus = {
@@ -1873,7 +1953,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Fully_Collectivize_the_Farms
 		}
-		x = 21
+		x = 31
 		y = 19
 
 	}
@@ -1885,7 +1965,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Fully_Collectivize_the_Farms
 		}
-		x = 17
+		x = 27
 		y = 19
 
 	}
@@ -1897,7 +1977,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Request_COMECON_Aid
 		}
-		x = 25
+		x = 35
 		y = 19
 
 	}
@@ -1909,7 +1989,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Subsidize_the_Cooperatives
 		}
-		x = 16
+		x = 26
 		y = 20
 
 	}
@@ -1924,7 +2004,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Subsidize_the_Cooperatives
 		}
-		x = 19
+		x = 29
 		y = 20
 
 	}
@@ -1939,7 +2019,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Construct_Adriatic_Defenses
 		}
-		x = 23
+		x = 33
 		y = 20
 
 	}
@@ -1951,7 +2031,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Construct_Adriatic_Defenses
 		}
-		x = 26
+		x = 36
 		y = 20
 
 	}
@@ -1966,7 +2046,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_New_Railway_Developments
 		}
-		x = 18
+		x = 28
 		y = 21
 
 	}
@@ -1981,7 +2061,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Invest_in_Athens
 		}
-		x = 21
+		x = 31
 		y = 21
 
 	}
@@ -1996,7 +2076,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Complete_Currency_Reform
 		}
-		x = 24
+		x = 34
 		y = 21
 
 	}
@@ -2014,7 +2094,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Construct_Hotels_in_Amaliado
 		}
-		x = 21
+		x = 31
 		y = 22
 
 	}
@@ -2026,7 +2106,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_The_XX_Congress_of_the_CPSU
 		}
-		x = 23
+		x = 33
 		y = 24
 
 	}
@@ -2038,7 +2118,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_The_Second_Five_Year_Plan
 		}
-		x = 23
+		x = 33
 		y = 25
 
 	}
@@ -2050,7 +2130,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Relax_Collectivizaton_Efforts
 		}
-		x = 21
+		x = 31
 		y = 26
 		completion_reward = {
 			every_owned_state = {
@@ -2070,7 +2150,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Relax_Collectivizaton_Efforts
 		}
-		x = 25
+		x = 35
 		y = 26
 		completion_reward = {
 			add_ideas = urban_planning
@@ -2085,7 +2165,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Mass_Rural_Investments
 		}
-		x = 20
+		x = 30
 		y = 27
 
 	}
@@ -2100,7 +2180,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Mass_Rural_Investments
 		}
-		x = 23
+		x = 33
 		y = 27
 
 	}
@@ -2112,7 +2192,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Incentive_Urban_Migration
 		}
-		x = 26
+		x = 36
 		y = 27
 		completion_reward = {
 			184 = {
@@ -2142,7 +2222,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Commence_Mining_Operations_in_Kevala
 		}
-		x = 24
+		x = 34
 		y = 28
 		completion_reward = {
 			184 = {
@@ -2164,7 +2244,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Expand_Agricultural_Development_in_Northern_Greece
 		}
-		x = 22
+		x = 32
 		y = 28
 		completion_reward = {
 			add_tech_bonus = {
@@ -2186,7 +2266,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Mass_Fertilizer_Production
 		}
-		x = 23
+		x = 33
 		y = 29
 
 	}
@@ -2198,7 +2278,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_The_XX_Congress_of_the_CPSU
 		}
-		x = 33
+		x = 43
 		y = 24
 
 	}
@@ -2210,7 +2290,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Regain_Control
 		}
-		x = 33
+		x = 43
 		y = 25
 		completion_reward = {
 			SOV = {
@@ -2231,7 +2311,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Distance_Ourselves_from_Moscow
 		}
-		x = 31
+		x = 41
 		y = 26
 		completion_reward = {
 			PRC = {
@@ -2257,7 +2337,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Distance_Ourselves_from_Moscow
 		}
-		x = 35
+		x = 45
 		y = 26
 		completion_reward = {
 			add_to_variable = { var = domestic_influence_amount value = 250 }
@@ -2287,7 +2367,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Condemn_the_Anti_Revisionist_Movement_as_Counter_Productive
 		}
-		x = 33
+		x = 43
 		y = 27
 
 	}
@@ -2299,7 +2379,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Condemn_the_Anti_Revisionist_Movement_as_Counter_Productive
 		}
-		x = 30
+		x = 40
 		y = 27
 
 	}
@@ -2311,7 +2391,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Condemn_Khruschevs_Reforms
 		}
-		x = 36
+		x = 46
 		y = 27
 
 	}
@@ -2326,7 +2406,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Between_a_Rock_and_a_Hard_Place
 		}
-		x = 34
+		x = 44
 		y = 28
 		completion_reward = {
 			capital_scope = {
@@ -2366,7 +2446,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Purge_Valfeiadas
 		}
-		x = 32
+		x = 42
 		y = 28
 		completion_reward = {
 			add_research_slot = 1
@@ -2383,7 +2463,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Emphasize_Scientific_Development
 		}
-		x = 33
+		x = 43
 		y = 29
 		completion_reward = {
 			country_event = PDG_Political.101
@@ -2397,7 +2477,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Our_Future
 		}
-		x = 35
+		x = 45
 		y = 30
 		completion_reward = {
 			PRC = {
@@ -2446,7 +2526,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Our_Future
 		}
-		x = 31
+		x = 41
 		y = 30
 
 	}
@@ -2458,7 +2538,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_The_XX_Congress_of_the_CPSU
 		}
-		x = 12
+		x = 22
 		y = 24
 
 	}
@@ -2470,7 +2550,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_KKE_Reformist_Takeover
 		}
-		x = 12
+		x = 22
 		y = 25
 
 	}
@@ -2482,7 +2562,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_A_Bridge_Too_Far
 		}
-		x = 15
+		x = 25
 		y = 27
 
 	}
@@ -2494,7 +2574,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Announce_Withdrawal_from_the_Warsaw_Pact
 		}
-		x = 15
+		x = 25
 		y = 26
 
 	}
@@ -2506,7 +2586,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Announce_Withdrawal_from_the_Warsaw_Pact
 		}
-		x = 7
+		x = 17
 		y = 26
 
 	}
@@ -2518,9 +2598,11 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Soviets_Back_Down
 		}
-		x = 12
+		mutually_exclusive = {
+			focus = PDG_President_Charilaos_Florakis
+		}
+		x = 22
 		y = 27
-
 	}
 	focus = {
 		id = PDG_Limited_Privitization
@@ -2533,9 +2615,8 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Execute_Zachariadis
 		}
-		x = 12
+		x = 22
 		y = 30
-
 	}
 	focus = {
 		id = PDG_Take_Out_IMF_Loans
@@ -2545,9 +2626,8 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Execute_Zachariadis
 		}
-		x = 9
+		x = 19
 		y = 30
-
 	}
 	focus = {
 		id = PDG_Reform_the_Secret_Police
@@ -2557,7 +2637,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Dismiss_Florakis
 		}
-		x = 15
+		x = 25
 		y = 30
 
 	}
@@ -2572,7 +2652,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Take_Out_IMF_Loans
 		}
-		x = 11
+		x = 21
 		y = 31
 
 	}
@@ -2587,7 +2667,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Limited_Privitization
 		}
-		x = 13
+		x = 23
 		y = 31
 
 	}
@@ -2602,7 +2682,7 @@ focus_tree = {
 			focus = PDG_Democraticization_of_Greece
 			focus = PDG_Privitization_Campaign
 		}
-		x = 7
+		x = 17
 		y = 32
 
 	}
@@ -2614,7 +2694,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_A_New_Direction
 		}
-		x = 4
+		x = 14
 		y = 33
 
 	}
@@ -2626,7 +2706,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_A_New_Direction
 		}
-		x = 7
+		x = 17
 		y = 33
 
 	}
@@ -2638,7 +2718,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_A_New_Direction
 		}
-		x = 10
+		x = 20
 		y = 33
 
 	}
@@ -2650,7 +2730,10 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Soviets_Back_Down
 		}
-		x = 3
+		mutually_exclusive = {
+			focus = PDG_Marshal_Markos_Vafiadis
+		}
+		x = 13
 		y = 27
 
 	}
@@ -2662,7 +2745,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Unprecedented_Liberalization
 		}
-		x = 5
+		x = 15
 		y = 29
 
 	}
@@ -2674,7 +2757,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Unprecedented_Liberalization
 		}
-		x = 1
+		x = 11
 		y = 29
 
 	}
@@ -2689,7 +2772,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Invite_Vafiadis_Back_into_the_KKE
 		}
-		x = 3
+		x = 13
 		y = 30
 
 	}
@@ -2701,7 +2784,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Exile_Zachariadis
 		}
-		x = 0
+		x = 10
 		y = 30
 
 	}
@@ -2713,7 +2796,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Invite_Vafiadis_Back_into_the_KKE
 		}
-		x = 6
+		x = 16
 		y = 30
 		completion_reward = {
 			news_event = Greek_Thaw.1
@@ -2736,7 +2819,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Invite_Loyalists_to_Return
 		}
-		x = 2
+		x = 12
 		y = 31
 		completion_reward = {
 			news_event = Greek_Thaw.15
@@ -2758,7 +2841,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_Mass_Amnesty
 		}
-		x = 4
+		x = 14
 		y = 31
 
 	}
@@ -2770,7 +2853,7 @@ focus_tree = {
 		prerequisite = {
 			focus = PDG_President_Charilaos_Florakis
 		}
-		x = 3
+		x = 13
 		y = 28
 
 	}
