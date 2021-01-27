@@ -620,7 +620,7 @@ focus_tree = {
 		x = 19
 		y = 5
 			completion_reward = {
-					add_ideas = idea_young_pioneers
+					add_ideas = German_Pioneers
 				}
 
 	}
@@ -1751,7 +1751,7 @@ focus_tree = {
 		x = 7
 		y = 16
 			available = {
-					date > 1960
+					date > 1960.1.1
 				}
 			completion_reward = {
 					add_ideas = ddr_idea_new_economic_system

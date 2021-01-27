@@ -8,9 +8,12 @@ ic_pulse = {
 	set_variable = { oil_consumption_total_desired = 0 }
 	monthly_power_projection_gain = yes
 	monthly_set_fpp = yes
-	monthly_infamy_calc = yes
+ 	monthly_infamy_calc = yes
+
 	#resource_concession_evaluation = yes
 	add_to_variable = { global.ic_pulse_check = 1 }
+	set_variable = { Exploit_Limit = global.Exploit_Limit } 
+	add_to_variable = { Exploit_Limit = Exploit_Limit_Adjustment }
 	if = {
 		limit = {
 			check_variable = { global.eco_health < 0 }
@@ -25,9 +28,13 @@ ic_pulse = {
 	divide_variable = { global.eco_output_factor = 11 } #Average between 1 and eco_health x 11. 0 eco_health = 0.09 output factor
 	
 	clamp_variable = {
-		var = foriegnPowerProjection
+		var = foreignPowerProjection
 		min = 0
 		max = 2000000
+	}
+	if = {
+		limit = { NOT = { has_variable = badboy } } # check to prevent error if empty
+		set_variable = { badboy = 0 }
 	}
 	clamp_variable = {
 		var = badboy
@@ -50,13 +57,21 @@ ic_pulse = {
 					is_fully_controlled_by = VIE
 				}
 				create_unit = {
-					division = "division_template = \"Viet Cong Su đoàn\" start_experience_factor = 0.2 start_equipment_factor = 1"
+					division = "division_template = \"Viet Cong Su doàn\" start_experience_factor = 0.2 start_equipment_factor = 1"
 					owner = NLF
 				}
 			}
 		}
 	}
 	
+	if = {
+		limit = {
+			NOT = { has_global_flag = Twentieth_Congress_of_the_CPSU }
+			date > 1956.02.14 # Historical date
+			date < 1956.03.15
+		}
+		set_global_flag = Twentieth_Congress_of_the_CPSU
+	}
 	if = {
 		limit = {
 			tag = FRA
@@ -69,12 +84,118 @@ ic_pulse = {
 	}
 	if = {
 		limit = {
+			tag = USA
+			date > 1962.4.01
+			date < 1962.6.01
+			NOT = { has_country_flag = US_STEEL }
+		}
+		set_country_flag = US_STEEL
+		country_event = US_STEEL.0
+	}
+	if = {
+		limit = {
+			tag = USA
+			date > 1950.2.01
+			date < 1950.4.01
+			NOT = { has_country_flag = Red_Scare_start }
+		}
+		set_country_flag = Red_Scare_start
+		news_event = Red_Scare.1
+	}
+	if = {
+		limit = {
+			tag = USA
+			date > 1951.3.01
+			date < 1951.5.01
+			NOT = { has_country_flag = Red_Scare_start_2 }
+		}
+		set_country_flag = Red_Scare_start_2
+		country_event = Red_Scare.2
+	}
+	if = {
+		limit = {
+			tag = USA
+			date > 1949.6.01
+			date < 1949.8.01
+			NOT = { has_country_flag = Red_Scare_start_3 }
+		}
+		set_country_flag = Red_Scare_start_3
+		country_event = Red_Scare_Cul.1
+	}
+	if = {
+		limit = {
+			tag = USA
+			date > 1957.5.01
+			date < 1957.7.01
+			NOT = { has_country_flag = Red_Scare_end_2 }
+			has_country_flag = McCarthy_End_ALT
+		}
+		set_country_flag = Red_Scare_end_2
+		news_event = Red_Scare.21
+	}
+	if = {
+		limit = {
+			tag = USA
+			date > 1957.5.01
+			date < 1957.7.01
+			NOT = { has_country_flag = Red_Scare_end_2 }
+			NOT = { has_country_flag = McCarthy_End_ALT }
+		}
+		set_country_flag = Red_Scare_end_2
+		news_event = Red_Scare.23
+	}
+	if = {
+		limit = {
+			tag = USA
+			date > 1957.6.01
+			date < 1957.8.01
+			NOT = { has_country_flag = Red_Scare_end_3 }
+			NOT = { has_country_flag = reactionary_court }
+		}
+		set_country_flag = Red_Scare_end_3
+		news_event = Red_Scare_Cul.28
+	}	
+	if = {
+		limit = {
+			tag = USA
+			date > 1957.6.01
+			date < 1957.8.01
+			NOT = { has_country_flag = Red_Scare_end_3 }
+			has_country_flag = reactionary_court 
+		}
+		set_country_flag = Red_Scare_end_3
+		news_event = Red_Scare_Cul.29
+	}	
+
+	if = {
+		limit = {
+			tag = INO
+			date > 1958.1.01
+			date < 1962.3.01
+			NOT = { has_country_flag = SUMATRA_1 }
+		}
+		set_country_flag = SUMATRA_1
+		country_event = Sumatran_Revolt.0
+	}
+	if = {
+		limit = {
+			tag = MOR
+			date > 1958.10.01
+			date < 1958.12.01
+			NOT = { has_country_flag = second_rif_revolt_0 }
+		}
+		set_country_flag = second_rif_revolt_0
+		country_event = second_rif_revolt.0
+	}
+
+	if = {
+		limit = {
 			tag = SOV
 			date > 1961.10.01
 			date < 1961.12.30
 			NOT = { has_country_flag = Tsar_Bomba }
 		}
-		country_event = news.1031
+		news_event = news.1031
 		set_country_flag = Tsar_Bomba
 		tsar_bomba_super_event = yes
 	}
@@ -1221,7 +1342,7 @@ ic_pulse = {
 			date < 1964.11.01
 			NOT = { has_country_flag = rise_furlo }
 		}
-		country_event = Fulro.1
+		news_event = Fulro.1
 		set_country_flag = rise_furlo
 	}
 	if = {
@@ -1230,7 +1351,7 @@ ic_pulse = {
 			date < 1969.10.01
 			NOT = { has_country_flag = ho_chi_minh_death }
 		}
-		country_event = North_Vietnam.1
+		news_event = North_Vietnam.1
 		set_country_flag = ho_chi_minh_death
 	}
 
@@ -1658,6 +1779,14 @@ ic_pulse = {
 	}
 	if = {
 		limit = {
+				tag = RAJ
+				date > 1964.05.01
+				date < 1964.06.01
+			}
+		country_event = india.3
+	}
+	if = {
+		limit = {
 				tag = JOR
 				NOT = { has_country_flag = Currency_News_1 }
 				date > 1950.01.01
@@ -1792,83 +1921,83 @@ ic_pulse = {
 	}
 	if = {
 		limit = {
-				NOT = { has_country_flag = saf_news_2 }
-				tag = SAF
-				date > 1960.02.01
-				date < 1960.03.01
-			}
+			NOT = { has_country_flag = saf_news_2 }
+			tag = SAF
+			date > 1960.02.01
+			date < 1960.03.01
+		}
 		news_event = saf_news.2
 	}
 	if = {
 		limit = {
-				NOT = { has_country_flag = saf_news_3 }
-				tag = SAF
-				date > 1960.04.09
-				date < 1960.05.09
-			}
+			NOT = { has_country_flag = saf_news_3 }
+			tag = SAF
+			date > 1960.04.09
+			date < 1960.05.09
+		}
 		news_event = saf_news.3
 	}
 	if = {
 		limit = {
-				NOT = { has_country_flag = saf_news_4 }
-				tag = SAF
-				date > 1960.05.04
-				date < 1960.06.04
-			}
+			NOT = { has_country_flag = saf_news_4 }
+			tag = SAF
+			date > 1960.05.04
+			date < 1960.06.04
+		}
 		news_event = saf_news.4
 	}
 	if = {
 		limit = {
-				NOT = { has_country_flag = saf_news_5 }
-				tag = SAF
-				date > 1960.10.05
-				date < 1960.11.05
-			}
+			NOT = { has_country_flag = saf_news_5 }
+			tag = SAF
+			date > 1960.10.05
+			date < 1960.11.05
+		}
 		news_event = saf_news.5
 	}
 	if = {
 		limit = {
-				NOT = { has_country_flag = saf_news_6 }
-				tag = SAF
-				date > 1960.11.14
-				date < 1960.12.14
-			}
+			NOT = { has_country_flag = saf_news_6 }
+			tag = SAF
+			date > 1960.11.14
+			date < 1960.12.14
+		}
 		news_event = saf_news.6
 	}
 	if = {
 		limit = {
-				NOT = { has_country_flag = saf_news_7 }
-				tag = SAF
-				date > 1961.02.14
-				date < 1961.03.14
-			}
+			NOT = { has_country_flag = saf_news_7 }
+			tag = SAF
+			date > 1961.02.14
+			date < 1961.03.14
+		}
 		news_event = saf_news.7
 	}
 	if = {
 		limit = {
-				NOT = { has_country_flag = saf_news_8 }
-				tag = SAF
-				date > 1961.03.01
-				date < 1961.04.01
-			}
+			NOT = { has_country_flag = saf_news_8 }
+			tag = SAF
+			date > 1961.03.01
+			date < 1961.04.01
+		}
 		news_event = saf_news.8
 	}
 	if = {
 		limit = {
-				NOT = { has_country_flag = saf_news_9 }
-				tag = SAF
-				date > 1961.11.01
-				date < 1961.12.01
-			}
+			NOT = { has_country_flag = saf_news_9 }
+			tag = SAF
+			date > 1961.11.01
+			date < 1961.12.01
+		}
 		news_event = saf_news.9
 	}
 	if = {
 		limit = {
-				NOT = { has_country_flag = saf_news_10 }
-				tag = SAF
-				date > 1961.12.16
-				date < 1961.13.16
-			}
+			NOT = { has_country_flag = saf_news_10 }
+			tag = SAF
+			date > 1961.12.16
+			date < 1962.01.16
+		}
 		news_event = saf_news.10
 	}
 	if = {
@@ -1881,45 +2010,37 @@ ic_pulse = {
 	}
 	if = {
 		limit = {
-				tag = DAH
-				date > 1960.12.01
-				date < 1961.01.01
-			}
-		country_event = DAH.1
-	}
-	if = {
-		limit = {
-				tag = GHA
-				date > 1951.02.01
-				date < 1952.04.01
-			}
+			tag = GHA
+			date > 1951.02.01
+			date < 1952.04.01
+		}
 		country_event = Ghana.1
 	}
 	if = {
 		limit = {
-				tag = GHA
-				date > 1954.02.01
-				date < 1955.01.01
-			}
+			tag = GHA
+			date > 1954.02.01
+			date < 1955.01.01
+		}
 		country_event = Ghana.2
 	}
 	if = {
 		limit = {
-				tag = GHA
-				date > 1960.04.01
-				date < 1961.01.01
-			}
+			tag = GHA
+			date > 1960.04.01
+			date < 1961.01.01
+		}
 		country_event = Ghana.3
 	} 
 		 
 	if = {
 		limit = {
-				NOT = { has_country_flag = NNE_1 }
-				tag = USA
-				date > 1967.06.12
-				date < 1967.07.12
-			}
-			set_country_flag = NNE_1
+			NOT = { has_country_flag = NNE_1 }
+			tag = USA
+			date > 1967.06.12
+			date < 1967.07.12
+		}
+		set_country_flag = NNE_1
 		country_event = NNE.1
 	}
 	if = {
@@ -2082,26 +2203,6 @@ ic_pulse = {
 		}
 		country_event = equ.1
 		}
-	if = {
-		limit = {
-				NOT = { has_country_flag = NNE_17 }
-				tag = USA
-				date > 1951.03.21
-				date < 1951.04.21
-			}
-			set_country_flag = NNE_17
-		country_event = NNE.17
-	}
-	if = {
-		limit = {
-				NOT = { has_country_flag = NNE_18 }
-				tag = USA
-				date > 1951.06.04
-				date < 1951.07.04
-			}
-			set_country_flag = NNE_18
-		country_event = NNE.18
-	}
 	if = {
 		limit = {
 				NOT = { has_country_flag = NNE_19 }
@@ -3322,6 +3423,18 @@ ic_pulse = {
 			if = {
 				limit = {
 					tag = FRA
+					date > 1959.05.01
+					date < 1960.01.01
+					OR = {
+						has_completed_focus = FRA_Reafirmed_Fourth_Republic_1953
+						has_completed_focus = FRA_Local_Autonomy_for_the_French_Union_1953
+					}
+				}
+				country_event = french_elections.200
+			}
+			if = {
+				limit = {
+					tag = FRA
 					date > 1968.04.28
 					date < 1968.05.02
 					has_completed_focus = FRA_60s_Re_Elect_De_Galle
@@ -3510,25 +3623,14 @@ ic_pulse = {
 					NOT = { has_global_flag = berlin_uprising_1952 }
 					has_capitulated = no		
 				}
-				country_event = cwu.2
+				news_event = cwu.2
 			}
 			if = {
 				limit = {
 					tag = ENG 
-							OR = {
-								has_government = conservative
-								has_government = socialist
-								has_government = democratic
-								has_government = centrist
-								has_government = liberal
-								has_government = Liberal_Conservatism
-								has_government = Christian_Democratic
-								has_government = Social_Liberalism
-								has_government = Social_Democratic
-							}
 					
 					date > 1950.02.01
-					date < 1951.04.01
+					date < 1950.03.01
 				}
 				country_event = CWelect.1
 			}
@@ -3736,10 +3838,8 @@ ic_pulse = {
 				limit = {
 					has_idea = korean_war
 					NOT = {
-						OR = {
-							has_war_with = KOR
-							has_war_with = KPA
-						}
+						has_war_with = KOR
+						has_war_with = KPA
 					}
 				}
 				remove_ideas = korean_war
@@ -3775,10 +3875,8 @@ ic_pulse = {
 					date > 1955.08.01
 					date < 1956.01.01
 					NOT = {
-						OR = {
-							country_exists = ALG
-							has_war_with = ALG
-						}
+						country_exists = ALG
+						has_war_with = ALG
 					}
 				}
 				country_event = algeria.1002
@@ -3789,10 +3887,8 @@ ic_pulse = {
 					date > 1955.12.01
 					date < 1956.02.01
 					NOT = {
-						OR = {
-							country_exists = ALG
-							has_war_with = ALG
-						}
+						country_exists = ALG
+						has_war_with = ALG
 					}
 				}
 				country_event = algeria.1003
@@ -3803,13 +3899,28 @@ ic_pulse = {
 					date > 1956.09.01
 					date < 1957.01.01
 					NOT = {
-						OR = {
-							country_exists = ALG
-							has_war_with = ALG
-						}
+						country_exists = ALG
+						has_war_with = ALG
 					}
 				}
 				country_event = algeria.1005
+			}
+			if = {
+				limit = {
+					tag = DDR
+					date > 1971.04.01
+					date < 1971.07.01
+				}
+				country_event = ulbricht_purge.2
+				complete_national_focus = DDR_60s_Ulbrichts_Falling_out_from_Moscow
+			}
+			if = {
+				limit = {
+					tag = SOV
+					date > 1986.04.01
+					date < 1986.07.01
+				}
+				country_event = chernobyl.1
 			}
 			if = {
 				limit = {
@@ -4031,7 +4142,11 @@ ic_pulse = {
 					tag = USA
 					date > 1952.07.15
 					date < 1952.09.31
+					NOT = {
+						has_country_flag = USA_1952_Nominations
+					}
 				}
+				set_country_flag = USA_1952_Nominations
 				country_event = usa.1000
 				country_event = usa.1001
 			}
@@ -4954,7 +5069,10 @@ ic_pulse = {
 			NOT = { country_exists = NGA }
 		}
 		set_country_flag = Biafra_War_Start
-		NGA = { complete_national_focus = NGA_1960s_Biafran_War }
+		NGA = {
+			complete_national_focus = NGA_1960s_Biafran_War
+			remove_unit_leader = 196801
+		}
 		BFR = {
 			transfer_state = 1122
 			create_corps_commander = {
@@ -4964,8 +5082,18 @@ ic_pulse = {
 				skill = 6
 				id = 196801
 			}
+			create_corps_commander = {
+				name = "Victor Banjo"
+				portrait_path = "gfx/leaders/NGA/Victor_Banjo.dds"
+				id = 129798 
+				traits = { trait_reckless }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
 			load_oob = BFR_1949
-			
 		}
 		if = {
 			limit = {
@@ -5730,10 +5858,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = Compagnie_Internationale_sponsor
-				has_global_flag = hired_Compagnie_Internationale
-			}
+			has_country_flag = Compagnie_Internationale_sponsor
+			has_global_flag = hired_Compagnie_Internationale
 		}
 		clr_country_flag = Compagnie_Internationale_sponsor
 		clr_global_flag = hired_Compagnie_Internationale
@@ -5744,10 +5870,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = Babies_of_Biafra_sponsor
-				has_global_flag = hired_Babies_of_Biafra
-			}
+			has_country_flag = Babies_of_Biafra_sponsor
+			has_global_flag = hired_Babies_of_Biafra
 		}
 		clr_country_flag = Babies_of_Biafra_sponsor
 		clr_global_flag = hired_Babies_of_Biafra
@@ -5758,10 +5882,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = Control_Risks_sponsor
-				has_global_flag = hired_Control_Risks
-			}
+			has_country_flag = Control_Risks_sponsor
+			has_global_flag = hired_Control_Risks
 		}
 		clr_country_flag = Control_Risks_sponsor
 		clr_global_flag = hired_Control_Risks
@@ -5772,10 +5894,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = WatchGuard_International_sponsor
-				has_global_flag = hired_WatchGuard_International
-			}
+			has_country_flag = WatchGuard_International_sponsor
+			has_global_flag = hired_WatchGuard_International
 		}
 		clr_country_flag = WatchGuard_International_sponsor
 		clr_global_flag = hired_WatchGuard_International
@@ -5786,10 +5906,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = Les_Affreux_sponsor
-				has_global_flag = hired_Les_Affreux
-			}
+			has_country_flag = Les_Affreux_sponsor
+			has_global_flag = hired_Les_Affreux
 		}
 		clr_country_flag = Les_Affreux_sponsor
 		clr_global_flag = hired_Les_Affreux
@@ -5800,10 +5918,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = Vinnell_Corporation_sponsor
-				has_global_flag = hired_Vinnell_Corporation
-			}
+			has_country_flag = Vinnell_Corporation_sponsor
+			has_global_flag = hired_Vinnell_Corporation
 		}
 		clr_country_flag = Vinnell_Corporation_sponsor
 		clr_global_flag = hired_Vinnell_Corporation
@@ -5814,10 +5930,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = ten_Commando_sponsor
-				has_global_flag = hired_10_Commando
-			}
+			has_country_flag = ten_Commando_sponsor
+			has_global_flag = hired_10_Commando
 		}
 		clr_country_flag = ten_Commando_sponsor
 		clr_global_flag = hired_10_Commando
@@ -5828,10 +5942,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = six_Commando_sponsor
-				has_global_flag = hired_6_Commando
-			}
+			has_country_flag = six_Commando_sponsor
+			has_global_flag = hired_6_Commando
 		}
 		clr_country_flag = six_Commando_sponsor
 		clr_global_flag = hired_6_Commando
@@ -5842,10 +5954,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = five_Commando_sponsor
-				has_global_flag = hired_5_Commando
-			}
+			has_country_flag = five_Commando_sponsor
+			has_global_flag = hired_5_Commando
 		}
 		clr_country_flag = five_Commando_sponsor
 		clr_global_flag = hired_5_Commando
@@ -5856,10 +5966,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = four_Commando_sponsor
-				has_global_flag = hired_4_Commando
-			}
+			has_country_flag = four_Commando_sponsor
+			has_global_flag = hired_4_Commando
 		}
 		clr_country_flag = four_Commando_sponsor
 		clr_global_flag = hired_4_Commando
@@ -5870,10 +5978,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = paladin_sponsor
-				has_global_flag = hired_paladin
-			}
+			has_country_flag = paladin_sponsor
+			has_global_flag = hired_paladin
 		}
 		clr_country_flag = paladin_sponsor
 		clr_global_flag = hired_paladin
@@ -5884,10 +5990,8 @@ ic_pulse = {
 	if = {
 		limit = {
 			has_war = no
-			AND = {
-				has_country_flag = Jesa_Air_West_Africa_sponsor
-				has_global_flag = hired_Jesa_Air_West_Africa
-			}
+			has_country_flag = Jesa_Air_West_Africa_sponsor
+			has_global_flag = hired_Jesa_Air_West_Africa
 		}
 		clr_country_flag = Jesa_Air_West_Africa_sponsor
 		clr_global_flag = hired_Jesa_Air_West_Africa
@@ -7146,38 +7250,7 @@ ic_pulse = {
 			date < 1950.5.31
 		}
 	}
-	if = {
-		limit = {
-				OR = {
-					tag = BEL #doesn't
-					tag = AST #doesn't
-					tag = LUX #doesn't
-					tag = CAN #doesn't
-					tag = FRA #sends
-					tag = HOL #doesn't
-					tag = GRE #doesn't
-					tag = TUR #doesn't
-					tag = SAF #sends 
-					tag = COL #dosen't
-					tag = SIA #sends
-					tag = ETH #sends sometimes
-					tag = JAP #doesn't
-					tag = CHI #sends
-					tag = SPR #sends
-					tag = ENG #sends
-					tag = USA #sends
-					tag = NZL
-					tag = "PHI"
-				}
-				has_global_flag = korean_war
-				NOT = { 
-					has_country_flag = korea_48
-				}
-			}
-			set_country_flag = korea_48
-			add_ideas =	korean_war_volunteers
-			country_event = { id = korea.48 days = 0 }
-		}
+
 
 	if = {
 		limit = {
@@ -7252,7 +7325,7 @@ ic_pulse = {
 #Dutch Antilles being founded
 	if = {
 		limit = {
-			original_tag = NED
+			original_tag = HOL
 			date > 1954.12.1
 			date < 1954.12.31
 		}
@@ -7263,7 +7336,7 @@ ic_pulse = {
 		limit = {
 			original_tag = DOC
 			original_tag = COG
-			owns_state = 5117
+			owns_state = 295
 			date > 1964.8.1
 			date < 1964.8.31
 		}
@@ -7274,7 +7347,7 @@ ic_pulse = {
 			original_tag = DOC
 			original_tag = COG
 			original_tag = KAG
-			owns_state = 5117
+			owns_state = 295
 			date > 1966.5.1
 			date < 1966.5.31
 		}
@@ -7882,10 +7955,8 @@ ic_pulse = {
 			date > 1960.1.1
 			tag = NGA
 			NOT = {
-				OR = {
-					has_country_flag = binational_state
-					has_country_flag = partitioned_nigeria
-				}
+				has_country_flag = binational_state
+				has_country_flag = partitioned_nigeria
 			}
 			OR = {
 				has_idea = NGA_north_south_tension_low
@@ -7943,11 +8014,13 @@ ic_pulse = {
 			has_war = no
 		}
 		clr_country_flag = korea_devestated
-		remove_province_modifier = {
-			static_modifiers = { korean_war_devestation }
-			province = {
-				all_provinces = yes
+		every_owned_state = {
+			remove_province_modifier = {
+				static_modifiers = { korean_war_devestation }
+				province = {
+					all_provinces = yes
+				}
 			}
-		}		
+		}
 	}
 }

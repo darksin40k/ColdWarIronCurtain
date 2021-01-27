@@ -24,10 +24,10 @@ spriteTypes = {
 		name = "GFX_YUG_infantry_equip_5_medium"
 		texturefile = "gfx/interface/technologies/infantry/YUG_infantry_equip_5.dds"
 	}
-	 SpriteType = {
-		 name = "GFX_YUG_light_tanks_1_medium"
-		 texturefile = "gfx/interface/technologies/YUG_lt_1.dds"
-	 }
+	#  SpriteType = {
+	# 	 name = "GFX_YUG_light_tanks_1_medium"
+	# 	 texturefile = "gfx/interface/technologies/YUG_lt_1.dds"
+	#  }
 	
 	# SpriteType = {
 		# name = "GFX_YUG_light_tanks_2_medium"
@@ -107,36 +107,6 @@ spriteTypes = {
 	# SpriteType = {
 		# name = "GFX_YUG_main_battle_tanks_9_medium"
 		# texturefile = "gfx/interface/technologies/YUG_mbt_9.dds"
-	# }
-
-	# SpriteType = {
-		# name = "GFX_YUG_main_battle_tanks_4_ERA_medium"
-		# texturefile = "gfx/interface/technologies/YUG_mbt_ERA_4.dds"
-	# }
-	
-	# SpriteType = {
-		# name = "GFX_YUG_main_battle_tanks_5_ERA_medium"
-		# texturefile = "gfx/interface/technologies/YUG_mbt_ERA_5.dds"
-	# }
-
-	# SpriteType = {
-		# name = "GFX_YUG_main_battle_tanks_6_ERA_medium"
-		# texturefile = "gfx/interface/technologies/YUG_mbt_ERA_6.dds"
-	# }
-
-	# SpriteType = {
-		# name = "GFX_YUG_main_battle_tanks_7_ERA_medium"
-		# texturefile = "gfx/interface/technologies/YUG_mbt_ERA_7.dds"
-	# }
-	
-	# SpriteType = {
-		# name = "GFX_YUG_main_battle_tanks_8_ERA_medium"
-		# texturefile = "gfx/interface/technologies/YUG_mbt_ERA_8.dds"
-	# }
-
-	# SpriteType = {
-		# name = "GFX_YUG_main_battle_tanks_9_ERA_medium"
-		# texturefile = "gfx/interface/technologies/YUG_mbt_ERA_9.dds"
 	# }
 
 	# SpriteType = {
@@ -973,38 +943,6 @@ spriteTypes = {
 	# }
 	
 	# SpriteType = {
-		# name = "GFX_YUG_antiair10_medium"
-		# texturefile = "gfx/interface/technologies/YUG_AA_11.dds"
-	# }
-	# SpriteType = {
-		# name = "GFX_YUG_antiair9_medium"
-		# texturefile = "gfx/interface/technologies/SOV_AA_10.dds"
-	# }
-	# SpriteType = {
-		# name = "GFX_YUG_antiair8_medium"
-		# texturefile = "gfx/interface/technologies/YUG_AA_9.dds"
-	# }
-	# SpriteType = {
-		# name = "GFX_YUG_antiair7_medium"
-		# texturefile = "gfx/interface/technologies/YUG_AA_8.dds"
-	# }
-	
-	# SpriteType = {
-		# name = "GFX_YUG_antiair6_medium"
-		# texturefile = "gfx/interface/technologies/YUG_AA_7.dds"
-	# }
-	
-	# SpriteType = {
-		# name = "GFX_YUG_antiair5_medium"
-		# texturefile = "gfx/interface/technologies/SOV_AA_6.dds"
-	# }
-	
-	# SpriteType = {
-		# name = "GFX_YUG_antiair2_medium"
-		# texturefile = "gfx/interface/technologies/YUG_AA_3.dds"
-	# }
-	
-	# SpriteType = {
 		# name = "GFX_YUG_rocket_artillery3_medium"
 		# texturefile = "gfx/interface/technologies/YUG_rocket_artillery3.dds"
 	# }
@@ -1056,7 +994,6 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_YUG_infantry_specialist_5_medium"
-		texturefile = "gfx/interface/technologies/YUG_infantry_specialist_5_medium.dds"
+		texturefile = "gfx/interface/technologies/YUG_infantry_specialist_5.dds"
 	}
 }
-

@@ -6,14 +6,15 @@ state = {
 	}
 
 	history = {
-		owner = RAJ
+		#owner = RAJ #changed to PAK to clear error from log
+		owner = PAK
 		set_state_flag = tropical
 		set_state_flag = riverlarge
 		set_state_flag = nominal
 		set_state_flag = semideveloped
 		buildings = {
-			infrastructure = 2
-			state_infrastructure = 2
+			infrastructure = 1
+			state_infrastructure = 1
 
 			industrial_complex = 1
 			arms_factory = 1

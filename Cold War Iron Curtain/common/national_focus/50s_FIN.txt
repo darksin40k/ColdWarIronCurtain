@@ -1419,7 +1419,10 @@ focus_tree = {
 		x = 47
 		y = 3
 		completion_reward = {
-			country_event = fin.25
+			custom_effect_tooltip = fin_karelia
+				hidden_effect = {
+					country_event = fin.25
+				}
 		}
 	}
 	focus = {
@@ -2952,7 +2955,7 @@ focus_tree = {
 		x = 1
 		y = 15
 		completion_reward = {
-			add_ideas = idea_young_pioneers
+			add_ideas = Finnish_Pioneers
 		}
 	}
 	focus = {

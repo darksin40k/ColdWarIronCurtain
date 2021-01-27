@@ -453,10 +453,19 @@ country_event = {
 
     option = {
         name = "Will the Old General step up?"
+	set_country_flag = enable_macarthur
         news_event = {
             id = MacArthur_Dismissal.25 
             days = 30
         }  
+        country_event = {
+            id = USA_1952_Buildup.1
+            days = 45
+        }
+        country_event = {
+            id = USA_1952_Buildup.2
+            days = 50
+        }
     }
 }
 

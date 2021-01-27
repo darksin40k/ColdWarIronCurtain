@@ -196,7 +196,7 @@ add_ideas = {
 	policy_services_temp_0
 	policy_taxrate_temp_3
 	
-	policy_voting_temp_1
+	#policy_voting_temp_1
 	policy_media_temp_0
 	policy_women_temp_4
 	policy_minorities_temp_3
@@ -417,7 +417,7 @@ create_corps_commander = {
 
 1950.5.1 = {
 	drop_cosmetic_tag = yes	
-	white_peace = CHI
+	# white_peace = CHI	# commented to avoid error in 1960 start ("white_peace: not valid before game start, such as in history scripts")
 }
 
 1960.1.1 = {

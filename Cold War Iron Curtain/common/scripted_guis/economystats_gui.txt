@@ -1,71 +1,25 @@
 scripted_gui = {
-	view_valhalla = {
-		context_type = player_context
-		parent_window_token = top_bar
-		window_name = "view_economy_container"
-		dirty = show_economy_main
-		visible = {
-			is_ai = no
-		}
-
-		triggers = {
-			view_economy_button_click_enabled = {
-				
-			}
-		}
-
-		effects = {
-			view_economy_button_click = {
-				if = {
-					limit = { has_variable = show_economy_main }
-					
-					clear_variable = show_economy_main
-				}
-				else = {
-				
-					set_variable = { show_economy_main = 1 }
-				}
-				
-				set_variable = { global.totalexp = 0 }
-				add_to_variable = { global.totalexp = mil_expend}
-				add_to_variable = { global.totalexp = welfare_cost}
-				add_to_variable = { global.totalexp = cpi_cost}
-				add_to_variable = { global.totalexp = edu_cost}
-				add_to_variable = { global.totalexp = health_cost}
-				add_to_variable = { global.totalexp = pub_cost}
-
-				create_pie_chart = yes
-		
-		
-			}
-		}
-	}
-	
-	
 	economy_main = {
 		context_type = player_context
 		parent_window_token = top_bar
 		window_name = "economy_main_container"
 		dirty = show_economy_main
-		
-		
 
 		visible = {
 			check_variable = { show_economy_main > 0 }
 			is_ai = no
 		}
-		
+
 		ai_enabled = {
 			always = no
 		}
-		
+
 		effects = {
 			exitbutton_legislation_click = {
-									set_variable = { show_economy_main = 0 }
-											}
-					}
-			
-		
+				set_variable = { show_economy_main = 0 }
+			}
+		}
+
 		properties = {
 			pie0 = { frame = pie_chart^0 }
 			pie1 = { frame = pie_chart^1 }
@@ -374,11 +328,5 @@ scripted_gui = {
 			3pie98 = { frame = 3pie_chart^98 }
 			3pie99 = { frame = 3pie_chart^99 }
 		}
-
-
-
-
 	}
-		
-		
-}		
+}

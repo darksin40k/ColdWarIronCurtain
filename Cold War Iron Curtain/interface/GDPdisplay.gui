@@ -1,24 +1,5 @@
 guiTypes = {
 	containerWindowType = {
-		name = "view_GDP_container"
-		position = { x = 732 y = 4  }
-		
-		
-
-		buttonType = {
-			name = "view_GDP_button"
-			position = { x = 0 y = 0 }
-			quadTextureSprite = "GFX_GDPbg"
-			pdx_tooltip = "core_debt_instant"
-			pdx_tooltip_delayed = "core_debt"
-			shortcut = "j"
-		}
-	}
-
-	
-	
-	
-	containerWindowType = {
 		name = "GDP_main_container"
 		position = { x = 1 y = 0 }	
 		show_position = { x = 750 y = 115 }
@@ -41,41 +22,36 @@ guiTypes = {
 			position = { x=-370 y =10 }
 		}
 
- ##commodore background
-
+ 		##commodore background
 		containerWindowType = {		
-		name = "background"
-		position = { x=0 y =0 }
-		clipping = no
-		size = { width = 980 height = 600 }
+			name = "background"
+			position = { x = 0 y = 0 }
+			clipping = no
+			size = { width = 980 height = 600 }
 
-		
-		
-		background = {
-			name = "Background"		
-			quadTextureSprite ="GFX_tiled_window_2b_border_crt"
-			position = { x=76 y =37 }
+			background = {
+				name = "Background"		
+				quadTextureSprite ="GFX_tiled_window_2b_border_crt"
+				position = { x = 76 y = 37 }
 			}
 
-		iconType ={
+			iconType = {
 				name ="commodore_panel"
 				spriteType = "GFX_gui_commodore_panel"
-				position = { x= 110 y = 649 }
+				position = { x = 110 y = 649 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = no
 				scale = 1
 			}
 
-		iconType ={
+			iconType = {
 				name ="commodore_screen"
 				spriteType = "GFX_gui_commodore_screen3"
-				position = { x= -415 y = -152 }
+				position = { x = -415 y = -152 }
 				Orientation = "UPPER_LEFT"
 				alwaystransparent = yes
 				scale = 1
 			}
-		
-
 		}
 						
 		buttonType = {
@@ -91,8 +67,6 @@ guiTypes = {
 			position = { x = -954 y = 688 }
 			quadTextureSprite = "GFX_gui_buttoncommodore"
 			Orientation = "UPPER_RIGHT"
-			
-			
 		}
 
 		buttonType = {
@@ -100,8 +74,6 @@ guiTypes = {
 			position = { x = -814 y = 688 }
 			quadTextureSprite = "GFX_gui_buttoncommodore"
 			Orientation = "UPPER_RIGHT"
-			
-			
 		}
 
 		buttonType = {
@@ -110,7 +82,6 @@ guiTypes = {
 			position = {x=-280 y=765}
 			Orientation = "UPPER_RIGHT"
 			spriteType = "GFX_gui_commodore_audio"
-			
 		}
 
 		buttonType = {
@@ -118,7 +89,6 @@ guiTypes = {
 			position = {x=-327 y=758}
 			Orientation = "UPPER_RIGHT"
 			spriteType = "GFX_gui_commodore_video"
-			
 		}
 
 	containerWindowType = {		
@@ -801,7 +771,7 @@ guiTypes = {
 			position = { x = 540 y = 660 }
 			font = "hoi_30header"
 			text = "Means of Production"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = ""
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -816,7 +786,7 @@ guiTypes = {
 			position = { x = 518 y = 690 }
 			font = "hoi_24header"
 			text = "(Numbers)"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = ""
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -897,7 +867,7 @@ guiTypes = {
 			position = { x = 486 y = 790}
 			font = "hoi_24header"
 			text = "GDP_OFFICE"
-			pdx_tooltip = "DOCK_FACTORIES"
+			pdx_tooltip = "OFFICE_PARKS"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -917,7 +887,7 @@ guiTypes = {
 			position = { x = 486 y = 815 }
 			font = "hoi_24header"
 			text = "GDP_AGRI"
-			pdx_tooltip = "DOCK_FACTORIES"
+			pdx_tooltip = "AGRI_COMPLEXES"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -937,7 +907,7 @@ guiTypes = {
 			position = { x = 486 y = 840 }
 			font = "hoi_24header"
 			text = "GDP_REFINERY"
-			pdx_tooltip = "DOCK_FACTORIES"
+			pdx_tooltip = "REFINERIES"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -957,7 +927,7 @@ guiTypes = {
 			position = { x = 675 y = 870 }
 			font = "hoi_24header"
 			text = "GDP_SECTOR_TOTAL"
-			pdx_tooltip = "DOCK_FACTORIES"
+			pdx_tooltip = "OUR_TOTAL_GDP"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -979,7 +949,7 @@ guiTypes = {
 			position = { x = 755 y = 689 }
 			font = "hoi_24header"
 			text = "(Industrial Value)"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = ""
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1005,7 +975,7 @@ guiTypes = {
 			position = { x = 760 y = 740 }
 			font = "hoi_24header"
 			text = "Value   $[?milvalue|G3]T"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = "MIL_FACTORIES"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1018,7 +988,7 @@ guiTypes = {
 			position = { x = 760 y = 765 }
 			font = "hoi_24header"
 			text = "Value:  $[?dockvalue|G3]T"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = "DOCK_FACTORIES"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1031,7 +1001,7 @@ guiTypes = {
 			position = { x = 760 y = 790 }
 			font = "hoi_24header"
 			text = "Value:  $[?ofpvalue|G3]T"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = "OFFICE_PARKS"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1046,7 +1016,7 @@ guiTypes = {
 			position = { x = 760 y = 815 }
 			font = "hoi_24header"
 			text = "Value:  $[?farmvalue|G3]T"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = "AGRI_COMPLEXES"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1058,7 +1028,7 @@ guiTypes = {
 			position = { x = 760 y =  840 }
 			font = "hoi_24header"
 			text = "Value:  $[?refineryvalue|G3]T"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = "REFINERIES"
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1080,7 +1050,7 @@ guiTypes = {
 			position = { x = 980 y = 680 }
 			font = "hoi_30header"
 			text = "GDP_MACRO"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = ""
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1093,7 +1063,7 @@ guiTypes = {
 			position = { x = 970 y =  710 }
 			font = "hoi_24header"
 			text = "National Productvity: x[?inc_productivity|G3]"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = ""
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1106,7 +1076,7 @@ guiTypes = {
 			position = { x = 970 y =  750 }
 			font = "hoi_24header"
 			text = "Dock Productivity: x[?dockyard_tech|G3]"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = ""
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1119,7 +1089,7 @@ guiTypes = {
 			position = { x = 970 y =  770 }
 			font = "hoi_24header"
 			text = "Office Productivity: x[?office_park_tech|G3]"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = ""
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1131,7 +1101,7 @@ guiTypes = {
 			position = { x = 970 y =  790 }
 			font = "hoi_24header"
 			text = "Agri Productivity: x[?farm_tech|G3]"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = ""
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no
@@ -1144,7 +1114,7 @@ guiTypes = {
 			position = { x = 970 y =  810 }
 			font = "hoi_24header"
 			text = "Refinery Productivity: x[?oil_refinery_tech|G3]"
-			pdx_tooltip = "CIV_FACTORIES"
+			pdx_tooltip = ""
 			maxWidth = 350
 			maxHeight = 20
 			fixedsize = no

@@ -629,7 +629,14 @@ country_event = {
 			white_peace = CAN
 			white_peace = SAF
 			white_peace = USA
-			white_peace = CHI
+		}
+		if = {
+			limit = {
+				has_global_flag = chinese_civil_war_over
+			}
+			PRC = {
+				white_peace = CHI
+			}
 		}
 		KOR = {
 			dismantle_faction = yes
@@ -869,8 +876,13 @@ country_event = {
 		white_peace = CAN
 		white_peace = SAF
 		white_peace = CHI
-		PRC = {
-			white_peace = CHI
+		if = {
+			limit = {
+				has_global_flag = chinese_civil_war_over
+			}
+			PRC = {
+				white_peace = CHI
+			}
 		}
 		USA = {
 			white_peace = PRC
@@ -888,6 +900,7 @@ country_event = {
 		SOV = { give_guarantee = KPA }
 		PRC = { give_guarantee = KPA }
 		USA = { give_guarantee = KOR }
+		clr_global_flag = korean_war
 	}
 }
 
@@ -1121,10 +1134,6 @@ country_event = {
 				is_historical_focus_on = yes
 				factor = 0
 			}
-		}
-		declare_war_on = {
-			target = KPA
-			type = annex_everything
 		}
 		declare_war_on = {
 			target = KPA
@@ -2236,6 +2245,7 @@ country_event = {
  immediate = {log = "[GetDateText]: [Root.GetName]: id = korea.48"}
 	title = "UN resolution n.82"
 	desc = korea.48.d
+	picture = GFX_korea_48 
 
 	is_triggered_only = yes
 

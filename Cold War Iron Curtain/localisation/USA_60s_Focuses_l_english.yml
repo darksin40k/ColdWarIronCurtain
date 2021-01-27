@@ -25,10 +25,10 @@
  USASOV_VIETNAM.2.d:0 "The American invasion of the Vietnamese jungles has continued unopposed for some time, even though [USA.GetNameDef]'s troops have made little progress. We have learned that Januscz Lewandowski, Polish representative to the International Control Commission, has proposed a diplomatic initiative called \"Marigold\". As a part of this proposition, he would help to discern peace terms by acting as and intermediary between North Vietnam and the American ambassador to South Vietnam. Although we should not actively mediate, we can prevent his initiative, if we wish."
  USASOV_VIETNAM.3.d:0 "Soviet ambassador to [POL.GetNameDef] has reached out to our diplomats over Marigold, the diplomatic initiative recently started by Januscz Lewandowski. These diplomats have tactlessly suggested with thinly veiled threats that we prevent his efforts at diplomacy. Unfortunately, we cannot allow Lewandowski to continue this effort."
  USASOV_VIETNAM.4.d:0 "Our ambassador to South Vietnam has received a communique from Polish representative to the International Control Commission Januscz Lewandowski. Lewandowski has expressed a desire to serve as intermediary in peace negotiations between North Vietnam and [USA.GetNameDef]. While some of the President's closest advisors believe that we should take this opportunity to pull out of the war, there are plenty of warhawks who believe that we can fight tooth and nail to win this fight against communism."
- USASOV_VIETNAM.5.d:0 "The [USA.GetAdj] government has officially accepted our proposal for peace negotiations between North Vietnam and [USA.GetNameDef]! We can expect proper negotiations in the coming months at the headquarters of the United Nations, if [VIN.GetNameDef] accepts."
- USASOV_VIETNAM.6.d:0 "Diplomatic Initiative Marigold was quickly and unequivocally rejected by [USA.GetAdj]. Unfortunately, we will not be able to iron out the conflict in Vietnam."
+ USASOV_VIETNAM.5.d:0 "The [USA.GetAdjective] government has officially accepted our proposal for peace negotiations between North Vietnam and [USA.GetNameDef]! We can expect proper negotiations in the coming months at the headquarters of the United Nations, if [VIN.GetNameDef] accepts."
+ USASOV_VIETNAM.6.d:0 "Diplomatic Initiative Marigold was quickly and unequivocally rejected by [USA.GetAdjective]. Unfortunately, we will not be able to iron out the conflict in Vietnam."
  USASOV_VIETNAM.7.d:0 "Polish representative to the ICC Januscz Lewandowski has volunteered himself as a middleman for peace negotiations between our nation and [USA.GetNameDef]! The Americans even seem to be willing to work with us for peace. "
- USASOV_VIETNAM.8.d:0 "Representatives from [USA.GetNameDef] and [VIN.GetNameDef] have met under supervision from Polish representative Lewandowski at the headquarters of the United Nations. Following several days of tense negotiations, they have agreed on peace terms, that have further been affirmed by the governments of [USA.GetNameDef] and [VIN.GetNameDef]. The [USA.GetAdj] military will soon be withdrawing from Southeast Asia."
+ USASOV_VIETNAM.8.d:0 "Representatives from [USA.GetNameDef] and [VIN.GetNameDef] have met under supervision from Polish representative Lewandowski at the headquarters of the United Nations. Following several days of tense negotiations, they have agreed on peace terms, that have further been affirmed by the governments of [USA.GetNameDef] and [VIN.GetNameDef]. The [USA.GetAdjective] military will soon be withdrawing from Southeast Asia."
  USASOV_VIETNAM.9.d:0 "Leaders in [VIN.GetNameDef] have rejected our attempts at peace! For some reason, they seem to want the fight?"
 
  
@@ -101,8 +101,8 @@
  USA_Re_Establish_Mafia_in_Cuba_desc:0 "Now that our Cuban Exiles have defeated the Communist Forces, it is time to re-establish the old order before Castro rose to power. Part of that order is the Mafia gangs, who, although obviously criminal, will be vital to keeping order."
  USA_60s_Cuban_Deathsquads:0 "Cuban Deathsquads"
  USA_60s_Cuban_Deathsquads_desc:0 "Despite Castro's downfall, many Cubans are protesting and rioting against their newfound freedom and liberty! This can't continue. Forming deathsquads to protect our interests is necessary to destroy Cuban Communism forever."
- USA_60s_Depose_Juan_Velasco:0 "Depose Juan Velasco Alverado"
- USA_60s_Depose_Juan_Velasco_desc:0 "Juan Velasco Alverado, the leader of Peru, is a tyrannical despot, and must be removed. Our agents are in place and are waiting for the green light." 
+ USA_60s_Depose_Juan_Velasco:0 "Depose Juan Velasco Alvarado"
+ USA_60s_Depose_Juan_Velasco_desc:0 "Juan Velasco Alvarado, the leader of Peru, is a tyrannical despot, and must be removed. Our agents are in place and are waiting for the green light." 
  USA_60s_Establish_Ecuadorian_Junta:0 "Establish Ecuadorian Junta"
  USA_60s_Establish_Ecuadorian_Junta_desc:0 "While Ecuador isn't communist yet, it is time to create a new regime. Although a true democracy is preferable, a strong military junta is necessary to maintain stability and the status quo."
  USA_60s_Operation_POWER_PACK:0 "Operation POWER PACK"
@@ -299,7 +299,7 @@
  USA_60s_Expand_Aid_to_South_Korea_desc:0 "Despite securing freedom in the 1953 Cease-Fire, the ROK still needs to defend itself from the North Korean and Chinese communist instigators. To do that, it needs a stronger economy and armed forces."
  USA_60s_Encourage_Further_Thai_Intervention_in_South_East_Asia:0 "Encourage Further Thai Intervention in South East Asia"
  USA_60s_Encourage_Further_Thai_Intervention_in_South_East_Asia_desc:0 "The Thai have been a surprisingly firm ally in South East Asia, and have been providing support to the south Vietnamese and Royalists. It's time for them to get more involved."
- #prague spring loc, focuses not implemented yet!
+ #Prague spring loc, focuses not implemented yet!
  #USA_60s_The_Prague_Spring:0 "The Prague Spring"
  #USA_60s_The_Prague_Spring_desc:0
  #USA_60s_Condemn_Soviet_Imperialism:0 "Condemn Soviet Imperialism"
@@ -308,7 +308,7 @@
  #USA_60s_Place_Czechoslovakia_Under_the_Nuclear_Umbrella:0 "Place Czechoslovakia Under the Nuclear Umbrella"
  #USA_60s_USA_cze_Backs_Down:0 "USA Backs Down"
  USA_60s_The_Gulf_of_Tonkin_Incident:0 "The Gulf of Tonkin Incident"
- USA_60s_The_Gulf_of_Tonkin_Incident_desc:0 "The North Vietnamese have attacked tow of our destroyers out on patrol in the Tonkin Gulf! This unprecedented, unwarranted act of violence will not go unnoticed. This. Means. War."
+ USA_60s_The_Gulf_of_Tonkin_Incident_desc:0 "The North Vietnamese have attacked two of our destroyers out on patrol in the Tonkin Gulf! This unprecedented, unwarranted act of violence will not go unnoticed. This. Means. War."
  USA_60s_Begin_The_Vietnam_War:0 "Begin The Vietnam War"
  USA_60s_Begin_The_Vietnam_War_desc:0 "The time for war has come again. There are no holds barred, and no mercy will be given to the backstabbing Ho Chi Minh and his Communist dogs. We will crush them like the puny ants they truly are."
  USA_60s_Restrict_Involvement:0 "Restrict Involvement"

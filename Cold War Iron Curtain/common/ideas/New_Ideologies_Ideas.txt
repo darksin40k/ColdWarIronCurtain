@@ -115,6 +115,32 @@ ideas = {
 			modifier = {
 			}
 		}
+
+		UN_national_asset_freeze = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.025
+				production_speed_buildings_factor = -0.1
+			}
+		}
+
+		UN_officials_sanctioned = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.025
+			}
+		}
+
 		UN_Trade_Sanctions = {
 			allowed = {
 				always = no
@@ -394,6 +420,20 @@ ideas = {
 			}
 
 		}
+		US_Steel_Price_Hike = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			#picture = GFX_transfer_of_functions_act
+
+			modifier = {
+				stability_factor = -0.05
+				production_speed_buildings_factor = -0.15
+			}
+
+		}
 		NGA_macpherson_constitution_2 = {
 			allowed = {
 				always = no
@@ -601,12 +641,9 @@ ideas = {
 				always = no 
 			}	
 			modifier = {
-				consumer_goods_factor = 0.5
-				production_speed_buildings_factor = -0.25
-				industrial_capacity_factory = -0.33
-				#production_factory_max_efficiency_factor = -0.3
-				#political_power_factor = -0.3
-				#research_speed_factor = -0.25
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.15
 			}			
 
 		}
@@ -616,9 +653,9 @@ ideas = {
 				always = no 
 			}	
 			modifier = {
-				consumer_goods_factor = 0.3
-				production_speed_buildings_factor = -0.175
-				industrial_capacity_factory = -0.20
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.10
+				industrial_capacity_factory = -0.1
 			}			
 
 		}
@@ -628,9 +665,9 @@ ideas = {
 				always = no 
 			}	
 			modifier = {
-				consumer_goods_factor = 0.15
-				production_speed_buildings_factor = -0.10
-				industrial_capacity_factory = -0.10
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
 			}			
 
 		}
@@ -1250,7 +1287,7 @@ ideas = {
 				production_speed_buildings_factor = 0.15
 			}	
 			targeted_modifier = {
-				tag = SOV
+				tag = USA
 				trade_cost_for_target_factor = -0.25
 				cic_to_target_factor = 0.05
 			}
@@ -1432,6 +1469,32 @@ ideas = {
 				conscription_factor = 0.01
 				army_morale_factor = 0.01
 				stability_factor = 0.01
+			}
+		}
+		National_Firearms_Act2 = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				#can_create_factions = yes
+			}
+	
+			modifier = {
+				conscription_factor = 0.02
+				army_morale_factor = 0.03
+				stability_factor = 0.05
+				resistance_growth = -0.5
 			}
 		}
 		Liberation_Theology = {
@@ -3086,6 +3149,30 @@ ideas = {
 				production_speed_arms_factory_factor = -0.5
 			}
 		}
+		mic_expansion = {
+			
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+	
+			rule = {
+				#can_create_factions = yes
+			}
+	
+			modifier = {
+				conscription_factor = 0.105
+				production_speed_arms_factory_factor = 0.35
+			}
+		}
 		importing_western_machinery = {
 			
 			
@@ -4371,7 +4458,7 @@ ideas = {
 			
 			modifier = {
 			stability_factor = 0.05
-			resistance_growth = 0.25			
+			resistance_growth = -0.25			
 			}
 		}
 		hyperinflation1 = {
@@ -4849,7 +4936,7 @@ ideas = {
 			
 			modifier = {
 				min_export = -0.1
-				production_factory_max_efficiency_factor = -0.10
+				production_factory_max_efficiency_factor = -0.05
 				political_power_factor = 0.25
 				stability_factor = 0.02
 			}
@@ -5681,6 +5768,26 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 		}
+		A_Sound_Dollar = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_speed_buildings_factor = 0.1
+				
+				production_factory_max_efficiency_factor = 0.1
+			}		
+		}
 		Currency_Devaluation = {
 			allowed = {
 				always = no
@@ -5918,7 +6025,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.05
 			}		
 		}
-		foriegn_economic_growth = {
+		foreign_economic_growth = {
 			allowed = {
 				always = no
 			}
@@ -7348,22 +7455,18 @@ ideas = {
 
 			picture = FRA_scw_intervention_republicans_focus
 		}
+
 		#East German 60s Ideas
 		Republikflucht = {	
-
-		picture = Republikflucht
-			
+			picture = Republikflucht
 			allowed = {
 				always = no # Triggered via event
 			}
-			
 			modifier = {
 				MONTHLY_POPULATION = -0.10
 				production_speed_buildings_factor = -0.15
 				production_factory_max_efficiency_factor = -0.15				
 			}
-	
-
 		}
 
 		Resource_Efficiency = {
@@ -7814,7 +7917,7 @@ ideas = {
 				industrial_capacity_factory = 0.05
 			}
 		}
-		foriegn_military_aid = {
+		foreign_military_aid = {
 		
 			allowed = {
 				always = no

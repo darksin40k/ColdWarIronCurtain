@@ -139,7 +139,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		completion_reward = {
-			add_ideas = idea_young_pioneers
+			add_ideas = Bulgarian_Pioneers
 		}
 	}
 	focus = {
@@ -350,10 +350,8 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = { 
-						OR = {
-							has_idea = gulag_politic
-							has_idea = gulag_politic_expanded
-						}
+						has_idea = gulag_politic
+						has_idea = gulag_politic_expanded
 					}
 				}
 				add_ideas = gulag_politic
@@ -718,10 +716,8 @@ focus_tree = {
 			if = {
 				limit = {
 					NOT = { 
-						OR = {
-							has_idea = gulag_politic
-							has_idea = gulag_politic_expanded
-						}
+						has_idea = gulag_politic
+						has_idea = gulag_politic_expanded
 					}
 				}
 				add_ideas = gulag_politic

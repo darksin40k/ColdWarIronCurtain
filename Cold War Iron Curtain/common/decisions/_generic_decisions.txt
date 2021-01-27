@@ -138,7 +138,7 @@ variables_calculation_category = {
 					}
 					var:UNS.un_nation_target = {
 						add_timed_idea = {
-							idea = national_asset_freeze
+							idea = UN_national_asset_freeze
 							days = 3650
 						}
 					}
@@ -150,7 +150,7 @@ variables_calculation_category = {
 					}
 					var:UNS.un_nation_target = {
 						add_timed_idea = {
-							idea = officials_sanctioned
+							idea = UN_officials_sanctioned
 							days = 3650
 						}
 					}
@@ -402,30 +402,19 @@ variables_calculation_category = {
 	}
 
 	ic_Financial = {
-		
 		allowed = {
-		  
 		}
-		
 		visible = {
-			
 		}
 		available = {
 			always = no
 		}
-		
-
-
 		activation = {
-			
 		}
-
 		#is_good = yes
 
 		selectable_mission = yes
 		days_mission_timeout = 30
-		
-
 		
 		timeout_effect = {
 			hidden_effect = {
@@ -569,11 +558,8 @@ variables_calculation_category = {
 				}
                 log = "[GetDateText]: [Root.GetName]: emergency_policy_replanning scripted effect"
 				emergency_policy_replanning = yes
-
 			}
 		}
-
-
 		complete_effect = {
 			hidden_effect = {
                 log = "[GetDateText]: [Root.GetName]: income effect every_country scripted effect"
@@ -582,7 +568,34 @@ variables_calculation_category = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 100
+		}
+	}	
+
+	ic_Financial_Start = {
+		allowed = {
+		}
+		visible = {
+			always = no
+		}
+		available = {
+			always = no
+		}
+		activation = {
+		}
+
+		fire_only_once = yes
+		selectable_mission = yes
+		days_mission_timeout = 1
 		
+		timeout_effect = {
+			hidden_effect = {
+                log = "[GetDateText]: [Root.GetName]: industrial pulse effect"
+				industrial_pulse = yes
+				monthly_power_projection_gain = yes
+			}
+		}
 		ai_will_do = {
 			factor = 100
 		}
@@ -728,10 +741,11 @@ variables_calculation_category = {
 		visible = {
 			original_tag = USA
 			KOR = { has_war_with = KPA }
-			date > 1952.01.01
-			date < 1954.01.01
-		}
 
+		}
+		available = {
+			has_completed_focus = USA_50s_Implement_MacArthurs_Proposal
+		}
 		fire_only_once = yes
 
 		cost = 0
@@ -1002,6 +1016,7 @@ operations = {
 		
 		complete_effect = {
 			activate_mission = Battle_of_Hainan
+			set_province_controller = 1038
 			load_oob = PRC_Hainan_oob
 		}
 
@@ -1018,6 +1033,124 @@ operations = {
 			factor = 1
 		}
 	}
+
+
+
+	Intervention_into_Syria = {
+
+		icon = generic_prepare_civil_war
+
+
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+        cancel_trigger = {
+            NOT = {
+                has_war_with = SYR
+            }
+        }
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 180
+
+
+		timeout_effect = {
+            custom_effect_tooltip = IRQ_INTERVEITON_TT
+            white_peace = SYR
+            news_event = CIA_SYRIA.58
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Intervention_into_Syria_TUR = {
+
+		icon = generic_prepare_civil_war
+
+
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+        cancel_trigger = {
+            NOT = {
+                has_war_with = SYR
+            }
+        }
+		cost = 0
+
+		fire_only_once = yes
+		selectable_mission = yes
+
+		days_mission_timeout = 180
+
+
+		timeout_effect = {
+            custom_effect_tooltip = SYR_IRAQI_INTERVENTION_TT
+            if = {
+                limit = {
+                    controls_state = 894
+                    controls_state = 677
+                    controls_state = 810
+                    controls_state = 777
+                    controls_state = 680
+                }
+                news_event = CIA_SYRIA.60
+                894 = {
+                    add_core_of = TUR
+                }
+                677 = {
+                    add_core_of = TUR
+                }
+                810 = {
+                    add_core_of = TUR
+                }
+                777 = {
+                    add_core_of = TUR
+                }
+                680 = {
+                    add_core_of = TUR
+                }
+                transfer_state = 894
+                transfer_state = 677
+                transfer_state = 810
+                transfer_state = 777
+                transfer_state = 680
+            }
+            else_if = {
+                limit = {
+                    SYR = {
+                        controls_state = 905
+                    }
+                }
+                news_event = CIA_SYRIA.61
+                SYR = {
+                    transfer_state = 905
+                }
+                white_peace = SYR
+            }
+            else = {
+                white_peace = SYR
+            }
+            
+            news_event = CIA_SYRIA.58
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
 
 	Battle_of_Hainan = {
 
@@ -1039,7 +1172,7 @@ operations = {
 
 		complete_effect = {
 			transfer_state = 591
-			news_event = PRC_Hainan.1
+			#news_event = PRC_Hainan.1
 			white_peace = CHI
 			CHI = {
 				complete_national_focus = CHI_Fall_of_Hainan
@@ -1052,7 +1185,7 @@ operations = {
 					591 = { is_fully_controlled_by = PRC  } 
 				}
 				transfer_state = 591
-				news_event = PRC_Hainan.1
+				#news_event = PRC_Hainan.1
 				white_peace = CHI
 				CHI = {
 					complete_national_focus = CHI_Fall_of_Hainan
@@ -1062,7 +1195,7 @@ operations = {
 				CHI = {
 					complete_national_focus = CHI_Victory_in_Hainan
 				}
-				news_event = ROC_Hainan.1
+				#news_event = ROC_Hainan.1
 			}
 			white_peace = CHI
 		}
@@ -1373,6 +1506,7 @@ special_projects = {
 		}
 	
 		visible = {
+			has_full_control_of_state = 743
 			has_global_flag = SUEZ_CANAL_BLOCKED
 		}
 	
@@ -1444,6 +1578,7 @@ special_projects = {
 		}
 	
 		visible = {
+			has_full_control_of_state = 685
 			has_global_flag = PANAMA_CANAL_BLOCKED
 		}
 	
